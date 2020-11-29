@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitReturns": false,
+    "noUnusedLocals": true,
+    "outDir": "functions/lib",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "strict": true,
+    // "allowJs": true,
+    // "allowSyntheticDefaultImports": true,
+    // "resolveJsonModule": false,
+    // "isolatedModules": true,
+    // "jsx": "react",
+    // "lib": [
+    //   "es6",
+    //   "es2017",
+    //   "dom"
+    // ],
+    // "moduleResolution": "node",
+    // "noEmit": true,
+    // "strict": true,
+    "target": "es2017"
+  },
+  "compileOnSave": true,
+  "include": [
+    "functions/src"
+  ]
+}
