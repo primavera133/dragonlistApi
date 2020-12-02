@@ -1,20 +1,16 @@
 import firebase from 'firebase'
 import { Request, Response } from 'express'
 
-import { UserLoginData } from '../../types'
+import { IUserLoginData } from '../../types'
 import config from '../../config/firebaseConfig'
-
-firebase.initializeApp(config)
 
 import validators from '../../util/validators/index'
 
-type UserResponse = {
-  token: string
-}
+firebase.initializeApp(config)
 
-const loginUser = async (request: Request, response: Response): Promise<Response<UserResponse> | Error> => {
+const loginUser = async (request: Request, response: Response): Promise<void | Response<Error>> => {
   try {
-    const userLoginData: UserLoginData = {
+    const userLoginData: IUserLoginData = {
       email: request.body.email,
       password: request.body.password,
     }

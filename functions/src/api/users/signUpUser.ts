@@ -3,15 +3,11 @@ import { Request, Response } from 'express'
 
 import { db } from '../../util/admin'
 import validators from '../../util/validators/index'
-import { UserSignupData } from '../../types'
+import { IUserSignupData } from '../../types'
 
-type SignupResponse = {
-  token: string
-}
-
-const signUpUser = async (request: Request, response: Response): Promise<Response<SignupResponse | Error>> => {
+const signUpUser = async (request: Request, response: Response): Promise<void | Response<Error>> => {
   try {
-    const newUser: UserSignupData = {
+    const newUser: IUserSignupData = {
       username: request.body.username,
       firstName: request.body.firstName,
       lastName: request.body.lastName,

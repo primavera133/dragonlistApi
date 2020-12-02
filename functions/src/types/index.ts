@@ -1,6 +1,7 @@
 import * as firebase from 'firebase-admin'
+import { Request } from 'express'
 
-export interface Country {
+export interface ICountry {
   countryId: string
   defaultLanguage: string
   name: string
@@ -10,18 +11,18 @@ export interface Country {
   createdAt: string
 }
 
-export interface UserLoginData {
+export interface IUserLoginData {
   name?: string
   email: string
   password: string
 }
 
-export interface LoginError {
+export interface ILoginError {
   email?: string
   password?: string
 }
 
-export interface UserSignupData {
+export interface IUserSignupData {
   username: string
   email: string
   firstName: string
@@ -32,7 +33,7 @@ export interface UserSignupData {
   confirmPassword: string
 }
 
-export interface SignupError {
+export interface ISignupError {
   email?: string
   password?: string
   firstName?: string
@@ -43,7 +44,25 @@ export interface SignupError {
   username?: string
 }
 
-export interface ValidatedResponse {
-  errors: LoginError
+export interface IValidatedResponse {
+  errors: ILoginError
   valid: boolean
+}
+
+export interface IUser {
+  uid: string
+  username?: string
+  imageUrl?: string
+  email?: string
+  firstName?: string
+  lastName?: string
+  phoneNumber?: string
+  country?: string
+  password?: string
+  confirmPassword?: string
+}
+
+export interface IGetUserAuthInfoRequest extends Request {
+  user?: IUser
+  rawBody?: any
 }

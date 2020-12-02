@@ -1,10 +1,10 @@
 import * as firebase from 'firebase-admin'
 import { Request, Response } from 'express'
 import { db } from '../util/admin'
-import { Country } from '../types'
+import { ICountry } from '../types'
 
 export const countryConverter = {
-  toFirestore(country: Country): firebase.firestore.DocumentData {
+  toFirestore(country: ICountry): firebase.firestore.DocumentData {
     return {
       id: country.countryId,
       name: country.name,
@@ -16,7 +16,7 @@ export const countryConverter = {
     }
   },
 
-  fromFirestore(snapshot: firebase.firestore.QueryDocumentSnapshot): Country {
+  fromFirestore(snapshot: firebase.firestore.QueryDocumentSnapshot): ICountry {
     const { id, defaultLanguage, languages, locale, name, regions, createdAt } = snapshot.data()
     return {
       countryId: id,
@@ -30,7 +30,7 @@ export const countryConverter = {
   },
 }
 
-const getAllCountries = async (request: Request, response: Response): Promise<Response<Country[]> | Error> => {
+const getAllCountries = async (request: Request, response: Response): Promise<Response<ICountry[]> | Error> => {
   try {
     const dbResponse = await db.collection('country').orderBy('name', 'asc').withConverter(countryConverter).get()
 

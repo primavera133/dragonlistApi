@@ -1,9 +1,9 @@
-import { UserSignupData, SignupError, ValidatedResponse } from '../../types'
+import { IUserSignupData, ISignupError, IValidatedResponse } from '../../types'
 import { isEmpty } from './isEmpty'
 import { isEmail } from './isEmail'
 
-export const validateSignUpData = (data: UserSignupData): ValidatedResponse => {
-  const errors: SignupError = {}
+export const validateSignUpData = (data: IUserSignupData): IValidatedResponse => {
+  const errors: ISignupError = {}
 
   if (isEmpty(data.email)) {
     errors.email = 'Must not be empty'
