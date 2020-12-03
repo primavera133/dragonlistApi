@@ -3,6 +3,7 @@ import BusBoy from 'busboy'
 import path from 'path'
 import os from 'os'
 import fs from 'fs'
+import { v4 as UUID } from 'uuid'
 import { Response } from 'express'
 import { IGetUserAuthInfoRequest } from '../../types'
 import config from '../../config/firebaseConfig'
@@ -35,20 +36,25 @@ const uploadProfilePhoto = async (
     })
 
     busboy.on('finish', async () => {
+      const uuid = UUID()
       try {
-        await admin
+        const uploadResponse = await admin
           .storage()
           .bucket()
           .upload(imageFilePath, {
             resumable: false,
             metadata: {
+              contentType: imageMimeType,
               metadata: {
-                contentType: imageMimeType,
+                firebaseStorageDownloadTokens: uuid,
               },
             },
           })
 
-        const imageUrl = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/${imageFileName}?alt=media`
+        const file = uploadResponse[0]
+        const fileName = encodeURIComponent(file.name)
+
+        const imageUrl = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/${fileName}?alt=media&token=${uuid}`
 
         await db.doc(`/users/${request.user?.username}`).update({
           imageUrl,
