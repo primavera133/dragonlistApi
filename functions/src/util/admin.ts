@@ -2,4 +2,6 @@ import admin from 'firebase-admin'
 
 admin.initializeApp()
 
-export const db = admin.firestore()
+const db = admin.firestore()
+
+export default { db, admin }

@@ -1,7 +1,7 @@
 import firebase from 'firebase'
 import { Request, Response } from 'express'
 
-import { db } from '../../util/admin'
+import adminConfig from '../../util/admin'
 import validators from '../../util/validators/index'
 import { IUserSignupData } from '../../types'
 
@@ -22,7 +22,7 @@ const signUpUser = async (request: Request, response: Response): Promise<void | 
 
     if (!valid) return response.status(400).json(errors)
 
-    const doc = await db.doc(`/users/${newUser.username}`).get()
+    const doc = await adminConfig.db.doc(`/users/${newUser.username}`).get()
 
     if (doc.exists) {
       return response.status(400).json({ username: 'this username is already taken' })
@@ -47,7 +47,7 @@ const signUpUser = async (request: Request, response: Response): Promise<void | 
       createdAt: new Date().toISOString(),
       userId,
     }
-    await db.doc(`/users/${newUser.username}`).set(userCredentials)
+    await adminConfig.db.doc(`/users/${newUser.username}`).set(userCredentials)
 
     return response.status(201).json({ token })
   } catch (err) {

@@ -1,5 +1,5 @@
 import admin from 'firebase-admin'
-import { db } from './admin'
+import adminConfig from './admin'
 import { Response, NextFunction } from 'express'
 import { IGetUserAuthInfoRequest } from '../types'
 
@@ -21,7 +21,7 @@ const auth = async (
 
     request.user = decodedToken
 
-    const data = await db.collection('users').where('userId', '==', request.user.uid).limit(1).get()
+    const data = await adminConfig.db.collection('users').where('userId', '==', request.user.uid).limit(1).get()
 
     request.user.username = data.docs[0].data().username
     request.user.imageUrl = data.docs[0].data().imageUrl

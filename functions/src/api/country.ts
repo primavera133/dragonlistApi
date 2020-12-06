@@ -1,6 +1,6 @@
 import * as firebase from 'firebase-admin'
 import { Request, Response } from 'express'
-import { db } from '../util/admin'
+import adminConfig from '../util/admin'
 import { ICountry } from '../types'
 
 export const countryConverter = {
@@ -32,7 +32,11 @@ export const countryConverter = {
 
 const getAllCountries = async (request: Request, response: Response): Promise<Response<ICountry[]> | Error> => {
   try {
-    const dbResponse = await db.collection('country').orderBy('name', 'asc').withConverter(countryConverter).get()
+    const dbResponse = await adminConfig.db
+      .collection('country')
+      .orderBy('name', 'asc')
+      .withConverter(countryConverter)
+      .get()
 
     const result = dbResponse.docs.map((doc) => {
       const data = doc.data()

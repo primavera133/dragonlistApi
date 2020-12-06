@@ -1,6 +1,6 @@
 import { Response } from 'express'
 import { IGetUserAuthInfoRequest, IUser } from '../../types'
-import { db } from '../../util/admin'
+import adminConfig from '../../util/admin'
 
 interface IUserData {
   userCredentials?: IUser
@@ -12,7 +12,7 @@ const getUserDetails = async (
 ): Promise<Response<IUserData> | Response<Error>> => {
   try {
     const userData: IUserData = {}
-    const doc = await db.doc(`/users/${request.user?.username}`).get()
+    const doc = await adminConfig.db.doc(`/users/${request.user?.username}`).get()
 
     if (!doc.exists) {
       throw new Error('Doc does not exist')
