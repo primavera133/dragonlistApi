@@ -7,7 +7,9 @@ import signUpUser from './api/users/signUpUser'
 import uploadProfilePhoto from './api/users/uploadProfilePhoto'
 import getUserDetails from './api/users/getUserDetails'
 import updateUserDetails from './api/users/updateUserDetails'
-import getAllCountries from './api/country'
+
+import getAllCountries from './api/country/getAllCountries'
+import getCountry from './api/country/getCountry'
 
 import auth from './util/auth'
 
@@ -19,5 +21,6 @@ app.post('/user/image', auth, uploadProfilePhoto)
 app.get('/user', auth, getUserDetails)
 app.put('/user', auth, updateUserDetails)
 app.get('/countries', getAllCountries)
+app.get('/country/:countryId', getCountry)
 
 exports.api = functions.region('europe-west1').https.onRequest(app)

@@ -1,13 +1,15 @@
 import * as firebase from 'firebase-admin'
 import { Request } from 'express'
 
+export interface IRegion {}
 export interface ICountry {
   countryId: string
   defaultLanguage: string
   name: string
   languages: string[]
   locale: string
-  regions: firebase.firestore.DocumentReference
+  regions: IRegion[]
+  regionsRefs?: firebase.firestore.DocumentReference[]
   createdAt: string
 }
 
