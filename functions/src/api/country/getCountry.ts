@@ -4,7 +4,7 @@ import { ICountry, IRegion } from '../../types'
 
 const getCountry = async (request: Request, response: Response): Promise<Response<ICountry> | Error> => {
   try {
-    const dbResponse = await adminConfig.db.doc(`/country/${request.params.countryId}`).get()
+    const dbResponse = await adminConfig.db.doc(`/countries/${request.params.countryId}`).get()
     const countryItem: ICountry = dbResponse.data() as ICountry
 
     // Extract regions references

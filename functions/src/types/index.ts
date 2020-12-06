@@ -1,7 +1,9 @@
 import * as firebase from 'firebase-admin'
 import { Request } from 'express'
 
-export interface IRegion {}
+export interface IRegion {
+  name: string
+}
 export interface ICountry {
   countryId: string
   defaultLanguage: string
@@ -67,4 +69,25 @@ export interface IUser {
 export interface IGetUserAuthInfoRequest extends Request {
   user?: IUser
   rawBody?: any
+}
+
+export interface ISpecie {
+  id: string
+  sc_name: string
+}
+
+export interface ISighting {
+  country: string
+  countryRef: firebase.firestore.DocumentReference<ICountry>
+  countryData: ICountry
+  date: Date
+  region?: string
+  regionRef?: firebase.firestore.DocumentReference
+  regionData?: IRegion
+  specie: string
+  specieRef?: firebase.firestore.DocumentReference<ISpecie>
+  specieData?: ISpecie
+  userId: string
+  userRef?: firebase.firestore.DocumentReference<IUser>
+  userData?: IUser
 }

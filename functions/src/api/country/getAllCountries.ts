@@ -4,7 +4,7 @@ import { ICountry } from '../../types'
 
 const getAllCountries = async (request: Request, response: Response): Promise<Response<ICountry[]> | Error> => {
   try {
-    const dbResponse = await adminConfig.db.collection('country').orderBy('name', 'asc').get()
+    const dbResponse = await adminConfig.db.collection('countries').orderBy('name', 'asc').get()
     const list: ICountry[] = []
     for (const doc of dbResponse.docs) {
       const countryItem = doc.data()
