@@ -55,6 +55,7 @@ export interface IValidatedResponse {
 
 export interface IUser {
   uid: string
+  roles?: string[]
   username?: string
   imageUrl?: string
   email?: string

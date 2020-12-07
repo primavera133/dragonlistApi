@@ -7,6 +7,7 @@ import signUpUser from './api/users/signUpUser'
 import uploadProfilePhoto from './api/users/uploadProfilePhoto'
 import getUserDetails from './api/users/getUserDetails'
 import updateUserDetails from './api/users/updateUserDetails'
+import deleteUser from './api/users/deleteUser'
 
 import getAllCountries from './api/country/getAllCountries'
 import getCountry from './api/country/getCountry'
@@ -21,9 +22,10 @@ const app = express()
 
 app.post('/login', loginUser)
 app.post('/signup', signUpUser)
-app.post('/user/image', auth, uploadProfilePhoto)
-app.get('/user', auth, getUserDetails)
-app.put('/user', auth, updateUserDetails)
+app.post('/user/image', auth(), uploadProfilePhoto)
+app.get('/user', auth(), getUserDetails)
+app.put('/user', auth(), updateUserDetails)
+app.delete('/user/:username', auth('admin'), deleteUser)
 app.get('/countries', getAllCountries)
 app.get('/country/:countryId', getCountry)
 app.get('/species', getAllSpecies)
