@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import adminConfig from '../../util/admin'
 import { ISighting } from '../../types'
 
-const getCountryUserSightings = async (
+const getCountryRegionUserSightings = async (
   request: Request,
   response: Response
 ): Promise<Response<ISighting[]> | Error> => {
@@ -12,6 +12,7 @@ const getCountryUserSightings = async (
     )) as FirebaseFirestore.Query<FirebaseFirestore.DocumentData>
 
     sightingsQuery = sightingsQuery.where('country', '==', request.params.countryId)
+    sightingsQuery = sightingsQuery.where('region', '==', request.params.regionId)
     sightingsQuery = sightingsQuery.where('username', '==', request.params.username)
     sightingsQuery = sightingsQuery.orderBy('date')
     const sightings = await sightingsQuery.get()
@@ -43,4 +44,4 @@ const getCountryUserSightings = async (
   }
 }
 
-export default getCountryUserSightings
+export default getCountryRegionUserSightings

@@ -13,6 +13,7 @@ import getAllCountries from './api/country/getAllCountries'
 import getCountry from './api/country/getCountry'
 import getCountrySightings from './api/country/getCountrySightings'
 import getCountryUserSightings from './api/country/getCountryUserSightings'
+import getCountryRegionUserSightings from './api/country/getCountryRegionUserSightings'
 
 import getAllSpecies from './api/specie/getAllSpecies'
 
@@ -33,6 +34,7 @@ app.get('/countries', getAllCountries)
 app.get('/country/:countryId', getCountry)
 app.get('/country/:countryId/sightings', getCountrySightings)
 app.get('/country/:countryId/user/:username/sightings', getCountryUserSightings)
+app.get('/country/:countryId/region/:regionId/user/:username/sightings', getCountryRegionUserSightings)
 
 app.get('/species', getAllSpecies)
 
