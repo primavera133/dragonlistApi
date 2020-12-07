@@ -12,6 +12,7 @@ export interface ICountry {
   locale: string
   regions: IRegion[]
   regionsRefs?: firebase.firestore.DocumentReference[]
+  regionsData?: IRegion[]
   createdAt: string
 }
 
@@ -79,7 +80,7 @@ export interface ISpecie {
 
 export interface ISighting {
   country: string
-  countryRef: firebase.firestore.DocumentReference<ICountry>
+  countryRef?: firebase.firestore.DocumentReference<ICountry>
   countryData: ICountry
   date: Date
   region?: string

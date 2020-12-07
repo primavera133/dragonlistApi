@@ -11,6 +11,7 @@ import deleteUser from './api/users/deleteUser'
 
 import getAllCountries from './api/country/getAllCountries'
 import getCountry from './api/country/getCountry'
+import getCountrySightings from './api/country/getCountrySightings'
 
 import getAllSpecies from './api/specie/getAllSpecies'
 
@@ -26,9 +27,13 @@ app.post('/user/image', auth(), uploadProfilePhoto)
 app.get('/user', auth(), getUserDetails)
 app.put('/user', auth(), updateUserDetails)
 app.delete('/user/:username', auth('admin'), deleteUser)
+
 app.get('/countries', getAllCountries)
 app.get('/country/:countryId', getCountry)
+app.get('/country/:countryId/sightings', getCountrySightings)
+
 app.get('/species', getAllSpecies)
+
 app.get('/sightings', getAllSightings)
 
 exports.api = functions.region('europe-west1').https.onRequest(app)
