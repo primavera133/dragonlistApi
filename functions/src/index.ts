@@ -12,6 +12,7 @@ import deleteUser from './api/users/deleteUser'
 import getAllCountries from './api/country/getAllCountries'
 import getCountry from './api/country/getCountry'
 import getCountrySightings from './api/country/getCountrySightings'
+import getCountryUserSightings from './api/country/getCountryUserSightings'
 
 import getAllSpecies from './api/specie/getAllSpecies'
 
@@ -31,6 +32,7 @@ app.delete('/user/:username', auth('admin'), deleteUser)
 app.get('/countries', getAllCountries)
 app.get('/country/:countryId', getCountry)
 app.get('/country/:countryId/sightings', getCountrySightings)
+app.get('/country/:countryId/user/:username/sightings', getCountryUserSightings)
 
 app.get('/species', getAllSpecies)
 
