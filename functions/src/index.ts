@@ -18,6 +18,8 @@ import getCountryRegionUserSightings from './api/country/getCountryRegionUserSig
 import getAllSpecies from './api/specie/getAllSpecies'
 
 import getAllSightings from './api/sightings/getAllSightings'
+import getSighting from './api/sightings/getSighting'
+import postSighting from './api/sightings/postSighting'
 
 import auth from './util/auth'
 
@@ -38,6 +40,8 @@ app.get('/country/:countryId/region/:regionId/user/:username/sightings', getCoun
 
 app.get('/species', getAllSpecies)
 
-app.get('/sightings', getAllSightings)
+app.get('/sightings', auth('admin'), getAllSightings)
+app.get('/sighting/:sightingId', getSighting)
+app.post('/sighting', auth(), postSighting)
 
 exports.api = functions.region('europe-west1').https.onRequest(app)

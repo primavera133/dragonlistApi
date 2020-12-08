@@ -26,7 +26,7 @@ const auth = (...permittedRoles: string[]) => {
 
       const userData = data.docs[0].data()
 
-      if (permittedRoles) {
+      if (permittedRoles.length) {
         const permissonIntersection = permittedRoles.filter((role) => userData.roles.includes(role))
         if (!permissonIntersection.length) {
           throw new Error('Insufficient user role')

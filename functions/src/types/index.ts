@@ -11,7 +11,7 @@ export interface ICountry {
   languages: string[]
   locale: string
   regions: IRegion[]
-  regionsRefs?: firebase.firestore.DocumentReference[]
+  regionsRefs?: FirebaseFirestore.DocumentReference[]
   regionsData?: IRegion[]
   createdAt: string
 }
@@ -49,8 +49,8 @@ export interface ISignupError {
   username?: string
 }
 
-export interface IValidatedResponse {
-  errors: ILoginError
+export interface IValidatedResponse<T> {
+  errors: T
   valid: boolean
 }
 
@@ -80,16 +80,37 @@ export interface ISpecie {
 
 export interface ISighting {
   country: string
-  countryRef?: firebase.firestore.DocumentReference<ICountry>
-  countryData: ICountry
+  countryRef?: FirebaseFirestore.DocumentReference<ICountry>
+  countryData?: ICountry
   date: Date
   region?: string
-  regionRef?: firebase.firestore.DocumentReference
+  regionRef?: FirebaseFirestore.DocumentReference<IRegion>
   regionData?: IRegion
   specie: string
-  specieRef?: firebase.firestore.DocumentReference<ISpecie>
+  specieRef?: FirebaseFirestore.DocumentReference<ISpecie>
   specieData?: ISpecie
-  userId: string
-  userRef?: firebase.firestore.DocumentReference<IUser>
+  username: string
+  userRef?: FirebaseFirestore.DocumentReference<IUser>
   userData?: IUser
+}
+export interface ISightingFormData {
+  country: string
+  countryRef?: FirebaseFirestore.DocumentReference<ICountry>
+  date: number
+  region: string
+  regionRef?: FirebaseFirestore.DocumentReference<IRegion>
+  specie: string
+  specieRef?: FirebaseFirestore.DocumentReference<ISpecie>
+  username: string
+}
+
+export interface ISightingFormRequest extends Request {
+  user?: IUser
+}
+
+export interface ISightingFormError {
+  country?: string
+  date?: string
+  region?: string
+  specie?: string
 }

@@ -2,7 +2,7 @@ import { IUserSignupData, ISignupError, IValidatedResponse } from '../../types'
 import { isEmpty } from './isEmpty'
 import { isEmail } from './isEmail'
 
-export const validateSignUpData = (data: IUserSignupData): IValidatedResponse => {
+export const validateSignUpData = (data: IUserSignupData): IValidatedResponse<ISignupError> => {
   const errors: ISignupError = {}
 
   if (isEmpty(data.email)) {

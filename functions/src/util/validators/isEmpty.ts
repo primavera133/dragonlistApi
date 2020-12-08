@@ -1,5 +1,5 @@
-export const isEmpty = (str: string): boolean => {
-  if (!str) return true
-  if (str.trim() === '') return true
+export const isEmpty = (value: string | number): boolean => {
+  if (!value) return true
+  if (typeof value === 'string' && value.trim() === '') return true
   else return false
 }

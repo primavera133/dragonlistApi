@@ -1,7 +1,7 @@
 import { IUserLoginData, ILoginError, IValidatedResponse } from '../../types'
 import { isEmpty } from './isEmpty'
 
-export const validateLoginData = (data: IUserLoginData): IValidatedResponse => {
+export const validateLoginData = (data: IUserLoginData): IValidatedResponse<ILoginError> => {
   const errors: ILoginError = {}
   if (isEmpty(data.email)) errors.email = 'Must not be empty'
   if (isEmpty(data.password)) errors.password = 'Must not be empty'
