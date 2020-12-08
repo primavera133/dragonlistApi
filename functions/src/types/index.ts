@@ -1,4 +1,3 @@
-import * as firebase from 'firebase-admin'
 import { Request } from 'express'
 
 export interface IRegion {
