@@ -64,3 +64,6 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+
+json_to_firestore/service_key.json
