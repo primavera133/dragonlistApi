@@ -1,0 +1,118 @@
+[
+  {
+    "itemID": "sweden:skåne",
+    "name": "Skåne"
+  },
+  {
+    "itemID": "sweden:halland",
+    "name": "Halland"
+  },
+  {
+    "itemID": "sweden:blekinge",
+    "name": "Blekinge"
+  },
+  {
+    "itemID": "sweden:småland",
+    "name": "Småland"
+  },
+  {
+    "itemID": "sweden:öland",
+    "name": "Öland"
+  },
+  {
+    "itemID": "sweden:gotland",
+    "name": "Gotland"
+  },
+  {
+    "itemID": "sweden:östergötland",
+    "name": "Östergötland"
+  },
+  {
+    "itemID": "sweden:västergötland",
+    "name": "Västergötland"
+  },
+  {
+    "itemID": "sweden:bohuslän",
+    "name": "Bohuslän"
+  },
+  {
+    "itemID": "sweden:dalsland",
+    "name": "Dalsland"
+  },
+  {
+    "itemID": "sweden:värmland",
+    "name": "Värmland"
+  },
+  {
+    "itemID": "sweden:närke",
+    "name": "Närke"
+  },
+  {
+    "itemID": "sweden:västmanland",
+    "name": "Västmanland"
+  },
+  {
+    "itemID": "sweden:södermanland",
+    "name": "Södermanland"
+  },
+  {
+    "itemID": "sweden:uppland",
+    "name": "Uppland"
+  },
+  {
+    "itemID": "sweden:dalarna",
+    "name": "Dalarna"
+  },
+  {
+    "itemID": "sweden:gästrikland",
+    "name": "Gästrikland"
+  },
+  {
+    "itemID": "sweden:hälsingland",
+    "name": "Hälsingland"
+  },
+  {
+    "itemID": "sweden:härjedalen",
+    "name": "Härjedalen"
+  },
+  {
+    "itemID": "sweden:medelpad",
+    "name": "Medelpad"
+  },
+  {
+    "itemID": "sweden:jämtland",
+    "name": "Jämtland"
+  },
+  {
+    "itemID": "sweden:ångermanland",
+    "name": "Ångermanland"
+  },
+  {
+    "itemID": "sweden:åsele lappmark",
+    "name": "Åsele lappmark"
+  },
+  {
+    "itemID": "sweden:västerbotten",
+    "name": "Västerbotten"
+  },
+  {
+    "itemID": "sweden:lycksele lappmark",
+    "name": "Lycksele lappmark"
+  },
+  {
+    "itemID": "sweden:norrbotten",
+    "name": "Norrbotten"
+  },
+  {
+    "itemID": "sweden:pite lappmark",
+    "name": "Pite lappmark"
+  },
+  {
+    "itemID": "sweden:lule lappmark",
+    "name": "Lule lappmark"
+  },
+  {
+    "itemID": "sweden:torne lappmark",
+    "name": "Torne lappmark"
+  }
+]
