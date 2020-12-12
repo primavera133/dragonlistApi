@@ -1,0 +1,41 @@
+{
+  "babelMacros": {
+    "twin": {
+      "preset": "emotion"
+    }
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
+  },
+  "dependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.0",
+    "tailwindcss": "^2.0.1",
+    "twin.macro": "^2.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "https://europe-west1-dragonlist-2aa56.cloudfunctions.net/api"
+}
