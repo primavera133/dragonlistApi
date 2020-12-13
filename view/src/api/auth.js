@@ -17,8 +17,8 @@ const postLogin = async (userData) => {
     if (!response.ok) {
       throw new Error('Login failed')
     }
-    const jsonData = response.json()
-    localStorage.setItem('AuthToken', `Bearer ${jsonData.token}`)
+    const jsonData = await response.json()
+    return jsonData.token
   } catch (error) {
     console.error(error)
     throw error

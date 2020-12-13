@@ -4,6 +4,7 @@ import { jsx } from '@emotion/react'
 import React, { useState } from 'react'
 import tw from 'twin.macro'
 
+import * as AuthService from '../service/AuthService'
 import auth from '../api/auth'
 import TextInput from '../components/TextInput'
 import PasswordInput from '../components/PasswordInput'
@@ -36,10 +37,11 @@ const loginPage = ({ history }) => {
 
       if (!validateForm()) return
 
-      await auth.postLogin({
+      const token = await auth.postLogin({
         email,
         password,
       })
+      AuthService.login(token)
       history.push('/')
     } catch (error) {
       console.error(error)
