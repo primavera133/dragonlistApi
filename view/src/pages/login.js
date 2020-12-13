@@ -4,8 +4,8 @@ import { jsx } from '@emotion/react'
 import React, { useState } from 'react'
 import tw from 'twin.macro'
 
-import * as AuthService from '../service/AuthService'
-import auth from '../api/auth'
+import * as authService from '../service/authService'
+import authApi from '../api/auth'
 import TextInput from '../components/TextInput'
 import PasswordInput from '../components/PasswordInput'
 import Button from '../components/Button'
@@ -37,11 +37,11 @@ const loginPage = ({ history }) => {
 
       if (!validateForm()) return
 
-      const token = await auth.postLogin({
+      const { token, userData } = await authApi.postLogin({
         email,
         password,
       })
-      AuthService.login(token)
+      authService.login(token, userData.roles)
       history.push('/')
     } catch (error) {
       console.error(error)

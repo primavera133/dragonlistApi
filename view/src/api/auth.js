@@ -18,7 +18,7 @@ const postLogin = async (userData) => {
       throw new Error('Login failed')
     }
     const jsonData = await response.json()
-    return jsonData.token
+    return jsonData
   } catch (error) {
     console.error(error)
     throw error

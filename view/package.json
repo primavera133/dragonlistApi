@@ -37,5 +37,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://europe-west1-dragonlist-2aa56.cloudfunctions.net/api"
+  "proxy": "http://localhost:5001/dragonlist-2aa56/europe-west1/api"
 }

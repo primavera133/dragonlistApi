@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import homePage from './pages/home'
 import loginPage from './pages/login'
 import profilePage from './pages/profile'
+import adminPage from './pages/admin'
 
 const App = () => {
   return (
@@ -18,7 +19,8 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={homePage} />
           <Route exact path="/login" component={loginPage} />
-          <ProtectedRoute exact path="/profile" component={profilePage} />
+          <ProtectedRoute exact path="/profile" component={profilePage} permittedRoles={['user']} />
+          <ProtectedRoute exact path="/admin" component={adminPage} permittedRoles={['admin']} />
         </Switch>
       </Router>
     </>
