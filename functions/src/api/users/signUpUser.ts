@@ -15,7 +15,6 @@ const signUpUser = async (request: Request, response: Response): Promise<void | 
       phoneNumber: request.body.phoneNumber,
       country: request.body.country,
       password: request.body.password,
-      confirmPassword: request.body.confirmPassword,
     }
 
     const { valid, errors } = validators.validateSignUpData(newUser)
@@ -35,7 +34,7 @@ const signUpUser = async (request: Request, response: Response): Promise<void | 
     }
 
     const userId = data.user.uid
-    const token = data.user.getIdToken()
+    const token = await data.user.getIdToken()
 
     const userCredentials = {
       username: newUser.username,
@@ -46,10 +45,11 @@ const signUpUser = async (request: Request, response: Response): Promise<void | 
       email: newUser.email,
       createdAt: new Date().toISOString(),
       userId,
+      roles: ['user'],
     }
     await adminConfig.db.doc(`/users/${newUser.username}`).set(userCredentials)
 
-    return response.status(201).json({ token })
+    return response.status(201).json({ token, userData: userCredentials })
   } catch (err) {
     console.error(err)
     if (err.code === 'auth/email-already-in-use') {

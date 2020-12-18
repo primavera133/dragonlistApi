@@ -17,7 +17,6 @@ export const validateSignUpData = (data: IUserSignupData): IValidatedResponse<IS
   if (isEmpty(data.country)) errors.country = 'Must not be empty'
 
   if (isEmpty(data.password)) errors.password = 'Must not be empty'
-  if (data.password !== data.confirmPassword) errors.confirmPassword = 'Passwords must be the same'
   if (isEmpty(data.username)) errors.username = 'Must not be empty'
 
   return {

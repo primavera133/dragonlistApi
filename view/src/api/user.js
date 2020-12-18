@@ -1,8 +1,8 @@
-import { getAuthHeader } from '../service/authService'
+import { getAuthHeader, logout } from '../service/authService'
 
 const getUser = async () => {
   try {
-    const url = '/user'
+    const url = '/api/user'
 
     const response = await fetch(url, {
       method: 'GET',
@@ -17,12 +17,15 @@ const getUser = async () => {
       referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
     })
     if (!response.ok) {
+      if (response.status > 400) {
+        logout()
+      }
       throw new Error('Get user failed')
     }
-    const jsonData = await response.json()
-    return jsonData
+    return await response.json()
   } catch (error) {
     console.error(error)
+    throw new Error(error)
   }
 }
 

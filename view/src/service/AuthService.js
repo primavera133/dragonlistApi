@@ -3,12 +3,8 @@ export const login = (token, roles) => {
 }
 
 export const getAuthHeader = () => {
-  try {
-    const auth = JSON.parse(window.localStorage.getItem('auth'))
-    return { Authorization: `Bearer ${auth.token}` }
-  } catch (error) {
-    console.error(error)
-  }
+  const auth = JSON.parse(window.localStorage.getItem('auth'))
+  return { Authorization: `Bearer ${auth?.token}` }
 }
 
 export const isAuthenticated = (withRoles) => {

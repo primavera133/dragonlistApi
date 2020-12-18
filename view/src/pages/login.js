@@ -9,6 +9,7 @@ import authApi from '../api/auth'
 import TextInput from '../components/TextInput'
 import PasswordInput from '../components/PasswordInput'
 import Button from '../components/Button'
+import Layout from '../components/Layout'
 
 const loginPage = ({ history }) => {
   const [email, setEmail] = useState('')
@@ -49,25 +50,21 @@ const loginPage = ({ history }) => {
   }
 
   return (
-    <div>
-      <div css={[tw`flex flex-col items-center justify-center h-screen`, tw`bg-gradient-to-b from-electric to-ribbon`]}>
-        <div tw="flex flex-col justify-center h-full space-y-5">
-          <form tw="grid grid-cols-2 gap-4" onSubmit={onSubmit}>
-            <TextInput id="email" name="email" label="Email" value={email} onChange={(v) => onUpdate('email', v)} />
-            <PasswordInput
-              id="password"
-              name="password"
-              label="Password"
-              value={password}
-              onChange={(v) => onUpdate('password', v)}
-            />
-            <Button isPrimary type="submit" disabled={formDisabled}>
-              Log in
-            </Button>
-          </form>
-        </div>
-      </div>
-    </div>
+    <Layout>
+      <form tw="grid grid-cols-2 gap-4" onSubmit={onSubmit}>
+        <TextInput id="email" name="email" label="Email" value={email} onChange={(v) => onUpdate('email', v)} />
+        <PasswordInput
+          id="password"
+          name="password"
+          label="Password"
+          value={password}
+          onChange={(v) => onUpdate('password', v)}
+        />
+        <Button isPrimary type="submit" disabled={formDisabled}>
+          Log in
+        </Button>
+      </form>
+    </Layout>
   )
 }
 

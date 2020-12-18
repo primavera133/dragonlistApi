@@ -34,7 +34,6 @@ export interface IUserSignupData {
   phoneNumber: string
   country: string
   password: string
-  confirmPassword: string
 }
 
 export interface ISignupError {
@@ -44,7 +43,6 @@ export interface ISignupError {
   lastName?: string
   phoneNumber?: string
   country?: string
-  confirmPassword?: string
   username?: string
 }
 
@@ -64,7 +62,6 @@ export interface IUser {
   phoneNumber?: string
   country?: string
   password?: string
-  confirmPassword?: string
 }
 
 export interface IGetUserAuthInfoRequest extends Request {
