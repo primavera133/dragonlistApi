@@ -27,7 +27,7 @@ const uploadProfilePhoto = async (
         return response.status(400).json({ error: 'Wrong file type submited' })
       }
       const imageExtension = filename.split('.')[filename.split('.').length - 1]
-      imageFileName = `${request.user?.username}.${imageExtension}`
+      imageFileName = `${request.user?.email}.${imageExtension}`
 
       const filePath = path.join(os.tmpdir(), imageFileName)
       imageFilePath = filePath
@@ -56,7 +56,7 @@ const uploadProfilePhoto = async (
 
         const imageUrl = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/${fileName}?alt=media&token=${uuid}`
 
-        await adminConfig.db.doc(`/users/${request.user?.username}`).update({
+        await adminConfig.db.doc(`/users/${request.user?.email}`).update({
           imageUrl,
         })
 

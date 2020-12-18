@@ -8,7 +8,6 @@ import { IUserSignupData } from '../../types'
 const signUpUser = async (request: Request, response: Response): Promise<void | Response<Error>> => {
   try {
     const newUser: IUserSignupData = {
-      username: request.body.username,
       firstName: request.body.firstName,
       lastName: request.body.lastName,
       email: request.body.email,
@@ -21,10 +20,10 @@ const signUpUser = async (request: Request, response: Response): Promise<void | 
 
     if (!valid) return response.status(400).json(errors)
 
-    const doc = await adminConfig.db.doc(`/users/${newUser.username}`).get()
+    const doc = await adminConfig.db.doc(`/users/${newUser.email}`).get()
 
     if (doc.exists) {
-      return response.status(400).json({ username: 'this username is already taken' })
+      return response.status(400).json({ email: 'this email is already taken' })
     }
 
     const data = await firebase.auth().createUserWithEmailAndPassword(newUser.email, newUser.password)
@@ -37,7 +36,6 @@ const signUpUser = async (request: Request, response: Response): Promise<void | 
     const token = await data.user.getIdToken()
 
     const userCredentials = {
-      username: newUser.username,
       firstName: newUser.firstName,
       lastName: newUser.lastName,
       phoneNumber: newUser.phoneNumber,
@@ -47,7 +45,7 @@ const signUpUser = async (request: Request, response: Response): Promise<void | 
       userId,
       roles: ['user'],
     }
-    await adminConfig.db.doc(`/users/${newUser.username}`).set(userCredentials)
+    await adminConfig.db.doc(`/users/${newUser.email}`).set(userCredentials)
 
     return response.status(201).json({ token, userData: userCredentials })
   } catch (err) {

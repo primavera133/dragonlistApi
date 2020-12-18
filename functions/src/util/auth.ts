@@ -33,7 +33,7 @@ const auth = (...permittedRoles: string[]) => {
         }
       }
 
-      request.user.username = userData.username
+      request.user.email = userData.email
       request.user.imageUrl = userData.imageUrl
       next()
     } catch (err) {

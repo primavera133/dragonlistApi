@@ -12,7 +12,7 @@ const getUserDetails = async (
 ): Promise<Response<IUserData> | Response<Error>> => {
   try {
     const userData: IUserData = {}
-    const doc = await adminConfig.db.doc(`/users/${request.user?.username}`).get()
+    const doc = await adminConfig.db.doc(`/users/${request.user?.email}`).get()
 
     if (!doc.exists) {
       throw new Error('Doc does not exist')

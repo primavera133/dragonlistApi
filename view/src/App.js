@@ -1,6 +1,3 @@
-import { jsx } from '@emotion/react'
-/** @jsxImportSource @emotion/react */
-
 import React from 'react'
 import { GlobalStyles } from 'twin.macro'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'

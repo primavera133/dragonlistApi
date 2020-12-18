@@ -10,14 +10,14 @@ const postSighting = async (
 ): Promise<Response<ISighting> | Response<Error>> => {
   try {
     if (!request.user) throw new Error('user is missing')
-    if (!request.user.username) throw new Error('username is missing')
+    if (!request.user.email) throw new Error('email is missing')
 
     const newSighting: ISightingFormData = {
       country: request.body.country,
       date: request.body.date,
       region: request.body.region,
       specie: request.body.specie,
-      username: request.user.username,
+      email: request.user.email,
     }
 
     const { valid, errors } = await validators.validateSightingData(newSighting)

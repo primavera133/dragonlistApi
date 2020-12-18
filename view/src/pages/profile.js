@@ -33,12 +33,11 @@ const profilePage = ({ history }) => {
         </div>
         <div tw="text-center px-3 pb-6 pt-2">
           {userData.roles.includes('admin') ? <h4>Admin</h4> : null}
-          <h3 tw="text-black text-sm font-sans">{userData.username}</h3>
+          <h3 tw="text-black text-sm font-sans">
+            {userData.firstName} {userData.lastName}
+          </h3>
           <div tw="mt-2 font-sans font-light text-gray-500">
             <ul>
-              <li>
-                {userData.firstName} {userData.lastName}
-              </li>
               <li>Resident country: {userData.country}</li>
               <li>
                 email: <a href={`mailto:${userData.email}`}>{userData.email}</a>

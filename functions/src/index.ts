@@ -30,13 +30,13 @@ app.post('/signup', signUpUser)
 app.post('/user/image', auth(), uploadProfilePhoto)
 app.get('/user', auth(), getUserDetails)
 app.put('/user', auth(), updateUserDetails)
-app.delete('/user/:username', auth('admin'), deleteUser)
+app.delete('/user/:email', auth('admin'), deleteUser)
 
 app.get('/countries', getAllCountries)
 app.get('/country/:countryId', getCountry)
 app.get('/country/:countryId/sightings', getCountrySightings)
-app.get('/country/:countryId/user/:username/sightings', getCountryUserSightings)
-app.get('/country/:countryId/region/:regionId/user/:username/sightings', getCountryRegionUserSightings)
+app.get('/country/:countryId/user/:email/sightings', getCountryUserSightings)
+app.get('/country/:countryId/region/:regionId/user/:email/sightings', getCountryRegionUserSightings)
 
 app.get('/species', getAllSpecies)
 

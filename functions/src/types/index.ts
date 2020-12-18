@@ -27,7 +27,6 @@ export interface ILoginError {
 }
 
 export interface IUserSignupData {
-  username: string
   email: string
   firstName: string
   lastName: string
@@ -43,7 +42,6 @@ export interface ISignupError {
   lastName?: string
   phoneNumber?: string
   country?: string
-  username?: string
 }
 
 export interface IValidatedResponse<T> {
@@ -54,7 +52,6 @@ export interface IValidatedResponse<T> {
 export interface IUser {
   uid: string
   roles?: string[]
-  username?: string
   imageUrl?: string
   email?: string
   firstName?: string
@@ -85,7 +82,6 @@ export interface ISighting {
   specie: string
   specieRef?: FirebaseFirestore.DocumentReference<ISpecie>
   specieData?: ISpecie
-  username: string
   userRef?: FirebaseFirestore.DocumentReference<IUser>
   userData?: IUser
 }
@@ -97,7 +93,7 @@ export interface ISightingFormData {
   regionRef?: FirebaseFirestore.DocumentReference<IRegion>
   specie: string
   specieRef?: FirebaseFirestore.DocumentReference<ISpecie>
-  username: string
+  email: string
 }
 
 export interface ISightingFormRequest extends Request {

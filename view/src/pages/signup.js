@@ -7,23 +7,24 @@ import tw from 'twin.macro'
 import * as authService from '../service/authService'
 import authApi from '../api/auth'
 import TextInput from '../components/TextInput'
+import Checkbox from '../components/Checkbox'
 import PasswordInput from '../components/PasswordInput'
 import Button from '../components/Button'
 import Layout from '../components/Layout'
 
 const loginPage = ({ history }) => {
-  const [username, setUsername] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
+  const [phonePublic, setPhonePublic] = useState(false)
   const [email, setEmail] = useState('')
+  const [emailPublic, setEmailPublic] = useState(false)
   const [country, setCountry] = useState('')
   const [password, setPassword] = useState('')
   const [formDisabled, setFormDisabled] = useState(true)
 
   const validateForm = () => {
     return !!(
-      username.length &&
       email.length &&
       password.length &&
       firstName.length &&
@@ -45,7 +46,6 @@ const loginPage = ({ history }) => {
       if (!validateForm()) return
 
       const { token, userData } = await authApi.postSignup({
-        username,
         firstName,
         lastName,
         country,
@@ -63,52 +63,73 @@ const loginPage = ({ history }) => {
   return (
     <Layout>
       <form tw="grid grid-cols-2 gap-4" onSubmit={onSubmit}>
-        <TextInput
-          id="username"
-          name="username"
-          label="Username"
-          value={username}
-          onChange={(v) => onUpdate(setUsername, v)}
-        />
-        <TextInput
-          id="firstName"
-          name="firstName"
-          label="First name"
-          value={firstName}
-          onChange={(v) => onUpdate(setFirstName, v)}
-        />
-        <TextInput
-          id="lastName"
-          name="lastName"
-          label="Last name"
-          value={lastName}
-          onChange={(v) => onUpdate(setLastName, v)}
-        />
-        <TextInput
-          id="country"
-          name="country"
-          label="Country"
-          value={country}
-          onChange={(v) => onUpdate(setCountry, v)}
-        />
-        <TextInput
-          id="phoneNumber"
-          name="phoneNumber"
-          label="Phone number"
-          value={phoneNumber}
-          onChange={(v) => onUpdate(setPhoneNumber, v)}
-        />
-        <TextInput id="email" name="email" label="Email" value={email} onChange={(v) => onUpdate(setEmail, v)} />
-        <PasswordInput
-          id="password"
-          name="password"
-          label="Password"
-          value={password}
-          onChange={(v) => onUpdate(setPassword, v)}
-        />
-        <Button isPrimary type="submit" disabled={formDisabled}>
-          Log in
-        </Button>
+        <div>
+          <TextInput
+            id="firstName"
+            name="firstName"
+            label="First name"
+            value={firstName}
+            onChange={(v) => onUpdate(setFirstName, v)}
+          />
+        </div>
+        <div>
+          <TextInput
+            id="lastName"
+            name="lastName"
+            label="Last name"
+            value={lastName}
+            onChange={(v) => onUpdate(setLastName, v)}
+          />
+        </div>
+        <div>
+          <TextInput
+            id="country"
+            name="country"
+            label="Country"
+            value={country}
+            onChange={(v) => onUpdate(setCountry, v)}
+          />
+        </div>
+        <div>
+          <TextInput
+            id="phoneNumber"
+            name="phoneNumber"
+            label="Phone number"
+            value={phoneNumber}
+            onChange={(v) => onUpdate(setPhoneNumber, v)}
+          />
+          <Checkbox
+            id="phonePublic"
+            name="phonePublic"
+            label="Display public"
+            value={phonePublic}
+            onChange={(v) => onUpdate(setPhonePublic, v)}
+          />
+        </div>
+        <div>
+          <TextInput id="email" name="email" label="Email" value={email} onChange={(v) => onUpdate(setEmail, v)} />
+          <Checkbox
+            id="emailPublic"
+            name="emailPublic"
+            label="Display public"
+            value={emailPublic}
+            onChange={(v) => onUpdate(setPhonePublic, v)}
+          />
+        </div>
+        <div>
+          <PasswordInput
+            id="password"
+            name="password"
+            label="Password"
+            value={password}
+            onChange={(v) => onUpdate(setPassword, v)}
+          />
+        </div>
+        <div>
+          <Button isPrimary type="submit" disabled={formDisabled}>
+            Sign up
+          </Button>
+        </div>
       </form>
     </Layout>
   )

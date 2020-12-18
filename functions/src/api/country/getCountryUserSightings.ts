@@ -12,7 +12,7 @@ const getCountryUserSightings = async (
     )) as FirebaseFirestore.Query<FirebaseFirestore.DocumentData>
 
     sightingsQuery = sightingsQuery.where('country', '==', request.params.countryId)
-    sightingsQuery = sightingsQuery.where('username', '==', request.params.username)
+    sightingsQuery = sightingsQuery.where('email', '==', request.params.email)
     sightingsQuery = sightingsQuery.orderBy('date')
     const sightings = await sightingsQuery.get()
 

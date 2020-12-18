@@ -13,7 +13,7 @@ const getCountryRegionUserSightings = async (
 
     sightingsQuery = sightingsQuery.where('country', '==', request.params.countryId)
     sightingsQuery = sightingsQuery.where('region', '==', request.params.regionId)
-    sightingsQuery = sightingsQuery.where('username', '==', request.params.username)
+    sightingsQuery = sightingsQuery.where('email', '==', request.params.email)
     sightingsQuery = sightingsQuery.orderBy('date')
     const sightings = await sightingsQuery.get()
 

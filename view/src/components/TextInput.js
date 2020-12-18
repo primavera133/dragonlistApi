@@ -4,7 +4,7 @@ import { jsx } from '@emotion/react'
 import React from 'react'
 import 'twin.macro'
 
-const TextInput = ({ id, label, name, value, placeholder, onChange }) => (
+const TextInput = ({ id, label, name, value, placeholder, onChange, disabled }) => (
   <label htmlFor={id} tw="block text-lg">
     <span tw="text-gray-900">{label}</span>
     <input
@@ -13,6 +13,7 @@ const TextInput = ({ id, label, name, value, placeholder, onChange }) => (
       id={id}
       name={name}
       placeholder={placeholder}
+      disabled={disabled}
       value={value}
       onChange={(e) => onChange(e.target.value)}
     />

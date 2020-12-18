@@ -12,7 +12,7 @@ const updateUserDetails = async (
   response: Response
 ): Promise<Response<TUserDetailsResponse> | Response<Error>> => {
   try {
-    const document = adminConfig.db.collection('users').doc(`${request.user?.username}`)
+    const document = adminConfig.db.collection('users').doc(`${request.user?.email}`)
     // TODO: validate body?
     await document.update(request.body)
 
