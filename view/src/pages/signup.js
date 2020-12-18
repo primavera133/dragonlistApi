@@ -3,16 +3,21 @@ import { jsx } from '@emotion/react'
 
 import React, { useState } from 'react'
 import tw from 'twin.macro'
+import { useQuery } from 'react-query'
 
 import * as authService from '../service/authService'
 import authApi from '../api/auth'
+import configApi from '../api/config'
 import TextInput from '../components/TextInput'
 import Checkbox from '../components/Checkbox'
+import Select from '../components/Select'
 import PasswordInput from '../components/PasswordInput'
 import Button from '../components/Button'
 import Layout from '../components/Layout'
 
 const loginPage = ({ history }) => {
+  const { isFetching: isFetchingCountries, data: countries } = useQuery('countries', configApi.getCountries)
+
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
@@ -63,33 +68,20 @@ const loginPage = ({ history }) => {
   return (
     <Layout>
       <form tw="grid grid-cols-2 gap-4" onSubmit={onSubmit}>
-        <div>
-          <TextInput
-            id="firstName"
-            name="firstName"
-            label="First name"
-            value={firstName}
-            onChange={(v) => onUpdate(setFirstName, v)}
-          />
-        </div>
-        <div>
-          <TextInput
-            id="lastName"
-            name="lastName"
-            label="Last name"
-            value={lastName}
-            onChange={(v) => onUpdate(setLastName, v)}
-          />
-        </div>
-        <div>
-          <TextInput
-            id="country"
-            name="country"
-            label="Country"
-            value={country}
-            onChange={(v) => onUpdate(setCountry, v)}
-          />
-        </div>
+        <TextInput
+          id="firstName"
+          name="firstName"
+          label="First name"
+          value={firstName}
+          onChange={(v) => onUpdate(setFirstName, v)}
+        />
+        <TextInput
+          id="lastName"
+          name="lastName"
+          label="Last name"
+          value={lastName}
+          onChange={(v) => onUpdate(setLastName, v)}
+        />
         <div>
           <TextInput
             id="phoneNumber"
@@ -116,15 +108,23 @@ const loginPage = ({ history }) => {
             onChange={(v) => onUpdate(setPhonePublic, v)}
           />
         </div>
-        <div>
-          <PasswordInput
-            id="password"
-            name="password"
-            label="Password"
-            value={password}
-            onChange={(v) => onUpdate(setPassword, v)}
+        {!isFetchingCountries && (
+          <Select
+            name="country"
+            id="country"
+            options={countries}
+            label="Country"
+            onChange={(v) => onUpdate(setCountry, v)}
           />
-        </div>
+        )}
+
+        <PasswordInput
+          id="password"
+          name="password"
+          label="Password"
+          value={password}
+          onChange={(v) => onUpdate(setPassword, v)}
+        />
         <div>
           <Button isPrimary type="submit" disabled={formDisabled}>
             Sign up

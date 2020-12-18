@@ -1,12 +1,12 @@
 import { getAuthHeader } from '../service/authService'
 import { defaultFetchSettings } from './common'
 
-const getUser = async () => {
+const getCountries = async () => {
   try {
-    const url = '/api/user'
+    const url = '/api/countries'
 
     const response = await fetch(url, {
-      ...defaultFetchSettings(),
+      ...defaultFetchSettings,
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -14,10 +14,7 @@ const getUser = async () => {
       },
     })
     if (!response.ok) {
-      // if (response.status > 400) {
-      //   logout()
-      // }
-      throw new Error('Get user failed')
+      throw new Error('Get countries failed')
     }
     return await response.json()
   } catch (error) {
@@ -26,4 +23,4 @@ const getUser = async () => {
   }
 }
 
-export default { getUser }
+export default { getCountries }
