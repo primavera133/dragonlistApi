@@ -12,7 +12,15 @@ import signupPage from './pages/signup'
 import profilePage from './pages/profile'
 import adminPage from './pages/admin'
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: true,
+      retry: 0,
+      staleTime: 60000,
+    },
+  },
+})
 
 const App = () => {
   return (
