@@ -1,4 +1,4 @@
-import { getAuthHeader } from '../service/authService'
+import { getAuthHeader } from '../services/authService'
 import { defaultFetchSettings } from './common'
 
 const getCountries = async () => {
@@ -10,7 +10,6 @@ const getCountries = async () => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        ...getAuthHeader(),
       },
     })
     if (!response.ok) {

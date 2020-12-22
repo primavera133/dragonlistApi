@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import tw from 'twin.macro'
 import { useQuery } from 'react-query'
 
-import * as authService from '../service/authService'
+import * as authService from '../services/authService'
 import authApi from '../api/auth'
 import configApi from '../api/config'
 import TextInput from '../components/TextInput'
@@ -58,7 +58,6 @@ const loginPage = ({ history }) => {
         email,
         password,
       })
-      authService.login(token, userData.roles)
       history.push('/')
     } catch (error) {
       console.error(error)

@@ -1,16 +1,17 @@
-import { getAuthHeader } from '../service/authService'
+import { getAuthHeader } from '../services/authService'
 import { defaultFetchSettings } from './common'
 
 const getUser = async () => {
   try {
     const url = '/api/user'
+    const authHeader = await getAuthHeader()
 
     const response = await fetch(url, {
-      ...defaultFetchSettings(),
+      ...defaultFetchSettings,
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        ...getAuthHeader(),
+        ...authHeader,
       },
     })
     if (!response.ok) {

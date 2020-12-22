@@ -1,23 +1,36 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Route, Redirect } from 'react-router-dom'
-import * as AuthService from '../service/authService'
+// import * as AuthService from '../services/authService'
+import { AuthContext } from '../services/authContext'
+import Layout from './Layout'
+import Loader from './Loader'
 
 const ProtectedRoute = ({ component: Component, permittedRoles, ...rest }) => {
+  const { authUser, loginFailed } = useContext(AuthContext)
+
   return (
     <Route
       {...rest}
-      render={(props) =>
-        AuthService.isAuthenticated(permittedRoles) === true ? (
-          <Component {...props} />
-        ) : (
-          <Redirect
-            to={{
-              pathname: '/login',
-              state: { from: props.location },
-            }}
-          />
-        )
-      }
+      render={(props) => {
+        if (loginFailed) {
+          return (
+            <Redirect
+              to={{
+                pathname: '/signin',
+                state: { from: props.location },
+              }}
+            />
+          )
+        }
+        if (!authUser)
+          return (
+            <Layout>
+              <Loader />
+            </Layout>
+          )
+        // AuthService.isAuthenticated(permittedRoles) === true ? (
+        return <Component {...props} />
+      }}
     />
   )
 }
