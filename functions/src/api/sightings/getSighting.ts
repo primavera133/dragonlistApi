@@ -1,10 +1,10 @@
 import { Request, Response } from 'express'
-import adminConfig from '../../util/admin'
+import { db } from '../../index'
 import { ISighting } from '../../types'
 
 const getSighting = async (request: Request, response: Response): Promise<Response<ISighting[]> | Error> => {
   try {
-    const dbResponse = await adminConfig.db.doc(`/sightings/${request.params.sightingId}`).get()
+    const dbResponse = await db.doc(`/sightings/${request.params.sightingId}`).get()
     const sightingItem: ISighting = dbResponse.data() as ISighting
 
     if (sightingItem.countryRef) {

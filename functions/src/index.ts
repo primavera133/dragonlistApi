@@ -1,12 +1,15 @@
 import * as functions from 'firebase-functions'
-
+import admin from 'firebase-admin'
+import firebase from 'firebase'
 import express from 'express'
 
 import signUpUser from './api/users/signUpUser'
+import postUser from './api/users/postUser'
 import uploadProfilePhoto from './api/users/uploadProfilePhoto'
 import getUserDetails from './api/users/getUserDetails'
 import updateUserDetails from './api/users/updateUserDetails'
 import deleteUser from './api/users/deleteUser'
+import loginUser from './api/users/login'
 
 import getAllCountries from './api/country/getAllCountries'
 import getCountry from './api/country/getCountry'
@@ -21,12 +24,19 @@ import getSighting from './api/sightings/getSighting'
 import postSighting from './api/sightings/postSighting'
 
 import auth from './util/auth'
+import config from './config/firebaseConfig'
+
+admin.initializeApp(config)
+firebase.initializeApp(config)
+export const db = admin.firestore()
 
 const app = express()
 
+app.post('/login', loginUser)
 app.post('/signup', signUpUser)
 app.post('/user/image', auth(), uploadProfilePhoto)
 app.get('/user', auth(), getUserDetails)
+app.post('/user', auth(), postUser)
 app.put('/user', auth(), updateUserDetails)
 app.delete('/user/:email', auth('admin'), deleteUser)
 

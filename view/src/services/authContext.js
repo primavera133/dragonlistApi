@@ -11,6 +11,7 @@ export const AuthProvider = ({ children }) => {
     firebaseApp.auth().onAuthStateChanged((authUser) => {
       setAuthUser(authUser)
       setLoginFailed(!authUser)
+      console.log('onAuthStateChanged', !!authUser)
     })
   }, [])
 

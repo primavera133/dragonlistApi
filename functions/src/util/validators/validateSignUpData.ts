@@ -11,12 +11,10 @@ export const validateSignUpData = (data: IUserSignupData): IValidatedResponse<IS
     errors.email = 'Must be valid email address'
   }
 
-  if (isEmpty(data.firstName)) errors.firstName = 'Must not be empty'
-  if (isEmpty(data.lastName)) errors.lastName = 'Must not be empty'
-  if (isEmpty(data.phoneNumber)) errors.phoneNumber = 'Must not be empty'
-  if (isEmpty(data.country)) errors.country = 'Must not be empty'
+  // if (isEmpty(data.firstName)) errors.firstName = 'Must not be empty'
+  // if (isEmpty(data.lastName)) errors.lastName = 'Must not be empty'
 
-  if (isEmpty(data.password)) errors.password = 'Must not be empty'
+  // if (isEmpty(data.password)) errors.password = 'Must not be empty'
 
   return {
     errors,

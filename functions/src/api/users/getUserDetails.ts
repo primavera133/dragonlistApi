@@ -1,18 +1,18 @@
 import { Response } from 'express'
-import { IGetUserAuthInfoRequest, IUser } from '../../types'
-import adminConfig from '../../util/admin'
+import { IAuthedRequest, IUser } from '../../types'
+import { db } from '../../index'
 
 interface IUserData {
   userCredentials?: IUser
 }
 
 const getUserDetails = async (
-  request: IGetUserAuthInfoRequest,
+  request: IAuthedRequest,
   response: Response
 ): Promise<Response<IUserData> | Response<Error>> => {
   try {
     const userData: IUserData = {}
-    const doc = await adminConfig.db.doc(`/users/${request.user?.email}`).get()
+    const doc = await db.doc(`/users/${request.user?.email}`).get()
 
     if (!doc.exists) {
       throw new Error('Doc does not exist')

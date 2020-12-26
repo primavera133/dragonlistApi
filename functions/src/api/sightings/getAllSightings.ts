@@ -1,10 +1,10 @@
 import { Request, Response } from 'express'
-import adminConfig from '../../util/admin'
+import { db } from '../../index'
 import { ISighting } from '../../types'
 
 const getAllSightings = async (request: Request, response: Response): Promise<Response<ISighting[]> | Error> => {
   try {
-    const dbResponse = await adminConfig.db.collection('sightings').orderBy('specie', 'asc').get()
+    const dbResponse = await db.collection('sightings').orderBy('specie', 'asc').get()
     const list: ISighting[] = []
     for (const doc of dbResponse.docs) {
       const sightingItem = doc.data()

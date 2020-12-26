@@ -1,18 +1,16 @@
 import firebase from 'firebase'
 import { Request, Response } from 'express'
-
-import adminConfig from '../../util/admin'
+import { db } from '../../index'
 import validators from '../../util/validators/index'
 import { IUserSignupData } from '../../types'
 
+//Deprecated?
 const signUpUser = async (request: Request, response: Response): Promise<void | Response<Error>> => {
   try {
     const newUser: IUserSignupData = {
       firstName: request.body.firstName,
       lastName: request.body.lastName,
       email: request.body.email,
-      phoneNumber: request.body.phoneNumber,
-      country: request.body.country,
       password: request.body.password,
     }
 
@@ -20,13 +18,13 @@ const signUpUser = async (request: Request, response: Response): Promise<void | 
 
     if (!valid) return response.status(400).json(errors)
 
-    const doc = await adminConfig.db.doc(`/users/${newUser.email}`).get()
+    const doc = await db.doc(`/users/${newUser.email}`).get()
 
     if (doc.exists) {
       return response.status(400).json({ email: 'this email is already taken' })
     }
 
-    const data = await firebase.auth().createUserWithEmailAndPassword(newUser.email, newUser.password)
+    const data = await firebase.auth().createUserWithEmailAndPassword(newUser.email, newUser.password || '')
 
     if (data.user === null) {
       throw new Error('Null user in data')
@@ -38,14 +36,12 @@ const signUpUser = async (request: Request, response: Response): Promise<void | 
     const userCredentials = {
       firstName: newUser.firstName,
       lastName: newUser.lastName,
-      phoneNumber: newUser.phoneNumber,
-      country: newUser.country,
       email: newUser.email,
       createdAt: new Date().toISOString(),
       userId,
       roles: ['user'],
     }
-    await adminConfig.db.doc(`/users/${newUser.email}`).set(userCredentials)
+    await db.doc(`/users/${newUser.email}`).set(userCredentials)
 
     return response.status(201).json({ token, userData: userCredentials })
   } catch (err) {

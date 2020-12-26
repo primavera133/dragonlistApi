@@ -1,20 +1,17 @@
-// import admin from 'firebase-admin'
+import admin from 'firebase-admin'
 import BusBoy from 'busboy'
 import path from 'path'
 import os from 'os'
 import fs from 'fs'
 import { v4 as UUID } from 'uuid'
 import { Response } from 'express'
-import { IGetUserAuthInfoRequest } from '../../types'
+import { db } from '../../index'
+import { IAuthedRequest } from '../../types'
 import config from '../../config/firebaseConfig'
 
-import adminConfig from '../../util/admin'
 import { deleteImage } from './deleteImage'
 
-const uploadProfilePhoto = async (
-  request: IGetUserAuthInfoRequest,
-  response: Response
-): Promise<void | Response<Error>> => {
+const uploadProfilePhoto = async (request: IAuthedRequest, response: Response): Promise<void | Response<Error>> => {
   try {
     const busboy = new BusBoy({ headers: request.headers })
 
@@ -38,7 +35,7 @@ const uploadProfilePhoto = async (
     busboy.on('finish', async () => {
       const uuid = UUID()
       try {
-        const uploadResponse = await adminConfig.admin
+        const uploadResponse = await admin
           .storage()
           .bucket()
           .upload(imageFilePath, {
@@ -56,7 +53,7 @@ const uploadProfilePhoto = async (
 
         const imageUrl = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/${fileName}?alt=media&token=${uuid}`
 
-        await adminConfig.db.doc(`/users/${request.user?.email}`).update({
+        await db.doc(`/users/${request.user?.email}`).update({
           imageUrl,
         })
 

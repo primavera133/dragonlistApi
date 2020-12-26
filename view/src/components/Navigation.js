@@ -47,19 +47,9 @@ export default function Navigation() {
         </div>
       ) : (
         <>
-          <NavLink to="/signin">
-            <button>Sign in</button>
+          <NavLink to="/signinemail">
+            <button>Sign in with email</button>
           </NavLink>{' '}
-          |
-          <NavLink
-            exact
-            activeStyle={{
-              fontWeight: 'bold',
-            }}
-            to={`/signup`}
-          >
-            Sign up
-          </NavLink>
         </>
       )}
     </div>

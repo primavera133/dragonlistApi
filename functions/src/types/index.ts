@@ -28,11 +28,9 @@ export interface ILoginError {
 
 export interface IUserSignupData {
   email: string
-  firstName: string
-  lastName: string
-  phoneNumber: string
-  country: string
-  password: string
+  firstName?: string
+  lastName?: string
+  password?: string
 }
 
 export interface ISignupError {
@@ -61,7 +59,7 @@ export interface IUser {
   password?: string
 }
 
-export interface IGetUserAuthInfoRequest extends Request {
+export interface IAuthedRequest extends Request {
   user?: IUser
   rawBody?: any
 }

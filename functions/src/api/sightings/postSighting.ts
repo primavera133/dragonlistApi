@@ -1,5 +1,5 @@
 import { Response } from 'express'
-import adminConfig from '../../util/admin'
+import { db } from '../../index'
 import validators from '../../util/validators/index'
 import refs from '../../util/refs'
 import { ISighting, ISightingFormData, ISightingFormRequest } from '../../types'
@@ -33,7 +33,7 @@ const postSighting = async (
 
     if (!valid) return response.status(400).json(errors)
 
-    const doc = await adminConfig.db.collection('sightings').add(newSighting)
+    const doc = await db.collection('sightings').add(newSighting)
 
     return response.status(201).json({
       sightingId: doc.id,

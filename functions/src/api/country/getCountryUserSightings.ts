@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import adminConfig from '../../util/admin'
+import { db } from '../../index'
 import { ISighting } from '../../types'
 
 const getCountryUserSightings = async (
@@ -7,9 +7,7 @@ const getCountryUserSightings = async (
   response: Response
 ): Promise<Response<ISighting[]> | Error> => {
   try {
-    let sightingsQuery = (await adminConfig.db.collection(
-      `sightings`
-    )) as FirebaseFirestore.Query<FirebaseFirestore.DocumentData>
+    let sightingsQuery = (await db.collection(`sightings`)) as FirebaseFirestore.Query<FirebaseFirestore.DocumentData>
 
     sightingsQuery = sightingsQuery.where('country', '==', request.params.countryId)
     sightingsQuery = sightingsQuery.where('email', '==', request.params.email)

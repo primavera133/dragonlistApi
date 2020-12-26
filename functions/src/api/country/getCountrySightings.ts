@@ -1,10 +1,10 @@
 import { Request, Response } from 'express'
-import adminConfig from '../../util/admin'
+import { db } from '../../index'
 import { ISighting } from '../../types'
 
 const getCountrySightings = async (request: Request, response: Response): Promise<Response<ISighting[]> | Error> => {
   try {
-    const sightings = await adminConfig.db
+    const sightings = await db
       .collection(`sightings`)
       .where('country', '==', request.params.countryId)
       .orderBy('date')

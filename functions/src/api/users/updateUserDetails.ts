@@ -1,18 +1,18 @@
 import { Response } from 'express'
-import adminConfig from '../../util/admin'
+import { db } from '../../index'
 
-import { IGetUserAuthInfoRequest } from '../../types'
+import { IAuthedRequest } from '../../types'
 
 type TUserDetailsResponse = {
   message: string
 }
 
 const updateUserDetails = async (
-  request: IGetUserAuthInfoRequest,
+  request: IAuthedRequest,
   response: Response
 ): Promise<Response<TUserDetailsResponse> | Response<Error>> => {
   try {
-    const document = adminConfig.db.collection('users').doc(`${request.user?.email}`)
+    const document = db.collection('users').doc(`${request.user?.email}`)
     // TODO: validate body?
     await document.update(request.body)
 

@@ -1,14 +1,10 @@
 import admin from 'firebase-admin'
-import adminConfig from './admin'
+import { db } from '../index'
 import { Response, NextFunction } from 'express'
-import { IGetUserAuthInfoRequest } from '../types'
+import { IAuthedRequest } from '../types'
 
 const auth = (...permittedRoles: string[]) => {
-  return async (
-    request: IGetUserAuthInfoRequest,
-    response: Response,
-    next: NextFunction
-  ): Promise<void | Response<Error>> => {
+  return async (request: IAuthedRequest, response: Response, next: NextFunction): Promise<void | Response<Error>> => {
     try {
       let idToken
       if (request.headers.authorization && request.headers.authorization.startsWith('Bearer ')) {
@@ -22,19 +18,25 @@ const auth = (...permittedRoles: string[]) => {
 
       request.user = decodedToken
 
-      const data = await adminConfig.db.collection('users').where('userId', '==', request.user.uid).limit(1).get()
+      const data = await db.collection('users').where('userId', '==', request.user.uid).limit(1).get()
 
-      const userData = data.docs[0].data()
-
-      if (permittedRoles.length) {
-        const permissonIntersection = permittedRoles.filter((role) => userData.roles.includes(role))
-        if (!permissonIntersection.length) {
+      if (!data.docs.length) {
+        if (permittedRoles.length) {
           throw new Error('Insufficient user role')
         }
+      } else {
+        const userData = data.docs[0].data()
+
+        if (permittedRoles.length) {
+          const permissonIntersection = permittedRoles.filter((role) => userData.roles.includes(role))
+          if (!permissonIntersection.length) {
+            throw new Error('Insufficient user role')
+          }
+        }
+        request.user.email = userData.email
+        request.user.imageUrl = userData.imageUrl
       }
 
-      request.user.email = userData.email
-      request.user.imageUrl = userData.imageUrl
       next()
     } catch (err) {
       console.error('Error while verifying token', err)
