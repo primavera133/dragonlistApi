@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 
+import { AuthContext } from '../services/authContext'
 import userApi from '../api/user'
 import TextInput from '../components/TextInput'
 import Button from '../components/Button'
 
 const NewUserForm = ({ email }) => {
+  const { setUnfinishedProfile } = useContext(AuthContext)
+
   const [formDisabled, setFormDisabled] = useState(true)
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
@@ -19,7 +22,8 @@ const NewUserForm = ({ email }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await userApi.postUser(JSON.stringify({ email, firstName, lastName }))
+    await userApi.putUser(JSON.stringify({ email, firstName, lastName, unfinishedProfile: false }))
+    setUnfinishedProfile(false)
     console.log('update successful')
   }
 

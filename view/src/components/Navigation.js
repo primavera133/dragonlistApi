@@ -5,10 +5,11 @@ import { firebaseApp } from '../firebase'
 import { AuthContext } from '../services/authContext'
 
 export default function Navigation() {
-  const { authUser } = useContext(AuthContext)
+  const { authUser, unfinishedProfile } = useContext(AuthContext)
 
   return (
     <div>
+      {unfinishedProfile && <div>UNFINISHED PROFILE</div>}
       {!!authUser ? (
         <div>
           <p>{`Welcome, ${authUser.displayName}`}</p>

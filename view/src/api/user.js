@@ -28,11 +28,9 @@ const getUser = async () => {
 }
 
 const postUser = async (userData) => {
-  console.log('postUser', userData)
   try {
     const url = '/api/user'
     const authHeader = await getAuthHeader()
-    console.log('authHeader', authHeader)
 
     const response = await fetch(url, {
       ...defaultFetchSettings,
@@ -56,4 +54,28 @@ const postUser = async (userData) => {
   }
 }
 
-export default { getUser, postUser }
+const putUser = async (userData) => {
+  try {
+    const url = '/api/user'
+    const authHeader = await getAuthHeader()
+
+    const response = await fetch(url, {
+      ...defaultFetchSettings,
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        ...authHeader,
+      },
+      body: userData,
+    })
+    if (!response.ok) {
+      throw new Error(`Put user failed: ${response.message}`)
+    }
+    return await response.json()
+  } catch (error) {
+    console.error(error)
+    throw new Error(error)
+  }
+}
+
+export default { getUser, postUser, putUser }

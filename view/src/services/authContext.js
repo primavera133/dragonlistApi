@@ -6,14 +6,19 @@ export const AuthContext = React.createContext()
 export const AuthProvider = ({ children }) => {
   const [authUser, setAuthUser] = useState(null)
   const [loginFailed, setLoginFailed] = useState(false)
+  const [unfinishedProfile, setUnfinishedProfile] = useState(false)
 
   useEffect(() => {
     firebaseApp.auth().onAuthStateChanged((authUser) => {
       setAuthUser(authUser)
       setLoginFailed(!authUser)
-      console.log('onAuthStateChanged', !!authUser)
+      // console.log('onAuthStateChanged', !!authUser)
     })
   }, [])
 
-  return <AuthContext.Provider value={{ authUser, loginFailed }}>{children}</AuthContext.Provider>
+  return (
+    <AuthContext.Provider value={{ authUser, loginFailed, unfinishedProfile, setUnfinishedProfile }}>
+      {children}
+    </AuthContext.Provider>
+  )
 }

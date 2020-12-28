@@ -3,13 +3,14 @@ import admin from 'firebase-admin'
 import firebase from 'firebase'
 import express from 'express'
 
-import signUpUser from './api/users/signUpUser'
-import postUser from './api/users/postUser'
-import uploadProfilePhoto from './api/users/uploadProfilePhoto'
-import getUserDetails from './api/users/getUserDetails'
-import updateUserDetails from './api/users/updateUserDetails'
 import deleteUser from './api/users/deleteUser'
+import getUserDetails from './api/users/getUserDetails'
 import loginUser from './api/users/login'
+import postUser from './api/users/postUser'
+import putUser from './api/users/putUser'
+import signUpUser from './api/users/signUpUser'
+import updateUserDetails from './api/users/updateUserDetails'
+import uploadProfilePhoto from './api/users/uploadProfilePhoto'
 
 import getAllCountries from './api/country/getAllCountries'
 import getCountry from './api/country/getCountry'
@@ -37,6 +38,7 @@ app.post('/signup', signUpUser)
 app.post('/user/image', auth(), uploadProfilePhoto)
 app.get('/user', auth(), getUserDetails)
 app.post('/user', auth(), postUser)
+app.put('/user', auth(), putUser)
 app.put('/user', auth(), updateUserDetails)
 app.delete('/user/:email', auth('admin'), deleteUser)
 

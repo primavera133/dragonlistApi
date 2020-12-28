@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import { Route, Redirect } from 'react-router-dom'
+
+import { AuthContext } from '../services/authContext'
+import userApi from '../api/user'
 
 import Layout from '../components/Layout'
 import EmailForm from '../components/EmailForm'
 import NewUserForm from '../components/NewUserForm'
 
 const completeSignInPage = ({ history }) => {
+  const { setUnfinishedProfile } = useContext(AuthContext)
+
   const [isEmailSignin, setIsEmailSignin] = useState(true)
   const [error, setError] = useState(false)
   const [email, setEmail] = useState()
@@ -29,7 +34,9 @@ const completeSignInPage = ({ history }) => {
       if (!result.additionalUserInfo.isNewUser) {
         history.push('/profile')
       } else {
-        // await userApi.postUser(JSON.stringify({ email }))
+        setUnfinishedProfile(true)
+        await userApi.postUser(JSON.stringify({ email, unfinishedProfile: true }))
+        // TODO: replace with enforcing modal?
         setIsNewUser(result.additionalUserInfo.isNewUser)
       }
     } catch (error) {

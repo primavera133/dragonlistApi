@@ -14,7 +14,6 @@ export const addRoles = (roles) => {
 }
 
 export const getAuthHeader = async () => {
-  console.log('getAuthHeader')
   try {
     const token = await firebase.auth().currentUser.getIdToken()
     return { Authorization: `Bearer ${token}` }
