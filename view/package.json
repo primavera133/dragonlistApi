@@ -5,16 +5,21 @@
     }
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test --env=jsdom",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\""
   },
   "dependencies": {
+    "@craco/craco": "^6.0.0",
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
-    "@tailwindcss/forms": "^0.2.1",
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "autoprefixer": "^10.1.0",
     "dotenv": "^8.2.0",
     "firebase": "^8.2.1",
     "react": "^17.0.1",
@@ -26,6 +31,8 @@
     "twin.macro": "^2.0.1"
   },
   "devDependencies": {
+    "postcss": "^8.2.1",
+    "postcss-loader": "^4.1.0",
     "prettier": "^2.1.2"
   },
   "browserslist": {

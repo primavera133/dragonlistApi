@@ -8,7 +8,7 @@ const PasswordInput = ({ id, label, name, value, placeholder, onChange }) => (
   <label htmlFor={id} tw="block  text-lg">
     <span tw="text-gray-900">{label}</span>
     <input
-      tw="mt-1 px-4 py-2 block w-full rounded focus:outline-none"
+      tw="mt-1 px-4 py-2 block w-full rounded border-gray-300 border"
       type="password"
       id={id}
       name={name}

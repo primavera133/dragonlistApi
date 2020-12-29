@@ -2,6 +2,7 @@ import { jsx } from '@emotion/react'
 /** @jsxImportSource @emotion/react */
 
 import React, { useState, useContext, useEffect } from 'react'
+import tw from 'twin.macro'
 import firebase from 'firebase/app'
 import { Redirect } from 'react-router-dom'
 
@@ -9,6 +10,9 @@ import { AuthContext } from '../services/authContext'
 import Layout from '../components/Layout'
 import EmailForm from '../components/EmailForm'
 import { isEmail } from '../utils/isEmail'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckSquare, faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
+import PageHeader from '../components/PageHeader'
 
 const signInEmailPage = ({ history }) => {
   const { authUser } = useContext(AuthContext)
@@ -42,34 +46,67 @@ const signInEmailPage = ({ history }) => {
 
   return (
     <Layout>
-      <h1>Sign in with email</h1>
-      <EmailForm onSubmit={setEmail} buttonText={'Next'} />
-      {success && (
-        <>
-          <div>
-            <p>
-              A sign-in email with additional instructions was sent to {email}. Check your inbox to complete sign-in.
-            </p>
-          </div>
-          <div>
-            <h3 onClick={() => setTrouble(true)}>Trouble getting email?</h3>
-            {trouble && (
+      <div tw="max-w-md">
+        <PageHeader>Sign in with email</PageHeader>
+        <p>
+          Dragonlist uses links-by-email to sign in. Enter your email address in the form below and we will send you a
+          link that you can use to sign in.
+        </p>
+        <p tw="mb-8">
+          If it's your first time signing in we will ask you a few additional questions to complete your profile.
+        </p>
+        <EmailForm
+          onSubmit={(v) => {
+            setSuccess(false)
+            setEmail(v)
+          }}
+          buttonText={'Next'}
+        />
+        {success && (
+          <>
+            <div tw="my-8">
               <p>
-                <h4>Try these common fixes:</h4>
-                <ul>
-                  <li>Check if the email was marked as spam or filtered. Check your internet connection.</li>
-                  <li>Check that you did not misspell your email.</li>
-                  <li>
-                    Check that your inbox space is not running out or other inbox settings related issues. If the steps
-                    above didn't work, you can resend the email. Note that this will deactivate the link in the older
-                    email.
-                  </li>
-                </ul>
+                A sign-in email with additional instructions was sent to {email}. Check your inbox to complete sign-in.
               </p>
-            )}
-          </div>
-        </>
-      )}
+            </div>
+            <div>
+              <button
+                onClick={() => setTrouble(true)}
+                tw="cursor-pointer focus:outline-none focus:ring focus:border-blue-300"
+              >
+                <FontAwesomeIcon icon={faQuestionCircle} tw="mr-2 text-gray-800" />
+                <span tw="text-xl font-semibold">Trouble getting email?</span>
+              </button>
+              {trouble && (
+                <p>
+                  <h4>Try these common fixes:</h4>
+                  <ul>
+                    <li>
+                      <FontAwesomeIcon icon={faCheckSquare} tw="mr-2 text-gray-800" />
+                      Check if the email was marked as spam or filtered.{' '}
+                    </li>
+                    <li>
+                      <FontAwesomeIcon icon={faCheckSquare} tw="mr-2 text-gray-800" /> Check your internet connection.
+                    </li>
+                    <li>
+                      <FontAwesomeIcon icon={faCheckSquare} tw="mr-2 text-gray-800" />
+                      Check that you did not misspell your email.
+                    </li>
+                    <li>
+                      <FontAwesomeIcon icon={faCheckSquare} tw="mr-2 text-gray-800" />
+                      Check that your inbox space is not running out or other inbox settings related issues.
+                    </li>
+                    <li tw="mt-2">
+                      If the steps above didn't work, you can resend the email. Note that this will deactivate the link
+                      in the older email.
+                    </li>
+                  </ul>
+                </p>
+              )}
+            </div>
+          </>
+        )}
+      </div>
     </Layout>
   )
 }
