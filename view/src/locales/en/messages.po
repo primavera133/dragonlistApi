@@ -1,0 +1,283 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#: src/components/Select/Select.js:38
+msgid "-- select ---"
+msgstr "-- select ---"
+
+#: src/pages/signin/signinemail.js:77
+msgid "A sign-in email with additional instructions was sent to {email}. Check your inbox to complete sign-in."
+msgstr "A sign-in email with additional instructions was sent to {email}. Check your inbox to complete sign-in."
+
+#: src/components/NewUserForm/NewUserForm.js:85
+msgid "Basic personal details"
+msgstr "Basic personal details"
+
+#: src/pages/signin/signinemail.js:101
+msgid "Check if the email was marked as spam or filtered."
+msgstr "Check if the email was marked as spam or filtered."
+
+#: src/pages/signin/signinemail.js:109
+msgid "Check that you did not misspell your email."
+msgstr "Check that you did not misspell your email."
+
+#: src/pages/signin/signinemail.js:113
+msgid "Check that your inbox space is not running out or other inbox settings related issues."
+msgstr "Check that your inbox space is not running out or other inbox settings related issues."
+
+#: src/pages/signin/signinemail.js:105
+msgid "Check your internet connection."
+msgstr "Check your internet connection."
+
+#: src/pages/completeSignIn/completeSignIn.js:119
+msgid "Complete"
+msgstr "Complete"
+
+#: src/pages/completeSignIn/completeSignIn.js:114
+msgid "Complete sign in"
+msgstr "Complete sign in"
+
+#: src/components/Footer/Footer.js:84
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: src/components/NewUserForm/NewUserForm.js:126
+msgid "Contact details"
+msgstr "Contact details"
+
+#: src/components/NewUserForm/NewUserForm.js:129
+msgid "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
+msgstr "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
+
+#: src/components/Navbar/Navbar.js:41
+msgid "Dragonlist"
+msgstr "Dragonlist"
+
+#: src/pages/signin/signinemail.js:56
+msgid "Dragonlist uses links-by-email to sign in. Enter your email address in the form below and we will send you a link that you can use to sign in."
+msgstr "Dragonlist uses links-by-email to sign in. Enter your email address in the form below and we will send you a link that you can use to sign in."
+
+#: src/components/EmailForm/EmailForm.js:34
+#: src/components/NewUserForm/NewUserForm.js:87
+msgid "Email"
+msgstr "Email"
+
+#: src/components/NewUserForm/NewUserForm.js:145
+msgid "Email for contact"
+msgstr "Email for contact"
+
+#: src/pages/home/home.js:136
+msgid "Find local help"
+msgstr "Find local help"
+
+#: src/components/Footer/Footer.js:35
+#~ msgid "Find us on any of these platforms, we respond 1-2 business days."
+#~ msgstr "Find us on any of these platforms, we respond 1-2 business days."
+
+#: src/components/NewUserForm/NewUserForm.js:92
+msgid "First name"
+msgstr "First name"
+
+#: src/components/Footer/Footer.js:100
+#~ msgid "Free Products"
+#~ msgstr "Free Products"
+
+#: src/components/Footer/Footer.js:52
+msgid "GBIF"
+msgstr "GBIF"
+
+#: src/components/Footer/Footer.js:92
+#~ msgid "Github"
+#~ msgstr "Github"
+
+#: src/components/Navbar/Navbar.js:74
+msgid "How-to"
+msgstr "How-to"
+
+#: src/components/Footer/Footer.js:57
+msgid "IUCN Red List"
+msgstr "IUCN Red List"
+
+#: src/pages/signin/signinemail.js:62
+msgid "If it's your first time signing in we will ask you a few additional questions to complete your profile."
+msgstr "If it's your first time signing in we will ask you a few additional questions to complete your profile."
+
+#: src/pages/signin/signinemail.js:118
+msgid "If the steps above didn't work, you can resend the email. Note that this will deactivate the link in the older email."
+msgstr "If the steps above didn't work, you can resend the email. Note that this will deactivate the link in the older email."
+
+#: src/components/Footer/Footer.js:35
+msgid "If you are old and wish to be young again, try and identify a dragonfly! - Simon Barres"
+msgstr "If you are old and wish to be young again, try and identify a dragonfly! - Simon Barres"
+
+#: src/components/NewUserForm/NewUserForm.js:140
+msgid "Including a country prefix is helpful."
+msgstr "Including a country prefix is helpful."
+
+#: src/components/NewUserForm/NewUserForm.js:100
+msgid "Last name"
+msgstr "Last name"
+
+#: src/components/Footer/Footer.js:32
+#~ msgid "Let's keep in touch!"
+#~ msgstr "Let's keep in touch!"
+
+#: src/components/Navbar/Navbar.js:109
+msgid "Logout"
+msgstr "Logout"
+
+#: src/components/Footer/Footer.js:113
+#~ msgid "MIT License"
+#~ msgstr "MIT License"
+
+#: src/pages/completeSignIn/completeSignIn.js:102
+msgid "Nothing to see here."
+msgstr "Nothing to see here."
+
+#: src/pages/completeSignIn/completeSignIn.js:95
+msgid "Nothing to see here. Move on"
+msgstr "Nothing to see here. Move on"
+
+#: src/components/Footer/Footer.js:69
+msgid "Other Resources"
+msgstr "Other Resources"
+
+#: src/components/NewUserForm/NewUserForm.js:137
+msgid "Phone number"
+msgstr "Phone number"
+
+#: src/pages/completeSignIn/completeSignIn.js:117
+msgid "Please provide email for confirmation"
+msgstr "Please provide email for confirmation"
+
+#: src/components/Footer/Footer.js:79
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+#: src/components/Navbar/Navbar.js:95
+msgid "Profile"
+msgstr "Profile"
+
+#: src/pages/home/home.js:101
+msgid "Put a pin on what you've seen"
+msgstr "Put a pin on what you've seen"
+
+#: src/pages/home/home.js:104
+msgid "Record where you first saw a specie in a country, or where your first sighting in a region of your country."
+msgstr "Record where you first saw a specie in a country, or where your first sighting in a region of your country."
+
+#: src/pages/home/home.js:61
+msgid "Record your dragonfly observations and find like-minded new friends."
+msgstr "Record your dragonfly observations and find like-minded new friends."
+
+#: src/components/NewUserForm/NewUserForm.js:107
+msgid "Resident country"
+msgstr "Resident country"
+
+#: src/components/NewUserForm/NewUserForm.js:117
+msgid "Resident region"
+msgstr "Resident region"
+
+#: src/components/NewUserForm/NewUserForm.js:153
+msgid "Save"
+msgstr "Save"
+
+#: src/components/Navbar/Navbar.js:124
+#: src/pages/home/home.js:174
+msgid "Sign in"
+msgstr "Sign in"
+
+#: src/pages/signin/signinemail.js:53
+msgid "Sign in with email"
+msgstr "Sign in with email"
+
+#: src/components/Footer/Footer.js:74
+msgid "Terms & Conditions"
+msgstr "Terms & Conditions"
+
+#: src/components/NewUserForm/NewUserForm.js:158
+msgid "There are still mandatory fields missing. You will be able to save when those are completed"
+msgstr "There are still mandatory fields missing. You will be able to save when those are completed"
+
+#: src/components/NewUserForm/NewUserForm.js:148
+msgid "This email can be the one you login with, or any other."
+msgstr "This email can be the one you login with, or any other."
+
+#: src/pages/home/home.js:155
+#: src/pages/home/home.js:177
+msgid "This is a project made mainly for fun. For the fun of listing your observations. For the fun of comparing your lists and for the fun of finding a companion when you are in need of local guidance."
+msgstr "This is a project made mainly for fun. For the fun of listing your observations. For the fun of comparing your lists and for the fun of finding a companion when you are in need of local guidance."
+
+#: src/pages/home/home.js:164
+msgid "This is not citizen-science. You probably don't want to record every single observation in our database. There are better tools for that. See our <0>list of related services</0> for those."
+msgstr "This is not citizen-science. You probably don't want to record every single observation in our database. There are better tools for that. See our <0>list of related services</0> for those."
+
+#: src/pages/home/home.js:64
+msgid "This site is all about sharing lists and finding friends. Keeping lists is fun and why not have fun with other like minded?"
+msgstr "This site is all about sharing lists and finding friends. Keeping lists is fun and why not have fun with other like minded?"
+
+#: src/pages/home/home.js:212
+msgid "This site was made by some members of <0>Trollslände­föreningen</0>, the Swedish dragonfly society."
+msgstr "This site was made by some members of <0>Trollslände­föreningen</0>, the Swedish dragonfly society."
+
+#: src/pages/home/home.js:123
+msgid "Top 10 lists per country. Or per region of your country."
+msgstr "Top 10 lists per country. Or per region of your country."
+
+#: src/pages/home/home.js:139
+msgid "Traveling to a new region? Want some advice on good places or where to find a special specie? Why not ask someone who saw it before?"
+msgstr "Traveling to a new region? Want some advice on good places or where to find a special specie? Why not ask someone who saw it before?"
+
+#: src/components/Footer/Footer.js:62
+msgid "Trollsländeföreningen"
+msgstr "Trollsländeföreningen"
+
+#: src/pages/signin/signinemail.js:90
+msgid "Trouble getting email?"
+msgstr "Trouble getting email?"
+
+#: src/pages/signin/signinemail.js:96
+msgid "Try these common fixes:"
+msgstr "Try these common fixes:"
+
+#: src/components/Footer/Footer.js:42
+msgid "Useful Links"
+msgstr "Useful Links"
+
+#: src/components/NewUserForm/NewUserForm.js:80
+msgid "Welcome new user"
+msgstr "Welcome new user"
+
+#: src/pages/home/home.js:161
+msgid "What is this not?"
+msgstr "What is this not?"
+
+#: src/pages/home/home.js:152
+msgid "What is this website?"
+msgstr "What is this website?"
+
+#: src/pages/home/home.js:209
+msgid "Who made this?"
+msgstr "Who made this?"
+
+#: src/pages/home/home.js:120
+msgid "Who saw most?"
+msgstr "Who saw most?"
+
+#: src/components/Footer/Footer.js:47
+msgid "iNaturalist"
+msgstr "iNaturalist"
+
+#: src/components/Footer/Footer.js:96
+msgid "{0} Dragonlist by <0>Jonas Myrenås</0>, <1>Github</1>."
+msgstr "{0} Dragonlist by <0>Jonas Myrenås</0>, <1>Github</1>."

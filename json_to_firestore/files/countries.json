@@ -1,10 +1,1522 @@
 [
   {
+    "itemID": "afghanistan",
+    "name": "Afghanistan",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "albania",
+    "name": "Albania",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "algeria",
+    "name": "Algeria",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "andorra",
+    "name": "Andorra",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "angola",
+    "name": "Angola",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "antigua and barbuda",
+    "name": "Antigua and Barbuda",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "argentina",
+    "name": "Argentina",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "armenia",
+    "name": "Armenia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "australia",
+    "name": "Australia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "austria",
+    "name": "Austria",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "azerbaijan",
+    "name": "Azerbaijan",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "bahamas",
+    "name": "Bahamas",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "bahrain",
+    "name": "Bahrain",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "bangladesh",
+    "name": "Bangladesh",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "barbados",
+    "name": "Barbados",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "belarus",
+    "name": "Belarus",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "belgium",
+    "name": "Belgium",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "belize",
+    "name": "Belize",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "benin",
+    "name": "Benin",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "bhutan",
+    "name": "Bhutan",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "bolivia",
+    "name": "Bolivia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "bosnia and herzegovina",
+    "name": "Bosnia and Herzegovina",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "botswana",
+    "name": "Botswana",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "brazil",
+    "name": "Brazil",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "brunei",
+    "name": "Brunei",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "bulgaria",
+    "name": "Bulgaria",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "burkina faso",
+    "name": "Burkina Faso",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "burundi",
+    "name": "Burundi",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "côte d'ivoire",
+    "name": "Côte d'Ivoire",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "cabo verde",
+    "name": "Cabo Verde",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "cambodia",
+    "name": "Cambodia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "cameroon",
+    "name": "Cameroon",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "canada",
+    "name": "Canada",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "central african republic",
+    "name": "Central African Republic",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "chad",
+    "name": "Chad",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "chile",
+    "name": "Chile",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "china",
+    "name": "China",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "colombia",
+    "name": "Colombia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "comoros",
+    "name": "Comoros",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "congo-brazzaville",
+    "name": "Congo (Congo-Brazzaville)",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "costa Rica",
+    "name": "Costa Rica",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "croatia",
+    "name": "Croatia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "cuba",
+    "name": "Cuba",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "cyprus",
+    "name": "Cyprus",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "czechia",
+    "name": "Czechia (Czech Republic)",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "democratic republic of the congo",
+    "name": "Democratic Republic of the Congo",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "denmark",
+    "name": "Denmark",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "djibouti",
+    "name": "Djibouti",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "dominica",
+    "name": "Dominica",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "dominican republic",
+    "name": "Dominican Republic",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "ecuador",
+    "name": "Ecuador",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "egypt",
+    "name": "Egypt",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "el salvador",
+    "name": "El Salvador",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "equatorial guinea",
+    "name": "Equatorial Guinea",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "eritrea",
+    "name": "Eritrea",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "estonia",
+    "name": "Estonia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "eswatini",
+    "name": "Eswatini",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "ethiopia",
+    "name": "Ethiopia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "fiji",
+    "name": "Fiji",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "finland",
+    "name": "Finland",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "france",
+    "name": "France",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "gabon",
+    "name": "Gabon",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "gambia",
+    "name": "Gambia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "georgia",
+    "name": "Georgia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "germany",
+    "name": "Germany",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "ghana",
+    "name": "Ghana",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "greece",
+    "name": "Greece",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "grenada",
+    "name": "Grenada",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "guatemala",
+    "name": "Guatemala",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "guinea",
+    "name": "Guinea",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "guinea-Bissau",
+    "name": "Guinea",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "guyana",
+    "name": "Guyana",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "haiti",
+    "name": "Haiti",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "holy see",
+    "name": "Holy See",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "honduras",
+    "name": "Honduras",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "hungary",
+    "name": "Hungary",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "iceland",
+    "name": "Iceland",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "india",
+    "name": "India",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "indonesia",
+    "name": "Indonesia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "iran",
+    "name": "Iran",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "iraq",
+    "name": "Iraq",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "ireland",
+    "name": "Ireland",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "israel",
+    "name": "Israel",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "italy",
+    "name": "Italy",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "jamaica",
+    "name": "Jamaica",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "japan",
+    "name": "Japan",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "jordan",
+    "name": "Jordan",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "kazakhstan",
+    "name": "Kazakhstan",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "kenya",
+    "name": "Kenya",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "kiribati",
+    "name": "Kiribati",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "kuwait",
+    "name": "Kuwait",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "kyrgyzstan",
+    "name": "Kyrgyzstan",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "laos",
+    "name": "Laos",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "latvia",
+    "name": "Latvia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "lebanon",
+    "name": "Lebanon",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "lesotho",
+    "name": "Lesotho",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "liberia",
+    "name": "Liberia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "libya",
+    "name": "Libya",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "liechtenstein",
+    "name": "Liechtenstein",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "lithuania",
+    "name": "Lithuania",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "luxembourg",
+    "name": "Luxembourg",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "madagascar",
+    "name": "Madagascar",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "malawi",
+    "name": "Malawi",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "malaysia",
+    "name": "Malaysia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "maldives",
+    "name": "Maldives",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "mali",
+    "name": "Mali",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "malta",
+    "name": "Malta",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "marshall islands",
+    "name": "Marshall Islands",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "mauritania",
+    "name": "Mauritania",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "mauritius",
+    "name": "Mauritius",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "mexico",
+    "name": "Mexico",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "micronesia",
+    "name": "Micronesia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "moldova",
+    "name": "Moldova",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "monaco",
+    "name": "Monaco",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "mongolia",
+    "name": "Mongolia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "montenegro",
+    "name": "Montenegro",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "morocco",
+    "name": "Morocco",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "mozambique",
+    "name": "Mozambique",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "myanmar",
+    "name": "Myanmar",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "namibia",
+    "name": "Namibia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "nauru",
+    "name": "Nauru",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "nepal",
+    "name": "Nepal",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "netherlands",
+    "name": "Netherlands",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "new zealand",
+    "name": "New Zealand",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "nicaragua",
+    "name": "Nicaragua",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "niger",
+    "name": "Niger",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "nigeria",
+    "name": "Nigeria",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "north korea",
+    "name": "North Korea",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "north macedonia",
+    "name": "North Macedonia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "norway",
+    "name": "Norway",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "oman",
+    "name": "Oman",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "pakistan",
+    "name": "Pakistan",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "palau",
+    "name": "Palau",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "palestine state",
+    "name": "Palestine State",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "panama",
+    "name": "Panama",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "papua new guinea",
+    "name": "Papua New Guinea",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "paraguay",
+    "name": "Paraguay",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "peru",
+    "name": "Peru",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "philippines",
+    "name": "Philippines",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "poland",
+    "name": "Poland",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "portugal",
+    "name": "Portugal",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "qatar",
+    "name": "Qatar",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "romania",
+    "name": "Romania",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "russia",
+    "name": "Russia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "rwanda",
+    "name": "Rwanda",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "saint kitts and nevis",
+    "name": "Saint Kitts and Nevis",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "saint Lucia",
+    "name": "Saint Lucia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "saint vincent and the grenadines",
+    "name": "Saint Vincent and the Grenadines",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "samoa",
+    "name": "Samoa",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "san marino",
+    "name": "San Marino",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "sao tome and principe",
+    "name": "Sao Tome and Pricipe",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "saudi arabia",
+    "name": "Saudi Arabia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "senegal",
+    "name": "Senegal",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "serbia",
+    "name": "Serbia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "seychelles",
+    "name": "Seychelles",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "sierra leone",
+    "name": "Sierra Leone",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "singapore",
+    "name": "Singapore",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "slovakia",
+    "name": "Slovakia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "slovenia",
+    "name": "Slovenia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "solomon islands",
+    "name": "Solomon Islands",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "somalia",
+    "name": "Somalia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "south africa",
+    "name": "South Africa",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "south korea",
+    "name": "South Korea",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "south sudan",
+    "name": "South Sudan",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "spain",
+    "name": "Spain",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "sri lanka",
+    "name": "Sri Lanka",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "sudan",
+    "name": "Sudan",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "suriname",
+    "name": "Suriname",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
     "itemID": "sweden",
     "name": "Sweden",
-    "default_language": "se",
+    "default_language": "sv",
     "languages": [
-      "se",
+      "sv",
       "en"
     ],
     "regions": [
@@ -37,37 +1549,240 @@
       "pite lappmark",
       "lule lappmark",
       "torne lappmark"
-    ],
-    "regionsRefs": [
-      "regions/skåne",
-      "regions/halland",
-      "regions/blekinge",
-      "regions/småland",
-      "regions/öland",
-      "regions/gotland",
-      "regions/östergötland",
-      "regions/västergötland",
-      "regions/bohuslän",
-      "regions/dalsland",
-      "regions/värmland",
-      "regions/närke",
-      "regions/västmanland",
-      "regions/södermanland",
-      "regions/uppland",
-      "regions/dalarna",
-      "regions/gästrikland",
-      "regions/hälsingland",
-      "regions/härjedalen",
-      "regions/medelpad",
-      "regions/jämtland",
-      "regions/ångermanland",
-      "regions/åsele lappmark",
-      "regions/västerbotten",
-      "regions/lycksele lappmark",
-      "regions/norrbotten",
-      "regions/pite lappmark",
-      "regions/lule lappmark",
-      "regions/torne lappmark"
     ]
+  },
+  {
+    "itemID": "switzerland",
+    "name": "Switzerland",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "syria",
+    "name": "Syria",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "tajikistan",
+    "name": "Tajikistan",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "tanzania",
+    "name": "Tanzania",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "thailand",
+    "name": "Thailand",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "timor-Leste",
+    "name": "Timor",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "togo",
+    "name": "Togo",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "tonga",
+    "name": "Tonga",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "trinidad and tobago",
+    "name": "Trinidad and Tobago",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "tunisia",
+    "name": "Tunisia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "turkey",
+    "name": "Turkey",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "turkmenistan",
+    "name": "Turkmenistan",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "tuvalu",
+    "name": "Tuvalu",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "uganda",
+    "name": "Uganda",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "ukraine",
+    "name": "Ukraine",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "united arab emirates",
+    "name": "United Arab Emirates",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "united kingdom",
+    "name": "United Kingdom",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "united states of america",
+    "name": "United States of America",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "uruguay",
+    "name": "Uruguay",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "uzbekistan",
+    "name": "Uzbekistan",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "vanuatu",
+    "name": "Vanuatu",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "venezuela",
+    "name": "Venezuela",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "vietnam",
+    "name": "Vietnam",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "yemen",
+    "name": "Yemen",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "zambia",
+    "name": "Zambia",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
+  },
+  {
+    "itemID": "zimbabwe",
+    "name": "Zimbabwe",
+    "default_language": "en",
+    "languages": [
+      "en"
+    ],
+    "regions": []
   }
 ]

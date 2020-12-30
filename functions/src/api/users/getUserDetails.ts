@@ -20,8 +20,7 @@ const getUserDetails = async (
     userData.userCredentials = doc.data() as IUser
     return response.json(userData)
   } catch (error) {
-    console.error(error)
-    return response.status(500).json({ error: error.code })
+    return response.status(500).json({ error: error.message })
   }
 }
 

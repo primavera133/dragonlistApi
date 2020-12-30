@@ -15,10 +15,8 @@ const getUser = async () => {
       },
     })
     if (!response.ok) {
-      // if (response.status > 400) {
-      //   logout()
-      // }
-      throw new Error('Get user failed')
+      const errorBody = await response.json()
+      throw new Error(`Get user failed: ${errorBody.error}`)
     }
     return await response.json()
   } catch (error) {
