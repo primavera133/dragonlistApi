@@ -35,7 +35,7 @@ const completeSignInPage = ({ history, i18n }) => {
 
   useEffect(() => {
     if (!authUser && email && isEmailSignin) signInWithEmail()
-  }, [email])
+  }, [email, authUser, isEmailSignin])
 
   // Take care of page reload
   useEffect(() => {
@@ -65,18 +65,17 @@ const completeSignInPage = ({ history, i18n }) => {
     } catch (error) {
       console.error(error)
       if (error.message) setError(error.message)
-      setTimeout(() => {
-        window.location.reload()
-      }, 5000)
+      // setTimeout(() => {
+      //   window.location.reload()
+      // }, 5000)
     }
   }
 
   const completeSignInWithEmailLink = async () => {
     try {
       setIsEmailSignin(firebase.auth().isSignInWithEmailLink(window.location.href))
-
       if (email) {
-        await signInWithEmail(email)
+        await signInWithEmail()
       }
     } catch (error) {
       // Some error occurred, you can inspect the code: error.code
