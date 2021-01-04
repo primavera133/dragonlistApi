@@ -4,6 +4,10 @@ import { jsx } from '@emotion/react'
 import React from 'react'
 import 'twin.macro'
 
+/**
+ * Radio form element
+ * @param {*} param0
+ */
 const Radio = ({ id, label, name, value, onChange, disabled }) => (
   <div tw="block mt-2">
     <label htmlFor={id} tw="inline-flex items-center text-lg">
