@@ -21,6 +21,7 @@ import getCountryRegionUserSightings from './api/country/getCountryRegionUserSig
 import getAllSpecies from './api/specie/getAllSpecies'
 
 import getAllSightings from './api/sightings/getAllSightings'
+// import getUserSightings from './api/sightings/getUserSightings'
 import getSighting from './api/sightings/getSighting'
 import postSighting from './api/sightings/postSighting'
 
@@ -32,26 +33,31 @@ firebase.initializeApp(config)
 export const db = admin.firestore()
 
 const app = express()
+const router = express.Router()
 
-app.post('/login', loginUser)
-app.post('/signup', signUpUser)
-app.post('/user/image', auth(), uploadProfilePhoto)
-app.get('/user', auth(), getUserDetails)
-app.post('/user', auth(), postUser)
-app.put('/user', auth(), putUser)
-app.put('/user', auth(), updateUserDetails)
-app.delete('/user/:email', auth('admin'), deleteUser)
+app.post('/api/login', loginUser)
+app.post('/api/signup', signUpUser)
+app.post('/api/user/image', auth(), uploadProfilePhoto)
+app.get('/api/user', auth(), getUserDetails)
+app.post('/api/user', auth(), postUser)
+app.put('/api/user', auth(), putUser)
+app.put('/api/user', auth(), updateUserDetails)
+app.delete('/api/user/:email', auth('admin'), deleteUser)
 
-app.get('/countries', getAllCountries)
-app.get('/country/:countryId', getCountry)
-app.get('/country/:countryId/sightings', getCountrySightings)
-app.get('/country/:countryId/user/:email/sightings', getCountryUserSightings)
-app.get('/country/:countryId/region/:regionId/user/:email/sightings', getCountryRegionUserSightings)
+app.get('/api/countries', getAllCountries)
+app.get('/api/country/:countryId', getCountry)
+app.get('/api/country/:countryId/sightings', getCountrySightings)
+app.get('/api/country/:countryId/user/:email/sightings', getCountryUserSightings)
+app.get('/api/country/:countryId/region/:regionId/user/:email/sightings', getCountryRegionUserSightings)
 
-app.get('/species', getAllSpecies)
+app.get('/api/species', getAllSpecies)
 
-app.get('/sightings', auth('admin'), getAllSightings)
-app.get('/sighting/:sightingId', getSighting)
-app.post('/sighting', auth(), postSighting)
+app.get('/api/sightings', auth('admin'), getAllSightings)
+// app.post('/api/sightings/user/:userId', auth(), getUserSightings)
+app.get('/api/sighting/:sightingId', getSighting)
+app.post('/api/sighting', auth(), postSighting)
 
-exports.api = functions.region('europe-west1').https.onRequest(app)
+app.use('/dragonlistapi', router)
+
+exports.dragonlistapi = functions.region('us-central1').https.onRequest(app)
+console.log('index.ts')
