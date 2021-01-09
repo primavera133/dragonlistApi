@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: npm i
+        working-directory: ./view
       - run: npm run build
         working-directory: ./view
         env:
