@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm run build
+        working-directory: ./view
         env:
           REACT_APP_BASE_URL: https://dragonlist-2aa56.web.app
           REACT_APP_API_KEY: "${{ secrets.FIREBASE_API_KEY }}"
