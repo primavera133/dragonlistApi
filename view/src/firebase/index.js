@@ -12,7 +12,7 @@ export const firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 }
 
-console.log('debug firebase:', process.env.REACT_APP_API_KEY)
+// console.log('debug firebase:', process.env.REACT_APP_API_KEY)
 
 // Initialize Firebase
 export const firebaseApp = firebase.initializeApp(firebaseConfig)

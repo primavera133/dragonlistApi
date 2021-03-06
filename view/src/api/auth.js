@@ -2,7 +2,7 @@ import { defaultFetchSettings } from './common'
 
 const postSignup = async (userData) => {
   try {
-    const url = '/api/signup'
+    const url = `/api/signup`
 
     const response = await fetch(url, {
       ...defaultFetchSettings,

@@ -1,19 +1,22 @@
 import { getAuthHeader } from '../services/authService'
 import { defaultFetchSettings } from './common'
 
-const getCountries = async () => {
+const getUserObservations = async () => {
   try {
-    const url = `/api/countries`
+    const url = `/api/observations/user/${userId}`
+    const authHeader = await getAuthHeader()
 
     const response = await fetch(url, {
       ...defaultFetchSettings,
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        ...authHeader,
       },
     })
     if (!response.ok) {
-      throw new Error('Get countries failed')
+      const errorBody = await response.json()
+      throw new Error(`Get user observations failed: ${errorBody.error}`)
     }
     return await response.json()
   } catch (error) {
@@ -22,4 +25,4 @@ const getCountries = async () => {
   }
 }
 
-export default { getCountries }
+export default { getUserObservations }

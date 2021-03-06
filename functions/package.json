@@ -41,7 +41,7 @@
   },
   "private": true,
   "version": "1.0.0",
-  "description": "List your sightings",
+  "description": "List your observations",
   "directories": {
     "lib": "lib"
   },

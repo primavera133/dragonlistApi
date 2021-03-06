@@ -19,6 +19,10 @@ msgstr "-- select ---"
 msgid "A sign-in email with additional instructions was sent to {email}. Check your inbox to complete sign-in."
 msgstr "A sign-in email with additional instructions was sent to {email}. Check your inbox to complete sign-in."
 
+#: src/pages/observation/add.js:73
+msgid "Add observation"
+msgstr "Add observation"
+
 #: src/components/NewUserForm/NewUserForm.js:85
 msgid "Basic personal details"
 msgstr "Basic personal details"
@@ -39,11 +43,11 @@ msgstr "Check that your inbox space is not running out or other inbox settings r
 msgid "Check your internet connection."
 msgstr "Check your internet connection."
 
-#: src/pages/completeSignIn/completeSignIn.js:119
+#: src/pages/completeSignIn/completeSignIn.js:118
 msgid "Complete"
 msgstr "Complete"
 
-#: src/pages/completeSignIn/completeSignIn.js:114
+#: src/pages/completeSignIn/completeSignIn.js:113
 msgid "Complete sign in"
 msgstr "Complete sign in"
 
@@ -58,6 +62,10 @@ msgstr "Contact details"
 #: src/components/NewUserForm/NewUserForm.js:129
 msgid "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
 msgstr "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
+
+#: src/pages/observation/add.js:76
+msgid "Country"
+msgstr "Country"
 
 #: src/components/Navbar/Navbar.js:41
 msgid "Dragonlist"
@@ -80,17 +88,9 @@ msgstr "Email for contact"
 msgid "Find local help"
 msgstr "Find local help"
 
-#: src/components/Footer/Footer.js:35
-#~ msgid "Find us on any of these platforms, we respond 1-2 business days."
-#~ msgstr "Find us on any of these platforms, we respond 1-2 business days."
-
 #: src/components/NewUserForm/NewUserForm.js:92
 msgid "First name"
 msgstr "First name"
-
-#: src/components/Footer/Footer.js:100
-#~ msgid "Free Products"
-#~ msgstr "Free Products"
 
 #: src/components/Footer/Footer.js:52
 msgid "GBIF"
@@ -128,25 +128,25 @@ msgstr "Including a country prefix is helpful."
 msgid "Last name"
 msgstr "Last name"
 
-#: src/components/Footer/Footer.js:32
-#~ msgid "Let's keep in touch!"
-#~ msgstr "Let's keep in touch!"
-
 #: src/components/Navbar/Navbar.js:109
 msgid "Logout"
 msgstr "Logout"
 
-#: src/components/Footer/Footer.js:113
-#~ msgid "MIT License"
-#~ msgstr "MIT License"
+#: src/components/DatePicker/DatePicker.js:44
+msgid "Next Month"
+msgstr "Next Month"
 
-#: src/pages/completeSignIn/completeSignIn.js:102
+#: src/pages/completeSignIn/completeSignIn.js:101
 msgid "Nothing to see here."
 msgstr "Nothing to see here."
 
-#: src/pages/completeSignIn/completeSignIn.js:95
+#: src/pages/completeSignIn/completeSignIn.js:94
 msgid "Nothing to see here. Move on"
 msgstr "Nothing to see here. Move on"
+
+#: src/components/DatePicker/DatePicker.js:23
+msgid "Observation date"
+msgstr "Observation date"
 
 #: src/components/Footer/Footer.js:69
 msgid "Other Resources"
@@ -156,9 +156,13 @@ msgstr "Other Resources"
 msgid "Phone number"
 msgstr "Phone number"
 
-#: src/pages/completeSignIn/completeSignIn.js:117
+#: src/pages/completeSignIn/completeSignIn.js:116
 msgid "Please provide email for confirmation"
 msgstr "Please provide email for confirmation"
+
+#: src/components/DatePicker/DatePicker.js:37
+msgid "Previous Month"
+msgstr "Previous Month"
 
 #: src/components/Footer/Footer.js:79
 msgid "Privacy Policy"
@@ -180,6 +184,10 @@ msgstr "Record where you first saw a specie in a country, or where your first si
 msgid "Record your dragonfly observations and find like-minded new friends."
 msgstr "Record your dragonfly observations and find like-minded new friends."
 
+#: src/pages/observation/add.js:80
+msgid "Region"
+msgstr "Region"
+
 #: src/components/NewUserForm/NewUserForm.js:107
 msgid "Resident country"
 msgstr "Resident country"
@@ -200,6 +208,10 @@ msgstr "Sign in"
 #: src/pages/signin/signinemail.js:53
 msgid "Sign in with email"
 msgstr "Sign in with email"
+
+#: src/pages/observation/add.js:87
+msgid "Specie"
+msgstr "Specie"
 
 #: src/components/Footer/Footer.js:74
 msgid "Terms & Conditions"

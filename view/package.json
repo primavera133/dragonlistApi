@@ -23,10 +23,14 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@lingui/detect-locale": "^3.3.0",
     "@lingui/react": "^3.3.0",
+    "@reecelucas/react-datepicker": "^2.0.0",
     "autoprefixer": "^10.1.0",
+    "date-fns": "^2.16.1",
     "dotenv": "^8.2.0",
     "firebase": "^8.2.1",
+    "node-sass": "^4.14.1",
     "react": "^17.0.1",
+    "react-autosuggest": "^10.0.4",
     "react-dom": "^17.0.1",
     "react-query": "^3.3.2",
     "react-router-dom": "^5.2.0",
@@ -53,5 +57,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5001/dragonlist-2aa56/europe-west1"
+  "proxy": "http://localhost:5001/dragonlist-2aa56/europe-west1/dragonlistapi"
 }

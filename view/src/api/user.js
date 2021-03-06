@@ -3,7 +3,7 @@ import { defaultFetchSettings } from './common'
 
 const getUser = async () => {
   try {
-    const url = '/api/user'
+    const url = `/api/user`
     const authHeader = await getAuthHeader()
 
     const response = await fetch(url, {
@@ -27,7 +27,7 @@ const getUser = async () => {
 
 const postUser = async (userData) => {
   try {
-    const url = '/api/user'
+    const url = `/api/user`
     const authHeader = await getAuthHeader()
 
     const response = await fetch(url, {
@@ -54,7 +54,7 @@ const postUser = async (userData) => {
 
 const putUser = async (userData) => {
   try {
-    const url = '/api/user'
+    const url = `/api/user`
     const authHeader = await getAuthHeader()
 
     const response = await fetch(url, {

@@ -1,570 +1,712 @@
 [
   {
-    "itemID": "aeshna affinis",
+    "id": "aeshna affinis",
+    "name": "aeshna affinis",
     "scientific_name": "aeshna affinis"
   },
   {
-    "itemID": "aeshna caerulea",
+    "id": "aeshna caerulea",
+    "name": "aeshna caerulea",
     "scientific_name": "aeshna caerulea"
   },
   {
-    "itemID": "aeshna crenata",
+    "id": "aeshna crenata",
+    "name": "aeshna crenata",
     "scientific_name": "aeshna crenata"
   },
   {
-    "itemID": "aeshna cyanea",
+    "id": "aeshna cyanea",
+    "name": "aeshna cyanea",
     "scientific_name": "aeshna cyanea"
   },
   {
-    "itemID": "aeshna grandis",
+    "id": "aeshna grandis",
+    "name": "aeshna grandis",
     "scientific_name": "aeshna grandis"
   },
   {
-    "itemID": "aeshna isoceles",
+    "id": "aeshna isoceles",
+    "name": "aeshna isoceles",
     "scientific_name": "aeshna isoceles"
   },
   {
-    "itemID": "aeshna juncea",
+    "id": "aeshna juncea",
+    "name": "aeshna juncea",
     "scientific_name": "aeshna juncea"
   },
   {
-    "itemID": "aeshna mixta",
+    "id": "aeshna mixta",
+    "name": "aeshna mixta",
     "scientific_name": "aeshna mixta"
   },
   {
-    "itemID": "aeshna serrata",
+    "id": "aeshna serrata",
+    "name": "aeshna serrata",
     "scientific_name": "aeshna serrata"
   },
   {
-    "itemID": "aeshna subarctica",
+    "id": "aeshna subarctica",
+    "name": "aeshna subarctica",
     "scientific_name": "aeshna subarctica"
   },
   {
-    "itemID": "aeshna viridis",
+    "id": "aeshna viridis",
+    "name": "aeshna viridis",
     "scientific_name": "aeshna viridis"
   },
   {
-    "itemID": "anax ephippiger",
+    "id": "anax ephippiger",
+    "name": "anax ephippiger",
     "scientific_name": "anax ephippiger"
   },
   {
-    "itemID": "anax immaculifrons",
+    "id": "anax immaculifrons",
+    "name": "anax immaculifrons",
     "scientific_name": "anax immaculifrons"
   },
   {
-    "itemID": "anax imperator",
+    "id": "anax imperator",
+    "name": "anax imperator",
     "scientific_name": "anax imperator"
   },
   {
-    "itemID": "anax junius",
+    "id": "anax junius",
+    "name": "anax junius",
     "scientific_name": "anax junius"
   },
   {
-    "itemID": "anax parthenope",
+    "id": "anax parthenope",
+    "name": "anax parthenope",
     "scientific_name": "anax parthenope"
   },
   {
-    "itemID": "boyeria cretensis",
+    "id": "boyeria cretensis",
+    "name": "boyeria cretensis",
     "scientific_name": "boyeria cretensis"
   },
   {
-    "itemID": "boyeria irene",
+    "id": "boyeria irene",
+    "name": "boyeria irene",
     "scientific_name": "boyeria irene"
   },
   {
-    "itemID": "arachytron pratense",
+    "id": "arachytron pratense",
+    "name": "brachytron pratense",
     "scientific_name": "brachytron pratense"
   },
   {
-    "itemID": "caliaeschna microstigma",
+    "id": "caliaeschna microstigma",
+    "name": "caliaeschna microstigma",
     "scientific_name": "caliaeschna microstigma"
   },
   {
-    "itemID": "calopteryx haemorrhoidalis",
+    "id": "calopteryx haemorrhoidalis",
+    "name": "calopteryx haemorrhoidalis",
     "scientific_name": "calopteryx haemorrhoidalis"
   },
   {
-    "itemID": "calopteryx splendens",
+    "id": "calopteryx splendens",
+    "name": "calopteryx splendens",
     "scientific_name": "calopteryx splendens"
   },
   {
-    "itemID": "calopteryx virgo",
+    "id": "calopteryx virgo",
+    "name": "calopteryx virgo",
     "scientific_name": "calopteryx virgo"
   },
   {
-    "itemID": "calopteryx xanthostoma",
+    "id": "calopteryx xanthostoma",
+    "name": "calopteryx xanthostoma",
     "scientific_name": "calopteryx xanthostoma"
   },
   {
-    "itemID": "ceriagrion georgifreyi",
+    "id": "ceriagrion georgifreyi",
+    "name": "ceriagrion georgifreyi",
     "scientific_name": "ceriagrion georgifreyi"
   },
   {
-    "itemID": "ceriagrion tenellum",
+    "id": "ceriagrion tenellum",
+    "name": "ceriagrion tenellum",
     "scientific_name": "ceriagrion tenellum"
   },
   {
-    "itemID": "coenagrion armatum",
+    "id": "coenagrion armatum",
+    "name": "coenagrion armatum",
     "scientific_name": "coenagrion armatum"
   },
   {
-    "itemID": "coenagrion caerulaescens",
+    "id": "coenagrion caerulaescens",
+    "name": "coenagrion caerulaescens",
     "scientific_name": "coenagrion caerulaescens"
   },
   {
-    "itemID": "coenagrion ecornutum",
+    "id": "coenagrion ecornutum",
+    "name": "coenagrion ecornutum",
     "scientific_name": "coenagrion ecornutum"
   },
   {
-    "itemID": "coenagrion glaciale",
+    "id": "coenagrion glaciale",
+    "name": "coenagrion glaciale",
     "scientific_name": "coenagrion glaciale"
   },
   {
-    "itemID": "coenagrion hastulatum",
+    "id": "coenagrion hastulatum",
+    "name": "coenagrion hastulatum",
     "scientific_name": "coenagrion hastulatum"
   },
   {
-    "itemID": "coenagrion hylas",
+    "id": "coenagrion hylas",
+    "name": "coenagrion hylas",
     "scientific_name": "coenagrion hylas"
   },
   {
-    "itemID": "coenagrion intermedium",
+    "id": "coenagrion intermedium",
+    "name": "coenagrion intermedium",
     "scientific_name": "coenagrion intermedium"
   },
   {
-    "itemID": "coenagrion johanssoni",
+    "id": "coenagrion johanssoni",
+    "name": "coenagrion johanssoni",
     "scientific_name": "coenagrion johanssoni"
   },
   {
-    "itemID": "coenagrion lunulatum",
+    "id": "coenagrion lunulatum",
+    "name": "coenagrion lunulatum",
     "scientific_name": "coenagrion lunulatum"
   },
   {
-    "itemID": "coenagrion mercuriale",
+    "id": "coenagrion mercuriale",
+    "name": "coenagrion mercuriale",
     "scientific_name": "coenagrion mercuriale"
   },
   {
-    "itemID": "coenagrion ornatum",
+    "id": "coenagrion ornatum",
+    "name": "coenagrion ornatum",
     "scientific_name": "coenagrion ornatum"
   },
   {
-    "itemID": "coenagrion puella",
+    "id": "coenagrion puella",
+    "name": "coenagrion puella",
     "scientific_name": "coenagrion puella"
   },
   {
-    "itemID": "coenagrion pulchellum",
+    "id": "coenagrion pulchellum",
+    "name": "coenagrion pulchellum",
     "scientific_name": "coenagrion pulchellum"
   },
   {
-    "itemID": "coenagrion scitulum",
+    "id": "coenagrion scitulum",
+    "name": "coenagrion scitulum",
     "scientific_name": "coenagrion scitulum"
   },
   {
-    "itemID": "enallagma cyathigerum",
+    "id": "enallagma cyathigerum",
+    "name": "enallagma cyathigerum",
     "scientific_name": "enallagma cyathigerum"
   },
   {
-    "itemID": "erythromma lindenii",
+    "id": "erythromma lindenii",
+    "name": "erythromma lindenii",
     "scientific_name": "erythromma lindenii"
   },
   {
-    "itemID": "erythromma najas",
+    "id": "erythromma najas",
+    "name": "erythromma najas",
     "scientific_name": "erythromma najas"
   },
   {
-    "itemID": "erythromma viridulum",
+    "id": "erythromma viridulum",
+    "name": "erythromma viridulum",
     "scientific_name": "erythromma viridulum"
   },
   {
-    "itemID": "ischnura aralensis",
+    "id": "ischnura aralensis",
+    "name": "ischnura aralensis",
     "scientific_name": "ischnura aralensis"
   },
   {
-    "itemID": "ischnura elegans",
+    "id": "ischnura elegans",
+    "name": "ischnura elegans",
     "scientific_name": "ischnura elegans"
   },
   {
-    "itemID": "ischnura fountaineae",
+    "id": "ischnura fountaineae",
+    "name": "ischnura fountaineae",
     "scientific_name": "ischnura fountaineae"
   },
   {
-    "itemID": "ischnura genei",
+    "id": "ischnura genei",
+    "name": "ischnura genei",
     "scientific_name": "ischnura genei"
   },
   {
-    "itemID": "ischnura graellsii",
+    "id": "ischnura graellsii",
+    "name": "ischnura graellsii",
     "scientific_name": "ischnura graellsii"
   },
   {
-    "itemID": "ischnura hastata",
+    "id": "ischnura hastata",
+    "name": "ischnura hastata",
     "scientific_name": "ischnura hastata"
   },
   {
-    "itemID": "ischnura intermedia",
+    "id": "ischnura intermedia",
+    "name": "ischnura intermedia",
     "scientific_name": "ischnura intermedia"
   },
   {
-    "itemID": "ischnura pumilio",
+    "id": "ischnura pumilio",
+    "name": "ischnura pumilio",
     "scientific_name": "ischnura pumilio"
   },
   {
-    "itemID": "ischnura saharensis",
+    "id": "ischnura saharensis",
+    "name": "ischnura saharensis",
     "scientific_name": "ischnura saharensis"
   },
   {
-    "itemID": "ischnura senegalensis",
+    "id": "ischnura senegalensis",
+    "name": "ischnura senegalensis",
     "scientific_name": "ischnura senegalensis"
   },
   {
-    "itemID": "nehalennia speciosa",
+    "id": "nehalennia speciosa",
+    "name": "nehalennia speciosa",
     "scientific_name": "nehalennia speciosa"
   },
   {
-    "itemID": "pyrrhosoma nymphula",
+    "id": "pyrrhosoma nymphula",
+    "name": "pyrrhosoma nymphula",
     "scientific_name": "pyrrhosoma nymphula"
   },
   {
-    "itemID": "pyrrhosoma elisabethae",
+    "id": "pyrrhosoma elisabethae",
+    "name": "pyrrhosoma elisabethae",
     "scientific_name": "pyrrhosoma elisabethae"
   },
   {
-    "itemID": "cordulegaster bidentata",
+    "id": "cordulegaster bidentata",
+    "name": "cordulegaster bidentata",
     "scientific_name": "cordulegaster bidentata"
   },
   {
-    "itemID": "cordulegaster boltonii",
+    "id": "cordulegaster boltonii",
+    "name": "cordulegaster boltonii",
     "scientific_name": "cordulegaster boltonii"
   },
   {
-    "itemID": "cordulegaster helladica",
+    "id": "cordulegaster helladica",
+    "name": "cordulegaster helladica",
     "scientific_name": "cordulegaster helladica"
   },
   {
-    "itemID": "cordulegaster heros",
+    "id": "cordulegaster heros",
+    "name": "cordulegaster heros",
     "scientific_name": "cordulegaster heros"
   },
   {
-    "itemID": "cordulegaster insignis",
+    "id": "cordulegaster insignis",
+    "name": "cordulegaster insignis",
     "scientific_name": "cordulegaster insignis"
   },
   {
-    "itemID": "cordulegaster picta",
+    "id": "cordulegaster picta",
+    "name": "cordulegaster picta",
     "scientific_name": "cordulegaster picta"
   },
   {
-    "itemID": "cordulegaster trinacriae",
+    "id": "cordulegaster trinacriae",
+    "name": "cordulegaster trinacriae",
     "scientific_name": "cordulegaster trinacriae"
   },
   {
-    "itemID": "cordulia aenea",
+    "id": "cordulia aenea",
+    "name": "cordulia aenea",
     "scientific_name": "cordulia aenea"
   },
   {
-    "itemID": "epitheca bimaculata",
+    "id": "epitheca bimaculata",
+    "name": "epitheca bimaculata",
     "scientific_name": "epitheca bimaculata"
   },
   {
-    "itemID": "somatochlora alpestris",
+    "id": "somatochlora alpestris",
+    "name": "somatochlora alpestris",
     "scientific_name": "somatochlora alpestris"
   },
   {
-    "itemID": "somatochlora arctica",
+    "id": "somatochlora arctica",
+    "name": "somatochlora arctica",
     "scientific_name": "somatochlora arctica"
   },
   {
-    "itemID": "somatochlora borisi",
+    "id": "somatochlora borisi",
+    "name": "somatochlora borisi",
     "scientific_name": "somatochlora borisi"
   },
   {
-    "itemID": "somatochlora flavomaculata",
+    "id": "somatochlora flavomaculata",
+    "name": "somatochlora flavomaculata",
     "scientific_name": "somatochlora flavomaculata"
   },
   {
-    "itemID": "somatochlora graeseri",
+    "id": "somatochlora graeseri",
+    "name": "somatochlora graeseri",
     "scientific_name": "somatochlora graeseri"
   },
   {
-    "itemID": "somatochlora meridionalis",
+    "id": "somatochlora meridionalis",
+    "name": "somatochlora meridionalis",
     "scientific_name": "somatochlora meridionalis"
   },
   {
-    "itemID": "somatochlora metallica",
+    "id": "somatochlora metallica",
+    "name": "somatochlora metallica",
     "scientific_name": "somatochlora metallica"
   },
   {
-    "itemID": "somatochlora sahlbergi",
+    "id": "somatochlora sahlbergi",
+    "name": "somatochlora sahlbergi",
     "scientific_name": "somatochlora sahlbergi"
   },
   {
-    "itemID": "epallage fatime",
+    "id": "epallage fatime",
+    "name": "epallage fatime",
     "scientific_name": "epallage fatime"
   },
   {
-    "itemID": "gomphus flavipes",
+    "id": "gomphus flavipes",
+    "name": "gomphus flavipes",
     "scientific_name": "gomphus flavipes"
   },
   {
-    "itemID": "gomphus graslinii",
+    "id": "gomphus graslinii",
+    "name": "gomphus graslinii",
     "scientific_name": "gomphus graslinii"
   },
   {
-    "itemID": "gomphus pulchellus",
+    "id": "gomphus pulchellus",
+    "name": "gomphus pulchellus",
     "scientific_name": "gomphus pulchellus"
   },
   {
-    "itemID": "gomphus schneiderii",
+    "id": "gomphus schneiderii",
+    "name": "gomphus schneiderii",
     "scientific_name": "gomphus schneiderii"
   },
   {
-    "itemID": "gomphus simillimus",
+    "id": "gomphus simillimus",
+    "name": "gomphus simillimus",
     "scientific_name": "gomphus simillimus"
   },
   {
-    "itemID": "gomphus vulgatissimus",
+    "id": "gomphus vulgatissimus",
+    "name": "gomphus vulgatissimus",
     "scientific_name": "gomphus vulgatissimus"
   },
   {
-    "itemID": "lindenia tetraphylla",
+    "id": "lindenia tetraphylla",
+    "name": "lindenia tetraphylla",
     "scientific_name": "lindenia tetraphylla"
   },
   {
-    "itemID": "onychogomphus costae",
+    "id": "onychogomphus costae",
+    "name": "onychogomphus costae",
     "scientific_name": "onychogomphus costae"
   },
   {
-    "itemID": "onychogomphus cazuma",
+    "id": "onychogomphus cazuma",
+    "name": "onychogomphus cazuma",
     "scientific_name": "onychogomphus cazuma"
   },
   {
-    "itemID": "onychogomphus forcipatus",
+    "id": "onychogomphus forcipatus",
+    "name": "onychogomphus forcipatus",
     "scientific_name": "onychogomphus forcipatus"
   },
   {
-    "itemID": "onychogomphus uncatus",
+    "id": "onychogomphus uncatus",
+    "name": "onychogomphus uncatus",
     "scientific_name": "onychogomphus uncatus"
   },
   {
-    "itemID": "ophiogomphus cecilia",
+    "id": "ophiogomphus cecilia",
+    "name": "ophiogomphus cecilia",
     "scientific_name": "ophiogomphus cecilia"
   },
   {
-    "itemID": "paragomphus genei",
+    "id": "paragomphus genei",
+    "name": "paragomphus genei",
     "scientific_name": "paragomphus genei"
   },
   {
-    "itemID": "oxygastra curtisii",
+    "id": "oxygastra curtisii",
+    "name": "oxygastra curtisii",
     "scientific_name": "oxygastra curtisii"
   },
   {
-    "itemID": "chalcolestes parvidens",
+    "id": "chalcolestes parvidens",
+    "name": "chalcolestes parvidens",
     "scientific_name": "chalcolestes parvidens"
   },
   {
-    "itemID": "chalcolestes viridis",
+    "id": "chalcolestes viridis",
+    "name": "chalcolestes viridis",
     "scientific_name": "chalcolestes viridis"
   },
   {
-    "itemID": "lestes barbarus",
+    "id": "lestes barbarus",
+    "name": "lestes barbarus",
     "scientific_name": "lestes barbarus"
   },
   {
-    "itemID": "lestes dryas",
+    "id": "lestes dryas",
+    "name": "lestes dryas",
     "scientific_name": "lestes dryas"
   },
   {
-    "itemID": "lestes macrostigma",
+    "id": "lestes macrostigma",
+    "name": "lestes macrostigma",
     "scientific_name": "lestes macrostigma"
   },
   {
-    "itemID": "lestes sponsa",
+    "id": "lestes sponsa",
+    "name": "lestes sponsa",
     "scientific_name": "lestes sponsa"
   },
   {
-    "itemID": "lestes virens",
+    "id": "lestes virens",
+    "name": "lestes virens",
     "scientific_name": "lestes virens"
   },
   {
-    "itemID": "sympecma fusca",
+    "id": "sympecma fusca",
+    "name": "sympecma fusca",
     "scientific_name": "sympecma fusca"
   },
   {
-    "itemID": "sympecma paedisca",
+    "id": "sympecma paedisca",
+    "name": "sympecma paedisca",
     "scientific_name": "sympecma paedisca"
   },
   {
-    "itemID": "brachythemis impartita",
+    "id": "brachythemis impartita",
+    "name": "brachythemis impartita",
     "scientific_name": "brachythemis impartita"
   },
   {
-    "itemID": "crocothemis erythraea",
+    "id": "crocothemis erythraea",
+    "name": "crocothemis erythraea",
     "scientific_name": "crocothemis erythraea"
   },
   {
-    "itemID": "diplacodes lefebvrii",
+    "id": "diplacodes lefebvrii",
+    "name": "diplacodes lefebvrii",
     "scientific_name": "diplacodes lefebvrii"
   },
   {
-    "itemID": "leucorrhinia albifrons",
+    "id": "leucorrhinia albifrons",
+    "name": "leucorrhinia albifrons",
     "scientific_name": "leucorrhinia albifrons"
   },
   {
-    "itemID": "leucorrhinia caudalis",
+    "id": "leucorrhinia caudalis",
+    "name": "leucorrhinia caudalis",
     "scientific_name": "leucorrhinia caudalis"
   },
   {
-    "itemID": "leucorrhinia dubia",
+    "id": "leucorrhinia dubia",
+    "name": "leucorrhinia dubia",
     "scientific_name": "leucorrhinia dubia"
   },
   {
-    "itemID": "leucorrhinia pectoralis",
+    "id": "leucorrhinia pectoralis",
+    "name": "leucorrhinia pectoralis",
     "scientific_name": "leucorrhinia pectoralis"
   },
   {
-    "itemID": "leucorrhinia rubicunda",
+    "id": "leucorrhinia rubicunda",
+    "name": "leucorrhinia rubicunda",
     "scientific_name": "leucorrhinia rubicunda"
   },
   {
-    "itemID": "libellula depressa",
+    "id": "libellula depressa",
+    "name": "libellula depressa",
     "scientific_name": "libellula depressa"
   },
   {
-    "itemID": "libellula fulva",
+    "id": "libellula fulva",
+    "name": "libellula fulva",
     "scientific_name": "libellula fulva"
   },
   {
-    "itemID": "libellula quadrimaculata",
+    "id": "libellula quadrimaculata",
+    "name": "libellula quadrimaculata",
     "scientific_name": "libellula quadrimaculata"
   },
   {
-    "itemID": "orthetrum albistylum",
+    "id": "orthetrum albistylum",
+    "name": "orthetrum albistylum",
     "scientific_name": "orthetrum albistylum"
   },
   {
-    "itemID": "orthetrum brunneum",
+    "id": "orthetrum brunneum",
+    "name": "orthetrum brunneum",
     "scientific_name": "orthetrum brunneum"
   },
   {
-    "itemID": "orthetrum cancellatum",
+    "id": "orthetrum cancellatum",
+    "name": "orthetrum cancellatum",
     "scientific_name": "orthetrum cancellatum"
   },
   {
-    "itemID": "orthetrum chrysostigma",
+    "id": "orthetrum chrysostigma",
+    "name": "orthetrum chrysostigma",
     "scientific_name": "orthetrum chrysostigma"
   },
   {
-    "itemID": "orthetrum coerulescens",
+    "id": "orthetrum coerulescens",
+    "name": "orthetrum coerulescens",
     "scientific_name": "orthetrum coerulescens"
   },
   {
-    "itemID": "orthetrum nitidinerve",
+    "id": "orthetrum nitidinerve",
+    "name": "orthetrum nitidinerve",
     "scientific_name": "orthetrum nitidinerve"
   },
   {
-    "itemID": "orthetrum sabina",
+    "id": "orthetrum sabina",
+    "name": "orthetrum sabina",
     "scientific_name": "orthetrum sabina"
   },
   {
-    "itemID": "orthetrum taeniolatum",
+    "id": "orthetrum taeniolatum",
+    "name": "orthetrum taeniolatum",
     "scientific_name": "orthetrum taeniolatum"
   },
   {
-    "itemID": "orthetrum trinacria",
+    "id": "orthetrum trinacria",
+    "name": "orthetrum trinacria",
     "scientific_name": "orthetrum trinacria"
   },
   {
-    "itemID": "pantala flavescens",
+    "id": "pantala flavescens",
+    "name": "pantala flavescens",
     "scientific_name": "pantala flavescens"
   },
   {
-    "itemID": "selysiothemis nigra",
+    "id": "selysiothemis nigra",
+    "name": "selysiothemis nigra",
     "scientific_name": "selysiothemis nigra"
   },
   {
-    "itemID": "sympetrum danae",
+    "id": "sympetrum danae",
+    "name": "sympetrum danae",
     "scientific_name": "sympetrum danae"
   },
   {
-    "itemID": "sympetrum depressiusculum",
+    "id": "sympetrum depressiusculum",
+    "name": "sympetrum depressiusculum",
     "scientific_name": "sympetrum depressiusculum"
   },
   {
-    "itemID": "sympetrum flaveolum",
+    "id": "sympetrum flaveolum",
+    "name": "sympetrum flaveolum",
     "scientific_name": "sympetrum flaveolum"
   },
   {
-    "itemID": "sympetrum fonscolombii",
+    "id": "sympetrum fonscolombii",
+    "name": "sympetrum fonscolombii",
     "scientific_name": "sympetrum fonscolombii"
   },
   {
-    "itemID": "sympetrum meridionale",
+    "id": "sympetrum meridionale",
+    "name": "sympetrum meridionale",
     "scientific_name": "sympetrum meridionale"
   },
   {
-    "itemID": "sympetrum nigrifemur",
+    "id": "sympetrum nigrifemur",
+    "name": "sympetrum nigrifemur",
     "scientific_name": "sympetrum nigrifemur"
   },
   {
-    "itemID": "sympetrum pedemontanum",
+    "id": "sympetrum pedemontanum",
+    "name": "sympetrum pedemontanum",
     "scientific_name": "sympetrum pedemontanum"
   },
   {
-    "itemID": "sympetrum sanguineum",
+    "id": "sympetrum sanguineum",
+    "name": "sympetrum sanguineum",
     "scientific_name": "sympetrum sanguineum"
   },
   {
-    "itemID": "sympetrum sinaiticum",
+    "id": "sympetrum sinaiticum",
+    "name": "sympetrum sinaiticum",
     "scientific_name": "sympetrum sinaiticum"
   },
   {
-    "itemID": "sympetrum striolatum",
+    "id": "sympetrum striolatum",
+    "name": "sympetrum striolatum",
     "scientific_name": "sympetrum striolatum"
   },
   {
-    "itemID": "sympetrum vulgatum",
+    "id": "sympetrum vulgatum",
+    "name": "sympetrum vulgatum",
     "scientific_name": "sympetrum vulgatum"
   },
   {
-    "itemID": "trithemis annulata",
+    "id": "trithemis annulata",
+    "name": "trithemis annulata",
     "scientific_name": "trithemis annulata"
   },
   {
-    "itemID": "trithemis arteriosa",
+    "id": "trithemis arteriosa",
+    "name": "trithemis arteriosa",
     "scientific_name": "trithemis arteriosa"
   },
   {
-    "itemID": "trithemis festiva",
+    "id": "trithemis festiva",
+    "name": "trithemis festiva",
     "scientific_name": "trithemis festiva"
   },
   {
-    "itemID": "trithemis kirbyi",
+    "id": "trithemis kirbyi",
+    "name": "trithemis kirbyi",
     "scientific_name": "trithemis kirbyi"
   },
   {
-    "itemID": "zygonyx torridus",
+    "id": "zygonyx torridus",
+    "name": "zygonyx torridus",
     "scientific_name": "zygonyx torridus"
   },
   {
-    "itemID": "macromia amphigena",
+    "id": "macromia amphigena",
+    "name": "macromia amphigena",
     "scientific_name": "macromia amphigena"
   },
   {
-    "itemID": "macromia splendens",
+    "id": "macromia splendens",
+    "name": "macromia splendens",
     "scientific_name": "macromia splendens"
   },
   {
-    "itemID": "platycnemis acutipennis",
+    "id": "platycnemis acutipennis",
+    "name": "platycnemis acutipennis",
     "scientific_name": "platycnemis acutipennis"
   },
   {
-    "itemID": "platycnemis dealbata",
+    "id": "platycnemis dealbata",
+    "name": "platycnemis dealbata",
     "scientific_name": "platycnemis dealbata"
   },
   {
-    "itemID": "platycnemis latipes",
+    "id": "platycnemis latipes",
+    "name": "platycnemis latipes",
     "scientific_name": "platycnemis latipes"
   },
   {
-    "itemID": "platycnemis pennipes",
+    "id": "platycnemis pennipes",
+    "name": "platycnemis pennipes",
     "scientific_name": "platycnemis pennipes"
   }
 ]

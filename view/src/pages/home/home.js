@@ -102,8 +102,8 @@ const homePage = ({ history }) => {
                   </h6>
                   <p tw="mt-2 mb-4 text-gray-600">
                     <Trans>
-                      Record where you first saw a specie in a country, or where your first sighting in a region of your
-                      country.
+                      Record where you first saw a specie in a country, or where your first observation in a region of
+                      your country.
                     </Trans>
                   </p>
                 </div>

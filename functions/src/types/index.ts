@@ -3,15 +3,16 @@ import { Request } from 'express'
 export interface IRegion {
   name: string
 }
+
+export type TRegionName = string
+
 export interface ICountry {
   countryId: string
   defaultLanguage: string
   name: string
   languages: string[]
   locale: string
-  regions: IRegion[]
-  regionsRefs?: FirebaseFirestore.DocumentReference[]
-  regionsData?: IRegion[]
+  regions: TRegionName[]
   createdAt: string
 }
 
@@ -69,38 +70,32 @@ export interface ISpecie {
   sc_name: string
 }
 
-export interface ISighting {
+export interface IObservation {
   country: string
   countryRef?: FirebaseFirestore.DocumentReference<ICountry>
   countryData?: ICountry
-  date: Date
+  observationDate: Date
+  observationDateStr?: string
   region?: string
-  regionRef?: FirebaseFirestore.DocumentReference<IRegion>
-  regionData?: IRegion
   specie: string
-  specieRef?: FirebaseFirestore.DocumentReference<ISpecie>
-  specieData?: ISpecie
-  userRef?: FirebaseFirestore.DocumentReference<IUser>
   userData?: IUser
 }
-export interface ISightingFormData {
+export interface IObservationFormData {
   country: string
-  countryRef?: FirebaseFirestore.DocumentReference<ICountry>
-  date: number
-  region: string
-  regionRef?: FirebaseFirestore.DocumentReference<IRegion>
+  observationDate: number
+  observationDateStr?: string
+  region?: string
   specie: string
-  specieRef?: FirebaseFirestore.DocumentReference<ISpecie>
   email: string
 }
 
-export interface ISightingFormRequest extends Request {
+export interface IObservationFormRequest extends Request {
   user?: IUser
 }
 
-export interface ISightingFormError {
+export interface IObservationFormError {
   country?: string
-  date?: string
+  observationDate?: string
   region?: string
   specie?: string
 }

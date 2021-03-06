@@ -4,7 +4,7 @@ import { ISpecie } from '../../types'
 
 const getAllCountries = async (request: Request, response: Response): Promise<Response<ISpecie[]> | Error> => {
   try {
-    const dbResponse = await db.collection('species').orderBy('sc_name', 'asc').get()
+    const dbResponse = await db.collection('species').orderBy('scientific_name', 'asc').get()
     const list: ISpecie[] = []
     for (const doc of dbResponse.docs) {
       const specieItem = doc.data()

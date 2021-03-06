@@ -14,16 +14,16 @@ import uploadProfilePhoto from './api/users/uploadProfilePhoto'
 
 import getAllCountries from './api/country/getAllCountries'
 import getCountry from './api/country/getCountry'
-import getCountrySightings from './api/country/getCountrySightings'
-import getCountryUserSightings from './api/country/getCountryUserSightings'
-import getCountryRegionUserSightings from './api/country/getCountryRegionUserSightings'
+import getCountryObservations from './api/country/getCountryObservations'
+import getCountryUserObservations from './api/country/getCountryUserObservations'
+import getCountryRegionUserObservations from './api/country/getCountryRegionUserObservations'
 
 import getAllSpecies from './api/specie/getAllSpecies'
 
-import getAllSightings from './api/sightings/getAllSightings'
-// import getUserSightings from './api/sightings/getUserSightings'
-import getSighting from './api/sightings/getSighting'
-import postSighting from './api/sightings/postSighting'
+import getAllObservations from './api/observations/getAllObservations'
+// import getUserObservations from './api/observations/getUserObservations'
+import getObservation from './api/observations/getObservation'
+import postObservation from './api/observations/postObservation'
 
 import auth from './util/auth'
 import config from './config/firebaseConfig'
@@ -46,16 +46,16 @@ app.delete('/api/user/:email', auth('admin'), deleteUser)
 
 app.get('/api/countries', getAllCountries)
 app.get('/api/country/:countryId', getCountry)
-app.get('/api/country/:countryId/sightings', getCountrySightings)
-app.get('/api/country/:countryId/user/:email/sightings', getCountryUserSightings)
-app.get('/api/country/:countryId/region/:regionId/user/:email/sightings', getCountryRegionUserSightings)
+app.get('/api/country/:countryId/observations', getCountryObservations)
+app.get('/api/country/:countryId/user/:email/observations', getCountryUserObservations)
+app.get('/api/country/:countryId/region/:regionId/user/:email/observations', getCountryRegionUserObservations)
 
 app.get('/api/species', getAllSpecies)
 
-app.get('/api/sightings', auth('admin'), getAllSightings)
-// app.post('/api/sightings/user/:userId', auth(), getUserSightings)
-app.get('/api/sighting/:sightingId', getSighting)
-app.post('/api/sighting', auth(), postSighting)
+app.get('/api/observations', auth('admin'), getAllObservations)
+// app.post('/api/observations/user/:userId', auth(), getUserObservations)
+app.get('/api/observation/:observationId', getObservation)
+app.post('/api/observation', auth(), postObservation)
 
 app.use('/dragonlistapi', router)
 

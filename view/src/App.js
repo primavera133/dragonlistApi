@@ -17,6 +17,7 @@ import homePage from './pages/home/home'
 import howToPage from './pages/howto/howto'
 import signinEmailPage from './pages/signin/signinemail'
 import profilePage from './pages/profile/profile'
+import observationAddPage from './pages/observation/add'
 import adminPage from './pages/admin/admin'
 import termsAndConditionsPage from './pages/termsAndConditions/TermsAndConditions'
 import testPage from './pages/test/test'
@@ -50,6 +51,7 @@ const App = () => {
               <Route exact path="/contact" component={contactPage} />
               <Route exact path="/completeSignIn" component={completeSignInPage} />
               <Route exact path="/how-to" component={howToPage} />
+              <Route exact path="/observation/add" component={observationAddPage} />
               <Route exact path="/privacypolicy" component={privacyPolicyPage} />
               <Route exact path="/signin" component={signinEmailPage} />
               <Route exact path="/termsandconditions" component={termsAndConditionsPage} />

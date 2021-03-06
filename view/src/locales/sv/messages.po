@@ -21,6 +21,10 @@ msgstr " -- välj --"
 msgid "A sign-in email with additional instructions was sent to {email}. Check your inbox to complete sign-in."
 msgstr "Ett mail med en länk och instruktioner för hur du loggar in har mailats till {email}. Kolla din brevlåda för att fortsätta."
 
+#: src/pages/observation/add.js:73
+msgid "Add observation"
+msgstr "Lägg till ett kryss"
+
 #: src/components/NewUserForm/NewUserForm.js:85
 msgid "Basic personal details"
 msgstr "grundläggande personliga detaljer"
@@ -41,11 +45,11 @@ msgstr "Kolla att din inbox har nog med hårddiskutrymme"
 msgid "Check your internet connection."
 msgstr "Kolla din uppkoppling mot internet"
 
-#: src/pages/completeSignIn/completeSignIn.js:119
+#: src/pages/completeSignIn/completeSignIn.js:118
 msgid "Complete"
 msgstr "Fortsätt"
 
-#: src/pages/completeSignIn/completeSignIn.js:114
+#: src/pages/completeSignIn/completeSignIn.js:113
 msgid "Complete sign in"
 msgstr "Inlogging"
 
@@ -60,6 +64,10 @@ msgstr "Kontaktuppgifter"
 #: src/components/NewUserForm/NewUserForm.js:129
 msgid "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
 msgstr "Kontaktuppfterna är frivilliga att fylla i. Välj hur du vill att andra medlemmar ska kunna kontakta dig. Inga kontaktuppgifter visas upp för oinloggade användare."
+
+#: src/pages/observation/add.js:76
+msgid "Country"
+msgstr "Land"
 
 #: src/components/Navbar/Navbar.js:41
 msgid "Dragonlist"
@@ -126,13 +134,21 @@ msgstr "Efternamn"
 msgid "Logout"
 msgstr "Logga ut"
 
-#: src/pages/completeSignIn/completeSignIn.js:102
+#: src/components/DatePicker/DatePicker.js:44
+msgid "Next Month"
+msgstr "Nästa månad"
+
+#: src/pages/completeSignIn/completeSignIn.js:101
 msgid "Nothing to see here."
 msgstr "Inget att se här..."
 
-#: src/pages/completeSignIn/completeSignIn.js:95
+#: src/pages/completeSignIn/completeSignIn.js:94
 msgid "Nothing to see here. Move on"
 msgstr "Inget att se här längre..."
+
+#: src/components/DatePicker/DatePicker.js:23
+msgid "Observation date"
+msgstr "Datum för obsen"
 
 #: src/components/Footer/Footer.js:69
 msgid "Other Resources"
@@ -142,9 +158,13 @@ msgstr "Andra resurser"
 msgid "Phone number"
 msgstr "Telefonnummer"
 
-#: src/pages/completeSignIn/completeSignIn.js:117
+#: src/pages/completeSignIn/completeSignIn.js:116
 msgid "Please provide email for confirmation"
 msgstr "Var god uppge din mailadress för konfirmation"
+
+#: src/components/DatePicker/DatePicker.js:37
+msgid "Previous Month"
+msgstr "Föregående månad"
 
 #: src/components/Footer/Footer.js:79
 msgid "Privacy Policy"
@@ -165,6 +185,10 @@ msgstr "Spara var du först såg en art i ett land, eller var du först såg den
 #: src/pages/home/home.js:61
 msgid "Record your dragonfly observations and find like-minded new friends."
 msgstr "Skåda trollsländor, Lista dina observationer och skaffa nya vänner"
+
+#: src/pages/observation/add.js:80
+msgid "Region"
+msgstr "Region"
 
 #: src/components/NewUserForm/NewUserForm.js:107
 msgid "Resident country"
@@ -187,12 +211,16 @@ msgstr "Logga in/Skapa konto"
 msgid "Sign in with email"
 msgstr "Logga in med din email"
 
+#: src/pages/observation/add.js:87
+msgid "Specie"
+msgstr "Art"
+
 #: src/components/Footer/Footer.js:74
 msgid "Terms & Conditions"
 msgstr "Terms & Conditions"
 
 #: src/components/NewUserForm/NewUserForm.js:158
-msgid "There are still mandatory fields missing. You will be able to save when those are completed."
+msgid "There are still mandatory fields missing. You will be able to save when those are completed"
 msgstr "Det saknas uppgifter i några obligatoriska fält. Du kan spara först när du fyllt i dem."
 
 #: src/components/NewUserForm/NewUserForm.js:148
