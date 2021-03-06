@@ -1,7 +1,7 @@
 import { jsx } from '@emotion/react'
 /** @jsxImportSource @emotion/react */
 
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useQuery } from 'react-query'
 import tw from 'twin.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -35,6 +35,13 @@ const getHeroBg = () => {
 const homePage = ({ history }) => {
   const { authUser, unfinishedProfile } = useContext(AuthContext)
   useQuery('countries', configApi.getCountries)
+
+  useEffect(() => {
+    if (unfinishedProfile) {
+      history.push('/completeProfile')
+    }
+  }, [unfinishedProfile])
+
   return (
     <>
       <Navbar transparent />

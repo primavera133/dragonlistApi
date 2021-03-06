@@ -76,9 +76,6 @@ const NewUserForm = ({ email, i18n }) => {
 
   return (
     <>
-      <PageHeader>
-        <Trans>Welcome new user</Trans>
-      </PageHeader>
       <form tw="" onSubmit={handleSubmit}>
         <fieldset tw="mb-8">
           <FormLegend>

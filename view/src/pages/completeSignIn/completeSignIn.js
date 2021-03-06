@@ -14,7 +14,6 @@ import userApi from '../../api/user'
 
 import Layout from '../../components/Layout/Layout'
 import EmailForm from '../../components/EmailForm/EmailForm'
-import NewUserForm from '../../components/NewUserForm/NewUserForm'
 import PageHeader from '../../components/PageHeader/PageHeader'
 import Loader from '../../components/Loader/Loader'
 
@@ -97,8 +96,6 @@ const completeSignInPage = ({ history, i18n }) => {
       )
 
     if (error) return <div>ERROR: {error}</div>
-
-    // if (isNewUser) return <NewUserForm email={email} />
 
     if (!email)
       return (

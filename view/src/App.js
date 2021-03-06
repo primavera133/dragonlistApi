@@ -13,6 +13,7 @@ import { detectLanguage, dynamicActivate } from './i18n'
 
 import contactPage from './pages/contact/Contact'
 import completeSignInPage from './pages/completeSignIn/completeSignIn'
+import completeProfile from './pages/completeProfile/completeProfile'
 import homePage from './pages/home/home'
 import howToPage from './pages/howto/howto'
 import signinEmailPage from './pages/signin/signinemail'
@@ -50,6 +51,7 @@ const App = () => {
               <Route exact path="/" component={homePage} />
               <Route exact path="/contact" component={contactPage} />
               <Route exact path="/completeSignIn" component={completeSignInPage} />
+              <Route exact path="/completeProfile" component={completeProfile} />
               <Route exact path="/how-to" component={howToPage} />
               <Route exact path="/observation/add" component={observationAddPage} />
               <Route exact path="/privacypolicy" component={privacyPolicyPage} />
