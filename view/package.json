@@ -39,11 +39,11 @@
     "twin.macro": "^2.0.1"
   },
   "devDependencies": {
+    "@lingui/cli": "^3.3.0",
+    "@lingui/macro": "^3.3.0",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
-    "prettier": "^2.1.2",
-    "@lingui/cli": "^3.3.0",
-    "@lingui/macro": "^3.3.0"
+    "prettier": "^2.1.2"
   },
   "browserslist": {
     "production": [
