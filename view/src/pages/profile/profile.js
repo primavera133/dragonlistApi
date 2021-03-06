@@ -17,7 +17,7 @@ const UserImg = styled.img(() => [
 ])
 
 const profilePage = ({ history }) => {
-  const { authUser } = useContext(AuthContext)
+  const { unfinishedProfile } = useContext(AuthContext)
 
   const [userData, setUserData] = useState()
 
@@ -30,6 +30,12 @@ const profilePage = ({ history }) => {
       history.push('/signin')
     }
   }, [])
+
+  useEffect(() => {
+    if (unfinishedProfile) {
+      history.push('/completeProfile')
+    }
+  }, [unfinishedProfile])
 
   return (
     <Layout>

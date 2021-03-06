@@ -25,7 +25,7 @@ const completeSignInPage = ({ history, i18n }) => {
   const [error, setError] = useState(false)
   const [email, setEmail] = useState()
   const [isNewUser, setIsNewUser] = useState(false)
-  const [isComplete, setIsComplete] = useState(false)
+  // const [isComplete, setIsComplete] = useState(false)
 
   useEffect(() => {
     setEmail(window.localStorage.getItem('emailForSignIn'))
@@ -43,37 +43,18 @@ const completeSignInPage = ({ history, i18n }) => {
       if (unfinishedProfile) {
         setEmail(authUser.email)
         setIsNewUser(true)
-        setIsComplete(false)
+        // setIsComplete(false)
       } else {
         setIsNewUser(false)
-        setIsComplete(true)
+        // setIsComplete(true)
       }
     }
   }, [userDetails, unfinishedProfile, authUser])
 
-  const signInWithEmail = async () => {
-    try {
-      const result = await firebase.auth().signInWithEmailLink(email, window.location.href)
-      if (!result.additionalUserInfo.isNewUser) {
-        history.push('/profile')
-      } else {
-        setUnfinishedProfile(true)
-        await userApi.postUser(JSON.stringify({ email, unfinishedProfile: true }))
-        // TODO: replace with enforcing modal?
-        setIsNewUser(result.additionalUserInfo.isNewUser)
-      }
-    } catch (error) {
-      console.error(error)
-      if (error.message) setError(error.message)
-      // setTimeout(() => {
-      //   window.location.reload()
-      // }, 5000)
-    }
-  }
-
   const completeSignInWithEmailLink = async () => {
     try {
-      setIsEmailSignin(firebase.auth().isSignInWithEmailLink(window.location.href))
+      firebase.auth().isSignInWithEmailLink(window.location.href) ? setIsEmailSignin(true) : history.push('/test-error')
+
       if (email) {
         await signInWithEmail()
       }
@@ -86,14 +67,27 @@ const completeSignInPage = ({ history, i18n }) => {
     }
   }
 
+  const signInWithEmail = async () => {
+    try {
+      const result = await firebase.auth().signInWithEmailLink(email, window.location.href)
+      if (!result.additionalUserInfo.isNewUser) {
+        history.push('/profile')
+      } else {
+        await userApi.postUser(JSON.stringify({ email, unfinishedProfile: true }))
+        setUnfinishedProfile(true)
+        console.log('signIn complete')
+        history.push('/profile')
+
+        // setIsNewUser(result.additionalUserInfo.isNewUser)
+      }
+    } catch (error) {
+      console.error(error)
+      if (error.message) setError(error.message)
+    }
+  }
+
   const pageDetails = () => {
     if (authUserLoading) return <Loader />
-    if (isComplete)
-      return (
-        <div>
-          <Trans>Nothing to see here. Move on</Trans>
-        </div>
-      )
 
     if (!isEmailSignin)
       return (
@@ -104,7 +98,7 @@ const completeSignInPage = ({ history, i18n }) => {
 
     if (error) return <div>ERROR: {error}</div>
 
-    if (isNewUser) return <NewUserForm email={email} />
+    // if (isNewUser) return <NewUserForm email={email} />
 
     if (!email)
       return (
