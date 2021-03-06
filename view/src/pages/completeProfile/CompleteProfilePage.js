@@ -8,18 +8,13 @@ import { t, Trans } from '@lingui/macro'
 import tw from 'twin.macro'
 
 import { AuthContext } from '../../services/authContext'
-import Layout from '../../components/Layout/Layout'
-import PageHeader from '../../components/PageHeader/PageHeader'
-import Loader from '../../components/Loader/Loader'
-import NewUserForm from '../../components/NewUserForm/NewUserForm'
+import { Layout } from '../../components/Layout'
+import { PageHeader } from '../../components/PageHeader'
+import { Loader } from '../../components/Loader'
+import { NewUserForm } from '../../components/NewUserForm'
 
-const completeProfile = ({}) => {
+export const CompleteProfilePage = withI18n()(({}) => {
   const { authUser, authUserLoading, userDetails } = useContext(AuthContext)
-
-  useEffect(() => {
-    console.log('authUser', authUser)
-    console.log('userDetails', userDetails)
-  }, [authUser])
 
   return (
     <Layout>
@@ -31,11 +26,11 @@ const completeProfile = ({}) => {
       </div>
       {authUser && authUser.email && (
         <div tw="max-w-md">
-          <NewUserForm email={authUser.email} />
+          <NewUserForm
+          // email={authUser.email}
+          />
         </div>
       )}
     </Layout>
   )
-}
-
-export default withI18n()(completeProfile)
+})

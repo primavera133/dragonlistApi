@@ -4,7 +4,7 @@ import { jsx } from '@emotion/react'
 import React from 'react'
 import 'twin.macro'
 
-const Checkbox = ({ id, label, name, value, onChange, disabled }) => (
+export const Checkbox = ({ id, label, name, value, onChange, disabled }) => (
   <label htmlFor={id} tw="inline-flex items-center text-lg block mt-2">
     <input
       disabled={disabled}
@@ -18,5 +18,3 @@ const Checkbox = ({ id, label, name, value, onChange, disabled }) => (
     <span tw="text-gray-900">{label}</span>
   </label>
 )
-
-export default Checkbox

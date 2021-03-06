@@ -2,7 +2,7 @@ import { jsx } from '@emotion/react'
 /** @jsxImportSource @emotion/react */
 
 import React, { useState, useContext, useEffect } from 'react'
-import tw from 'twin.macro'
+// import tw from 'twin.macro'
 import firebase from 'firebase/app'
 import { Redirect } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,11 +12,11 @@ import { Trans } from '@lingui/macro'
 import { AuthContext } from '../../services/authContext'
 import { isEmail } from '../../utils/isEmail'
 
-import Layout from '../../components/Layout/Layout'
-import EmailForm from '../../components/EmailForm/EmailForm'
-import PageHeader from '../../components/PageHeader/PageHeader'
+import { Layout } from '../../components/Layout'
+import { EmailForm } from '../../components/EmailForm'
+import { PageHeader } from '../../components/PageHeader'
 
-const signInEmailPage = ({ history }) => {
+export const SignInEmailPage = ({ history }) => {
   const { authUser } = useContext(AuthContext)
   const [email, setEmail] = useState('')
   const [success, setSuccess] = useState(false)
@@ -130,5 +130,3 @@ const signInEmailPage = ({ history }) => {
     </Layout>
   )
 }
-
-export default signInEmailPage

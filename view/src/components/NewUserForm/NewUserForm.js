@@ -11,26 +11,37 @@ import { AuthContext } from '../../services/authContext'
 import configApi from '../../api/config'
 import userApi from '../../api/user'
 import TextInput from '../TextInput/TextInput'
-import Select from '../Select/Select'
-import Button from '../Button/Button'
-import PageHeader from '../PageHeader/PageHeader'
-import FormLegend from '../FormLegend/FormLegend'
+import { Select } from '../Select'
+import { Button } from '../Button'
+import { FormLegend } from '../FormLegend'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
-const NewUserForm = ({ email, i18n }) => {
-  const { setUnfinishedProfile } = useContext(AuthContext)
-
+export const NewUserForm = withI18n()(({ i18n }) => {
+  const [contactPhone, setContactPhone] = useState('')
+  const [contactEmail, setContactEmail] = useState('')
+  const [email, setEmail] = useState('')
   const [formDisabled, setFormDisabled] = useState(true)
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [residentCountry, setResidentCountry] = useState('')
   const [regions, setRegions] = useState('')
   const [residentRegion, setResidentRegion] = useState('')
-  const [contactPhone, setContactPhone] = useState('')
-  const [contactEmail, setContactEmail] = useState(email)
 
+  const { userDetails, setUnfinishedProfile } = useContext(AuthContext)
   const { isFetching: isFetchingCountries, data: countries } = useQuery('countries', configApi.getCountries)
+
+  useEffect(() => {
+    if (userDetails) {
+      setContactEmail(userDetails.contactEmail || '')
+      setContactPhone(userDetails.contactPhone || '')
+      setEmail(userDetails.email || '')
+      setFirstName(userDetails.firstName || '')
+      setLastName(userDetails.lastName || '')
+      setResidentCountry(userDetails.residentCountry || '')
+      setResidentRegion(userDetails.residentRegion || '')
+    }
+  }, [userDetails])
 
   useEffect(() => {
     if (!isFetchingCountries && residentCountry) {
@@ -42,23 +53,26 @@ const NewUserForm = ({ email, i18n }) => {
         }))
         setRegions(mappedRegions)
       } catch (error) {
-        //console.log(error)
+        console.log(error)
       }
     }
   }, [countries, residentCountry, isFetchingCountries])
 
   useEffect(() => {
     setFormDisabled(!validateForm())
-  }, [firstName, lastName, residentCountry])
+  }, [contactEmail, firstName, lastName, residentCountry])
 
   const validateForm = () => {
-    return !!(email.length && firstName.length && lastName.length && residentCountry)
+    if (contactEmail && firstName && lastName && residentCountry) {
+      return !!(contactEmail.length && firstName.length && lastName.length && residentCountry)
+    }
+    return false
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     const userData = {
-      email,
+      contactEmail,
       firstName,
       lastName,
       residentCountry,
@@ -115,6 +129,7 @@ const NewUserForm = ({ email, i18n }) => {
               name="residentRegion"
               options={regions}
               onChange={setResidentRegion}
+              selected={residentRegion}
             />
           )}
         </fieldset>
@@ -159,6 +174,4 @@ const NewUserForm = ({ email, i18n }) => {
       </form>
     </>
   )
-}
-
-export default withI18n()(NewUserForm)
+})

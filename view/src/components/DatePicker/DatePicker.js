@@ -17,7 +17,7 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 import './datePicker.scss'
 
-const DatePickerComp = ({ onSelectDate }) => (
+export const DatePickerComponent = withI18n()(({ onSelectDate }) => (
   <>
     <label htmlFor="observationDate">
       <Trans>Observation date</Trans>
@@ -49,6 +49,4 @@ const DatePickerComp = ({ onSelectDate }) => (
       </DatePickerCalendar>
     </DatePicker>
   </>
-)
-
-export default withI18n()(DatePickerComp)
+))

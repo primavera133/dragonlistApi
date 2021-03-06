@@ -5,10 +5,9 @@ import React from 'react'
 import tw from 'twin.macro'
 import { Trans } from '@lingui/macro'
 
-import BlackLink from '../../components/Link/BlackLink'
-import ExternalBlackLink from '../../components/Link/ExternalBlackLink'
+import { BlackLink, ExternalBlackLink } from '../../components/Link'
 
-export default function Footer() {
+export const Footer = () => {
   return (
     <>
       <footer tw="relative bg-dlumbra pt-8 pb-6">

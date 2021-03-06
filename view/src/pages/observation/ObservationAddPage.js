@@ -12,15 +12,15 @@ import configApi from '../../api/config'
 import listsApi from '../../api/lists'
 import speciesApi from '../../api/species'
 
-import DatePicker from '../../components/DatePicker/DatePicker'
-import Layout from '../../components/Layout/Layout'
-import Loader from '../../components/Loader/Loader'
-import PageHeader from '../../components/PageHeader/PageHeader'
-import Select from '../../components/Select/Select'
-import Search from '../../components/Search/Search'
-import Button from '../../components/Button/Button'
+import { DatePicker } from '../../components/DatePicker'
+import { Layout } from '../../components/Layout'
+import { Loader } from '../../components/Loader'
+import { PageHeader } from '../../components/PageHeader'
+import { Select } from '../../components/Select/Select'
+import { Search } from '../../components/Search'
+import { Button } from '../../components/Button'
 
-const observationAddPage = ({ history }) => {
+export const ObservationAddPage = withI18n()(({ history }) => {
   const { isFetching: isFetchingCountries, data: countries } = useQuery('countries', configApi.getCountries)
   const { isFetching: isFetchingSpecies, data: species } = useQuery('species', speciesApi.getSpecies)
   // const { isFetching: isFetchingUserObservations, data: userObservations } = useQuery(
@@ -138,6 +138,4 @@ const observationAddPage = ({ history }) => {
       )}
     </Layout>
   )
-}
-
-export default withI18n()(observationAddPage)
+})

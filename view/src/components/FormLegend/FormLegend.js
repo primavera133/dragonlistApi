@@ -4,6 +4,6 @@ import { jsx } from '@emotion/react'
 import React from 'react'
 import tw, { css } from 'twin.macro'
 
-export default ({ children }) => (
+export const FormLegend = ({ children }) => (
   <legend css={[tw`text-black font-semibold text-xl lg:text-2xl mb-4`]}>{children}</legend>
 )

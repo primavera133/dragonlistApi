@@ -11,7 +11,7 @@ const setLanguage = (value) => {
   window.location.reload()
 }
 
-const Language = ({ transparent }) => {
+export const Language = ({ transparent }) => {
   const [lang, setLang] = useState()
   useEffect(() => {
     setLang(detectLanguage())
@@ -38,5 +38,3 @@ const Language = ({ transparent }) => {
     </ul>
   )
 }
-
-export default Language

@@ -4,7 +4,7 @@ import { jsx } from '@emotion/react'
 import React, { useEffect, useState, useContext } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/auth'
-import tw, { css } from 'twin.macro'
+import tw from 'twin.macro'
 
 import { withI18n } from '@lingui/react'
 import { t, Trans } from '@lingui/macro'
@@ -12,19 +12,17 @@ import { t, Trans } from '@lingui/macro'
 import { AuthContext } from '../../services/authContext'
 import userApi from '../../api/user'
 
-import Layout from '../../components/Layout/Layout'
-import EmailForm from '../../components/EmailForm/EmailForm'
-import PageHeader from '../../components/PageHeader/PageHeader'
-import Loader from '../../components/Loader/Loader'
+import { Layout } from '../../components/Layout'
+import { EmailForm } from '../../components/EmailForm'
+import { PageHeader } from '../../components/PageHeader'
+import { Loader } from '../../components/Loader'
 
-const completeSignInPage = ({ history, i18n }) => {
+export const CompleteSignInPage = withI18n()(({ history, i18n }) => {
   const { authUser, authUserLoading, userDetails, unfinishedProfile, setUnfinishedProfile } = useContext(AuthContext)
 
   const [isEmailSignin, setIsEmailSignin] = useState(true)
   const [error, setError] = useState(false)
   const [email, setEmail] = useState()
-  const [isNewUser, setIsNewUser] = useState(false)
-  // const [isComplete, setIsComplete] = useState(false)
 
   useEffect(() => {
     setEmail(window.localStorage.getItem('emailForSignIn'))
@@ -35,20 +33,6 @@ const completeSignInPage = ({ history, i18n }) => {
   useEffect(() => {
     if (!authUser && email && isEmailSignin) signInWithEmail()
   }, [email, authUser, isEmailSignin])
-
-  // Take care of page reload
-  useEffect(() => {
-    if (!!authUser && !!userDetails) {
-      if (unfinishedProfile) {
-        setEmail(authUser.email)
-        setIsNewUser(true)
-        // setIsComplete(false)
-      } else {
-        setIsNewUser(false)
-        // setIsComplete(true)
-      }
-    }
-  }, [userDetails, unfinishedProfile, authUser])
 
   const completeSignInWithEmailLink = async () => {
     try {
@@ -76,8 +60,6 @@ const completeSignInPage = ({ history, i18n }) => {
         setUnfinishedProfile(true)
         console.log('signIn complete')
         history.push('/profile')
-
-        // setIsNewUser(result.additionalUserInfo.isNewUser)
       }
     } catch (error) {
       console.error(error)
@@ -118,6 +100,4 @@ const completeSignInPage = ({ history, i18n }) => {
       <div tw="max-w-md">{pageDetails()}</div>
     </Layout>
   )
-}
-
-export default withI18n()(completeSignInPage)
+})

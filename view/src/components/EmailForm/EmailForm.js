@@ -3,10 +3,10 @@ import { withI18n } from '@lingui/react'
 import { t } from '@lingui/macro'
 
 import TextInput from '../../components/TextInput/TextInput'
-import Button from '../Button/Button'
+import { Button } from '../Button'
 import { isEmail } from '../../utils/isEmail'
 
-const EmailForm = ({ onSubmit, buttonText, i18n }) => {
+export const EmailForm = withI18n()(({ onSubmit, buttonText, i18n }) => {
   const [formDisabled, setFormDisabled] = useState(true)
   const [email, setEmail] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
@@ -44,6 +44,4 @@ const EmailForm = ({ onSubmit, buttonText, i18n }) => {
       </div>
     </form>
   )
-}
-
-export default withI18n()(EmailForm)
+})

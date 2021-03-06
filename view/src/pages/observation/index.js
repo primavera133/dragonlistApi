@@ -1,0 +1,1 @@
+export { ObservationAddPage } from './ObservationAddPage'

@@ -18,10 +18,10 @@ import { Trans } from '@lingui/macro'
 import configApi from '../../api/config'
 import { AuthContext } from '../../services/authContext'
 
-import Navbar from '../../components/Navbar/Navbar.js'
-import Footer from '../../components/Footer/Footer.js'
-import Link from '../../components/Link/Link'
-import Button from '../../components/Button/Button'
+import { Navbar } from '../../components/Navbar'
+import { Footer } from '../../components/Footer'
+import { Link } from '../../components/Link'
+import { Button } from '../../components/Button'
 
 const getHeroBg = () => {
   const images = [
@@ -32,7 +32,7 @@ const getHeroBg = () => {
   return images[Math.floor(Math.random() * images.length)]
 }
 
-const homePage = ({ history }) => {
+export const HomePage = ({ history }) => {
   const { authUser, unfinishedProfile } = useContext(AuthContext)
   useQuery('countries', configApi.getCountries)
 
@@ -239,5 +239,3 @@ const homePage = ({ history }) => {
     </>
   )
 }
-
-export default homePage

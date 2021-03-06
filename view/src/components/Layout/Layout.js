@@ -4,10 +4,10 @@ import { jsx } from '@emotion/react'
 import React, { useState } from 'react'
 import tw from 'twin.macro'
 
-import Navbar from '../Navbar/Navbar.js'
-import Footer from '../Footer/Footer.js'
+import { Navbar } from '../Navbar'
+import { Footer } from '../Footer'
 
-function Layout({ children }) {
+export const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
@@ -20,5 +20,3 @@ function Layout({ children }) {
     </>
   )
 }
-// export default Layout
-export default Layout

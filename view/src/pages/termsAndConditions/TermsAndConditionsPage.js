@@ -1,10 +1,8 @@
 import { jsx } from '@emotion/react'
 
 import React from 'react'
-import Layout from '../../components/Layout/Layout'
+import { Layout } from '../../components/Layout'
 
-const TnCPage = ({ history }) => {
+export const TermsAndConditionsPage = ({ history }) => {
   return <Layout>Terms & Conditions</Layout>
 }
-
-export default TnCPage

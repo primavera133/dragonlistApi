@@ -3,10 +3,10 @@ import { jsx } from '@emotion/react'
 
 import React, { useState } from 'react'
 import Autosuggest from 'react-autosuggest'
-import tw, { styled } from 'twin.macro'
+// import tw, { styled } from 'twin.macro'
 import './search.scss'
 
-export default ({ label, names, onSelect }) => {
+export const Search = ({ label, names, onSelect }) => {
   const [value, setValue] = useState('')
   const [suggestions, setSuggestions] = useState([])
 

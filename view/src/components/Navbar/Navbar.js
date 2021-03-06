@@ -11,10 +11,10 @@ import { Trans } from '@lingui/macro'
 
 import { firebaseApp } from '../../firebase'
 import { AuthContext } from '../../services/authContext'
-import Button from '../Button/Button'
-import Language from '../Language/Language'
+import { Button } from '../Button'
+import { Language } from '../Language'
 
-export default function Navbar(props) {
+export const Navbar = (props) => {
   const { authUser, unfinishedProfile } = useContext(AuthContext)
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (

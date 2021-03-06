@@ -6,8 +6,8 @@ import { AuthContext } from '../../services/authContext'
 
 import React, { useEffect, useState, useContext } from 'react'
 import tw, { styled } from 'twin.macro'
-import Layout from '../../components/Layout/Layout'
-import Loader from '../../components/Loader/Loader'
+import { Layout } from '../../components/Layout'
+import { Loader } from '../../components/Loader'
 
 const UserCard = styled.div(() => [tw`rounded-lg shadow max-w-lg my-3 bg-white`, 'min-width: 20rem'])
 const UserImg = styled.img(() => [
@@ -16,7 +16,7 @@ const UserImg = styled.img(() => [
   'height: 10rem',
 ])
 
-const profilePage = ({ history }) => {
+export const ProfilePage = ({ history }) => {
   const { unfinishedProfile } = useContext(AuthContext)
 
   const [userData, setUserData] = useState()
@@ -69,5 +69,3 @@ const profilePage = ({ history }) => {
     </Layout>
   )
 }
-
-export default profilePage

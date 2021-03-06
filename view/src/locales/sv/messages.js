@@ -66,7 +66,7 @@
     'There are still mandatory fields missing. You will be able to save when those are completed':
       'Det saknas uppgifter i några obligatoriska fält. Du kan spara först när du fyllt i dem.',
     'This email can be the one you login with, or any other.':
-      'Välj själv om du vill använda samma som ovan eller någon annan.',
+      'Välj själv om du vill använda samma som du loggar in med eller någon annan adress.',
     'This is a project made mainly for fun. For the fun of listing your observations. For the fun of comparing your lists and for the fun of finding a companion when you are in need of local guidance.':
       'Detta är ett projekt drivet för nöjes skull. För nöjet att skapa listor över observationer. För nöjet att jämföra dina listor med andras och för nöjet att finna likasinnade att ta hälp av.',
     "This is not citizen-science. You probably don't want to record every single observation in our database. There are better tools for that. See our <0>list of related services</0> for those.":

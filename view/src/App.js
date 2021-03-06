@@ -11,18 +11,17 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 import { detectLanguage, dynamicActivate } from './i18n'
 
-import contactPage from './pages/contact/Contact'
-import completeSignInPage from './pages/completeSignIn/completeSignIn'
-import completeProfile from './pages/completeProfile/completeProfile'
-import homePage from './pages/home/home'
-import howToPage from './pages/howto/howto'
-import signinEmailPage from './pages/signin/signinemail'
-import profilePage from './pages/profile/profile'
-import observationAddPage from './pages/observation/add'
-import adminPage from './pages/admin/admin'
-import termsAndConditionsPage from './pages/termsAndConditions/TermsAndConditions'
-import testPage from './pages/test/test'
-import privacyPolicyPage from './pages/privacyPolicy/PrivacyPolicy'
+import { ContactPage } from './pages/contact'
+import { CompleteSignInPage } from './pages/completeSignIn'
+import { CompleteProfilePage } from './pages/completeProfile'
+import { HomePage } from './pages/home'
+import { HowToPage } from './pages/howto'
+import { SignInEmailPage } from './pages/signin'
+import { ProfilePage } from './pages/profile'
+import { ObservationAddPage } from './pages/observation'
+import { AdminPage } from './pages/admin'
+import { TermsAndConditionsPage } from './pages/termsAndConditions'
+import { PrivacyPolicyPage } from './pages/privacyPolicy'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -48,18 +47,17 @@ const App = () => {
           {/* <GlobalStyles /> */}
           <Router>
             <Switch>
-              <Route exact path="/" component={homePage} />
-              <Route exact path="/contact" component={contactPage} />
-              <Route exact path="/completeSignIn" component={completeSignInPage} />
-              <Route exact path="/completeProfile" component={completeProfile} />
-              <Route exact path="/how-to" component={howToPage} />
-              <Route exact path="/observation/add" component={observationAddPage} />
-              <Route exact path="/privacypolicy" component={privacyPolicyPage} />
-              <Route exact path="/signin" component={signinEmailPage} />
-              <Route exact path="/termsandconditions" component={termsAndConditionsPage} />
-              <ProtectedRoute exact path="/profile" component={profilePage} permittedRoles={['user']} />
-              <ProtectedRoute exact path="/admin" component={adminPage} permittedRoles={['admin']} />
-              <ProtectedRoute exact path="/test" component={testPage} permittedRoles={['user']} />
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/contact" component={ContactPage} />
+              <Route exact path="/completeSignIn" component={CompleteSignInPage} />
+              <Route exact path="/completeProfile" component={CompleteProfilePage} />
+              <Route exact path="/how-to" component={HowToPage} />
+              <Route exact path="/observation/add" component={ObservationAddPage} />
+              <Route exact path="/privacypolicy" component={PrivacyPolicyPage} />
+              <Route exact path="/signin" component={SignInEmailPage} />
+              <Route exact path="/termsandconditions" component={TermsAndConditionsPage} />
+              <ProtectedRoute exact path="/profile" component={ProfilePage} permittedRoles={['user']} />
+              <ProtectedRoute exact path="/admin" component={AdminPage} permittedRoles={['admin']} />
             </Switch>
           </Router>
           <ReactQueryDevtools initialIsOpen={false} />

@@ -1,6 +1,6 @@
 import tw, { css, styled, theme } from 'twin.macro'
 
-const Button = styled.button(({ isPrimary, isSecondary, isSmall }) => [
+export const Button = styled.button(({ isPrimary, isSecondary, isSmall }) => [
   // The common button styles added with the tw import
   tw`text-lg px-8 py-2 rounded focus:outline-none hocus:shadow`,
   tw`transform transition-transform duration-75`,
@@ -28,5 +28,3 @@ const Button = styled.button(({ isPrimary, isSecondary, isSmall }) => [
   // Conditional props can be added
   isSmall ? tw`text-sm` : tw`text-lg`,
 ])
-
-export default Button

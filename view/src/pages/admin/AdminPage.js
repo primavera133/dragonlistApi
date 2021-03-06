@@ -4,7 +4,7 @@ import { jsx } from '@emotion/react'
 import React from 'react'
 import tw from 'twin.macro'
 
-const adminPage = ({ history }) => {
+export const AdminPage = ({ history }) => {
   return (
     <div>
       <div css={[tw`flex flex-col items-center justify-center h-screen`, tw`bg-gradient-to-b from-electric to-ribbon`]}>
@@ -13,5 +13,3 @@ const adminPage = ({ history }) => {
     </div>
   )
 }
-
-export default adminPage
