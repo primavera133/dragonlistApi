@@ -6,7 +6,7 @@ import { Layout } from '../Layout'
 import { Loader } from '../Loader'
 
 const ProtectedRoute = ({ component: Component, permittedRoles, ...rest }) => {
-  const { authUser, loginFailed } = useContext(AuthContext)
+  const { authUser, loginFailed, unfinishedProfile } = useContext(AuthContext)
 
   return (
     <Route
@@ -17,6 +17,16 @@ const ProtectedRoute = ({ component: Component, permittedRoles, ...rest }) => {
             <Redirect
               to={{
                 pathname: '/signin',
+                state: { from: props.location },
+              }}
+            />
+          )
+        }
+        if (unfinishedProfile) {
+          return (
+            <Redirect
+              to={{
+                pathname: '/completeProfile',
                 state: { from: props.location },
               }}
             />

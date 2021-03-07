@@ -31,12 +31,6 @@ export const ProfilePage = ({ history }) => {
     }
   }, [])
 
-  useEffect(() => {
-    if (unfinishedProfile) {
-      history.push('/completeProfile')
-    }
-  }, [unfinishedProfile])
-
   return (
     <Layout>
       {userData ? (

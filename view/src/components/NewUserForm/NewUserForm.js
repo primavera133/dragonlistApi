@@ -17,7 +17,7 @@ import { FormLegend } from '../FormLegend'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
-export const NewUserForm = withI18n()(({ i18n }) => {
+export const NewUserForm = withI18n()(({ i18n, history }) => {
   const [contactPhone, setContactPhone] = useState('')
   const [contactEmail, setContactEmail] = useState('')
   const [email, setEmail] = useState('')
@@ -30,6 +30,8 @@ export const NewUserForm = withI18n()(({ i18n }) => {
 
   const { userDetails, setUnfinishedProfile } = useContext(AuthContext)
   const { isFetching: isFetchingCountries, data: countries } = useQuery('countries', configApi.getCountries)
+
+  const requiredProps = [contactEmail, firstName, lastName, residentCountry]
 
   useEffect(() => {
     if (userDetails) {
@@ -60,17 +62,18 @@ export const NewUserForm = withI18n()(({ i18n }) => {
 
   useEffect(() => {
     setFormDisabled(!validateForm())
-  }, [contactEmail, firstName, lastName, residentCountry])
+  }, [...requiredProps])
 
   const validateForm = () => {
-    if (contactEmail && firstName && lastName && residentCountry) {
-      return !!(contactEmail.length && firstName.length && lastName.length && residentCountry)
-    }
-    return false
+    return requiredProps.every((p) => p.length >= 1)
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (!validateForm()) {
+      return
+    }
+
     const userData = {
       contactEmail,
       firstName,
@@ -85,7 +88,7 @@ export const NewUserForm = withI18n()(({ i18n }) => {
     }
     await userApi.putUser(JSON.stringify(userData))
     setUnfinishedProfile(false)
-    console.log('update successful')
+    history.push('/profile')
   }
 
   return (
