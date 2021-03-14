@@ -13,59 +13,63 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/Select/Select.js:38
+#: src/components/Select/Select.js:37
 msgid "-- select ---"
 msgstr " -- välj --"
 
-#: src/pages/signin/signinemail.js:77
+#: src/pages/signin/SignInEmailPage.js:77
 msgid "A sign-in email with additional instructions was sent to {email}. Check your inbox to complete sign-in."
 msgstr "Ett mail med en länk och instruktioner för hur du loggar in har mailats till {email}. Kolla din brevlåda för att fortsätta."
 
-#: src/pages/observation/add.js:73
+#: src/pages/observation/ObservationAddPage.js:101
 msgid "Add observation"
 msgstr "Lägg till ett kryss"
 
-#: src/components/NewUserForm/NewUserForm.js:85
+#: src/pages/profile/ProfilePage.js:27
+msgid "Admin"
+msgstr "Administratör"
+
+#: src/components/NewUserForm/NewUserForm.js:99
 msgid "Basic personal details"
 msgstr "grundläggande personliga detaljer"
 
-#: src/pages/signin/signinemail.js:101
+#: src/pages/signin/SignInEmailPage.js:101
 msgid "Check if the email was marked as spam or filtered."
 msgstr "Kolla om mailet blev markerat som spam eller har filtrerats"
 
-#: src/pages/signin/signinemail.js:109
+#: src/pages/signin/SignInEmailPage.js:109
 msgid "Check that you did not misspell your email."
 msgstr "Kolla att du stavade rätt till din mailadress"
 
-#: src/pages/signin/signinemail.js:113
+#: src/pages/signin/SignInEmailPage.js:113
 msgid "Check that your inbox space is not running out or other inbox settings related issues."
 msgstr "Kolla att din inbox har nog med hårddiskutrymme"
 
-#: src/pages/signin/signinemail.js:105
+#: src/pages/signin/SignInEmailPage.js:105
 msgid "Check your internet connection."
 msgstr "Kolla din uppkoppling mot internet"
 
-#: src/pages/completeSignIn/completeSignIn.js:118
+#: src/pages/completeSignIn/CompleteSignInPage.js:91
 msgid "Complete"
 msgstr "Fortsätt"
 
-#: src/pages/completeSignIn/completeSignIn.js:113
+#: src/pages/completeSignIn/CompleteSignInPage.js:86
 msgid "Complete sign in"
 msgstr "Inlogging"
 
-#: src/components/Footer/Footer.js:84
+#: src/components/Footer/Footer.js:83
 msgid "Contact Us"
 msgstr "Kontakta oss"
 
-#: src/components/NewUserForm/NewUserForm.js:126
+#: src/components/NewUserForm/NewUserForm.js:141
 msgid "Contact details"
 msgstr "Kontaktuppgifter"
 
-#: src/components/NewUserForm/NewUserForm.js:129
+#: src/components/NewUserForm/NewUserForm.js:144
 msgid "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
 msgstr "Kontaktuppfterna är frivilliga att fylla i. Välj hur du vill att andra medlemmar ska kunna kontakta dig. Inga kontaktuppgifter visas upp för oinloggade användare."
 
-#: src/pages/observation/add.js:76
+#: src/pages/observation/ObservationAddPage.js:107
 msgid "Country"
 msgstr "Land"
 
@@ -73,28 +77,32 @@ msgstr "Land"
 msgid "Dragonlist"
 msgstr "Trollsländelistan"
 
-#: src/pages/signin/signinemail.js:56
+#: src/pages/signin/SignInEmailPage.js:56
 msgid "Dragonlist uses links-by-email to sign in. Enter your email address in the form below and we will send you a link that you can use to sign in."
 msgstr "Trollsländelistan använder länk-via-email för inloggning. Fyll i din mailadress i formulärsfältet nedan så skickar vi ett mail till dig med en länk som du kan använda för att logga in."
 
+#: src/pages/profile/ProfilePage.js:50
+msgid "Edit"
+msgstr "Ändra uppgifter"
+
 #: src/components/EmailForm/EmailForm.js:34
-#: src/components/NewUserForm/NewUserForm.js:87
+#: src/components/NewUserForm/NewUserForm.js:101
 msgid "Email"
 msgstr "Mailadress"
 
-#: src/components/NewUserForm/NewUserForm.js:145
+#: src/components/NewUserForm/NewUserForm.js:160
 msgid "Email for contact"
 msgstr "Mailadress för kontakt"
 
-#: src/pages/home/home.js:136
+#: src/pages/home/HomePage.js:143
 msgid "Find local help"
 msgstr "Hitta lokala förmågor"
 
-#: src/components/NewUserForm/NewUserForm.js:92
+#: src/components/NewUserForm/NewUserForm.js:106
 msgid "First name"
 msgstr "Förnamn"
 
-#: src/components/Footer/Footer.js:52
+#: src/components/Footer/Footer.js:51
 msgid "GBIF"
 msgstr "GBIF"
 
@@ -106,27 +114,27 @@ msgstr "GBIF"
 msgid "How-to"
 msgstr "Hur gör man?"
 
-#: src/components/Footer/Footer.js:57
+#: src/components/Footer/Footer.js:56
 msgid "IUCN Red List"
 msgstr "IUCN Red list"
 
-#: src/pages/signin/signinemail.js:62
+#: src/pages/signin/SignInEmailPage.js:62
 msgid "If it's your first time signing in we will ask you a few additional questions to complete your profile."
 msgstr "Om det är första gången du loggar in kommer vi be dig om lite grundläggande uppgifter för att komplettera din profil."
 
-#: src/pages/signin/signinemail.js:118
+#: src/pages/signin/SignInEmailPage.js:118
 msgid "If the steps above didn't work, you can resend the email. Note that this will deactivate the link in the older email."
 msgstr "Om stegen ovan inte fungerar, kan du prova att skicka om ditt mail. Notera att länken i föregående mailet automatiskt deaktiveras."
 
-#: src/components/Footer/Footer.js:35
+#: src/components/Footer/Footer.js:34
 msgid "If you are old and wish to be young again, try and identify a dragonfly! - Simon Barres"
 msgstr "If you are old and wish to be young again, try and identify a dragonfly! - Simon Barres"
 
-#: src/components/NewUserForm/NewUserForm.js:140
+#: src/components/NewUserForm/NewUserForm.js:155
 msgid "Including a country prefix is helpful."
 msgstr "Inkludera gärna landsprefix (som t ex +46)"
 
-#: src/components/NewUserForm/NewUserForm.js:100
+#: src/components/NewUserForm/NewUserForm.js:114
 msgid "Last name"
 msgstr "Efternamn"
 
@@ -134,31 +142,39 @@ msgstr "Efternamn"
 msgid "Logout"
 msgstr "Logga ut"
 
+#: src/pages/profile/ProfilePage.js:20
+msgid "My pages"
+msgstr "Mina sidor"
+
+#: src/pages/profile/ProfilePage.js:31
+msgid "Name"
+msgstr "Namn"
+
 #: src/components/DatePicker/DatePicker.js:44
 msgid "Next Month"
 msgstr "Nästa månad"
 
-#: src/pages/completeSignIn/completeSignIn.js:101
+#: src/pages/completeSignIn/CompleteSignInPage.js:76
 msgid "Nothing to see here."
 msgstr "Inget att se här..."
 
 #: src/pages/completeSignIn/completeSignIn.js:94
-msgid "Nothing to see here. Move on"
-msgstr "Inget att se här längre..."
+#~ msgid "Nothing to see here. Move on"
+#~ msgstr "Inget att se här längre..."
 
 #: src/components/DatePicker/DatePicker.js:23
 msgid "Observation date"
 msgstr "Datum för obsen"
 
-#: src/components/Footer/Footer.js:69
+#: src/components/Footer/Footer.js:68
 msgid "Other Resources"
 msgstr "Andra resurser"
 
-#: src/components/NewUserForm/NewUserForm.js:137
+#: src/components/NewUserForm/NewUserForm.js:152
 msgid "Phone number"
 msgstr "Telefonnummer"
 
-#: src/pages/completeSignIn/completeSignIn.js:116
+#: src/pages/completeSignIn/CompleteSignInPage.js:89
 msgid "Please provide email for confirmation"
 msgstr "Var god uppge din mailadress för konfirmation"
 
@@ -166,7 +182,7 @@ msgstr "Var god uppge din mailadress för konfirmation"
 msgid "Previous Month"
 msgstr "Föregående månad"
 
-#: src/components/Footer/Footer.js:79
+#: src/components/Footer/Footer.js:78
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
@@ -174,124 +190,150 @@ msgstr "Privacy Policy"
 msgid "Profile"
 msgstr "Mina sidor"
 
-#: src/pages/home/home.js:101
+#: src/pages/home/HomePage.js:108
 msgid "Put a pin on what you've seen"
 msgstr "Sätt en kartnål på vad du sett"
 
 #: src/pages/home/home.js:104
-msgid "Record where you first saw a specie in a country, or where your first sighting in a region of your country."
-msgstr "Spara var du först såg en art i ett land, eller var du först såg den i ditt landskap."
+#~ msgid "Record where you first saw a specie in a country, or where your first sighting in a region of your country."
+#~ msgstr "Spara var du först såg en art i ett land, eller var du först såg den i ditt landskap."
 
-#: src/pages/home/home.js:61
+#: src/pages/home/HomePage.js:68
 msgid "Record your dragonfly observations and find like-minded new friends."
 msgstr "Skåda trollsländor, Lista dina observationer och skaffa nya vänner"
 
-#: src/pages/observation/add.js:80
+#: src/pages/observation/ObservationAddPage.js:117
 msgid "Region"
 msgstr "Region"
 
-#: src/components/NewUserForm/NewUserForm.js:107
+#: src/components/NewUserForm/NewUserForm.js:121
+#: src/pages/profile/ProfilePage.js:34
 msgid "Resident country"
 msgstr "Land"
 
-#: src/components/NewUserForm/NewUserForm.js:117
+#: src/components/NewUserForm/NewUserForm.js:131
+#: src/pages/profile/ProfilePage.js:37
 msgid "Resident region"
 msgstr "Region"
 
-#: src/components/NewUserForm/NewUserForm.js:153
+#: src/pages/profile/ProfilePage.js:27
+msgid "Role"
+msgstr "Roll"
+
+#: src/components/NewUserForm/NewUserForm.js:168
 msgid "Save"
 msgstr "Spara"
 
+#: src/pages/observation/ObservationAddPage.js:133
+msgid "Save observation"
+msgstr "Spara observationen"
+
 #: src/components/Navbar/Navbar.js:124
-#: src/pages/home/home.js:174
+#: src/pages/home/HomePage.js:181
 msgid "Sign in"
 msgstr "Logga in/Skapa konto"
 
-#: src/pages/signin/signinemail.js:53
+#: src/pages/signin/SignInEmailPage.js:53
 msgid "Sign in with email"
 msgstr "Logga in med din email"
 
-#: src/pages/observation/add.js:87
+#: src/pages/observation/ObservationAddPage.js:126
 msgid "Specie"
 msgstr "Art"
 
-#: src/components/Footer/Footer.js:74
+#: src/components/Footer/Footer.js:73
 msgid "Terms & Conditions"
 msgstr "Terms & Conditions"
 
-#: src/components/NewUserForm/NewUserForm.js:158
+#: src/components/NewUserForm/NewUserForm.js:173
 msgid "There are still mandatory fields missing. You will be able to save when those are completed"
 msgstr "Det saknas uppgifter i några obligatoriska fält. Du kan spara först när du fyllt i dem."
 
-#: src/components/NewUserForm/NewUserForm.js:148
+#: src/components/NewUserForm/NewUserForm.js:163
 msgid "This email can be the one you login with, or any other."
 msgstr "Välj själv om du vill använda samma som ovan eller någon annan."
 
-#: src/pages/home/home.js:155
-#: src/pages/home/home.js:177
+#: src/pages/home/HomePage.js:162
+#: src/pages/home/HomePage.js:184
 msgid "This is a project made mainly for fun. For the fun of listing your observations. For the fun of comparing your lists and for the fun of finding a companion when you are in need of local guidance."
 msgstr "Detta är ett projekt drivet för nöjes skull. För nöjet att skapa listor över observationer. För nöjet att jämföra dina listor med andras och för nöjet att finna likasinnade att ta hälp av."
 
-#: src/pages/home/home.js:164
+#: src/pages/home/HomePage.js:171
 msgid "This is not citizen-science. You probably don't want to record every single observation in our database. There are better tools for that. See our <0>list of related services</0> for those."
 msgstr "Detta är inte vetenskap eller \"citizen-science\". Du vill antagligen inte spara varenda observation du gör i vår databas. Det finns bättre verktyg som t.ex. Artportalen för det. Se vår <0>lista över relaterade tjänster</0> för fler förslag."
 
-#: src/pages/home/home.js:64
+#: src/pages/home/HomePage.js:71
 msgid "This site is all about sharing lists and finding friends. Keeping lists is fun and why not have fun with other like minded?"
 msgstr "Denna site handlar om att göra krysslistor och hitta vänner. Att hålla på med krysslistor är kul ochvarför inte dela det roliga med likasinnade?"
 
-#: src/pages/home/home.js:212
+#: src/pages/home/HomePage.js:219
 msgid "This site was made by some members of <0>Trollslände­föreningen</0>, the Swedish dragonfly society."
 msgstr "Denna sida gjordes av några medlemmar av <0>Trollslände­föreningen</0>."
 
-#: src/pages/home/home.js:123
+#: src/pages/home/HomePage.js:130
 msgid "Top 10 lists per country. Or per region of your country."
 msgstr "Top 10 svenska observatörer. Eller per landskap..."
 
-#: src/pages/home/home.js:139
+#: src/pages/home/HomePage.js:146
 msgid "Traveling to a new region? Want some advice on good places or where to find a special specie? Why not ask someone who saw it before?"
 msgstr "Planerar du en resa till ett okänt område? Letar du bra lokaler? Varför inte ta hjälp av någon från platsen?"
 
-#: src/components/Footer/Footer.js:62
+#: src/components/Footer/Footer.js:61
 msgid "Trollsländeföreningen"
 msgstr "Trollsländeföreningen"
 
-#: src/pages/signin/signinemail.js:90
+#: src/pages/signin/SignInEmailPage.js:90
 msgid "Trouble getting email?"
 msgstr "Fick du inget mail?"
 
-#: src/pages/signin/signinemail.js:96
+#: src/pages/signin/SignInEmailPage.js:96
 msgid "Try these common fixes:"
 msgstr "Försök något av dessa:"
 
-#: src/components/Footer/Footer.js:42
+#: src/pages/completeProfile/CompleteProfilePage.js:23
+msgid "Unfinished profile"
+msgstr "Dina uppgifter"
+
+#: src/components/Footer/Footer.js:41
 msgid "Useful Links"
 msgstr "Användbara länkar"
 
 #: src/components/NewUserForm/NewUserForm.js:80
-msgid "Welcome new user"
-msgstr "Ny användare? Välkommen!"
+#~ msgid "Welcome new user"
+#~ msgstr "Ny användare? Välkommen!"
 
-#: src/pages/home/home.js:161
+#: src/pages/home/HomePage.js:168
 msgid "What is this not?"
 msgstr "Vad är det inte?"
 
-#: src/pages/home/home.js:152
+#: src/pages/home/HomePage.js:159
 msgid "What is this website?"
 msgstr "Vad är det här för något?"
 
-#: src/pages/home/home.js:209
+#: src/pages/home/HomePage.js:216
 msgid "Who made this?"
 msgstr "Vem gjorde detta?"
 
-#: src/pages/home/home.js:120
+#: src/pages/home/HomePage.js:127
 msgid "Who saw most?"
 msgstr "Vem såg flest?"
 
-#: src/components/Footer/Footer.js:47
+#: src/pages/profile/ProfilePage.js:43
+msgid "contactEmail"
+msgstr "Publik email"
+
+#: src/pages/profile/ProfilePage.js:46
+msgid "contactPhone"
+msgstr "Publik telefon"
+
+#: src/pages/profile/ProfilePage.js:40
+msgid "email"
+msgstr "email för inloggning"
+
+#: src/components/Footer/Footer.js:46
 msgid "iNaturalist"
 msgstr "iNaturalist"
 
-#: src/components/Footer/Footer.js:96
+#: src/components/Footer/Footer.js:95
 msgid "{0} Dragonlist by <0>Jonas Myrenås</0>, <1>Github</1>."
 msgstr "{0} Trollsländelistan av <0>Jonas Myrenås</0>, <1>Github</1>."

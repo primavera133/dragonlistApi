@@ -51,6 +51,7 @@ const App = () => {
               <Route exact path="/contact" component={ContactPage} />
               <Route exact path="/completeSignIn" component={CompleteSignInPage} />
               <Route exact path="/completeProfile" component={CompleteProfilePage} />
+              <Route exact path="/editProfile" component={CompleteProfilePage} />
               <Route exact path="/how-to" component={HowToPage} />
               <Route exact path="/observation/add" component={ObservationAddPage} />
               <Route exact path="/privacypolicy" component={PrivacyPolicyPage} />
