@@ -1,712 +1,1314 @@
 [
   {
-    "id": "aeshna affinis",
-    "name": "aeshna affinis",
-    "scientific_name": "aeshna affinis"
-  },
-  {
-    "id": "aeshna caerulea",
-    "name": "aeshna caerulea",
-    "scientific_name": "aeshna caerulea"
-  },
-  {
-    "id": "aeshna crenata",
-    "name": "aeshna crenata",
-    "scientific_name": "aeshna crenata"
-  },
-  {
-    "id": "aeshna cyanea",
-    "name": "aeshna cyanea",
-    "scientific_name": "aeshna cyanea"
-  },
-  {
-    "id": "aeshna grandis",
-    "name": "aeshna grandis",
-    "scientific_name": "aeshna grandis"
-  },
-  {
-    "id": "aeshna isoceles",
-    "name": "aeshna isoceles",
-    "scientific_name": "aeshna isoceles"
-  },
-  {
-    "id": "aeshna juncea",
-    "name": "aeshna juncea",
-    "scientific_name": "aeshna juncea"
-  },
-  {
-    "id": "aeshna mixta",
-    "name": "aeshna mixta",
-    "scientific_name": "aeshna mixta"
-  },
-  {
-    "id": "aeshna serrata",
-    "name": "aeshna serrata",
-    "scientific_name": "aeshna serrata"
-  },
-  {
-    "id": "aeshna subarctica",
-    "name": "aeshna subarctica",
-    "scientific_name": "aeshna subarctica"
-  },
-  {
-    "id": "aeshna viridis",
-    "name": "aeshna viridis",
-    "scientific_name": "aeshna viridis"
-  },
-  {
-    "id": "anax ephippiger",
-    "name": "anax ephippiger",
-    "scientific_name": "anax ephippiger"
-  },
-  {
-    "id": "anax immaculifrons",
-    "name": "anax immaculifrons",
-    "scientific_name": "anax immaculifrons"
-  },
-  {
-    "id": "anax imperator",
-    "name": "anax imperator",
-    "scientific_name": "anax imperator"
-  },
-  {
-    "id": "anax junius",
-    "name": "anax junius",
-    "scientific_name": "anax junius"
-  },
-  {
-    "id": "anax parthenope",
-    "name": "anax parthenope",
-    "scientific_name": "anax parthenope"
-  },
-  {
-    "id": "boyeria cretensis",
-    "name": "boyeria cretensis",
-    "scientific_name": "boyeria cretensis"
-  },
-  {
-    "id": "boyeria irene",
-    "name": "boyeria irene",
-    "scientific_name": "boyeria irene"
-  },
-  {
-    "id": "arachytron pratense",
-    "name": "brachytron pratense",
-    "scientific_name": "brachytron pratense"
-  },
-  {
-    "id": "caliaeschna microstigma",
-    "name": "caliaeschna microstigma",
-    "scientific_name": "caliaeschna microstigma"
-  },
-  {
-    "id": "calopteryx haemorrhoidalis",
-    "name": "calopteryx haemorrhoidalis",
-    "scientific_name": "calopteryx haemorrhoidalis"
-  },
-  {
-    "id": "calopteryx splendens",
-    "name": "calopteryx splendens",
-    "scientific_name": "calopteryx splendens"
-  },
-  {
-    "id": "calopteryx virgo",
-    "name": "calopteryx virgo",
-    "scientific_name": "calopteryx virgo"
-  },
-  {
-    "id": "calopteryx xanthostoma",
-    "name": "calopteryx xanthostoma",
-    "scientific_name": "calopteryx xanthostoma"
-  },
-  {
-    "id": "ceriagrion georgifreyi",
-    "name": "ceriagrion georgifreyi",
-    "scientific_name": "ceriagrion georgifreyi"
-  },
-  {
-    "id": "ceriagrion tenellum",
-    "name": "ceriagrion tenellum",
-    "scientific_name": "ceriagrion tenellum"
-  },
-  {
-    "id": "coenagrion armatum",
-    "name": "coenagrion armatum",
-    "scientific_name": "coenagrion armatum"
-  },
-  {
-    "id": "coenagrion caerulaescens",
-    "name": "coenagrion caerulaescens",
-    "scientific_name": "coenagrion caerulaescens"
-  },
-  {
-    "id": "coenagrion ecornutum",
-    "name": "coenagrion ecornutum",
-    "scientific_name": "coenagrion ecornutum"
-  },
-  {
-    "id": "coenagrion glaciale",
-    "name": "coenagrion glaciale",
-    "scientific_name": "coenagrion glaciale"
-  },
-  {
-    "id": "coenagrion hastulatum",
-    "name": "coenagrion hastulatum",
-    "scientific_name": "coenagrion hastulatum"
-  },
-  {
-    "id": "coenagrion hylas",
-    "name": "coenagrion hylas",
-    "scientific_name": "coenagrion hylas"
-  },
-  {
-    "id": "coenagrion intermedium",
-    "name": "coenagrion intermedium",
-    "scientific_name": "coenagrion intermedium"
-  },
-  {
-    "id": "coenagrion johanssoni",
-    "name": "coenagrion johanssoni",
-    "scientific_name": "coenagrion johanssoni"
-  },
-  {
-    "id": "coenagrion lunulatum",
-    "name": "coenagrion lunulatum",
-    "scientific_name": "coenagrion lunulatum"
-  },
-  {
-    "id": "coenagrion mercuriale",
-    "name": "coenagrion mercuriale",
-    "scientific_name": "coenagrion mercuriale"
-  },
-  {
-    "id": "coenagrion ornatum",
-    "name": "coenagrion ornatum",
-    "scientific_name": "coenagrion ornatum"
-  },
-  {
-    "id": "coenagrion puella",
-    "name": "coenagrion puella",
-    "scientific_name": "coenagrion puella"
-  },
-  {
-    "id": "coenagrion pulchellum",
-    "name": "coenagrion pulchellum",
-    "scientific_name": "coenagrion pulchellum"
-  },
-  {
-    "id": "coenagrion scitulum",
-    "name": "coenagrion scitulum",
-    "scientific_name": "coenagrion scitulum"
-  },
-  {
-    "id": "enallagma cyathigerum",
-    "name": "enallagma cyathigerum",
-    "scientific_name": "enallagma cyathigerum"
-  },
-  {
-    "id": "erythromma lindenii",
-    "name": "erythromma lindenii",
-    "scientific_name": "erythromma lindenii"
-  },
-  {
-    "id": "erythromma najas",
-    "name": "erythromma najas",
-    "scientific_name": "erythromma najas"
-  },
-  {
-    "id": "erythromma viridulum",
-    "name": "erythromma viridulum",
-    "scientific_name": "erythromma viridulum"
-  },
-  {
-    "id": "ischnura aralensis",
-    "name": "ischnura aralensis",
-    "scientific_name": "ischnura aralensis"
-  },
-  {
-    "id": "ischnura elegans",
-    "name": "ischnura elegans",
-    "scientific_name": "ischnura elegans"
-  },
-  {
-    "id": "ischnura fountaineae",
-    "name": "ischnura fountaineae",
-    "scientific_name": "ischnura fountaineae"
-  },
-  {
-    "id": "ischnura genei",
-    "name": "ischnura genei",
-    "scientific_name": "ischnura genei"
-  },
-  {
-    "id": "ischnura graellsii",
-    "name": "ischnura graellsii",
-    "scientific_name": "ischnura graellsii"
-  },
-  {
-    "id": "ischnura hastata",
-    "name": "ischnura hastata",
-    "scientific_name": "ischnura hastata"
-  },
-  {
-    "id": "ischnura intermedia",
-    "name": "ischnura intermedia",
-    "scientific_name": "ischnura intermedia"
-  },
-  {
-    "id": "ischnura pumilio",
-    "name": "ischnura pumilio",
-    "scientific_name": "ischnura pumilio"
-  },
-  {
-    "id": "ischnura saharensis",
-    "name": "ischnura saharensis",
-    "scientific_name": "ischnura saharensis"
-  },
-  {
-    "id": "ischnura senegalensis",
-    "name": "ischnura senegalensis",
-    "scientific_name": "ischnura senegalensis"
-  },
-  {
-    "id": "nehalennia speciosa",
-    "name": "nehalennia speciosa",
-    "scientific_name": "nehalennia speciosa"
-  },
-  {
-    "id": "pyrrhosoma nymphula",
-    "name": "pyrrhosoma nymphula",
-    "scientific_name": "pyrrhosoma nymphula"
-  },
-  {
-    "id": "pyrrhosoma elisabethae",
-    "name": "pyrrhosoma elisabethae",
-    "scientific_name": "pyrrhosoma elisabethae"
-  },
-  {
-    "id": "cordulegaster bidentata",
-    "name": "cordulegaster bidentata",
-    "scientific_name": "cordulegaster bidentata"
-  },
-  {
-    "id": "cordulegaster boltonii",
-    "name": "cordulegaster boltonii",
-    "scientific_name": "cordulegaster boltonii"
-  },
-  {
-    "id": "cordulegaster helladica",
-    "name": "cordulegaster helladica",
-    "scientific_name": "cordulegaster helladica"
-  },
-  {
-    "id": "cordulegaster heros",
-    "name": "cordulegaster heros",
-    "scientific_name": "cordulegaster heros"
-  },
-  {
-    "id": "cordulegaster insignis",
-    "name": "cordulegaster insignis",
-    "scientific_name": "cordulegaster insignis"
-  },
-  {
-    "id": "cordulegaster picta",
-    "name": "cordulegaster picta",
-    "scientific_name": "cordulegaster picta"
-  },
-  {
-    "id": "cordulegaster trinacriae",
-    "name": "cordulegaster trinacriae",
-    "scientific_name": "cordulegaster trinacriae"
-  },
-  {
-    "id": "cordulia aenea",
-    "name": "cordulia aenea",
-    "scientific_name": "cordulia aenea"
-  },
-  {
-    "id": "epitheca bimaculata",
-    "name": "epitheca bimaculata",
-    "scientific_name": "epitheca bimaculata"
-  },
-  {
-    "id": "somatochlora alpestris",
-    "name": "somatochlora alpestris",
-    "scientific_name": "somatochlora alpestris"
-  },
-  {
-    "id": "somatochlora arctica",
-    "name": "somatochlora arctica",
-    "scientific_name": "somatochlora arctica"
-  },
-  {
-    "id": "somatochlora borisi",
-    "name": "somatochlora borisi",
-    "scientific_name": "somatochlora borisi"
-  },
-  {
-    "id": "somatochlora flavomaculata",
-    "name": "somatochlora flavomaculata",
-    "scientific_name": "somatochlora flavomaculata"
-  },
-  {
-    "id": "somatochlora graeseri",
-    "name": "somatochlora graeseri",
-    "scientific_name": "somatochlora graeseri"
-  },
-  {
-    "id": "somatochlora meridionalis",
-    "name": "somatochlora meridionalis",
-    "scientific_name": "somatochlora meridionalis"
-  },
-  {
-    "id": "somatochlora metallica",
-    "name": "somatochlora metallica",
-    "scientific_name": "somatochlora metallica"
-  },
-  {
-    "id": "somatochlora sahlbergi",
-    "name": "somatochlora sahlbergi",
-    "scientific_name": "somatochlora sahlbergi"
-  },
-  {
-    "id": "epallage fatime",
-    "name": "epallage fatime",
-    "scientific_name": "epallage fatime"
-  },
-  {
-    "id": "gomphus flavipes",
-    "name": "gomphus flavipes",
-    "scientific_name": "gomphus flavipes"
-  },
-  {
-    "id": "gomphus graslinii",
-    "name": "gomphus graslinii",
-    "scientific_name": "gomphus graslinii"
-  },
-  {
-    "id": "gomphus pulchellus",
-    "name": "gomphus pulchellus",
-    "scientific_name": "gomphus pulchellus"
-  },
-  {
-    "id": "gomphus schneiderii",
-    "name": "gomphus schneiderii",
-    "scientific_name": "gomphus schneiderii"
-  },
-  {
-    "id": "gomphus simillimus",
-    "name": "gomphus simillimus",
-    "scientific_name": "gomphus simillimus"
-  },
-  {
-    "id": "gomphus vulgatissimus",
-    "name": "gomphus vulgatissimus",
-    "scientific_name": "gomphus vulgatissimus"
-  },
-  {
-    "id": "lindenia tetraphylla",
-    "name": "lindenia tetraphylla",
-    "scientific_name": "lindenia tetraphylla"
-  },
-  {
-    "id": "onychogomphus costae",
-    "name": "onychogomphus costae",
-    "scientific_name": "onychogomphus costae"
-  },
-  {
-    "id": "onychogomphus cazuma",
-    "name": "onychogomphus cazuma",
-    "scientific_name": "onychogomphus cazuma"
-  },
-  {
-    "id": "onychogomphus forcipatus",
-    "name": "onychogomphus forcipatus",
-    "scientific_name": "onychogomphus forcipatus"
-  },
-  {
-    "id": "onychogomphus uncatus",
-    "name": "onychogomphus uncatus",
-    "scientific_name": "onychogomphus uncatus"
-  },
-  {
-    "id": "ophiogomphus cecilia",
-    "name": "ophiogomphus cecilia",
-    "scientific_name": "ophiogomphus cecilia"
-  },
-  {
-    "id": "paragomphus genei",
-    "name": "paragomphus genei",
-    "scientific_name": "paragomphus genei"
-  },
-  {
-    "id": "oxygastra curtisii",
-    "name": "oxygastra curtisii",
-    "scientific_name": "oxygastra curtisii"
-  },
-  {
-    "id": "chalcolestes parvidens",
-    "name": "chalcolestes parvidens",
-    "scientific_name": "chalcolestes parvidens"
-  },
-  {
-    "id": "chalcolestes viridis",
-    "name": "chalcolestes viridis",
-    "scientific_name": "chalcolestes viridis"
-  },
-  {
-    "id": "lestes barbarus",
-    "name": "lestes barbarus",
-    "scientific_name": "lestes barbarus"
-  },
-  {
-    "id": "lestes dryas",
-    "name": "lestes dryas",
-    "scientific_name": "lestes dryas"
-  },
-  {
-    "id": "lestes macrostigma",
-    "name": "lestes macrostigma",
-    "scientific_name": "lestes macrostigma"
-  },
-  {
-    "id": "lestes sponsa",
-    "name": "lestes sponsa",
-    "scientific_name": "lestes sponsa"
-  },
-  {
-    "id": "lestes virens",
-    "name": "lestes virens",
-    "scientific_name": "lestes virens"
-  },
-  {
-    "id": "sympecma fusca",
-    "name": "sympecma fusca",
-    "scientific_name": "sympecma fusca"
-  },
-  {
-    "id": "sympecma paedisca",
-    "name": "sympecma paedisca",
-    "scientific_name": "sympecma paedisca"
-  },
-  {
-    "id": "brachythemis impartita",
-    "name": "brachythemis impartita",
-    "scientific_name": "brachythemis impartita"
-  },
-  {
-    "id": "crocothemis erythraea",
-    "name": "crocothemis erythraea",
-    "scientific_name": "crocothemis erythraea"
-  },
-  {
-    "id": "diplacodes lefebvrii",
-    "name": "diplacodes lefebvrii",
-    "scientific_name": "diplacodes lefebvrii"
-  },
-  {
-    "id": "leucorrhinia albifrons",
-    "name": "leucorrhinia albifrons",
-    "scientific_name": "leucorrhinia albifrons"
-  },
-  {
-    "id": "leucorrhinia caudalis",
-    "name": "leucorrhinia caudalis",
-    "scientific_name": "leucorrhinia caudalis"
-  },
-  {
-    "id": "leucorrhinia dubia",
-    "name": "leucorrhinia dubia",
-    "scientific_name": "leucorrhinia dubia"
-  },
-  {
-    "id": "leucorrhinia pectoralis",
-    "name": "leucorrhinia pectoralis",
-    "scientific_name": "leucorrhinia pectoralis"
-  },
-  {
-    "id": "leucorrhinia rubicunda",
-    "name": "leucorrhinia rubicunda",
-    "scientific_name": "leucorrhinia rubicunda"
-  },
-  {
-    "id": "libellula depressa",
-    "name": "libellula depressa",
-    "scientific_name": "libellula depressa"
-  },
-  {
-    "id": "libellula fulva",
-    "name": "libellula fulva",
-    "scientific_name": "libellula fulva"
-  },
-  {
-    "id": "libellula quadrimaculata",
-    "name": "libellula quadrimaculata",
-    "scientific_name": "libellula quadrimaculata"
-  },
-  {
-    "id": "orthetrum albistylum",
-    "name": "orthetrum albistylum",
-    "scientific_name": "orthetrum albistylum"
-  },
-  {
-    "id": "orthetrum brunneum",
-    "name": "orthetrum brunneum",
-    "scientific_name": "orthetrum brunneum"
-  },
-  {
-    "id": "orthetrum cancellatum",
-    "name": "orthetrum cancellatum",
-    "scientific_name": "orthetrum cancellatum"
-  },
-  {
-    "id": "orthetrum chrysostigma",
-    "name": "orthetrum chrysostigma",
-    "scientific_name": "orthetrum chrysostigma"
-  },
-  {
-    "id": "orthetrum coerulescens",
-    "name": "orthetrum coerulescens",
-    "scientific_name": "orthetrum coerulescens"
-  },
-  {
-    "id": "orthetrum nitidinerve",
-    "name": "orthetrum nitidinerve",
-    "scientific_name": "orthetrum nitidinerve"
-  },
-  {
-    "id": "orthetrum sabina",
-    "name": "orthetrum sabina",
-    "scientific_name": "orthetrum sabina"
-  },
-  {
-    "id": "orthetrum taeniolatum",
-    "name": "orthetrum taeniolatum",
-    "scientific_name": "orthetrum taeniolatum"
-  },
-  {
-    "id": "orthetrum trinacria",
-    "name": "orthetrum trinacria",
-    "scientific_name": "orthetrum trinacria"
-  },
-  {
-    "id": "pantala flavescens",
-    "name": "pantala flavescens",
-    "scientific_name": "pantala flavescens"
-  },
-  {
-    "id": "selysiothemis nigra",
-    "name": "selysiothemis nigra",
-    "scientific_name": "selysiothemis nigra"
-  },
-  {
-    "id": "sympetrum danae",
-    "name": "sympetrum danae",
-    "scientific_name": "sympetrum danae"
-  },
-  {
-    "id": "sympetrum depressiusculum",
-    "name": "sympetrum depressiusculum",
-    "scientific_name": "sympetrum depressiusculum"
-  },
-  {
-    "id": "sympetrum flaveolum",
-    "name": "sympetrum flaveolum",
-    "scientific_name": "sympetrum flaveolum"
-  },
-  {
-    "id": "sympetrum fonscolombii",
-    "name": "sympetrum fonscolombii",
-    "scientific_name": "sympetrum fonscolombii"
-  },
-  {
-    "id": "sympetrum meridionale",
-    "name": "sympetrum meridionale",
-    "scientific_name": "sympetrum meridionale"
-  },
-  {
-    "id": "sympetrum nigrifemur",
-    "name": "sympetrum nigrifemur",
-    "scientific_name": "sympetrum nigrifemur"
-  },
-  {
-    "id": "sympetrum pedemontanum",
-    "name": "sympetrum pedemontanum",
-    "scientific_name": "sympetrum pedemontanum"
-  },
-  {
-    "id": "sympetrum sanguineum",
-    "name": "sympetrum sanguineum",
-    "scientific_name": "sympetrum sanguineum"
-  },
-  {
-    "id": "sympetrum sinaiticum",
-    "name": "sympetrum sinaiticum",
-    "scientific_name": "sympetrum sinaiticum"
-  },
-  {
-    "id": "sympetrum striolatum",
-    "name": "sympetrum striolatum",
-    "scientific_name": "sympetrum striolatum"
-  },
-  {
-    "id": "sympetrum vulgatum",
-    "name": "sympetrum vulgatum",
-    "scientific_name": "sympetrum vulgatum"
-  },
-  {
-    "id": "trithemis annulata",
-    "name": "trithemis annulata",
-    "scientific_name": "trithemis annulata"
-  },
-  {
-    "id": "trithemis arteriosa",
-    "name": "trithemis arteriosa",
-    "scientific_name": "trithemis arteriosa"
-  },
-  {
-    "id": "trithemis festiva",
-    "name": "trithemis festiva",
-    "scientific_name": "trithemis festiva"
-  },
-  {
-    "id": "trithemis kirbyi",
-    "name": "trithemis kirbyi",
-    "scientific_name": "trithemis kirbyi"
-  },
-  {
-    "id": "zygonyx torridus",
-    "name": "zygonyx torridus",
-    "scientific_name": "zygonyx torridus"
-  },
-  {
-    "id": "macromia amphigena",
-    "name": "macromia amphigena",
-    "scientific_name": "macromia amphigena"
-  },
-  {
-    "id": "macromia splendens",
-    "name": "macromia splendens",
-    "scientific_name": "macromia splendens"
-  },
-  {
-    "id": "platycnemis acutipennis",
-    "name": "platycnemis acutipennis",
-    "scientific_name": "platycnemis acutipennis"
-  },
-  {
-    "id": "platycnemis dealbata",
-    "name": "platycnemis dealbata",
-    "scientific_name": "platycnemis dealbata"
-  },
-  {
-    "id": "platycnemis latipes",
-    "name": "platycnemis latipes",
-    "scientific_name": "platycnemis latipes"
-  },
-  {
-    "id": "platycnemis pennipes",
-    "name": "platycnemis pennipes",
-    "scientific_name": "platycnemis pennipes"
+    "itemID": "aeshna affinis",
+    "scientific_name": "aeshna affinis",
+    "sv": [
+      "klarblå mosaikslända"
+    ],
+    "en": [
+      "southern migrant hawker",
+      "blue-eyed hawker"
+    ]
+  },
+  {
+    "itemID": "aeshna caerulea",
+    "scientific_name": "aeshna caerulea",
+    "sv": [
+      "fjällmosaikslända"
+    ],
+    "en": [
+      "azure hawker"
+    ]
+  },
+  {
+    "itemID": "aeshna crenata",
+    "scientific_name": "aeshna crenata",
+    "sv": [
+      "sibirisk mosaikslända"
+    ],
+    "en": [
+      "siberian hawker"
+    ]
+  },
+  {
+    "itemID": "aeshna cyanea",
+    "scientific_name": "aeshna cyanea",
+    "sv": [
+      "blågrön mosaikslända"
+    ],
+    "en": [
+      "southern hawker"
+    ]
+  },
+  {
+    "itemID": "aeshna grandis",
+    "scientific_name": "aeshna grandis",
+    "sv": [
+      "brun mosaikslända"
+    ],
+    "en": [
+      "brown hawker"
+    ]
+  },
+  {
+    "itemID": "aeshna isoceles",
+    "scientific_name": "aeshna isoceles",
+    "sv": [
+      "kilfläckslända"
+    ],
+    "en": [
+      "green-eyed hawker"
+    ]
+  },
+  {
+    "itemID": "aeshna juncea",
+    "scientific_name": "aeshna juncea",
+    "sv": [
+      "starrmosaikslända"
+    ],
+    "en": [
+      "common hawker",
+      "sedge darner",
+      "moorland hawker"
+    ]
+  },
+  {
+    "itemID": "aeshna mixta",
+    "scientific_name": "aeshna mixta",
+    "sv": [
+      "höstmosaikslända"
+    ],
+    "en": [
+      "migrant hawker"
+    ]
+  },
+  {
+    "itemID": "aeshna serrata",
+    "scientific_name": "aeshna serrata",
+    "sv": [
+      "vassmosaikslända"
+    ],
+    "en": [
+      "baltic hawker"
+    ]
+  },
+  {
+    "itemID": "aeshna subarctica",
+    "scientific_name": "aeshna subarctica",
+    "sv": [
+      "gungflymosaikslända"
+    ],
+    "en": [
+      "bog hawker",
+      "subarctic darner"
+    ]
+  },
+  {
+    "itemID": "aeshna viridis",
+    "scientific_name": "aeshna viridis",
+    "sv": [
+      "grön mosaikslända"
+    ],
+    "en": [
+      "green hawker"
+    ]
+  },
+  {
+    "itemID": "anax ephippiger",
+    "scientific_name": "anax ephippiger",
+    "sv": [
+      "brun kejsartrollslända"
+    ],
+    "en": [
+      "vagrant emperor"
+    ]
+  },
+  {
+    "itemID": "anax immaculifrons",
+    "scientific_name": "anax immaculifrons",
+    "sv": [],
+    "en": [
+      "magnificent emperor"
+    ]
+  },
+  {
+    "itemID": "anax imperator",
+    "scientific_name": "anax imperator",
+    "sv": [
+      "blå kejsartrollslända"
+    ],
+    "en": [
+      "emperor dragonfly",
+      "blue emperor"
+    ]
+  },
+  {
+    "itemID": "anax junius",
+    "scientific_name": "anax junius",
+    "sv": [],
+    "en": [
+      "common green darner"
+    ]
+  },
+  {
+    "itemID": "anax parthenope",
+    "scientific_name": "anax parthenope",
+    "sv": [
+      "mindre kejsartrollslända"
+    ],
+    "en": [
+      "lesser emperor"
+    ]
+  },
+  {
+    "itemID": "boyeria cretensis",
+    "scientific_name": "boyeria cretensis",
+    "sv": [],
+    "en": [
+      "cretan spectre"
+    ]
+  },
+  {
+    "itemID": "boyeria irene",
+    "scientific_name": "boyeria irene",
+    "sv": [],
+    "en": [
+      "western spectre"
+    ]
+  },
+  {
+    "itemID": "brachytron pratense",
+    "scientific_name": "brachytron pratense",
+    "sv": [
+      "tidig mosaikslända"
+    ],
+    "en": [
+      "hairy dragonfly"
+    ]
+  },
+  {
+    "itemID": "caliaeschna microstigma",
+    "scientific_name": "caliaeschna microstigma",
+    "sv": [],
+    "en": [
+      "shady hawker"
+    ]
+  },
+  {
+    "itemID": "calopteryx haemorrhoidalis",
+    "scientific_name": "calopteryx haemorrhoidalis",
+    "sv": [],
+    "en": [
+      "copper demoiselle"
+    ]
+  },
+  {
+    "itemID": "calopteryx splendens",
+    "scientific_name": "calopteryx splendens",
+    "sv": [
+      "blåbandad jungfruslända"
+    ],
+    "en": [
+      "banded demoiselle",
+      "banded agrion",
+      "banded jewelwing"
+    ]
+  },
+  {
+    "itemID": "calopteryx virgo",
+    "scientific_name": "calopteryx virgo",
+    "sv": [
+      "blå jungfruslända"
+    ],
+    "en": [
+      "beautiful demoiselle",
+      "beautiful jewelwing"
+    ]
+  },
+  {
+    "itemID": "calopteryx xanthostoma",
+    "scientific_name": "calopteryx xanthostoma",
+    "sv": [],
+    "en": [
+      "western demoiselle"
+    ]
+  },
+  {
+    "itemID": "ceriagrion georgifreyi",
+    "scientific_name": "ceriagrion georgifreyi",
+    "sv": [],
+    "en": [
+      "turkish red damsel"
+    ]
+  },
+  {
+    "itemID": "ceriagrion tenellum",
+    "scientific_name": "ceriagrion tenellum",
+    "sv": [
+      "liten rödögonflickslända"
+    ],
+    "en": [
+      "small red damselfly"
+    ]
+  },
+  {
+    "itemID": "coenagrion armatum",
+    "scientific_name": "coenagrion armatum",
+    "sv": [
+      "griptångflickslända"
+    ],
+    "en": [
+      "dark bluet",
+      "norfolk damselfly"
+    ]
+  },
+  {
+    "itemID": "coenagrion caerulaescens",
+    "scientific_name": "coenagrion caerulaescens",
+    "sv": [],
+    "en": [
+      "mediterranean bluet"
+    ]
+  },
+  {
+    "itemID": "coenagrion ecornutum",
+    "scientific_name": "coenagrion ecornutum",
+    "sv": [],
+    "en": []
+  },
+  {
+    "itemID": "coenagrion glaciale",
+    "scientific_name": "coenagrion glaciale",
+    "sv": [],
+    "en": []
+  },
+  {
+    "itemID": "coenagrion hastulatum",
+    "scientific_name": "coenagrion hastulatum",
+    "sv": [
+      "spjutflickslända"
+    ],
+    "en": [
+      "northern damselfly",
+      "spearhead bluet"
+    ]
+  },
+  {
+    "itemID": "coenagrion hylas",
+    "scientific_name": "coenagrion hylas",
+    "sv": [],
+    "en": [
+      "siberian bluet"
+    ]
+  },
+  {
+    "itemID": "coenagrion intermedium",
+    "scientific_name": "coenagrion intermedium",
+    "sv": [],
+    "en": [
+      "cretan bluet"
+    ]
+  },
+  {
+    "itemID": "coenagrion johanssoni",
+    "scientific_name": "coenagrion johanssoni",
+    "sv": [
+      "myrflickslända"
+    ],
+    "en": [
+      "arctic bluet"
+    ]
+  },
+  {
+    "itemID": "coenagrion lunulatum",
+    "scientific_name": "coenagrion lunulatum",
+    "sv": [
+      "månflickslända"
+    ],
+    "en": [
+      "crescent bluet",
+      "irish damselfly"
+    ]
+  },
+  {
+    "itemID": "coenagrion mercuriale",
+    "scientific_name": "coenagrion mercuriale",
+    "sv": [],
+    "en": [
+      "southern damselfly"
+    ]
+  },
+  {
+    "itemID": "coenagrion ornatum",
+    "scientific_name": "coenagrion ornatum",
+    "sv": [],
+    "en": [
+      "ornate bluet"
+    ]
+  },
+  {
+    "itemID": "coenagrion puella",
+    "scientific_name": "coenagrion puella",
+    "sv": [
+      "ljus lyrflickslända"
+    ],
+    "en": [
+      "azure damselfly"
+    ]
+  },
+  {
+    "itemID": "coenagrion pulchellum",
+    "scientific_name": "coenagrion pulchellum",
+    "sv": [
+      "mörk lyrflickslända"
+    ],
+    "en": [
+      "variable damselfly"
+    ]
+  },
+  {
+    "itemID": "coenagrion scitulum",
+    "scientific_name": "coenagrion scitulum",
+    "sv": [],
+    "en": [
+      "dainty bluet"
+    ]
+  },
+  {
+    "itemID": "enallagma cyathigerum",
+    "scientific_name": "enallagma cyathigerum",
+    "sv": [
+      "sjöflickslända"
+    ],
+    "en": [
+      "common bluet"
+    ]
+  },
+  {
+    "itemID": "erythromma lindenii",
+    "scientific_name": "erythromma lindenii",
+    "sv": [
+      "pokalflickslända"
+    ],
+    "en": [
+      "goblet-marked damselfly"
+    ]
+  },
+  {
+    "itemID": "erythromma najas",
+    "scientific_name": "erythromma najas",
+    "sv": [
+      "större rödögonflickslända",
+      "rödögd flickslända"
+    ],
+    "en": [
+      "Red-eyed damselfly"
+    ]
+  },
+  {
+    "itemID": "erythromma viridulum",
+    "scientific_name": "erythromma viridulum",
+    "sv": [
+      "mindre rödögonflickslända"
+    ],
+    "en": [
+      "Small red-eyed damselfly"
+    ]
+  },
+  {
+    "itemID": "ischnura aralensis",
+    "scientific_name": "ischnura aralensis",
+    "sv": [],
+    "en": []
+  },
+  {
+    "itemID": "ischnura elegans",
+    "scientific_name": "ischnura elegans",
+    "sv": [
+      "större kustflickslända"
+    ],
+    "en": [
+      "Blue-tailed damselfly",
+      "Common Bluetail"
+    ]
+  },
+  {
+    "itemID": "ischnura fountaineae",
+    "scientific_name": "ischnura fountaineae",
+    "sv": [],
+    "en": [
+      "oasis bluetail"
+    ]
+  },
+  {
+    "itemID": "ischnura genei",
+    "scientific_name": "ischnura genei",
+    "sv": [],
+    "en": [
+      "island bluetail"
+    ]
+  },
+  {
+    "itemID": "ischnura graellsii",
+    "scientific_name": "ischnura graellsii",
+    "sv": [],
+    "en": [
+      "iberian bluetail"
+    ]
+  },
+  {
+    "itemID": "ischnura hastata",
+    "scientific_name": "ischnura hastata",
+    "sv": [],
+    "en": [
+      "citrine forktail"
+    ]
+  },
+  {
+    "itemID": "ischnura intermedia",
+    "scientific_name": "ischnura intermedia",
+    "sv": [],
+    "en": [
+      "persian bluetail"
+    ]
+  },
+  {
+    "itemID": "ischnura pumilio",
+    "scientific_name": "ischnura pumilio",
+    "sv": [
+      "mondre kustflickslända"
+    ],
+    "en": [
+      "Small Bluetail",
+      "Scarce blue-tailed damselfly"
+    ]
+  },
+  {
+    "itemID": "ischnura saharensis",
+    "scientific_name": "ischnura saharensis",
+    "sv": [],
+    "en": [
+      "sahara bluetail"
+    ]
+  },
+  {
+    "itemID": "ischnura senegalensis",
+    "scientific_name": "ischnura senegalensis",
+    "sv": [],
+    "en": [
+      "marsh bluetail"
+    ]
+  },
+  {
+    "itemID": "nehalennia speciosa",
+    "scientific_name": "nehalennia speciosa",
+    "sv": [
+      "dvärgflickslända"
+    ],
+    "en": [
+      "pygmy damselfly",
+      "sedgeling",
+      "sedgling"
+    ]
+  },
+  {
+    "itemID": "pyrrhosoma nymphula",
+    "scientific_name": "pyrrhosoma nymphula",
+    "sv": [
+      "röd flickslända"
+    ],
+    "en": [
+      "large red damselfly"
+    ]
+  },
+  {
+    "itemID": "pyrrhosoma elisabethae",
+    "scientific_name": "pyrrhosoma elisabethae",
+    "sv": [],
+    "en": [
+      "greek red damselfly"
+    ]
+  },
+  {
+    "itemID": "cordulegaster bidentata",
+    "scientific_name": "cordulegaster bidentata",
+    "sv": [],
+    "en": [
+      "sombre goldenring"
+    ]
+  },
+  {
+    "itemID": "cordulegaster boltonii",
+    "scientific_name": "cordulegaster boltonii",
+    "sv": [
+      "kungstrollslända"
+    ],
+    "en": [
+      "common goldenring"
+    ]
+  },
+  {
+    "itemID": "cordulegaster helladica",
+    "scientific_name": "cordulegaster helladica",
+    "sv": [],
+    "en": [
+      "greek goldenring"
+    ]
+  },
+  {
+    "itemID": "cordulegaster heros",
+    "scientific_name": "cordulegaster heros",
+    "sv": [],
+    "en": [
+      "balkan goldenring"
+    ]
+  },
+  {
+    "itemID": "cordulegaster insignis",
+    "scientific_name": "cordulegaster insignis",
+    "sv": [],
+    "en": [
+      "blue-eyed goldenring"
+    ]
+  },
+  {
+    "itemID": "cordulegaster picta",
+    "scientific_name": "cordulegaster picta",
+    "sv": [],
+    "en": [
+      "turkish goldenring"
+    ]
+  },
+  {
+    "itemID": "cordulegaster trinacriae",
+    "scientific_name": "cordulegaster trinacriae",
+    "sv": [],
+    "en": [
+      "italian goldenring"
+    ]
+  },
+  {
+    "itemID": "cordulia aenea",
+    "scientific_name": "cordulia aenea",
+    "sv": [
+      "guldtrollslända"
+    ],
+    "en": [
+      "downy emerald"
+    ]
+  },
+  {
+    "itemID": "epitheca bimaculata",
+    "scientific_name": "epitheca bimaculata",
+    "sv": [
+      "tvåfläckad trollslända"
+    ],
+    "en": [
+      "eurasian baskettail"
+    ]
+  },
+  {
+    "itemID": "somatochlora alpestris",
+    "scientific_name": "somatochlora alpestris",
+    "sv": [
+      "fjälltrollslända"
+    ],
+    "en": [
+      "alpine emerald"
+    ]
+  },
+  {
+    "itemID": "somatochlora arctica",
+    "scientific_name": "somatochlora arctica",
+    "sv": [
+      "mondre glanstrollslända"
+    ],
+    "en": [
+      "northern emerald"
+    ]
+  },
+  {
+    "itemID": "somatochlora borisi",
+    "scientific_name": "somatochlora borisi",
+    "sv": [],
+    "en": [
+      "bulgarian emerald"
+    ]
+  },
+  {
+    "itemID": "somatochlora flavomaculata",
+    "scientific_name": "somatochlora flavomaculata",
+    "sv": [
+      "gulfläckad glanstrollslända"
+    ],
+    "en": [
+      "yellow-spotted emerald"
+    ]
+  },
+  {
+    "itemID": "somatochlora graeseri",
+    "scientific_name": "somatochlora graeseri",
+    "sv": [],
+    "en": []
+  },
+  {
+    "itemID": "somatochlora meridionalis",
+    "scientific_name": "somatochlora meridionalis",
+    "sv": [],
+    "en": [
+      "balkan emerald"
+    ]
+  },
+  {
+    "itemID": "somatochlora metallica",
+    "scientific_name": "somatochlora metallica",
+    "sv": [
+      "metalltrollslända"
+    ],
+    "en": [
+      "brilliant emerald"
+    ]
+  },
+  {
+    "itemID": "somatochlora sahlbergi",
+    "scientific_name": "somatochlora sahlbergi",
+    "sv": [
+      "tundratrollslända"
+    ],
+    "en": [
+      "treeline emerald"
+    ]
+  },
+  {
+    "itemID": "epallage fatime",
+    "scientific_name": "epallage fatime",
+    "sv": [
+      ""
+    ],
+    "en": [
+      "odalisque"
+    ]
+  },
+  {
+    "itemID": "gomphus flavipes",
+    "scientific_name": "gomphus flavipes",
+    "sv": [],
+    "en": [
+      "river clubtail"
+    ]
+  },
+  {
+    "itemID": "gomphus graslinii",
+    "scientific_name": "gomphus graslinii",
+    "sv": [],
+    "en": [
+      "pronged clubtail"
+    ]
+  },
+  {
+    "itemID": "gomphus pulchellus",
+    "scientific_name": "gomphus pulchellus",
+    "sv": [
+      ""
+    ],
+    "en": [
+      "western clubtail"
+    ]
+  },
+  {
+    "itemID": "gomphus schneiderii",
+    "scientific_name": "gomphus schneiderii",
+    "sv": [],
+    "en": [
+      "turkish clubtail"
+    ]
+  },
+  {
+    "itemID": "gomphus simillimus",
+    "scientific_name": "gomphus simillimus",
+    "sv": [],
+    "en": [
+      "yellow clubtail"
+    ]
+  },
+  {
+    "itemID": "gomphus vulgatissimus",
+    "scientific_name": "gomphus vulgatissimus",
+    "sv": [
+      "sandflodtrollslända"
+    ],
+    "en": [
+      "common clubtail"
+    ]
+  },
+  {
+    "itemID": "lindenia tetraphylla",
+    "scientific_name": "lindenia tetraphylla",
+    "sv": [],
+    "en": [
+      "bladetail",
+      "lobe-tailed dragonfly",
+      "arabian lobetail"
+    ]
+  },
+  {
+    "itemID": "onychogomphus costae",
+    "scientific_name": "onychogomphus costae",
+    "sv": [
+      ""
+    ],
+    "en": [
+      "faded pincertail",
+      "plain hook-tailed dragonfly",
+      "costa's pincertail"
+    ]
+  },
+  {
+    "itemID": "onychogomphus cazuma",
+    "scientific_name": "onychogomphus cazuma",
+    "sv": [],
+    "en": [
+      "cazuma pincertail"
+    ]
+  },
+  {
+    "itemID": "onychogomphus forcipatus",
+    "scientific_name": "onychogomphus forcipatus",
+    "sv": [
+      "stenflodtrollslända"
+    ],
+    "en": [
+      "green-eyed hooktail",
+      "small pincertail"
+    ]
+  },
+  {
+    "itemID": "onychogomphus uncatus",
+    "scientific_name": "onychogomphus uncatus",
+    "sv": [],
+    "en": [
+      "large pincertail"
+    ]
+  },
+  {
+    "itemID": "ophiogomphus cecilia",
+    "scientific_name": "ophiogomphus cecilia",
+    "sv": [
+      "grön flodtrollslända"
+    ],
+    "en": [
+      "green gomphid"
+    ]
+  },
+  {
+    "itemID": "paragomphus genei",
+    "scientific_name": "paragomphus genei",
+    "sv": [],
+    "en": [
+      "common hooktail"
+    ]
+  },
+  {
+    "itemID": "oxygastra curtisii",
+    "scientific_name": "oxygastra curtisii",
+    "sv": [],
+    "en": [
+      "orange spotted emerald"
+    ]
+  },
+  {
+    "itemID": "chalcolestes parvidens",
+    "scientific_name": "chalcolestes parvidens",
+    "sv": [],
+    "en": [
+      "eastern willow spreadwing"
+    ]
+  },
+  {
+    "itemID": "chalcolestes viridis",
+    "scientific_name": "chalcolestes viridis",
+    "sv": [
+      "västlig trädflickslända"
+    ],
+    "en": [
+      "green emerald damselfly"
+    ]
+  },
+  {
+    "itemID": "lestes barbarus",
+    "scientific_name": "lestes barbarus",
+    "sv": [
+      "vandrande smaragdflickslända",
+      "långväga smaragdflickslända"
+    ],
+    "en": [
+      "migrant spreadwing",
+      "southern emerald damselfly",
+      "shy emerald damselfly"
+    ]
+  },
+  {
+    "itemID": "lestes dryas",
+    "scientific_name": "lestes dryas",
+    "sv": [
+      "kraftig smaragdflickslända"
+    ],
+    "en": [
+      "emerald spreadwing",
+      "scarce emerald damselfly",
+      "robust spreadwing",
+      "turlough spreadwing"
+    ]
+  },
+  {
+    "itemID": "lestes macrostigma",
+    "scientific_name": "lestes macrostigma",
+    "sv": [],
+    "en": [
+      "dark spreadwing"
+    ]
+  },
+  {
+    "itemID": "lestes sponsa",
+    "scientific_name": "lestes sponsa",
+    "sv": [
+      "pudrad smaragdflickslända"
+    ],
+    "en": [
+      "common spreadwing"
+    ]
+  },
+  {
+    "itemID": "lestes virens",
+    "scientific_name": "lestes virens",
+    "sv": [
+      "mindre smaragdflickslända"
+    ],
+    "en": [
+      "small spreadwing"
+    ]
+  },
+  {
+    "itemID": "sympecma fusca",
+    "scientific_name": "sympecma fusca",
+    "sv": [
+      "vinterflickslända"
+    ],
+    "en": [
+      "common winter damselfly"
+    ]
+  },
+  {
+    "itemID": "sympecma paedisca",
+    "scientific_name": "sympecma paedisca",
+    "sv": [
+      "sibirisk vinterflickslända"
+    ],
+    "en": [
+      "siberian winter damselfly"
+    ]
+  },
+  {
+    "itemID": "brachythemis impartita",
+    "scientific_name": "brachythemis impartita",
+    "sv": [],
+    "en": [
+      "northern banded groundling"
+    ]
+  },
+  {
+    "itemID": "crocothemis erythraea",
+    "scientific_name": "crocothemis erythraea",
+    "sv": [
+      "karmintrollslända"
+    ],
+    "en": [
+      "broad scarlet",
+      "ommon scarlet-darter",
+      "scarlet darter",
+      "scarlet dragonfly"
+    ]
+  },
+  {
+    "itemID": "diplacodes lefebvrii",
+    "scientific_name": "diplacodes lefebvrii",
+    "sv": [],
+    "en": [
+      "black percher",
+      "black ground skimmer"
+    ]
+  },
+  {
+    "itemID": "leucorrhinia albifrons",
+    "scientific_name": "leucorrhinia albifrons",
+    "sv": [
+      "pudrad kärrtrollslända"
+    ],
+    "en": [
+      "dark whiteface"
+    ]
+  },
+  {
+    "itemID": "leucorrhinia caudalis",
+    "scientific_name": "leucorrhinia caudalis",
+    "sv": [
+      "bred kärrtrollslända"
+    ],
+    "en": [
+      "lilypad whiteface"
+    ]
+  },
+  {
+    "itemID": "leucorrhinia dubia",
+    "scientific_name": "leucorrhinia dubia",
+    "sv": [
+      "myrtrollslända"
+    ],
+    "en": [
+      "white-faced darter"
+    ]
+  },
+  {
+    "itemID": "leucorrhinia pectoralis",
+    "scientific_name": "leucorrhinia pectoralis",
+    "sv": [
+      "citronfläckad kärrtrollslända"
+    ],
+    "en": [
+      "yellow-spotted whiteface"
+    ]
+  },
+  {
+    "itemID": "leucorrhinia rubicunda",
+    "scientific_name": "leucorrhinia rubicunda",
+    "sv": [
+      "nordisk kärrtrollslända"
+    ],
+    "en": [
+      "ruby whiteface"
+    ]
+  },
+  {
+    "itemID": "libellula depressa",
+    "scientific_name": "libellula depressa",
+    "sv": [
+      "bred trollslända"
+    ],
+    "en": [
+      "broad bodied chaser",
+      "broad bodied darter"
+    ]
+  },
+  {
+    "itemID": "libellula fulva",
+    "scientific_name": "libellula fulva",
+    "sv": [
+      "spetsfläckad trollslända"
+    ],
+    "en": [
+      "scarce chaser"
+    ]
+  },
+  {
+    "itemID": "libellula quadrimaculata",
+    "scientific_name": "libellula quadrimaculata",
+    "sv": [
+      "fyrfläckad trollslända"
+    ],
+    "en": [
+      "four-spotted chaser",
+      "four-spotted skimmer"
+    ]
+  },
+  {
+    "itemID": "orthetrum albistylum",
+    "scientific_name": "orthetrum albistylum",
+    "sv": [],
+    "en": [
+      "white-tailed skimmer"
+    ]
+  },
+  {
+    "itemID": "orthetrum brunneum",
+    "scientific_name": "orthetrum brunneum",
+    "sv": [],
+    "en": [
+      "southern skimmer"
+    ]
+  },
+  {
+    "itemID": "orthetrum cancellatum",
+    "scientific_name": "orthetrum cancellatum",
+    "sv": [
+      "större sjötrollslända"
+    ],
+    "en": [
+      "black-tailed skimmer"
+    ]
+  },
+  {
+    "itemID": "orthetrum chrysostigma",
+    "scientific_name": "orthetrum chrysostigma",
+    "sv": [],
+    "en": [
+      "epaulet skimmer"
+    ]
+  },
+  {
+    "itemID": "orthetrum coerulescens",
+    "scientific_name": "orthetrum coerulescens",
+    "sv": [
+      "mindre sjötrollslända"
+    ],
+    "en": [
+      "keeled skimmer"
+    ]
+  },
+  {
+    "itemID": "orthetrum nitidinerve",
+    "scientific_name": "orthetrum nitidinerve",
+    "sv": [],
+    "en": [
+      "yellow-veined skimmer"
+    ]
+  },
+  {
+    "itemID": "orthetrum sabina",
+    "scientific_name": "orthetrum sabina",
+    "sv": [],
+    "en": [
+      "slender skimmer",
+      "green marsh hawk"
+    ]
+  },
+  {
+    "itemID": "orthetrum taeniolatum",
+    "scientific_name": "orthetrum taeniolatum",
+    "sv": [],
+    "en": [
+      "small skimmer"
+    ]
+  },
+  {
+    "itemID": "orthetrum trinacria",
+    "scientific_name": "orthetrum trinacria",
+    "sv": [],
+    "en": [
+      "long skimmer"
+    ]
+  },
+  {
+    "itemID": "pantala flavescens",
+    "scientific_name": "pantala flavescens",
+    "sv": [
+      "monsuntrollslända"
+    ],
+    "en": [
+      "globe skimmer",
+      "globe wanderer",
+      "wandering glider"
+    ]
+  },
+  {
+    "itemID": "selysiothemis nigra",
+    "scientific_name": "selysiothemis nigra",
+    "sv": [],
+    "en": [
+      "black pennant"
+    ]
+  },
+  {
+    "itemID": "sympetrum danae",
+    "scientific_name": "sympetrum danae",
+    "sv": [
+      "svart ängstrollslända"
+    ],
+    "en": [
+      "black darter"
+    ]
+  },
+  {
+    "itemID": "sympetrum depressiusculum",
+    "scientific_name": "sympetrum depressiusculum",
+    "sv": [],
+    "en": [
+      "spotted darter"
+    ]
+  },
+  {
+    "itemID": "sympetrum flaveolum",
+    "scientific_name": "sympetrum flaveolum",
+    "sv": [
+      "gulfläckad ängstrollslända"
+    ],
+    "en": [
+      "yellow-winged darter"
+    ]
+  },
+  {
+    "itemID": "sympetrum fonscolombii",
+    "scientific_name": "sympetrum fonscolombii",
+    "sv": [
+      "vandrande ängstrollslända"
+    ],
+    "en": [
+      "red-veined darter"
+    ]
+  },
+  {
+    "itemID": "sympetrum meridionale",
+    "scientific_name": "sympetrum meridionale",
+    "sv": [],
+    "en": [
+      "southern darter"
+    ]
+  },
+  {
+    "itemID": "sympetrum nigrifemur",
+    "scientific_name": "sympetrum nigrifemur",
+    "sv": [],
+    "en": [
+      "island darter"
+    ]
+  },
+  {
+    "itemID": "sympetrum pedemontanum",
+    "scientific_name": "sympetrum pedemontanum",
+    "sv": [
+      "bandad ängstrollslända"
+    ],
+    "en": [
+      "banded darter"
+    ]
+  },
+  {
+    "itemID": "sympetrum sanguineum",
+    "scientific_name": "sympetrum sanguineum",
+    "sv": [
+      "blodröd ängstrollslända"
+    ],
+    "en": [
+      "ruddy darter"
+    ]
+  },
+  {
+    "itemID": "sympetrum sinaiticum",
+    "scientific_name": "sympetrum sinaiticum",
+    "sv": [],
+    "en": []
+  },
+  {
+    "itemID": "sympetrum striolatum",
+    "scientific_name": "sympetrum striolatum",
+    "sv": [
+      "större ängstrollslända"
+    ],
+    "en": [
+      "common darter"
+    ]
+  },
+  {
+    "itemID": "sympetrum vulgatum",
+    "scientific_name": "sympetrum vulgatum",
+    "sv": [
+      "tegelröd ängstrollslända"
+    ],
+    "en": [
+      "vagrant darter"
+    ]
+  },
+  {
+    "itemID": "trithemis annulata",
+    "scientific_name": "trithemis annulata",
+    "sv": [],
+    "en": [
+      "violet dropwing",
+      "violet-marked darter",
+      "purple-blushed darter",
+      "plum-coloured dropwing"
+    ]
+  },
+  {
+    "itemID": "trithemis arteriosa",
+    "scientific_name": "trithemis arteriosa",
+    "sv": [],
+    "en": [
+      "red-veined dropwing"
+    ]
+  },
+  {
+    "itemID": "trithemis festiva",
+    "scientific_name": "trithemis festiva",
+    "sv": [],
+    "en": [
+      "black stream glider",
+      "indigo dropwing"
+    ]
+  },
+  {
+    "itemID": "trithemis kirbyi",
+    "scientific_name": "trithemis kirbyi",
+    "sv": [],
+    "en": [
+      "orange-winged dropwing",
+      "scarlet rock glider",
+      "kirby's dropwing"
+    ]
+  },
+  {
+    "itemID": "zygonyx torridus",
+    "scientific_name": "zygonyx torridus",
+    "sv": [],
+    "en": [
+      "ringed cascader"
+    ]
+  },
+  {
+    "itemID": "macromia amphigena",
+    "scientific_name": "macromia amphigena",
+    "sv": [],
+    "en": []
+  },
+  {
+    "itemID": "macromia splendens",
+    "scientific_name": "macromia splendens",
+    "sv": [],
+    "en": [
+      "splendid cruiser"
+    ]
+  },
+  {
+    "itemID": "platycnemis acutipennis",
+    "scientific_name": "platycnemis acutipennis",
+    "sv": [],
+    "en": [
+      "orange white-legged damselfly"
+    ]
+  },
+  {
+    "itemID": "platycnemis dealbata",
+    "scientific_name": "platycnemis dealbata",
+    "sv": [],
+    "en": [
+      "ivory featherleg"
+    ]
+  },
+  {
+    "itemID": "platycnemis latipes",
+    "scientific_name": "platycnemis latipes",
+    "sv": [],
+    "en": [
+      "white featherleg"
+    ]
+  },
+  {
+    "itemID": "platycnemis pennipes",
+    "scientific_name": "platycnemis pennipes",
+    "sv": [
+      "flodflickslända"
+    ],
+    "en": [
+      "white-legged damselfly"
+    ]
   }
 ]
