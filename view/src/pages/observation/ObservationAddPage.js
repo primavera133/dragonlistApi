@@ -91,12 +91,13 @@ export const ObservationAddPage = withI18n()(({ history }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (validateForm()) {
-      speciesApi.postObservation({
+      await speciesApi.postObservation({
         country,
         region,
         observationDate: observationDate.valueOf(),
         specie,
       })
+      history.push('/observation/list')
     }
   }
 
