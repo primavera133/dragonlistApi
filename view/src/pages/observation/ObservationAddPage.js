@@ -88,7 +88,7 @@ export const ObservationAddPage = withI18n()(({ history }) => {
     return validCountry && validRegion && validSpecie && validDate
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (validateForm()) {
       await speciesApi.postObservation({
