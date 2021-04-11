@@ -54,7 +54,12 @@ export const ObservationAddPage = withI18n()(({ history }) => {
 
   useEffect(() => {
     if (species?.length) {
-      setMappedSpecies(species.map((s) => [s.scientific_name, s.scientific_name]))
+      const lang = window.localStorage.getItem('lang')
+      const mapped = species.flatMap((s) => {
+        const names = [s.scientific_name].concat(s[lang]).filter((n) => !!n)
+        return names.map((name) => [s.scientific_name, name])
+      })
+      setMappedSpecies(mapped)
     }
   }, [species])
 
@@ -64,6 +69,10 @@ export const ObservationAddPage = withI18n()(({ history }) => {
       setRegion(userDetails?.residentRegion)
     }
   }, [userDetails])
+
+  const translatedName = (sc) => {
+    return t`${sc}`
+  }
 
   const isFetching = () => {
     // return isFetchingCountries || isFetchingSpecies || isFetchingUserObservations

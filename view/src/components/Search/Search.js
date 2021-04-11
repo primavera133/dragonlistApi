@@ -17,8 +17,8 @@ export const Search = ({ label, names, onSelect }) => {
 
     return inputLength === 0
       ? []
-      : names.filter(([key]) => {
-          return key.toLowerCase().match(inputMatcher)
+      : names.filter(([key, name]) => {
+          return name.toLowerCase().match(inputMatcher)
         })
   }
 
@@ -26,14 +26,13 @@ export const Search = ({ label, names, onSelect }) => {
   // based on the clicked suggestion. Teach Autosuggest how to calculate the
   // input value for every given suggestion.
   const getSuggestionValue = (suggestion) => {
-    console.log('getSuggestionValue', suggestion[1])
-    onSelect(suggestion[1])
-    return suggestion[0]
+    onSelect(suggestion[0])
+    return suggestion[1]
   }
 
   // Use your imagination to render suggestions.
   const renderSuggestion = (suggestion) => {
-    return <div>{suggestion[0]}</div>
+    return <div>{suggestion[1]}</div>
   }
 
   const onChange = (event, { newValue }) => {

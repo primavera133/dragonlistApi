@@ -194,6 +194,10 @@ msgstr "Mina sidor"
 msgid "Put a pin on what you've seen"
 msgstr "Sätt en kartnål på vad du sett"
 
+#: src/pages/home/HomePage.js:111
+msgid "Record where you first saw a specie in a country, or where your first observation in a region of your country."
+msgstr ""
+
 #: src/pages/home/home.js:104
 #~ msgid "Record where you first saw a specie in a country, or where your first sighting in a region of your country."
 #~ msgstr "Spara var du först såg en art i ett land, eller var du först såg den i ditt landskap."
