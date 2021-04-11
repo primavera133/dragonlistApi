@@ -9,7 +9,6 @@ import { useQuery } from 'react-query'
 
 import { AuthContext } from '../../services/authContext'
 import configApi from '../../api/config'
-import listsApi from '../../api/lists'
 import speciesApi from '../../api/species'
 
 import { DatePicker } from '../../components/DatePicker'

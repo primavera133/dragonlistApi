@@ -5,7 +5,11 @@ import { IObservation } from '../../types'
 const getUserObservations = async (request: Request, response: Response): Promise<Response<IObservation[]> | Error> => {
   try {
     const email = request.params.userId
-    const snapshot = await db.collection('observations').where('email', '==', email).orderBy('specie', 'asc').get()
+    const snapshot = await db
+      .collection('observations')
+      .where('email', '==', email)
+      .orderBy('observationDate', 'asc')
+      .get()
 
     if (snapshot.empty) {
       return response.json([])
