@@ -18,7 +18,7 @@ import { HomePage } from './pages/home'
 import { HowToPage } from './pages/howto'
 import { SignInEmailPage } from './pages/signin'
 import { ProfilePage } from './pages/profile'
-import { ObservationAddPage } from './pages/observation'
+import { ObservationAddPage, ObservationListPage } from './pages/observation'
 import { AdminPage } from './pages/admin'
 import { TermsAndConditionsPage } from './pages/termsAndConditions'
 import { PrivacyPolicyPage } from './pages/privacyPolicy'
@@ -54,6 +54,7 @@ const App = () => {
               <Route exact path="/editProfile" component={CompleteProfilePage} />
               <Route exact path="/how-to" component={HowToPage} />
               <Route exact path="/observation/add" component={ObservationAddPage} />
+              <Route exact path="/observation/list" component={ObservationListPage} />
               <Route exact path="/privacypolicy" component={PrivacyPolicyPage} />
               <Route exact path="/signin" component={SignInEmailPage} />
               <Route exact path="/termsandconditions" component={TermsAndConditionsPage} />

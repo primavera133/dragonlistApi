@@ -1,7 +1,7 @@
 import { getAuthHeader } from '../services/authService'
 import { defaultFetchSettings } from './common'
 
-const getUserObservations = async () => {
+const getUserObservations = async (userId) => {
   try {
     const url = `/api/observations/user/${userId}`
     const authHeader = await getAuthHeader()

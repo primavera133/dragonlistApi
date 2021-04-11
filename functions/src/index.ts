@@ -21,7 +21,7 @@ import getCountryRegionUserObservations from './api/country/getCountryRegionUser
 import getAllSpecies from './api/specie/getAllSpecies'
 
 import getAllObservations from './api/observations/getAllObservations'
-// import getUserObservations from './api/observations/getUserObservations'
+import getUserObservations from './api/observations/getUserObservations'
 import getObservation from './api/observations/getObservation'
 import postObservation from './api/observations/postObservation'
 
@@ -53,7 +53,7 @@ app.get('/api/country/:countryId/region/:regionId/user/:email/observations', get
 app.get('/api/species', getAllSpecies)
 
 app.get('/api/observations', auth('admin'), getAllObservations)
-// app.post('/api/observations/user/:userId', auth(), getUserObservations)
+app.get('/api/observations/user/:userId', auth(), getUserObservations)
 app.get('/api/observation/:observationId', getObservation)
 app.post('/api/observation', auth(), postObservation)
 

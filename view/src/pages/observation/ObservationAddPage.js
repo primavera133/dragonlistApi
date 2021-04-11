@@ -23,10 +23,6 @@ import { Button } from '../../components/Button'
 export const ObservationAddPage = withI18n()(({ history }) => {
   const { isFetching: isFetchingCountries, data: countries } = useQuery('countries', configApi.getCountries)
   const { isFetching: isFetchingSpecies, data: species } = useQuery('species', speciesApi.getSpecies)
-  // const { isFetching: isFetchingUserObservations, data: userObservations } = useQuery(
-  //   'userObservations',
-  //   listsApi.getUserObservations
-  // )
 
   const { userDetails } = useContext(AuthContext)
 
@@ -70,12 +66,7 @@ export const ObservationAddPage = withI18n()(({ history }) => {
     }
   }, [userDetails])
 
-  const translatedName = (sc) => {
-    return t`${sc}`
-  }
-
   const isFetching = () => {
-    // return isFetchingCountries || isFetchingSpecies || isFetchingUserObservations
     return isFetchingCountries || isFetchingSpecies
   }
 
