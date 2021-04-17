@@ -1,1 +1,1 @@
-export { Language } from './Language'
+export { Language, getLanguage } from './Language'

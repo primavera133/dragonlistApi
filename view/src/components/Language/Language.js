@@ -6,15 +6,27 @@ import tw, { css } from 'twin.macro'
 
 import { detectLanguage } from '../../i18n'
 
+let language
+
 const setLanguage = (value) => {
   window.localStorage.setItem('lang', value)
   window.location.reload()
 }
 
+export const getLanguage = () => {
+  try {
+    if (language) return language
+    return window.localStorage.getItem('lang')
+  } catch (err) {
+    console.log(err)
+  }
+}
+
 export const Language = ({ transparent }) => {
   const [lang, setLang] = useState()
   useEffect(() => {
-    setLang(detectLanguage())
+    language = detectLanguage()
+    setLang(language)
   }, [])
   return (
     <ul tw="mx-4 text-black" css={[transparent && tw`text-white`]}>

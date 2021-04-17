@@ -14,20 +14,21 @@ import listsApi from '../../api/lists'
 import speciesApi from '../../api/species'
 
 import { Layout } from '../../components/Layout'
+import { getLanguage } from '../../components/Language'
 import { Loader } from '../../components/Loader'
 import { PageHeader } from '../../components/PageHeader'
+import { Button } from '../../components/Button'
 
 export const ObservationListPage = withI18n()(({ history }) => {
-  const { isFetching: isFetchingSpecies, data: species } = useQuery('species', speciesApi.getSpecies)
-
   const [email, setEmail] = useState('')
+  const [language, setLanguage] = useState(getLanguage())
   const [country, setCountry] = useState('')
   const [region, setRegion] = useState('')
   const [uniqueObservations, setUniqueObservations] = useState([])
-  const [isFetching, setIsFetching] = useState(true)
 
   const { userDetails } = useContext(AuthContext)
 
+  const { isFetching: isFetchingSpecies, data: species } = useQuery('species', speciesApi.getSpecies)
   const { isFetching: isFetchingUserObservations, data: userObservations } = useQuery(
     ['userObservations', email],
     () => listsApi.getUserObservations(email),
@@ -35,6 +36,7 @@ export const ObservationListPage = withI18n()(({ history }) => {
       enabled: !!email,
     }
   )
+  const isFetching = isFetchingSpecies && isFetchingUserObservations
 
   useEffect(() => {
     if (userDetails) {
@@ -47,15 +49,27 @@ export const ObservationListPage = withI18n()(({ history }) => {
   useEffect(() => {
     if (userObservations) {
       const uniqueObservations = []
+      let number = 1
       userObservations.forEach((obs) => {
         if (!uniqueObservations.find((uobs) => obs.specie === uobs.specie)) {
-          uniqueObservations.push(obs)
+          uniqueObservations.push({
+            ...obs,
+            number: number++,
+          })
         }
       })
       setUniqueObservations(uniqueObservations)
-      setIsFetching(false)
     }
   }, [userObservations])
+
+  const translateName = (scientificName) => {
+    const specie = species.filter((sp) => sp.scientific_name === scientificName)[0] ?? []
+    return specie[language] ?? scientificName
+  }
+
+  const goAdd = () => {
+    history.push('/observation/add')
+  }
 
   return (
     <Layout>
@@ -77,12 +91,19 @@ export const ObservationListPage = withI18n()(({ history }) => {
           <ul>
             {uniqueObservations.map((obs, i) => (
               <li key={`items${i}`} tw="flex justify-between">
-                <span tw="text-lg font-semibold leading-normal pr-2">{obs.specie}</span>
+                <div tw="mb-2">
+                  <span tw="text-sm font-light pr-2">{obs.number}</span>
+                  <span tw="text-lg font-semibold leading-normal pr-2 capitalize">{translateName(obs.specie)}</span>
+                  <span tw="text-sm font-light leading-normal pr-2 capitalize">{obs.specie}</span>
+                </div>
                 <span tw="text-sm leading-normal">{format(new Date(obs.observationDate), 'yyyy-MM-dd')}</span>
               </li>
             ))}
           </ul>
           <hr tw="mt-1 mb-4" />
+          <Button isPrimary isSmall onClick={goAdd}>
+            <Trans>Add specie</Trans>
+          </Button>
         </div>
       )}
     </Layout>

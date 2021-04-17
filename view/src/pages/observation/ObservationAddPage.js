@@ -12,6 +12,7 @@ import configApi from '../../api/config'
 import speciesApi from '../../api/species'
 
 import { DatePicker } from '../../components/DatePicker'
+import { getLanguage } from '../../components/Language'
 import { Layout } from '../../components/Layout'
 import { Loader } from '../../components/Loader'
 import { PageHeader } from '../../components/PageHeader'
@@ -49,7 +50,7 @@ export const ObservationAddPage = withI18n()(({ history }) => {
 
   useEffect(() => {
     if (species?.length) {
-      const lang = window.localStorage.getItem('lang')
+      const lang = getLanguage()
       const mapped = species.flatMap((s) => {
         const names = [s.scientific_name].concat(s[lang]).filter((n) => !!n)
         return names.map((name) => [s.scientific_name, name])
