@@ -19,6 +19,7 @@ import { PageHeader } from '../../components/PageHeader'
 import { Select } from '../../components/Select/Select'
 import { Search } from '../../components/Search'
 import { Button } from '../../components/Button'
+import { mapRegions } from '../../utils/mapRegions'
 
 export const ObservationAddPage = withI18n()(({ history }) => {
   const { isFetching: isFetchingCountries, data: countries } = useQuery('countries', configApi.getCountries)
@@ -35,16 +36,7 @@ export const ObservationAddPage = withI18n()(({ history }) => {
 
   useEffect(() => {
     if (!isFetchingCountries && country) {
-      try {
-        const { regions } = countries.find((c) => c.itemID === country)
-        const mappedRegions = regions.map((r) => ({
-          id: r.toLowerCase(),
-          name: r.charAt(0).toUpperCase() + r.slice(1),
-        }))
-        setRegions(mappedRegions)
-      } catch (error) {
-        //console.log(error)
-      }
+      setRegions(mapRegions(country, countries))
     }
   }, [countries, country, isFetchingCountries])
 

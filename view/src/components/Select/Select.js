@@ -21,9 +21,11 @@ export const Select = withI18n()(({ disabled, id, label, name, options, onChange
   }
   return (
     <div tw="block">
-      <label htmlFor={id} tw="inline-flex items-center text-lg">
-        {label}
-      </label>
+      {label && (
+        <label htmlFor={id} tw="inline-flex items-center text-lg">
+          {label}
+        </label>
+      )}
       <select
         name={name}
         id={id}

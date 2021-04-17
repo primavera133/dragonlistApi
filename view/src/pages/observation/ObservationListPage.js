@@ -10,6 +10,7 @@ import { withI18n } from '@lingui/react'
 import { useQuery } from 'react-query'
 
 import { AuthContext } from '../../services/authContext'
+import configApi from '../../api/config'
 import listsApi from '../../api/lists'
 import speciesApi from '../../api/species'
 
@@ -18,16 +19,23 @@ import { getLanguage } from '../../components/Language'
 import { Loader } from '../../components/Loader'
 import { PageHeader } from '../../components/PageHeader'
 import { Button } from '../../components/Button'
+import { Select } from '../../components/Select/Select'
+
+import { capitalise } from '../../utils/capitalise'
+import { mapRegions } from '../../utils/mapRegions'
 
 export const ObservationListPage = withI18n()(({ history }) => {
   const [email, setEmail] = useState('')
-  const [language, setLanguage] = useState(getLanguage())
+  const [language] = useState(getLanguage())
   const [country, setCountry] = useState('')
-  const [region, setRegion] = useState('')
+  const [region, setRegion] = useState('all')
+  const [regions, setRegions] = useState([])
+  const [allRregions, setAllRegions] = useState(true)
   const [uniqueObservations, setUniqueObservations] = useState([])
 
   const { userDetails } = useContext(AuthContext)
 
+  const { isFetching: isFetchingCountries, data: countries } = useQuery('countries', configApi.getCountries)
   const { isFetching: isFetchingSpecies, data: species } = useQuery('species', speciesApi.getSpecies)
   const { isFetching: isFetchingUserObservations, data: userObservations } = useQuery(
     ['userObservations', email],
@@ -36,39 +44,52 @@ export const ObservationListPage = withI18n()(({ history }) => {
       enabled: !!email,
     }
   )
-  const isFetching = isFetchingSpecies && isFetchingUserObservations
+  const isFetching = isFetchingCountries || isFetchingSpecies || isFetchingUserObservations
 
   useEffect(() => {
     if (userDetails) {
       setEmail(userDetails.email)
       setCountry(userDetails?.residentCountry)
-      setRegion(userDetails?.residentRegion)
+      // setRegion(userDetails?.residentRegion)
     }
   }, [userDetails])
 
   useEffect(() => {
-    if (userObservations) {
+    if (!isFetchingCountries && country && countries) {
+      setRegions([{ id: 'all', name: i18n._(t`-- All regions --`) }, ...mapRegions(country, countries)])
+    }
+  }, [countries, country, isFetchingCountries])
+
+  useEffect(() => {
+    if (userObservations && country && region) {
       const uniqueObservations = []
       let number = 1
       userObservations.forEach((obs) => {
         if (!uniqueObservations.find((uobs) => obs.specie === uobs.specie)) {
-          uniqueObservations.push({
-            ...obs,
-            number: number++,
-          })
+          if (obs.country === country && (allRregions || obs.region === region)) {
+            uniqueObservations.push({
+              ...obs,
+              number: number++,
+            })
+          }
         }
       })
       setUniqueObservations(uniqueObservations)
     }
-  }, [userObservations])
+  }, [userObservations, country, region])
 
   const translateName = (scientificName) => {
     const specie = species.filter((sp) => sp.scientific_name === scientificName)[0] ?? []
-    return specie[language] ?? scientificName
+    return specie[language][0] ?? scientificName
   }
 
   const goAdd = () => {
     history.push('/observation/add')
+  }
+
+  const handleRegion = (region) => {
+    setAllRegions(region === 'all')
+    setRegion(region)
   }
 
   return (
@@ -80,6 +101,22 @@ export const ObservationListPage = withI18n()(({ history }) => {
           <PageHeader>
             <Trans>Your observations</Trans>
           </PageHeader>
+          <div tw="grid grid-cols-2">
+            <div tw="pb-4">
+              <Select id="country" name="country" options={countries} onChange={setCountry} selected={country} />
+            </div>
+
+            <div tw="pb-4">
+              <Select
+                id="region"
+                name="region"
+                options={regions}
+                onChange={handleRegion}
+                disabled={!regions?.length}
+                selected={region}
+              />
+            </div>
+          </div>
           <h3 tw="flex justify-between">
             <span tw="text-xl mb-2 font-semibold leading-normal">
               <Trans>Total list</Trans>{' '}
@@ -92,9 +129,9 @@ export const ObservationListPage = withI18n()(({ history }) => {
             {uniqueObservations.map((obs, i) => (
               <li key={`items${i}`} tw="flex justify-between">
                 <div tw="mb-2">
-                  <span tw="text-sm font-light pr-2">{obs.number}</span>
-                  <span tw="text-lg font-semibold leading-normal pr-2 capitalize">{translateName(obs.specie)}</span>
-                  <span tw="text-sm font-light leading-normal pr-2 capitalize">{obs.specie}</span>
+                  <span tw="text-sm font-light pr-2">{obs.number}:</span>
+                  <span tw="text-lg font-semibold leading-normal pr-2">{capitalise(translateName(obs.specie))}</span>
+                  <span tw="text-sm font-light leading-normal pr-2 ">{capitalise(obs.specie)}</span>
                 </div>
                 <span tw="text-sm leading-normal">{format(new Date(obs.observationDate), 'yyyy-MM-dd')}</span>
               </li>
