@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 // import { GlobalStyles } from 'twin.macro'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { i18n } from '@lingui/core'
@@ -53,6 +53,9 @@ const App = () => {
               <Route exact path="/completeProfile" component={CompleteProfilePage} />
               <Route exact path="/editProfile" component={CompleteProfilePage} />
               <Route exact path="/how-to" component={HowToPage} />
+              <Route exact path="/observation">
+                <Redirect to="/observation/list" />
+              </Route>
               <Route exact path="/observation/add" component={ObservationAddPage} />
               <Route exact path="/observation/list" component={ObservationListPage} />
               <Route exact path="/privacypolicy" component={PrivacyPolicyPage} />
