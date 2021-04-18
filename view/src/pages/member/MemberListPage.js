@@ -61,7 +61,7 @@ export const MemberListPage = withI18n()(({ history }) => {
       (member) =>
         (allCountries || member.residentCountry === country) && (allRegions || member.residentRegion === region)
     )
-    setMemebersList([...membersList, ...membersList])
+    setMemebersList(membersList)
   }, [members, country, region])
 
   const handleCountry = (country) => {
