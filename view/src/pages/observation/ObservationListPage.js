@@ -101,12 +101,19 @@ export const ObservationListPage = withI18n()(({ history }) => {
           <PageHeader>
             <Trans>Your observations</Trans>
           </PageHeader>
-          <div tw="grid grid-cols-2">
-            <div tw="pb-4">
-              <Select id="country" name="country" options={countries} onChange={setCountry} selected={country} />
+          <div tw="grid grid-cols-2 mb-8">
+            <div tw=" pr-1">
+              <Select
+                id="country"
+                name="country"
+                options={countries}
+                onChange={setCountry}
+                selected={country}
+                useInitial={false}
+              />
             </div>
 
-            <div tw="pb-4">
+            <div tw=" pl-1">
               <Select
                 id="region"
                 name="region"
@@ -114,17 +121,10 @@ export const ObservationListPage = withI18n()(({ history }) => {
                 onChange={handleRegion}
                 disabled={!regions?.length}
                 selected={region}
+                useInitial={false}
               />
             </div>
           </div>
-          <h3 tw="flex justify-between">
-            <span tw="text-xl mb-2 font-semibold leading-normal">
-              <Trans>Total list</Trans>{' '}
-            </span>
-            <span tw="text-lg font-semibold leading-normal">
-              {uniqueObservations.length} / {species?.length}
-            </span>
-          </h3>
           <ul>
             {uniqueObservations.map((obs, i) => (
               <li key={`items${i}`} tw="flex justify-between">
@@ -138,9 +138,15 @@ export const ObservationListPage = withI18n()(({ history }) => {
             ))}
           </ul>
           <hr tw="mt-1 mb-4" />
-          <Button isPrimary isSmall onClick={goAdd}>
-            <Trans>Add specie</Trans>
-          </Button>
+          <div tw="flex justify-between">
+            <span tw="text-lg font-semibold leading-normal">
+              {uniqueObservations.length} / {species?.length}
+            </span>
+
+            <Button isPrimary isSmall onClick={goAdd}>
+              <Trans>Add specie</Trans>
+            </Button>
+          </div>
         </div>
       )}
     </Layout>

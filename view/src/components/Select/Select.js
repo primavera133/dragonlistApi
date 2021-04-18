@@ -8,7 +8,7 @@ import { t, Trans } from '@lingui/macro'
 
 let previousValidValue
 
-export const Select = withI18n()(({ disabled, id, label, name, options, onChange, selected, i18n }) => {
+export const Select = withI18n()(({ disabled, id, label, name, options, onChange, selected, i18n, useInitial }) => {
   const ref = useRef()
   const handleChange = (e) => {
     const value = e.target.value
@@ -35,9 +35,11 @@ export const Select = withI18n()(({ disabled, id, label, name, options, onChange
         value={selected}
         ref={ref}
       >
-        <option value="" key="_select_">
-          {i18n._(t`-- select ---`)}
-        </option>
+        {useInitial && (
+          <option value="" key="_select_">
+            {i18n._(t`-- select ---`)}
+          </option>
+        )}
 
         {options.map((option) => (
           <option key={option.id} value={option.id}>
