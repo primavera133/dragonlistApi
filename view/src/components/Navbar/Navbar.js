@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 
 import tw from 'twin.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSignInAlt, faBars, faFileAlt } from '@fortawesome/free-solid-svg-icons'
+import { faSignInAlt, faBars, faFileAlt, faCheckSquare, faList } from '@fortawesome/free-solid-svg-icons'
 import { Trans } from '@lingui/macro'
 
 import { firebaseApp } from '../../firebase'
@@ -72,6 +72,42 @@ export const Navbar = (props) => {
                     css={[props.transparent ? tw`lg:text-gray-300 text-gray-500` : tw`text-gray-500`, tw`text-lg mr-2`]}
                   />
                   <Trans>How-to</Trans>
+                </NavLink>
+              </li>
+              <li tw="flex items-center">
+                <NavLink
+                  exact
+                  to="/observation/add"
+                  css={[
+                    props.transparent
+                      ? tw`lg:text-white lg:hover:text-gray-300 text-gray-800`
+                      : tw`text-gray-800 hover:text-gray-600`,
+                    tw`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold`,
+                  ]}
+                >
+                  <FontAwesomeIcon
+                    icon={faCheckSquare}
+                    css={[props.transparent ? tw`lg:text-gray-300 text-gray-500` : tw`text-gray-500`, tw`text-lg mr-2`]}
+                  />
+                  <Trans>Add observation</Trans>
+                </NavLink>
+              </li>
+              <li tw="flex items-center">
+                <NavLink
+                  exact
+                  to="/observation/list"
+                  css={[
+                    props.transparent
+                      ? tw`lg:text-white lg:hover:text-gray-300 text-gray-800`
+                      : tw`text-gray-800 hover:text-gray-600`,
+                    tw`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold`,
+                  ]}
+                >
+                  <FontAwesomeIcon
+                    icon={faList}
+                    css={[props.transparent ? tw`lg:text-gray-300 text-gray-500` : tw`text-gray-500`, tw`text-lg mr-2`]}
+                  />
+                  <Trans>My lists</Trans>
                 </NavLink>
               </li>
             </ul>

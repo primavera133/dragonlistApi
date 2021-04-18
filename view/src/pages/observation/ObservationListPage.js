@@ -28,7 +28,7 @@ export const ObservationListPage = withI18n()(({ history }) => {
   const [email, setEmail] = useState('')
   const [language] = useState(getLanguage())
   const [country, setCountry] = useState('')
-  const [countryList, setCountryList] = useState('')
+  const [countryList, setCountryList] = useState([])
   const [allCountries, setAllCountries] = useState(false)
   const [region, setRegion] = useState('all')
   const [regionList, setRegionList] = useState([])
