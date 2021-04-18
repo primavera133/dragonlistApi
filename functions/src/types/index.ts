@@ -49,15 +49,25 @@ export interface IValidatedResponse<T> {
 }
 
 export interface IUser {
-  uid: string
   roles?: string[]
   imageUrl?: string
   email?: string
   firstName?: string
   lastName?: string
-  phoneNumber?: string
-  country?: string
-  password?: string
+  contactPhone?: string
+  contactEmail?: string
+  residentCountry?: string
+  residentRegion?: string
+  unfinishedProfile: boolean
+  observationsCount?: IObservationsCount
+}
+export interface IObservationsCount {
+  [country: string]: IObservationsCountryCount
+}
+
+export interface IObservationsCountryCount {
+  total: number
+  [region: string]: number
 }
 
 export interface IAuthedRequest extends Request {
