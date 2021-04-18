@@ -18,6 +18,7 @@ import { HomePage } from './pages/home'
 import { HowToPage } from './pages/howto'
 import { SignInEmailPage } from './pages/signin'
 import { ProfilePage } from './pages/profile'
+import { MemberListPage } from './pages/member'
 import { ObservationAddPage, ObservationListPage } from './pages/observation'
 import { AdminPage } from './pages/admin'
 import { TermsAndConditionsPage } from './pages/termsAndConditions'
@@ -53,6 +54,10 @@ const App = () => {
               <Route exact path="/completeProfile" component={CompleteProfilePage} />
               <Route exact path="/editProfile" component={CompleteProfilePage} />
               <Route exact path="/how-to" component={HowToPage} />
+              <Route exact path="/members">
+                <Redirect to="/members/list" />
+              </Route>
+              <Route exact path="/members/list" component={MemberListPage} />
               <Route exact path="/observation">
                 <Redirect to="/observation/list" />
               </Route>

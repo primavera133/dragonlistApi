@@ -110,6 +110,24 @@ export const Navbar = (props) => {
                   <Trans>My lists</Trans>
                 </NavLink>
               </li>
+              <li tw="flex items-center">
+                <NavLink
+                  exact
+                  to="/members/list"
+                  css={[
+                    props.transparent
+                      ? tw`lg:text-white lg:hover:text-gray-300 text-gray-800`
+                      : tw`text-gray-800 hover:text-gray-600`,
+                    tw`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold`,
+                  ]}
+                >
+                  <FontAwesomeIcon
+                    icon={faList}
+                    css={[props.transparent ? tw`lg:text-gray-300 text-gray-500` : tw`text-gray-500`, tw`text-lg mr-2`]}
+                  />
+                  <Trans>Users</Trans>
+                </NavLink>
+              </li>
             </ul>
             <ul tw="flex flex-col lg:flex-row list-none lg:ml-auto">
               {!!authUser && (

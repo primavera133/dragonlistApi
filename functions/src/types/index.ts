@@ -99,3 +99,13 @@ export interface IObservationFormError {
   region?: string
   specie?: string
 }
+
+export interface IMember {
+  imageUrl?: string
+  contactEmail?: string
+  contactPhone?: string
+  firstName?: string
+  lastName?: string
+  residentCountry?: string
+  residentRegion?: string
+}

@@ -27,6 +27,7 @@ import postObservation from './api/observations/postObservation'
 
 import auth from './util/auth'
 import config from './config/firebaseConfig'
+import getAllMemebers from './api/member/getAllMembers'
 
 admin.initializeApp(config)
 firebase.initializeApp(config)
@@ -56,6 +57,8 @@ app.get('/api/observations', auth('admin'), getAllObservations)
 app.get('/api/observations/user/:userId', auth(), getUserObservations)
 app.get('/api/observation/:observationId', getObservation)
 app.post('/api/observation', auth(), postObservation)
+
+app.get('/api/members', auth(), getAllMemebers)
 
 app.use('/dragonlistapi', router)
 
