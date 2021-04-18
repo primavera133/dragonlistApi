@@ -28,9 +28,11 @@ export const ObservationListPage = withI18n()(({ history }) => {
   const [email, setEmail] = useState('')
   const [language] = useState(getLanguage())
   const [country, setCountry] = useState('')
+  const [countryList, setCountryList] = useState('')
+  const [allCountries, setAllCountries] = useState(false)
   const [region, setRegion] = useState('all')
-  const [regions, setRegions] = useState([])
-  const [allRregions, setAllRegions] = useState(true)
+  const [regionList, setRegionList] = useState([])
+  const [allRegions, setAllRegions] = useState(true)
   const [uniqueObservations, setUniqueObservations] = useState([])
 
   const { userDetails } = useContext(AuthContext)
@@ -56,7 +58,8 @@ export const ObservationListPage = withI18n()(({ history }) => {
 
   useEffect(() => {
     if (!isFetchingCountries && country && countries) {
-      setRegions([{ id: 'all', name: i18n._(t`-- All regions --`) }, ...mapRegions(country, countries)])
+      setRegionList([{ id: 'all', name: i18n._(t`-- All regions --`) }, ...mapRegions(country, countries)])
+      setCountryList([{ id: 'all', name: i18n._(t`-- All countries --`) }, ...countries])
     }
   }, [countries, country, isFetchingCountries])
 
@@ -66,7 +69,7 @@ export const ObservationListPage = withI18n()(({ history }) => {
       let number = 1
       userObservations.forEach((obs) => {
         if (!uniqueObservations.find((uobs) => obs.specie === uobs.specie)) {
-          if (obs.country === country && (allRregions || obs.region === region)) {
+          if ((allCountries || obs.country === country) && (allRegions || obs.region === region)) {
             uniqueObservations.push({
               ...obs,
               number: number++,
@@ -85,6 +88,11 @@ export const ObservationListPage = withI18n()(({ history }) => {
 
   const goAdd = () => {
     history.push('/observation/add')
+  }
+
+  const handleCountry = (country) => {
+    setAllCountries(country === 'all')
+    setCountry(country)
   }
 
   const handleRegion = (region) => {
@@ -106,8 +114,8 @@ export const ObservationListPage = withI18n()(({ history }) => {
               <Select
                 id="country"
                 name="country"
-                options={countries}
-                onChange={setCountry}
+                options={countryList}
+                onChange={handleCountry}
                 selected={country}
                 useInitial={false}
               />
@@ -117,9 +125,9 @@ export const ObservationListPage = withI18n()(({ history }) => {
               <Select
                 id="region"
                 name="region"
-                options={regions}
+                options={regionList}
                 onChange={handleRegion}
-                disabled={!regions?.length}
+                disabled={!regionList?.length}
                 selected={region}
                 useInitial={false}
               />
