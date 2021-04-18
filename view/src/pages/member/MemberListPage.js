@@ -7,6 +7,8 @@ import tw, { styled } from 'twin.macro'
 import { t, Trans } from '@lingui/macro'
 import { withI18n } from '@lingui/react'
 import { useQuery } from 'react-query'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAt, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 import { AuthContext } from '../../services/authContext'
 import configApi from '../../api/config'
@@ -59,7 +61,7 @@ export const MemberListPage = withI18n()(({ history }) => {
       (member) =>
         (allCountries || member.residentCountry === country) && (allRegions || member.residentRegion === region)
     )
-    setMemebersList(membersList)
+    setMemebersList([...membersList, ...membersList])
   }, [members, country, region])
 
   const handleCountry = (country) => {
@@ -110,45 +112,45 @@ export const MemberListPage = withI18n()(({ history }) => {
           </div>
           <ul>
             {membersList.map((member, i) => (
-              <li key={`items${i}`} tw="flex justify-between">
-                <div tw="mb-2">
-                  <div>
-                    <span tw="text-lg font-semibold leading-normal pr-2">
-                      {member.firstName} {member.lastName}
-                    </span>
-                    <span tw="text-lg font-light leading-normal pr-2">
-                      {capitalise(member.residentCountry)}, {capitalise(member.residentRegion)}
-                    </span>
-                  </div>
-                  {member.contactEmail && (
-                    <div>
-                      <a
-                        tw="text-sm font-light leading-normal pr-2"
-                        href={`mailto:${member.contactEmail}`}
-                        rel="noopener noreferrer"
-                      >
-                        {member.contactEmail}
-                      </a>
-                    </div>
-                  )}
-                  {member.contactPhone && (
-                    <div>
-                      <a
-                        tw="text-sm font-light leading-normal pr-2"
-                        href={`tel:${member.contactPhone}`}
-                        rel="noopener noreferrer"
-                      >
-                        {member.contactPhone}
-                      </a>
-                    </div>
-                  )}
+              <li key={`items${i}`} tw="border-b-2 last:border-0 py-2">
+                <div>
+                  <span tw="text-lg font-semibold leading-normal pr-2">
+                    {member.firstName} {member.lastName}
+                  </span>
+                  <span tw="text-lg font-light leading-normal pr-2">
+                    {capitalise(member.residentCountry)}, {capitalise(member.residentRegion)}
+                  </span>
                 </div>
+                {member.contactEmail && (
+                  <div tw="pl-1">
+                    <FontAwesomeIcon icon={faAt} tw="text-gray-500 text-sm mr-1" />
+                    <a
+                      tw="text-sm font-light leading-normal pr-2"
+                      href={`mailto:${member.contactEmail}`}
+                      rel="noopener noreferrer"
+                    >
+                      {member.contactEmail}
+                    </a>
+                  </div>
+                )}
+                {member.contactPhone && (
+                  <div tw="pl-1">
+                    <FontAwesomeIcon icon={faPhone} tw="text-gray-500 text-sm mr-1" />
+                    <a
+                      tw="text-sm font-light leading-normal pr-2"
+                      href={`tel:${member.contactPhone}`}
+                      rel="noopener noreferrer"
+                    >
+                      {member.contactPhone}
+                    </a>
+                  </div>
+                )}
               </li>
             ))}
           </ul>
-          <hr tw="mt-1 mb-4" />
+          {/* <hr tw="mt-1 mb-4" /> */}
           <div tw="flex justify-between">
-            <span tw="text-lg font-semibold leading-normal">
+            <span tw="text-lg font-semibold leading-normal mt-4">
               {membersList.length} / {members?.length}
             </span>
           </div>
