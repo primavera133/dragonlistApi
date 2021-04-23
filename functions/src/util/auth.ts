@@ -1,7 +1,7 @@
 import admin from 'firebase-admin'
 import { db } from '../index'
 import { Response, NextFunction } from 'express'
-import { IAuthedRequest } from '../types'
+import { IAuthedRequest, IUser } from '../types'
 
 const auth = (...permittedRoles: string[]) => {
   return async (request: IAuthedRequest, response: Response, next: NextFunction): Promise<void | Response<Error>> => {
@@ -15,17 +15,19 @@ const auth = (...permittedRoles: string[]) => {
       }
 
       const decodedToken = await admin.auth().verifyIdToken(idToken)
-
       request.user = decodedToken
 
-      const data = await db.collection('users').where('userId', '==', request.user.uid).limit(1).get()
+      const userDoc = await db
+        .collection('users')
+        .doc(decodedToken.email ?? '')
+        .get()
 
-      if (!data.docs.length) {
+      if (!userDoc.exists) {
         if (permittedRoles.length) {
           throw new Error('Insufficient user role')
         }
       } else {
-        const userData = data.docs[0].data()
+        const userData = userDoc.data() as IUser
 
         if (permittedRoles.length) {
           const permissonIntersection = permittedRoles.filter((role) => userData.roles.includes(role))
@@ -33,8 +35,8 @@ const auth = (...permittedRoles: string[]) => {
             throw new Error('Insufficient user role')
           }
         }
-        request.user.email = userData.email
-        request.user.imageUrl = userData.imageUrl
+        decodedToken.email = userData.email
+        // decodedToken.imageUrl = userData.imageUrl
       }
 
       next()

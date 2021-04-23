@@ -1,14 +1,14 @@
 import { Response } from 'express'
 import { db } from '../../index'
 // import validators from '../../util/validators/index'
-import { IAuthedRequest } from '../../types'
+import { IAuthedRequest, IUser } from '../../types'
 
 const putUser = async (request: IAuthedRequest, response: Response): Promise<void | Response<Error>> => {
   try {
-    const userDetails: any = {
+    const userDetails: IUser = {
+      ...request.body,
       email: request?.user?.email,
     }
-    Object.keys(request.body).forEach((key) => (userDetails[key] = request.body[key]))
 
     // TODO: Secure user details
     // const { valid, errors } = validators.validateSignUpData(userDetails)

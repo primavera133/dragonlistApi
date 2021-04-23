@@ -1,7 +1,6 @@
 import { Response } from 'express'
 
 import { db } from '../../index'
-import firebase from 'firebase'
 
 import validators from '../../util/validators/index'
 import { IObservation, IObservationFormData, IObservationFormRequest, IUser } from '../../types'

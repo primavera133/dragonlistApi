@@ -1,5 +1,5 @@
 import { Request } from 'express'
-
+import admin from 'firebase-admin'
 export interface IRegion {
   name: string
 }
@@ -49,7 +49,7 @@ export interface IValidatedResponse<T> {
 }
 
 export interface IUser {
-  roles?: string[]
+  roles: string[]
   imageUrl?: string
   email?: string
   firstName?: string
@@ -71,7 +71,7 @@ export interface IObservationsCountryCount {
 }
 
 export interface IAuthedRequest extends Request {
-  user?: IUser
+  user?: admin.auth.DecodedIdToken
   rawBody?: any
 }
 
