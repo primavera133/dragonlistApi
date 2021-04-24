@@ -16,9 +16,16 @@ const setLanguage = (value) => {
 export const getLanguage = () => {
   try {
     if (language) return language
-    return window.localStorage.getItem('lang')
+    const storedLanguage = window.localStorage.getItem('lang')
+    if (!storedLanguage) {
+      language = detectLanguage()
+      return setLanguage(language)
+    }
+    return storedLanguage
   } catch (err) {
     console.log(err)
+    language = detectLanguage()
+    return setLanguage(language)
   }
 }
 

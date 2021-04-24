@@ -9,6 +9,7 @@ import { withI18n } from '@lingui/react'
 import { useQuery } from 'react-query'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAt, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 import { AuthContext } from '../../services/authContext'
 import configApi from '../../api/config'
@@ -23,7 +24,6 @@ import { capitalise } from '../../utils/capitalise'
 import { mapRegions } from '../../utils/mapRegions'
 
 export const MemberListPage = withI18n()(({ history }) => {
-  // const [membersList, setMembersList] = useState([])
   const [country, setCountry] = useState('')
   const [countryList, setCountryList] = useState([])
   const [allCountries, setAllCountries] = useState(false)
@@ -57,18 +57,19 @@ export const MemberListPage = withI18n()(({ history }) => {
 
   useEffect(() => {
     if (!members) return
-    const membersList = members.filter(
-      (member) =>
-        (allCountries || member.residentCountry === country) && (allRegions || member.residentRegion === region)
+    setMemebersList(
+      members.filter((member) => {
+        return (allCountries || member.residentCountry === country) && (allRegions || member.residentRegion === region)
+      })
     )
-    setMemebersList(membersList)
-  }, [members, country, region])
+  }, [members, country, region, allCountries, allRegions])
 
   const handleCountry = (country) => {
     setAllCountries(country === 'all')
     setCountry(country)
     if (country === 'all') {
       setRegion('all')
+      setAllRegions(true)
     }
   }
 
@@ -84,7 +85,7 @@ export const MemberListPage = withI18n()(({ history }) => {
       ) : (
         <div tw="max-w-md">
           <PageHeader>
-            <Trans>Other users</Trans>
+            <Trans>All users</Trans>
           </PageHeader>
           <div tw="grid grid-cols-2 mb-8">
             <div tw=" pr-1">
@@ -145,6 +146,16 @@ export const MemberListPage = withI18n()(({ history }) => {
                     </a>
                   </div>
                 )}
+                <div>
+                  <Link to={`/member/${btoa(member.email)}/list`}>
+                    <Trans>Total observations</Trans>:{' '}
+                    {member.observationsCount
+                      ? Object.keys(member.observationsCount).reduce((acc, curr) => {
+                          return acc + member.observationsCount[curr].total
+                        }, 0)
+                      : 0}
+                  </Link>
+                </div>
               </li>
             ))}
           </ul>

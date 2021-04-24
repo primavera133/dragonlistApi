@@ -19,7 +19,7 @@ import { HowToPage } from './pages/howto'
 import { SignInEmailPage } from './pages/signin'
 import { ProfilePage } from './pages/profile'
 import { MemberListPage } from './pages/member'
-import { ObservationAddPage, ObservationListPage } from './pages/observation'
+import { ObservationAddPage, ObservationListPage, ObservationListPage2 } from './pages/observation'
 import { AdminPage } from './pages/admin'
 import { TermsAndConditionsPage } from './pages/termsAndConditions'
 import { PrivacyPolicyPage } from './pages/privacyPolicy'
@@ -58,6 +58,7 @@ const App = () => {
                 <Redirect to="/members/list" />
               </Route>
               <Route exact path="/members/list" component={MemberListPage} />
+              <Route exact path="/member/:encodedemail/list" component={ObservationListPage2} />
               <Route exact path="/observation">
                 <Redirect to="/observation/list" />
               </Route>

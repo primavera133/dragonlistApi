@@ -125,7 +125,7 @@ export const Navbar = (props) => {
                     icon={faList}
                     css={[props.transparent ? tw`lg:text-gray-300 text-gray-500` : tw`text-gray-500`, tw`text-lg mr-2`]}
                   />
-                  <Trans>Other users</Trans>
+                  <Trans>All users</Trans>
                 </NavLink>
               </li>
             </ul>

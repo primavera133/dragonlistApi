@@ -8,7 +8,7 @@ import getUserDetails from './api/users/getUserDetails'
 import loginUser from './api/users/login'
 import postUser from './api/users/postUser'
 import putUser from './api/users/putUser'
-import signUpUser from './api/users/signUpUser'
+// import signUpUser from './api/users/signUpUser'
 import updateUserDetails from './api/users/updateUserDetails'
 import uploadProfilePhoto from './api/users/uploadProfilePhoto'
 
@@ -27,7 +27,7 @@ import postObservation from './api/observations/postObservation'
 
 import auth from './util/auth'
 import config from './config/firebaseConfig'
-import getAllMemebers from './api/member/getAllMembers'
+import getAllMembers from './api/member/getAllMembers'
 
 admin.initializeApp(config)
 firebase.initializeApp(config)
@@ -37,7 +37,7 @@ const app = express()
 const router = express.Router()
 
 app.post('/api/login', loginUser)
-app.post('/api/signup', signUpUser)
+// app.post('/api/signup', signUpUser)
 app.post('/api/user/image', auth(), uploadProfilePhoto)
 app.get('/api/user', auth(), getUserDetails)
 app.post('/api/user', auth(), postUser)
@@ -54,11 +54,11 @@ app.get('/api/country/:countryId/region/:regionId/user/:email/observations', get
 app.get('/api/species', getAllSpecies)
 
 app.get('/api/observations', auth('admin'), getAllObservations)
-app.get('/api/observations/user/:userId', auth(), getUserObservations)
+app.get('/api/observations/user/:email', auth(), getUserObservations)
 app.get('/api/observation/:observationId', getObservation)
 app.post('/api/observation', auth(), postObservation)
 
-app.get('/api/members', auth('admin'), getAllMemebers)
+app.get('/api/members', auth(), getAllMembers)
 
 app.use('/dragonlistapi', router)
 

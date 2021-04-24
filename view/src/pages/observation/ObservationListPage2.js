@@ -3,7 +3,6 @@ import { jsx } from '@emotion/react'
 
 import React, { useState, useEffect, useContext } from 'react'
 import format from 'date-fns/format'
-import { Link } from 'react-router-dom'
 
 import tw, { styled } from 'twin.macro'
 import { t, Trans } from '@lingui/macro'
@@ -24,20 +23,21 @@ import { Select } from '../../components/Select/Select'
 
 import { capitalise } from '../../utils/capitalise'
 import { mapRegions } from '../../utils/mapRegions'
-import { Redirect } from 'react-router'
+import { useParams } from 'react-router'
 
-export const ObservationListPage = withI18n()(({ history }) => {
-  const [email, setEmail] = useState('')
+export const ObservationListPage2 = withI18n()(({ history }) => {
+  const { encodedemail } = useParams()
   const [language] = useState(getLanguage())
-  const [country, setCountry] = useState('')
+  const [email, setEmail] = useState()
+  const [country, setCountry] = useState('all')
   const [countryList, setCountryList] = useState([])
-  const [allCountries, setAllCountries] = useState(false)
+  const [allCountries, setAllCountries] = useState(true)
   const [region, setRegion] = useState('all')
   const [regionList, setRegionList] = useState([])
   const [allRegions, setAllRegions] = useState(true)
   const [uniqueObservations, setUniqueObservations] = useState([])
 
-  const { userDetails } = useContext(AuthContext)
+  const { userDetails: loggedInUserDetails } = useContext(AuthContext)
 
   const { isFetching: isFetchingCountries, data: countries } = useQuery('countries', configApi.getCountries)
   const { isFetching: isFetchingSpecies, data: species } = useQuery('species', speciesApi.getSpecies)
@@ -45,19 +45,16 @@ export const ObservationListPage = withI18n()(({ history }) => {
     ['userObservations', email],
     () => listsApi.getUserObservations(email),
     {
-      enabled: !!email,
+      enabled: !!loggedInUserDetails,
     }
   )
-
-  const isFetching = !language || isFetchingCountries || isFetchingSpecies || isFetchingUserObservations
+  const isFetching = isFetchingCountries || isFetchingSpecies || isFetchingUserObservations
 
   useEffect(() => {
-    if (userDetails) {
-      setEmail(userDetails.email)
-      setCountry(userDetails?.residentCountry)
-      // setRegion(userDetails?.residentRegion)
+    if (encodedemail) {
+      setEmail(atob(encodedemail))
     }
-  }, [userDetails])
+  }, [encodedemail])
 
   useEffect(() => {
     if (!isFetchingCountries && country && countries) {
@@ -85,7 +82,7 @@ export const ObservationListPage = withI18n()(({ history }) => {
   }, [userObservations, country, region])
 
   const translateName = (scientificName) => {
-    const specie = species.find((sp) => sp.scientific_name === scientificName) ?? []
+    const specie = species.filter((sp) => sp.scientific_name === scientificName)[0] ?? []
     return specie[language][0] ?? scientificName
   }
 
@@ -107,12 +104,10 @@ export const ObservationListPage = withI18n()(({ history }) => {
     <Layout>
       {isFetching ? (
         <Loader />
-      ) : !userDetails ? (
-        <div>Sign in to see list</div>
       ) : (
         <div tw="max-w-md">
           <PageHeader>
-            <Trans>Your observations</Trans>
+            <Trans>Observations</Trans>
           </PageHeader>
           <div tw="grid grid-cols-2 mb-8">
             <div tw=" pr-1">

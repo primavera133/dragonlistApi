@@ -4,7 +4,7 @@ import { IObservation } from '../../types'
 
 const getUserObservations = async (request: Request, response: Response): Promise<Response<IObservation[]> | Error> => {
   try {
-    const email = request.params.userId
+    const { email } = request.params
     const snapshot = await db
       .collection('observations')
       .where('email', '==', email)

@@ -3,7 +3,6 @@ import { jsx } from '@emotion/react'
 
 import React from 'react'
 import tw, { css } from 'twin.macro'
-import { Link } from 'react-router-dom'
 
 export const ExternalBlackLink = ({ href, children, target = '_blank' }) => (
   <a

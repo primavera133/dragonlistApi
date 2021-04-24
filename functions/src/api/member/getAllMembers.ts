@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import { db } from '../../index'
 import { IMember } from '../../types'
 
-const getAllMemebers = async (request: Request, response: Response): Promise<Response<IMember[]> | Error> => {
+const getAllMembers = async (request: Request, response: Response): Promise<Response<IMember[]> | Error> => {
   try {
     const dbResponse = await db.collection('users').where('unfinishedProfile', '==', false).get()
     const list: IMember[] = []
@@ -16,4 +16,4 @@ const getAllMemebers = async (request: Request, response: Response): Promise<Res
     return response.status(500).json({ error: err.code })
   }
 }
-export default getAllMemebers
+export default getAllMembers
