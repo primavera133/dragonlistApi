@@ -8,7 +8,7 @@ import { t, Trans } from '@lingui/macro'
 import { withI18n } from '@lingui/react'
 import { useQuery } from 'react-query'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAt, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faAt, faPhone, faClipboardList, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
 import { AuthContext } from '../../services/authContext'
@@ -146,14 +146,18 @@ export const MemberListPage = withI18n()(({ history }) => {
                     </a>
                   </div>
                 )}
-                <div>
-                  <Link to={`/member/${btoa(member.email)}/list`}>
+                <div tw="pl-1 flex justify-between items-end">
+                  <Link tw="hover:underline" to={`/member/${btoa(member.email)}/list`}>
+                    <FontAwesomeIcon icon={faClipboardList} tw="text-gray-500 text-sm mr-1" />
                     <Trans>Total observations</Trans>:{' '}
                     {member.observationsCount
                       ? Object.keys(member.observationsCount).reduce((acc, curr) => {
                           return acc + member.observationsCount[curr].total
                         }, 0)
                       : 0}
+                  </Link>
+                  <Link tw="hover:underline" to={`/member/${btoa(member.email)}/list`}>
+                    <FontAwesomeIcon icon={faArrowRight} tw="text-gray-500 text-xs mr-1" />
                   </Link>
                 </div>
               </li>
