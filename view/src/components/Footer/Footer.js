@@ -61,6 +61,11 @@ export const Footer = () => {
                         <Trans>Trollsländeföreningen</Trans>
                       </ExternalBlackLink>
                     </li>
+                    <li>
+                      <ExternalBlackLink href="http://www.artportalen.se/">
+                        <Trans>Artportalen</Trans>
+                      </ExternalBlackLink>
+                    </li>
                   </ul>
                 </div>
                 <div tw="w-full lg:w-4/12 px-4">

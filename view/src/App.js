@@ -27,8 +27,8 @@ import { PrivacyPolicyPage } from './pages/privacyPolicy'
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      refetchOnWindowFocus: true,
-      retry: 0,
+      refetchOnWindowFocus: false,
+      retry: 1,
       staleTime: 60000,
     },
   },
