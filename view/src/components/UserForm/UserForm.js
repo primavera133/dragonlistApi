@@ -17,7 +17,7 @@ import { FormLegend } from '../FormLegend'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
-export const NewUserForm = withI18n()(({ i18n, history }) => {
+export const UserForm = withI18n()(({ i18n, history }) => {
   const [contactPhone, setContactPhone] = useState('')
   const [contactEmail, setContactEmail] = useState('')
   const [email, setEmail] = useState('')
@@ -116,19 +116,25 @@ export const NewUserForm = withI18n()(({ i18n, history }) => {
             onChange={setLastName}
           />
           {!isFetchingCountries && (
-            <Select
-              id="residentCountry"
-              label={i18n._(t`Resident country`)}
-              name="residentCountry"
-              options={countries}
-              onChange={setResidentCountry}
-              selected={residentCountry}
-            />
+            <div tw="mb-4">
+              <Select
+                id="residentCountry"
+                label={i18n._(t`Resident country`)}
+                sublabel={i18n._(
+                  t`The country will be your default. You can still add oservations from other countries`
+                )}
+                name="residentCountry"
+                options={countries}
+                onChange={setResidentCountry}
+                selected={residentCountry}
+              />
+            </div>
           )}
           {!!regions?.length && (
             <Select
               id="residentRegion"
               label={i18n._(t`Resident region`)}
+              sublabel={i18n._(t`The region will be your default. You can still add oservations from other regions`)}
               name="residentRegion"
               options={regions}
               onChange={setResidentRegion}

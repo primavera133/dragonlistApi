@@ -29,7 +29,7 @@ msgstr "Lägg till ett kryss"
 msgid "Admin"
 msgstr "Administratör"
 
-#: src/components/NewUserForm/NewUserForm.js:99
+#: src/components/UserForm/UserForm.js:99
 msgid "Basic personal details"
 msgstr "grundläggande personliga detaljer"
 
@@ -61,11 +61,11 @@ msgstr "Inlogging"
 msgid "Contact Us"
 msgstr "Kontakta oss"
 
-#: src/components/NewUserForm/NewUserForm.js:141
+#: src/components/UserForm/UserForm.js:141
 msgid "Contact details"
 msgstr "Kontaktuppgifter"
 
-#: src/components/NewUserForm/NewUserForm.js:144
+#: src/components/UserForm/UserForm.js:144
 msgid "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
 msgstr "Kontaktuppfterna är frivilliga att fylla i. Välj hur du vill att andra medlemmar ska kunna kontakta dig. Inga kontaktuppgifter visas upp för oinloggade användare."
 
@@ -86,11 +86,11 @@ msgid "Edit"
 msgstr "Ändra uppgifter"
 
 #: src/components/EmailForm/EmailForm.js:34
-#: src/components/NewUserForm/NewUserForm.js:101
+#: src/components/UserForm/UserForm.js:101
 msgid "Email"
 msgstr "Mailadress"
 
-#: src/components/NewUserForm/NewUserForm.js:160
+#: src/components/UserForm/UserForm.js:160
 msgid "Email for contact"
 msgstr "Mailadress för kontakt"
 
@@ -98,7 +98,7 @@ msgstr "Mailadress för kontakt"
 msgid "Find local help"
 msgstr "Hitta lokala förmågor"
 
-#: src/components/NewUserForm/NewUserForm.js:106
+#: src/components/UserForm/UserForm.js:106
 msgid "First name"
 msgstr "Förnamn"
 
@@ -130,11 +130,11 @@ msgstr "Om stegen ovan inte fungerar, kan du prova att skicka om ditt mail. Note
 msgid "If you are old and wish to be young again, try and identify a dragonfly! - Simon Barres"
 msgstr "If you are old and wish to be young again, try and identify a dragonfly! - Simon Barres"
 
-#: src/components/NewUserForm/NewUserForm.js:155
+#: src/components/UserForm/UserForm.js:155
 msgid "Including a country prefix is helpful."
 msgstr "Inkludera gärna landsprefix (som t ex +46)"
 
-#: src/components/NewUserForm/NewUserForm.js:114
+#: src/components/UserForm/UserForm.js:114
 msgid "Last name"
 msgstr "Efternamn"
 
@@ -170,7 +170,7 @@ msgstr "Datum för obsen"
 msgid "Other Resources"
 msgstr "Andra resurser"
 
-#: src/components/NewUserForm/NewUserForm.js:152
+#: src/components/UserForm/UserForm.js:152
 msgid "Phone number"
 msgstr "Telefonnummer"
 
@@ -210,12 +210,12 @@ msgstr "Skåda trollsländor, Lista dina observationer och skaffa nya vänner"
 msgid "Region"
 msgstr "Region"
 
-#: src/components/NewUserForm/NewUserForm.js:121
+#: src/components/UserForm/UserForm.js:121
 #: src/pages/profile/ProfilePage.js:34
 msgid "Resident country"
 msgstr "Land"
 
-#: src/components/NewUserForm/NewUserForm.js:131
+#: src/components/UserForm/UserForm.js:131
 #: src/pages/profile/ProfilePage.js:37
 msgid "Resident region"
 msgstr "Region"
@@ -224,7 +224,7 @@ msgstr "Region"
 msgid "Role"
 msgstr "Roll"
 
-#: src/components/NewUserForm/NewUserForm.js:168
+#: src/components/UserForm/UserForm.js:168
 msgid "Save"
 msgstr "Spara"
 
@@ -249,11 +249,11 @@ msgstr "Art"
 msgid "Terms & Conditions"
 msgstr "Terms & Conditions"
 
-#: src/components/NewUserForm/NewUserForm.js:173
+#: src/components/UserForm/UserForm.js:173
 msgid "There are still mandatory fields missing. You will be able to save when those are completed"
 msgstr "Det saknas uppgifter i några obligatoriska fält. Du kan spara först när du fyllt i dem."
 
-#: src/components/NewUserForm/NewUserForm.js:163
+#: src/components/UserForm/UserForm.js:163
 msgid "This email can be the one you login with, or any other."
 msgstr "Välj själv om du vill använda samma som ovan eller någon annan."
 
@@ -302,7 +302,7 @@ msgstr "Dina uppgifter"
 msgid "Useful Links"
 msgstr "Användbara länkar"
 
-#: src/components/NewUserForm/NewUserForm.js:80
+#: src/components/UserForm/UserForm.js:80
 #~ msgid "Welcome new user"
 #~ msgstr "Ny användare? Välkommen!"
 

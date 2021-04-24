@@ -27,7 +27,7 @@ msgstr "Add observation"
 msgid "Admin"
 msgstr "Admin"
 
-#: src/components/NewUserForm/NewUserForm.js:99
+#: src/components/UserForm/UserForm.js:99
 msgid "Basic personal details"
 msgstr "Basic personal details"
 
@@ -59,11 +59,11 @@ msgstr "Complete sign in"
 msgid "Contact Us"
 msgstr "Contact Us"
 
-#: src/components/NewUserForm/NewUserForm.js:141
+#: src/components/UserForm/UserForm.js:141
 msgid "Contact details"
 msgstr "Contact details"
 
-#: src/components/NewUserForm/NewUserForm.js:144
+#: src/components/UserForm/UserForm.js:144
 msgid "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
 msgstr "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
 
@@ -84,11 +84,11 @@ msgid "Edit"
 msgstr "Edit"
 
 #: src/components/EmailForm/EmailForm.js:34
-#: src/components/NewUserForm/NewUserForm.js:101
+#: src/components/UserForm/UserForm.js:101
 msgid "Email"
 msgstr "Email"
 
-#: src/components/NewUserForm/NewUserForm.js:160
+#: src/components/UserForm/UserForm.js:160
 msgid "Email for contact"
 msgstr "Email for contact"
 
@@ -96,7 +96,7 @@ msgstr "Email for contact"
 msgid "Find local help"
 msgstr "Find local help"
 
-#: src/components/NewUserForm/NewUserForm.js:106
+#: src/components/UserForm/UserForm.js:106
 msgid "First name"
 msgstr "First name"
 
@@ -128,11 +128,11 @@ msgstr "If the steps above didn't work, you can resend the email. Note that this
 msgid "If you are old and wish to be young again, try and identify a dragonfly! - Simon Barres"
 msgstr "If you are old and wish to be young again, try and identify a dragonfly! - Simon Barres"
 
-#: src/components/NewUserForm/NewUserForm.js:155
+#: src/components/UserForm/UserForm.js:155
 msgid "Including a country prefix is helpful."
 msgstr "Including a country prefix is helpful."
 
-#: src/components/NewUserForm/NewUserForm.js:114
+#: src/components/UserForm/UserForm.js:114
 msgid "Last name"
 msgstr "Last name"
 
@@ -176,7 +176,7 @@ msgstr "Observation date"
 msgid "Other Resources"
 msgstr "Other Resources"
 
-#: src/components/NewUserForm/NewUserForm.js:152
+#: src/components/UserForm/UserForm.js:152
 msgid "Phone number"
 msgstr "Phone number"
 
@@ -216,12 +216,12 @@ msgstr "Record your dragonfly observations and find like-minded new friends."
 msgid "Region"
 msgstr "Region"
 
-#: src/components/NewUserForm/NewUserForm.js:121
+#: src/components/UserForm/UserForm.js:121
 #: src/pages/profile/ProfilePage.js:34
 msgid "Resident country"
 msgstr "Resident country"
 
-#: src/components/NewUserForm/NewUserForm.js:131
+#: src/components/UserForm/UserForm.js:131
 #: src/pages/profile/ProfilePage.js:37
 msgid "Resident region"
 msgstr "Resident region"
@@ -230,7 +230,7 @@ msgstr "Resident region"
 msgid "Role"
 msgstr "Role"
 
-#: src/components/NewUserForm/NewUserForm.js:168
+#: src/components/UserForm/UserForm.js:168
 msgid "Save"
 msgstr "Save"
 
@@ -255,11 +255,11 @@ msgstr "Specie"
 msgid "Terms & Conditions"
 msgstr "Terms & Conditions"
 
-#: src/components/NewUserForm/NewUserForm.js:173
+#: src/components/UserForm/UserForm.js:173
 msgid "There are still mandatory fields missing. You will be able to save when those are completed"
 msgstr "There are still mandatory fields missing. You will be able to save when those are completed"
 
-#: src/components/NewUserForm/NewUserForm.js:163
+#: src/components/UserForm/UserForm.js:163
 msgid "This email can be the one you login with, or any other."
 msgstr "This email can be the one you login with, or any other."
 
@@ -308,7 +308,7 @@ msgstr "Unfinished profile"
 msgid "Useful Links"
 msgstr "Useful Links"
 
-#: src/components/NewUserForm/NewUserForm.js:80
+#: src/components/UserForm/UserForm.js:80
 #~ msgid "Welcome new user"
 #~ msgstr "Welcome new user"
 

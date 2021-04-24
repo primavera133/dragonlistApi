@@ -9,7 +9,7 @@ import { t, Trans } from '@lingui/macro'
 let previousValidValue
 
 export const Select = withI18n()(
-  ({ disabled, id, label, name, options = [], onChange, selected, i18n, useInitial }) => {
+  ({ disabled, id, label, sublabel, name, options = [], onChange, selected, i18n, useInitial }) => {
     const ref = useRef()
     const handleChange = (e) => {
       const value = e.target.value
@@ -49,6 +49,7 @@ export const Select = withI18n()(
             </option>
           ))}
         </select>
+        {sublabel && <span tw="text-sm text-gray-500">{sublabel}</span>}
       </div>
     )
   }

@@ -10,7 +10,7 @@ import { AuthContext } from '../../services/authContext'
 import { Layout } from '../../components/Layout'
 import { PageHeader } from '../../components/PageHeader'
 import { Loader } from '../../components/Loader'
-import { NewUserForm } from '../../components/NewUserForm'
+import { UserForm } from '../../components/UserForm'
 
 export const CompleteProfilePage = withI18n()(({ history }) => {
   const { authUser, authUserLoading, userDetails } = useContext(AuthContext)
@@ -25,10 +25,7 @@ export const CompleteProfilePage = withI18n()(({ history }) => {
       </div>
       {authUser && authUser.email && (
         <div tw="max-w-md">
-          <NewUserForm
-            history={history}
-            // email={authUser.email}
-          />
+          <UserForm history={history} />
         </div>
       )}
     </Layout>
