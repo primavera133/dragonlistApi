@@ -84,6 +84,11 @@ export const ObservationAddPage = withI18n()(({ history }) => {
     }
   }
 
+  const handleCountry = (country) => {
+    setCountry(country)
+    setRegion('')
+  }
+
   return (
     <Layout>
       {isFetching() ? (
@@ -100,21 +105,23 @@ export const ObservationAddPage = withI18n()(({ history }) => {
                 label={i18n._(t`Country`)}
                 name="country"
                 options={countries}
-                onChange={setCountry}
+                onChange={handleCountry}
                 selected={country}
               />
             </div>
-            <div tw="pb-4">
-              <Select
-                id="region"
-                label={i18n._(t`Region`)}
-                name="region"
-                options={regions}
-                onChange={setRegion}
-                disabled={!regions?.length}
-                selected={region}
-              />
-            </div>
+            {!!regions?.length && (
+              <div tw="pb-4">
+                <Select
+                  id="region"
+                  label={i18n._(t`Region`)}
+                  name="region"
+                  options={regions}
+                  onChange={setRegion}
+                  disabled={!regions?.length}
+                  selected={region}
+                />
+              </div>
+            )}
             <div tw="pb-4">
               <Search label={i18n._(t`Specie`)} names={mappedSpecies} onSelect={setSpecie} />
             </div>
