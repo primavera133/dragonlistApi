@@ -6,7 +6,14 @@ import { NavLink } from 'react-router-dom'
 
 import tw from 'twin.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSignInAlt, faBars, faFileAlt, faCheckSquare, faList } from '@fortawesome/free-solid-svg-icons'
+import {
+  faSignInAlt,
+  faBars,
+  faFileAlt,
+  faCheckSquare,
+  faList,
+  faClipboardList,
+} from '@fortawesome/free-solid-svg-icons'
 import { Trans } from '@lingui/macro'
 
 import { firebaseApp } from '../../firebase'
@@ -15,7 +22,7 @@ import { Button } from '../Button'
 import { Language } from '../Language'
 
 export const Navbar = (props) => {
-  const { authUser, unfinishedProfile } = useContext(AuthContext)
+  const { authUser } = useContext(AuthContext)
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
     <>
@@ -56,78 +63,101 @@ export const Navbar = (props) => {
             id="example-navbar-warning"
           >
             <ul tw="flex flex-col lg:flex-row list-none mr-auto">
-              <li tw="flex items-center">
-                <NavLink
-                  exact
-                  to="/how-to"
-                  css={[
-                    props.transparent
-                      ? tw`lg:text-white lg:hover:text-gray-300 text-gray-800`
-                      : tw`text-gray-800 hover:text-gray-600`,
-                    tw`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold`,
-                  ]}
-                >
-                  <FontAwesomeIcon
-                    icon={faFileAlt}
-                    css={[props.transparent ? tw`lg:text-gray-300 text-gray-500` : tw`text-gray-500`, tw`text-lg mr-2`]}
-                  />
-                  <Trans>How-to</Trans>
-                </NavLink>
-              </li>
-              <li tw="flex items-center">
-                <NavLink
-                  exact
-                  to="/observation/add"
-                  css={[
-                    props.transparent
-                      ? tw`lg:text-white lg:hover:text-gray-300 text-gray-800`
-                      : tw`text-gray-800 hover:text-gray-600`,
-                    tw`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold`,
-                  ]}
-                >
-                  <FontAwesomeIcon
-                    icon={faCheckSquare}
-                    css={[props.transparent ? tw`lg:text-gray-300 text-gray-500` : tw`text-gray-500`, tw`text-lg mr-2`]}
-                  />
-                  <Trans>Add observation</Trans>
-                </NavLink>
-              </li>
-              <li tw="flex items-center">
-                <NavLink
-                  exact
-                  to="/observation/list"
-                  css={[
-                    props.transparent
-                      ? tw`lg:text-white lg:hover:text-gray-300 text-gray-800`
-                      : tw`text-gray-800 hover:text-gray-600`,
-                    tw`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold`,
-                  ]}
-                >
-                  <FontAwesomeIcon
-                    icon={faList}
-                    css={[props.transparent ? tw`lg:text-gray-300 text-gray-500` : tw`text-gray-500`, tw`text-lg mr-2`]}
-                  />
-                  <Trans>My lists</Trans>
-                </NavLink>
-              </li>
-              <li tw="flex items-center">
-                <NavLink
-                  exact
-                  to="/members/list"
-                  css={[
-                    props.transparent
-                      ? tw`lg:text-white lg:hover:text-gray-300 text-gray-800`
-                      : tw`text-gray-800 hover:text-gray-600`,
-                    tw`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold`,
-                  ]}
-                >
-                  <FontAwesomeIcon
-                    icon={faList}
-                    css={[props.transparent ? tw`lg:text-gray-300 text-gray-500` : tw`text-gray-500`, tw`text-lg mr-2`]}
-                  />
-                  <Trans>All users</Trans>
-                </NavLink>
-              </li>
+              {!authUser && (
+                <li tw="flex items-center">
+                  <NavLink
+                    exact
+                    to="/how-to"
+                    css={[
+                      props.transparent
+                        ? tw`lg:text-white lg:hover:text-gray-300 text-gray-800`
+                        : tw`text-gray-800 hover:text-gray-600`,
+                      tw`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold`,
+                    ]}
+                  >
+                    <FontAwesomeIcon
+                      icon={faFileAlt}
+                      css={[
+                        props.transparent ? tw`lg:text-gray-300 text-gray-500` : tw`text-gray-500`,
+                        tw`text-lg mr-2`,
+                      ]}
+                    />
+                    <Trans>How-to</Trans>
+                  </NavLink>
+                </li>
+              )}
+
+              {!!authUser && (
+                <li tw="flex items-center">
+                  <NavLink
+                    exact
+                    to="/observation/add"
+                    css={[
+                      props.transparent
+                        ? tw`lg:text-white lg:hover:text-gray-300 text-gray-800`
+                        : tw`text-gray-800 hover:text-gray-600`,
+                      tw`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold`,
+                    ]}
+                  >
+                    <FontAwesomeIcon
+                      icon={faCheckSquare}
+                      css={[
+                        props.transparent ? tw`lg:text-gray-300 text-gray-500` : tw`text-gray-500`,
+                        tw`text-lg mr-2`,
+                      ]}
+                    />
+                    <Trans>Add observation</Trans>
+                  </NavLink>
+                </li>
+              )}
+
+              {!!authUser && (
+                <li tw="flex items-center">
+                  <NavLink
+                    exact
+                    to="/observation/list"
+                    css={[
+                      props.transparent
+                        ? tw`lg:text-white lg:hover:text-gray-300 text-gray-800`
+                        : tw`text-gray-800 hover:text-gray-600`,
+                      tw`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold`,
+                    ]}
+                  >
+                    <FontAwesomeIcon
+                      icon={faClipboardList}
+                      css={[
+                        props.transparent ? tw`lg:text-gray-300 text-gray-500` : tw`text-gray-500`,
+                        tw`text-lg mr-2`,
+                      ]}
+                    />
+                    <Trans>My lists</Trans>
+                  </NavLink>
+                </li>
+              )}
+
+              {!!authUser && (
+                <li tw="flex items-center">
+                  <NavLink
+                    exact
+                    to="/members/list"
+                    css={[
+                      props.transparent
+                        ? tw`lg:text-white lg:hover:text-gray-300 text-gray-800`
+                        : tw`text-gray-800 hover:text-gray-600`,
+                      tw`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold`,
+                    ]}
+                  >
+                    <FontAwesomeIcon
+                      icon={faList}
+                      css={[
+                        props.transparent ? tw`lg:text-gray-300 text-gray-500` : tw`text-gray-500`,
+                        tw`text-lg mr-2`,
+                      ]}
+                    />
+                    <Trans>All users</Trans>
+                  </NavLink>
+                </li>
+              )}
             </ul>
             <ul tw="flex flex-col lg:flex-row list-none lg:ml-auto">
               {!!authUser && (

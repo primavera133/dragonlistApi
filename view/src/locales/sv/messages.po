@@ -268,7 +268,7 @@ msgstr "Detta är inte vetenskap eller \"citizen-science\". Du vill antagligen i
 
 #: src/pages/home/HomePage.js:71
 msgid "This site is all about sharing lists and finding friends. Keeping lists is fun and why not have fun with other like minded?"
-msgstr "Denna site handlar om att göra krysslistor och hitta vänner. Att hålla på med krysslistor är kul ochvarför inte dela det roliga med likasinnade?"
+msgstr "Denna site handlar om att göra krysslistor och hitta vänner. Att hålla på med krysslistor är kul och varför inte dela det roliga med likasinnade?"
 
 #: src/pages/home/HomePage.js:219
 msgid "This site was made by some members of <0>Trollslände­föreningen</0>, the Swedish dragonfly society."
