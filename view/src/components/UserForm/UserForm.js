@@ -120,7 +120,7 @@ export const UserForm = withI18n()(({ i18n, history }) => {
               <Select
                 id="residentCountry"
                 label={i18n._(t`Resident country`)}
-                sublabel={i18n._(
+                supText={i18n._(
                   t`The country will be your default. You can still add oservations from other countries`
                 )}
                 name="residentCountry"
@@ -134,7 +134,7 @@ export const UserForm = withI18n()(({ i18n, history }) => {
             <Select
               id="residentRegion"
               label={i18n._(t`Resident region`)}
-              sublabel={i18n._(t`The region will be your default. You can still add oservations from other regions`)}
+              supText={i18n._(t`The region will be your default. You can still add oservations from other regions`)}
               name="residentRegion"
               options={regions}
               onChange={setResidentRegion}

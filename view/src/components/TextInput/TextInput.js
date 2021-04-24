@@ -23,7 +23,7 @@ const TextInput = ({
     <label htmlFor={id} tw="block text-lg mb-2">
       <span tw="text-gray-900">{label}</span>
       {supText && (
-        <span tw="block text-sm">
+        <span tw="block text-sm text-gray-600">
           <FontAwesomeIcon icon={faInfoCircle} tw="mr-2  text-gray-500" />
           {supText}
         </span>
@@ -41,7 +41,7 @@ const TextInput = ({
     </label>
     {errorMessage && <span tw="block">{errorMessage}</span>}
     {subText && (
-      <span tw="block text-sm">
+      <span tw="block text-sm text-gray-600">
         <FontAwesomeIcon icon={faInfoCircle} tw="mr-2 text-gray-500" />
         {subText}
       </span>

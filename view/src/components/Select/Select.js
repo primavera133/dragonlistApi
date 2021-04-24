@@ -2,6 +2,9 @@ import { jsx } from '@emotion/react'
 /** @jsxImportSource @emotion/react */
 
 import React, { useRef } from 'react'
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import 'twin.macro'
 import { withI18n } from '@lingui/react'
 import { t, Trans } from '@lingui/macro'
@@ -9,7 +12,7 @@ import { t, Trans } from '@lingui/macro'
 let previousValidValue
 
 export const Select = withI18n()(
-  ({ disabled, id, label, sublabel, name, options = [], onChange, selected, i18n, useInitial }) => {
+  ({ disabled, id, label, supText, subText, name, options = [], onChange, selected, i18n, useInitial }) => {
     const ref = useRef()
     const handleChange = (e) => {
       const value = e.target.value
@@ -28,6 +31,13 @@ export const Select = withI18n()(
             {label}
           </label>
         )}
+        {supText && (
+          <span tw="block text-sm text-gray-600">
+            <FontAwesomeIcon icon={faInfoCircle} tw="mr-2  text-gray-500" />
+            {supText}
+          </span>
+        )}
+
         <select
           name={name}
           id={id}
@@ -49,7 +59,12 @@ export const Select = withI18n()(
             </option>
           ))}
         </select>
-        {sublabel && <span tw="text-sm text-gray-500">{sublabel}</span>}
+        {subText && (
+          <span tw="block text-sm text-gray-600">
+            <FontAwesomeIcon icon={faInfoCircle} tw="mr-2 text-gray-500" />
+            {subText}
+          </span>
+        )}
       </div>
     )
   }
