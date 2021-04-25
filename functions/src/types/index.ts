@@ -82,13 +82,11 @@ export interface ISpecie {
 
 export interface IObservation {
   country: string
-  countryRef?: FirebaseFirestore.DocumentReference<ICountry>
-  countryData?: ICountry
+  email: string
   observationDate: Date
   observationDateStr?: string
   region?: string
   specie: string
-  userData?: IUser
 }
 export interface IObservationFormData {
   country: string
@@ -99,6 +97,9 @@ export interface IObservationFormData {
   email: string
 }
 
+export interface IAuthRequest extends Request {
+  user?: IUser
+}
 export interface IObservationFormRequest extends Request {
   user?: IUser
 }

@@ -25,4 +25,28 @@ const getUserObservations = async (userId) => {
   }
 }
 
-export default { getUserObservations }
+const deleteUserObservation = async ({ id }) => {
+  try {
+    const url = `/api/observation/${id}`
+    const authHeader = await getAuthHeader()
+
+    const response = await fetch(url, {
+      ...defaultFetchSettings,
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        ...authHeader,
+      },
+    })
+    if (!response.ok) {
+      const errorBody = await response.json()
+      throw new Error(`Delete user observation failed: ${errorBody.error}`)
+    }
+    return await response.json()
+  } catch (error) {
+    console.error(error)
+    throw new Error(error)
+  }
+}
+
+export default { getUserObservations, deleteUserObservation }

@@ -14,8 +14,8 @@ const putUser = async (request: IAuthedRequest, response: Response): Promise<voi
     // const { valid, errors } = validators.validateSignUpData(userDetails)
     // if (!valid) return response.status(400).json(errors)
 
-    const doc = db.collection('users').doc(`${request.user?.email}`)
-    const userData = await doc.get()
+    const docRef = db.collection('users').doc(`${request.user?.email}`)
+    const userData = await docRef.get()
 
     if (!userData.exists) {
       return response.status(400).json({ message: 'user not found' })
@@ -26,7 +26,7 @@ const putUser = async (request: IAuthedRequest, response: Response): Promise<voi
       ...userDetails,
     }
 
-    await doc.update(updatedDetails)
+    await docRef.update(updatedDetails)
 
     return response.status(201).json({ userData: updatedDetails })
   } catch (err) {

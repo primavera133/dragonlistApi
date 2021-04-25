@@ -44,7 +44,7 @@ export const ObservationListPage = withI18n()(({ history }) => {
 
   const { isFetching: isFetchingCountries, data: countries } = useQuery('countries', configApi.getCountries)
   const { isFetching: isFetchingSpecies, data: species } = useQuery('species', speciesApi.getSpecies)
-  const { isFetching: isFetchingUserObservations, data: userObservations } = useQuery(
+  const { isFetching: isFetchingUserObservations, data: userObservations, refetch: refetchUserObservations } = useQuery(
     ['userObservations', email],
     () => listsApi.getUserObservations(email),
     {
@@ -118,8 +118,12 @@ export const ObservationListPage = withI18n()(({ history }) => {
   const handleEdit = (obs) => {
     console.log('edit', obs)
   }
+
   const handleDelete = (obs) => {
-    console.log('delete', obs)
+    if (confirm(i18n._(t`Are you sure you want to delete the observation?`))) {
+      listsApi.deleteUserObservation(obs)
+      refetchUserObservations()
+    }
   }
 
   return (

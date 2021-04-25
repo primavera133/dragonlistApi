@@ -24,6 +24,7 @@ import getAllObservations from './api/observations/getAllObservations'
 import getUserObservations from './api/observations/getUserObservations'
 import getObservation from './api/observations/getObservation'
 import postObservation from './api/observations/postObservation'
+import deleteUserObservation from './api/observations/deleteUserObservation'
 
 import auth from './util/auth'
 import config from './config/firebaseConfig'
@@ -55,7 +56,8 @@ app.get('/api/species', getAllSpecies)
 
 app.get('/api/observations', auth('admin'), getAllObservations)
 app.get('/api/observations/user/:email', auth(), getUserObservations)
-app.get('/api/observation/:observationId', getObservation)
+app.get('/api/observation/:observationId', auth(), getObservation)
+app.delete('/api/observation/:observationId', auth(), deleteUserObservation)
 app.post('/api/observation', auth(), postObservation)
 
 app.get('/api/members', auth(), getAllMembers)

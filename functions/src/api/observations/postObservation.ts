@@ -3,10 +3,10 @@ import { Response } from 'express'
 import { db } from '../../index'
 
 import validators from '../../util/validators/index'
-import { IObservation, IObservationFormData, IObservationFormRequest, IUser } from '../../types'
+import { IObservation, IObservationFormData, IAuthRequest, IUser } from '../../types'
 
 const postObservation = async (
-  request: IObservationFormRequest,
+  request: IAuthRequest,
   response: Response
 ): Promise<Response<IObservation> | Response<Error>> => {
   try {
