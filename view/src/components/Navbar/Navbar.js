@@ -115,7 +115,7 @@ export const Navbar = (props) => {
                 <li tw="flex items-center">
                   <NavLink
                     exact
-                    to="/observation/list"
+                    to={`/member/${btoa(authUser.email)}/list`}
                     css={[
                       props.transparent
                         ? tw`lg:text-white lg:hover:text-gray-300 text-gray-800`

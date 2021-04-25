@@ -3,12 +3,13 @@ import { jsx } from '@emotion/react'
 
 import React, { useState, useEffect, useContext } from 'react'
 import format from 'date-fns/format'
-import { Link } from 'react-router-dom'
 
 import tw, { styled } from 'twin.macro'
 import { t, Trans } from '@lingui/macro'
 import { withI18n } from '@lingui/react'
 import { useQuery } from 'react-query'
+import { faEdit, faInfoCircle, faTrash, faUserEdit } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { AuthContext } from '../../services/authContext'
 import configApi from '../../api/config'
@@ -24,20 +25,22 @@ import { Select } from '../../components/Select/Select'
 
 import { capitalise } from '../../utils/capitalise'
 import { mapRegions } from '../../utils/mapRegions'
-import { Redirect } from 'react-router'
+import { useParams } from 'react-router'
 
 export const ObservationListPage = withI18n()(({ history }) => {
-  const [email, setEmail] = useState('')
+  const { encodedemail } = useParams()
   const [language] = useState(getLanguage())
-  const [country, setCountry] = useState('')
+  const [email, setEmail] = useState()
+  const [country, setCountry] = useState('all')
   const [countryList, setCountryList] = useState([])
-  const [allCountries, setAllCountries] = useState(false)
+  const [allCountries, setAllCountries] = useState(true)
   const [region, setRegion] = useState('all')
   const [regionList, setRegionList] = useState([])
   const [allRegions, setAllRegions] = useState(true)
   const [uniqueObservations, setUniqueObservations] = useState([])
+  const [expandedSpecies, setExpandedSpecies] = useState(new Set())
 
-  const { userDetails } = useContext(AuthContext)
+  const { userDetails: loggedInUserDetails } = useContext(AuthContext)
 
   const { isFetching: isFetchingCountries, data: countries } = useQuery('countries', configApi.getCountries)
   const { isFetching: isFetchingSpecies, data: species } = useQuery('species', speciesApi.getSpecies)
@@ -45,19 +48,16 @@ export const ObservationListPage = withI18n()(({ history }) => {
     ['userObservations', email],
     () => listsApi.getUserObservations(email),
     {
-      enabled: !!email,
+      enabled: !!loggedInUserDetails,
     }
   )
-
-  const isFetching = !language || isFetchingCountries || isFetchingSpecies || isFetchingUserObservations
+  const isFetching = isFetchingCountries || isFetchingSpecies || isFetchingUserObservations
 
   useEffect(() => {
-    if (userDetails) {
-      setEmail(userDetails.email)
-      setCountry(userDetails?.residentCountry)
-      // setRegion(userDetails?.residentRegion)
+    if (encodedemail) {
+      setEmail(atob(encodedemail))
     }
-  }, [userDetails])
+  }, [encodedemail])
 
   useEffect(() => {
     if (!isFetchingCountries && country && countries) {
@@ -71,12 +71,16 @@ export const ObservationListPage = withI18n()(({ history }) => {
       const uniqueObservations = []
       let number = 1
       userObservations.forEach((obs) => {
-        if (!uniqueObservations.find((uobs) => obs.specie === uobs.specie)) {
-          if ((allCountries || obs.country === country) && (allRegions || obs.region === region)) {
+        if ((allCountries || obs.country === country) && (allRegions || obs.region === region)) {
+          const unique = uniqueObservations.find((uobs) => obs.specie === uobs.specie)
+          if (!unique) {
             uniqueObservations.push({
               ...obs,
               number: number++,
+              sub: [{ ...obs }],
             })
+          } else {
+            unique.sub.push({ ...obs })
           }
         }
       })
@@ -85,7 +89,7 @@ export const ObservationListPage = withI18n()(({ history }) => {
   }, [userObservations, country, region])
 
   const translateName = (scientificName) => {
-    const specie = species.find((sp) => sp.scientific_name === scientificName) ?? []
+    const specie = species.filter((sp) => sp.scientific_name === scientificName)[0] ?? []
     return specie[language][0] ?? scientificName
   }
 
@@ -103,16 +107,29 @@ export const ObservationListPage = withI18n()(({ history }) => {
     setRegion(region)
   }
 
+  const toggleExpandObservation = (obs) => {
+    if (expandedSpecies.has(obs.specie)) {
+      setExpandedSpecies((prev) => new Set([...prev].filter((x) => x !== obs.specie)))
+    } else {
+      setExpandedSpecies((previousState) => new Set([...expandedSpecies, obs.specie]))
+    }
+  }
+
+  const handleEdit = (obs) => {
+    console.log('edit', obs)
+  }
+  const handleDelete = (obs) => {
+    console.log('delete', obs)
+  }
+
   return (
     <Layout>
       {isFetching ? (
         <Loader />
-      ) : !userDetails ? (
-        <div>Sign in to see list</div>
       ) : (
         <div tw="max-w-md">
           <PageHeader>
-            <Trans>Your observations</Trans>
+            <Trans>Observations</Trans>
           </PageHeader>
           <div tw="grid grid-cols-2 mb-8">
             <div tw=" pr-1">
@@ -138,18 +155,72 @@ export const ObservationListPage = withI18n()(({ history }) => {
               />
             </div>
           </div>
-          <ul>
+          <table tw="table-auto w-full">
+            <thead>
+              <tr>
+                <th></th>
+                <th tw="align-top text-left">
+                  <span tw="pl-1">
+                    <Trans>Specie</Trans>
+                  </span>
+                </th>
+                <th tw="align-top text-left"></th>
+                <th tw="align-top text-left">
+                  <Trans>Date</Trans>
+                </th>
+              </tr>
+            </thead>
             {uniqueObservations.map((obs, i) => (
-              <li key={`items${i}`} tw="flex justify-between">
-                <div tw="mb-2">
-                  <span tw="text-sm font-light pr-2">{obs.number}:</span>
-                  <span tw="text-lg font-semibold leading-normal pr-2">{capitalise(translateName(obs.specie))}</span>
-                  <span tw="text-sm font-light leading-normal pr-2 ">{capitalise(obs.specie)}</span>
-                </div>
-                <span tw="text-sm leading-normal">{format(new Date(obs.observationDate), 'yyyy-MM-dd')}</span>
-              </li>
+              <tbody key={`items${i}`}>
+                <tr>
+                  <td tw="align-top text-sm font-light pt-1">{obs.number}:</td>
+                  <td tw="mb-2">
+                    <div tw="align-top pr-2">
+                      <button
+                        tw="px-1 text-lg font-semibold leading-normal"
+                        onClick={() => toggleExpandObservation(obs)}
+                      >
+                        {capitalise(translateName(obs.specie))}
+                      </button>
+                    </div>
+                    {!expandedSpecies.has(obs.specie) && (
+                      <div tw="align-top text-sm font-light leading-normal pr-2 pl-1 ">{capitalise(obs.specie)}</div>
+                    )}
+                  </td>
+                  <td tw="align-top text-sm font-light pr-2">
+                    <button tw="px-3 py-1" onClick={() => toggleExpandObservation(obs)}>
+                      {obs.sub.length}
+                    </button>
+                  </td>
+                  <td tw="align-top text-sm leading-normal whitespace-nowrap pt-1">
+                    {format(new Date(obs.observationDate), 'yyyy-MM-dd')}
+                  </td>
+                  <td>
+                    <span tw="mr-10"> </span>
+                  </td>
+                </tr>
+                {expandedSpecies.has(obs.specie) &&
+                  obs.sub.map((sub, j) => (
+                    <tr key={`subitems${i}${j}`}>
+                      <td></td>
+                      <td tw="align-top text-sm font-light leading-normal pr-2">{capitalise(obs.specie)}</td>
+                      <td tw="align-top text-sm font-light pr-2"></td>
+                      <td tw="align-top text-sm font-light leading-normal whitespace-nowrap">
+                        {format(new Date(sub.observationDate), 'yyyy-MM-dd')}
+                      </td>
+                      <td tw="align-top text-sm font-light leading-normal whitespace-nowrap">
+                        <button tw="px-1" onClick={() => handleEdit(sub)}>
+                          <FontAwesomeIcon icon={faEdit} tw="text-gray-500" />
+                        </button>
+                        <button tw="px-1" onClick={() => handleDelete(sub)}>
+                          <FontAwesomeIcon icon={faTrash} tw="text-gray-500" />
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
             ))}
-          </ul>
+          </table>
           <hr tw="mt-1 mb-4" />
           <div tw="flex justify-between">
             <span tw="text-lg font-semibold leading-normal">
