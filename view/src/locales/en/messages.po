@@ -11,7 +11,17 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#: src/components/Select/Select.js:37
+#: src/pages/member/MemberListPage.js:54
+#: src/pages/observation/ObservationListPage.js:65
+msgid "-- All countries --"
+msgstr "-- All countries --"
+
+#: src/pages/member/MemberListPage.js:53
+#: src/pages/observation/ObservationListPage.js:64
+msgid "-- All regions --"
+msgstr "-- All regions --"
+
+#: src/components/Select/Select.js:52
 msgid "-- select ---"
 msgstr "-- select ---"
 
@@ -19,13 +29,31 @@ msgstr "-- select ---"
 msgid "A sign-in email with additional instructions was sent to {email}. Check your inbox to complete sign-in."
 msgstr "A sign-in email with additional instructions was sent to {email}. Check your inbox to complete sign-in."
 
-#: src/pages/observation/ObservationAddPage.js:101
+#: src/components/Navbar/Navbar.js:109
+#: src/pages/observation/ObservationAddPage.js:99
 msgid "Add observation"
 msgstr "Add observation"
+
+#: src/pages/observation/ObservationListPage.js:235
+msgid "Add specie"
+msgstr "Add specie"
 
 #: src/pages/profile/ProfilePage.js:27
 msgid "Admin"
 msgstr "Admin"
+
+#: src/components/Navbar/Navbar.js:157
+#: src/pages/member/MemberListPage.js:88
+msgid "All users"
+msgstr "All users"
+
+#: src/pages/observation/ObservationListPage.js:123
+msgid "Are you sure you want to delete the observation?"
+msgstr "Are you sure you want to delete the observation?"
+
+#: src/components/Footer/Footer.js:66
+msgid "Artportalen"
+msgstr "Artportalen"
 
 #: src/components/UserForm/UserForm.js:99
 msgid "Basic personal details"
@@ -55,23 +83,27 @@ msgstr "Complete"
 msgid "Complete sign in"
 msgstr "Complete sign in"
 
-#: src/components/Footer/Footer.js:83
+#: src/components/Footer/Footer.js:88
 msgid "Contact Us"
 msgstr "Contact Us"
 
-#: src/components/UserForm/UserForm.js:141
+#: src/components/UserForm/UserForm.js:147
 msgid "Contact details"
 msgstr "Contact details"
 
-#: src/components/UserForm/UserForm.js:144
+#: src/components/UserForm/UserForm.js:150
 msgid "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
 msgstr "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
 
-#: src/pages/observation/ObservationAddPage.js:107
+#: src/pages/observation/ObservationAddPage.js:105
 msgid "Country"
 msgstr "Country"
 
-#: src/components/Navbar/Navbar.js:41
+#: src/pages/observation/ObservationListPage.js:173
+msgid "Date"
+msgstr "Date"
+
+#: src/components/Navbar/Navbar.js:48
 msgid "Dragonlist"
 msgstr "Dragonlist"
 
@@ -88,7 +120,7 @@ msgstr "Edit"
 msgid "Email"
 msgstr "Email"
 
-#: src/components/UserForm/UserForm.js:160
+#: src/components/UserForm/UserForm.js:166
 msgid "Email for contact"
 msgstr "Email for contact"
 
@@ -108,7 +140,7 @@ msgstr "GBIF"
 #~ msgid "Github"
 #~ msgstr "Github"
 
-#: src/components/Navbar/Navbar.js:74
+#: src/components/Navbar/Navbar.js:85
 msgid "How-to"
 msgstr "How-to"
 
@@ -128,7 +160,7 @@ msgstr "If the steps above didn't work, you can resend the email. Note that this
 msgid "If you are old and wish to be young again, try and identify a dragonfly! - Simon Barres"
 msgstr "If you are old and wish to be young again, try and identify a dragonfly! - Simon Barres"
 
-#: src/components/UserForm/UserForm.js:155
+#: src/components/UserForm/UserForm.js:161
 msgid "Including a country prefix is helpful."
 msgstr "Including a country prefix is helpful."
 
@@ -136,13 +168,17 @@ msgstr "Including a country prefix is helpful."
 msgid "Last name"
 msgstr "Last name"
 
-#: src/components/Navbar/Navbar.js:109
+#: src/components/Navbar/Navbar.js:193
 msgid "Logout"
 msgstr "Logout"
 
 #: src/pages/profile/ProfilePage.js:20
 #~ msgid "Mina sidor"
 #~ msgstr "Mina sidor"
+
+#: src/components/Navbar/Navbar.js:133
+msgid "My lists"
+msgstr "My lists"
 
 #: src/pages/profile/ProfilePage.js:20
 msgid "My pages"
@@ -172,11 +208,15 @@ msgstr "Nothing to see here."
 msgid "Observation date"
 msgstr "Observation date"
 
-#: src/components/Footer/Footer.js:68
+#: src/pages/observation/ObservationListPage.js:136
+msgid "Observations"
+msgstr "Observations"
+
+#: src/components/Footer/Footer.js:73
 msgid "Other Resources"
 msgstr "Other Resources"
 
-#: src/components/UserForm/UserForm.js:152
+#: src/components/UserForm/UserForm.js:158
 msgid "Phone number"
 msgstr "Phone number"
 
@@ -188,11 +228,11 @@ msgstr "Please provide email for confirmation"
 msgid "Previous Month"
 msgstr "Previous Month"
 
-#: src/components/Footer/Footer.js:78
+#: src/components/Footer/Footer.js:83
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
-#: src/components/Navbar/Navbar.js:95
+#: src/components/Navbar/Navbar.js:179
 msgid "Profile"
 msgstr "Profile"
 
@@ -212,16 +252,16 @@ msgstr "Record where you first saw a specie in a country, or where your first ob
 msgid "Record your dragonfly observations and find like-minded new friends."
 msgstr "Record your dragonfly observations and find like-minded new friends."
 
-#: src/pages/observation/ObservationAddPage.js:117
+#: src/pages/observation/ObservationAddPage.js:116
 msgid "Region"
 msgstr "Region"
 
-#: src/components/UserForm/UserForm.js:121
+#: src/components/UserForm/UserForm.js:122
 #: src/pages/profile/ProfilePage.js:34
 msgid "Resident country"
 msgstr "Resident country"
 
-#: src/components/UserForm/UserForm.js:131
+#: src/components/UserForm/UserForm.js:136
 #: src/pages/profile/ProfilePage.js:37
 msgid "Resident region"
 msgstr "Resident region"
@@ -230,7 +270,7 @@ msgstr "Resident region"
 msgid "Role"
 msgstr "Role"
 
-#: src/components/UserForm/UserForm.js:168
+#: src/components/UserForm/UserForm.js:174
 msgid "Save"
 msgstr "Save"
 
@@ -238,7 +278,7 @@ msgstr "Save"
 msgid "Save observation"
 msgstr "Save observation"
 
-#: src/components/Navbar/Navbar.js:124
+#: src/components/Navbar/Navbar.js:208
 #: src/pages/home/HomePage.js:181
 msgid "Sign in"
 msgstr "Sign in"
@@ -248,18 +288,27 @@ msgid "Sign in with email"
 msgstr "Sign in with email"
 
 #: src/pages/observation/ObservationAddPage.js:126
+#: src/pages/observation/ObservationListPage.js:168
 msgid "Specie"
 msgstr "Specie"
 
-#: src/components/Footer/Footer.js:73
+#: src/components/Footer/Footer.js:78
 msgid "Terms & Conditions"
 msgstr "Terms & Conditions"
 
-#: src/components/UserForm/UserForm.js:173
+#: src/components/UserForm/UserForm.js:124
+msgid "The country will be your default. You can still add oservations from other countries"
+msgstr "The country will be your default. You can still add oservations from other countries"
+
+#: src/components/UserForm/UserForm.js:137
+msgid "The region will be your default. You can still add oservations from other regions"
+msgstr "The region will be your default. You can still add oservations from other regions"
+
+#: src/components/UserForm/UserForm.js:179
 msgid "There are still mandatory fields missing. You will be able to save when those are completed"
 msgstr "There are still mandatory fields missing. You will be able to save when those are completed"
 
-#: src/components/UserForm/UserForm.js:163
+#: src/components/UserForm/UserForm.js:169
 msgid "This email can be the one you login with, or any other."
 msgstr "This email can be the one you login with, or any other."
 
@@ -283,6 +332,10 @@ msgstr "This site was made by some members of <0>Trollslände­föreningen</0>, 
 #: src/pages/home/HomePage.js:130
 msgid "Top 10 lists per country. Or per region of your country."
 msgstr "Top 10 lists per country. Or per region of your country."
+
+#: src/pages/member/MemberListPage.js:152
+msgid "Total observations"
+msgstr "Total observations"
 
 #: src/pages/home/HomePage.js:146
 msgid "Traveling to a new region? Want some advice on good places or where to find a special specie? Why not ask someone who saw it before?"
@@ -344,6 +397,6 @@ msgstr "email"
 msgid "iNaturalist"
 msgstr "iNaturalist"
 
-#: src/components/Footer/Footer.js:95
+#: src/components/Footer/Footer.js:100
 msgid "{0} Dragonlist by <0>Jonas Myrenås</0>, <1>Github</1>."
 msgstr "{0} Dragonlist by <0>Jonas Myrenås</0>, <1>Github</1>."

@@ -8,7 +8,7 @@ const getUserObservations = async (request: Request, response: Response): Promis
     const snapshot = await db
       .collection('observations')
       .where('email', '==', email)
-      .orderBy('observationDate', 'asc')
+      .orderBy('observationDate', 'desc')
       .get()
 
     if (snapshot.empty) {

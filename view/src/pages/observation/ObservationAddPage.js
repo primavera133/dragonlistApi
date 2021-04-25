@@ -5,7 +5,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import tw, { styled } from 'twin.macro'
 import { t, Trans } from '@lingui/macro'
 import { withI18n } from '@lingui/react'
-import { useQuery } from 'react-query'
+import { useQuery, useQueryClient } from 'react-query'
 
 import { AuthContext } from '../../services/authContext'
 import configApi from '../../api/config'
@@ -22,9 +22,9 @@ import { Button } from '../../components/Button'
 import { mapRegions } from '../../utils/mapRegions'
 
 export const ObservationAddPage = withI18n()(({ history }) => {
+  const queryClient = useQueryClient()
   const { isFetching: isFetchingCountries, data: countries } = useQuery('countries', configApi.getCountries)
   const { isFetching: isFetchingSpecies, data: species } = useQuery('species', speciesApi.getSpecies)
-
   const { userDetails } = useContext(AuthContext)
 
   const [country, setCountry] = useState('')
@@ -80,7 +80,8 @@ export const ObservationAddPage = withI18n()(({ history }) => {
         observationDate: observationDate.valueOf(),
         specie,
       })
-      history.push('/observation/list')
+      queryClient.clear(['userObservations', userDetails.email])
+      history.push(`/member/${btoa(userDetails.email)}/list`)
     }
   }
 

@@ -181,15 +181,13 @@ export const ObservationListPage = withI18n()(({ history }) => {
                   <td tw="mb-2">
                     <div tw="align-top pr-2">
                       <button
-                        tw="px-1 text-lg font-semibold leading-normal"
+                        tw="px-1 text-lg font-semibold leading-normal text-left"
                         onClick={() => toggleExpandObservation(obs)}
                       >
                         {capitalise(translateName(obs.specie))}
                       </button>
                     </div>
-                    {!expandedSpecies.has(obs.specie) && (
-                      <div tw="align-top text-sm font-light leading-normal pr-2 pl-1 ">{capitalise(obs.specie)}</div>
-                    )}
+                    <div tw="align-top text-sm font-light leading-normal pr-2 pl-1 ">{capitalise(obs.specie)}</div>
                   </td>
                   <td tw="align-top text-sm font-light pr-2">
                     <button tw="px-3 py-1" onClick={() => toggleExpandObservation(obs)}>
@@ -207,7 +205,9 @@ export const ObservationListPage = withI18n()(({ history }) => {
                   obs.sub.map((sub, j) => (
                     <tr key={`subitems${i}${j}`}>
                       <td></td>
-                      <td tw="align-top text-sm font-light leading-normal pr-2">{capitalise(obs.specie)}</td>
+                      <td tw="align-top text-sm font-light leading-normal pr-2 pl-1">
+                        <span>{capitalise(i18n._(t`${sub.country}`))}</span>, <span>{capitalise(sub.region)}</span>
+                      </td>
                       <td tw="align-top text-sm font-light pr-2"></td>
                       <td tw="align-top text-sm font-light leading-normal whitespace-nowrap">
                         {format(new Date(sub.observationDate), 'yyyy-MM-dd')}
@@ -232,7 +232,7 @@ export const ObservationListPage = withI18n()(({ history }) => {
             </span>
 
             <Button isPrimary isSmall onClick={goAdd}>
-              <Trans>Add specie</Trans>
+              <Trans>Add observation</Trans>
             </Button>
           </div>
         </div>

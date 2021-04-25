@@ -13,21 +13,49 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/Select/Select.js:37
+#: src/pages/member/MemberListPage.js:54
+#: src/pages/observation/ObservationListPage.js:65
+msgid "-- All countries --"
+msgstr "-- Alla länder --"
+
+#: src/pages/member/MemberListPage.js:53
+#: src/pages/observation/ObservationListPage.js:64
+msgid "-- All regions --"
+msgstr "-- Alla regioner --"
+
+#: src/components/Select/Select.js:52
 msgid "-- select ---"
-msgstr " -- välj --"
+msgstr "-- välj --"
 
 #: src/pages/signin/SignInEmailPage.js:77
 msgid "A sign-in email with additional instructions was sent to {email}. Check your inbox to complete sign-in."
 msgstr "Ett mail med en länk och instruktioner för hur du loggar in har mailats till {email}. Kolla din brevlåda för att fortsätta."
 
-#: src/pages/observation/ObservationAddPage.js:101
+#: src/components/Navbar/Navbar.js:109
+#: src/pages/observation/ObservationAddPage.js:99
 msgid "Add observation"
 msgstr "Lägg till ett kryss"
+
+#: src/pages/observation/ObservationListPage.js:235
+msgid "Add observation"
+msgstr "Lägg till observation"
 
 #: src/pages/profile/ProfilePage.js:27
 msgid "Admin"
 msgstr "Administratör"
+
+#: src/components/Navbar/Navbar.js:157
+#: src/pages/member/MemberListPage.js:88
+msgid "All users"
+msgstr "Alla användare"
+
+#: src/pages/observation/ObservationListPage.js:123
+msgid "Are you sure you want to delete the observation?"
+msgstr "Är du säker på att du vill radera obsen?"
+
+#: src/components/Footer/Footer.js:66
+msgid "Artportalen"
+msgstr "Artportalen"
 
 #: src/components/UserForm/UserForm.js:99
 msgid "Basic personal details"
@@ -57,23 +85,27 @@ msgstr "Fortsätt"
 msgid "Complete sign in"
 msgstr "Inlogging"
 
-#: src/components/Footer/Footer.js:83
+#: src/components/Footer/Footer.js:88
 msgid "Contact Us"
 msgstr "Kontakta oss"
 
-#: src/components/UserForm/UserForm.js:141
+#: src/components/UserForm/UserForm.js:147
 msgid "Contact details"
 msgstr "Kontaktuppgifter"
 
-#: src/components/UserForm/UserForm.js:144
+#: src/components/UserForm/UserForm.js:150
 msgid "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
 msgstr "Kontaktuppfterna är frivilliga att fylla i. Välj hur du vill att andra medlemmar ska kunna kontakta dig. Inga kontaktuppgifter visas upp för oinloggade användare."
 
-#: src/pages/observation/ObservationAddPage.js:107
+#: src/pages/observation/ObservationAddPage.js:105
 msgid "Country"
 msgstr "Land"
 
-#: src/components/Navbar/Navbar.js:41
+#: src/pages/observation/ObservationListPage.js:173
+msgid "Date"
+msgstr "Datum"
+
+#: src/components/Navbar/Navbar.js:48
 msgid "Dragonlist"
 msgstr "Trollsländelistan"
 
@@ -90,7 +122,7 @@ msgstr "Ändra uppgifter"
 msgid "Email"
 msgstr "Mailadress"
 
-#: src/components/UserForm/UserForm.js:160
+#: src/components/UserForm/UserForm.js:166
 msgid "Email for contact"
 msgstr "Mailadress för kontakt"
 
@@ -110,7 +142,7 @@ msgstr "GBIF"
 #~ msgid "Github"
 #~ msgstr "Github"
 
-#: src/components/Navbar/Navbar.js:74
+#: src/components/Navbar/Navbar.js:85
 msgid "How-to"
 msgstr "Hur gör man?"
 
@@ -130,7 +162,7 @@ msgstr "Om stegen ovan inte fungerar, kan du prova att skicka om ditt mail. Note
 msgid "If you are old and wish to be young again, try and identify a dragonfly! - Simon Barres"
 msgstr "If you are old and wish to be young again, try and identify a dragonfly! - Simon Barres"
 
-#: src/components/UserForm/UserForm.js:155
+#: src/components/UserForm/UserForm.js:161
 msgid "Including a country prefix is helpful."
 msgstr "Inkludera gärna landsprefix (som t ex +46)"
 
@@ -138,9 +170,13 @@ msgstr "Inkludera gärna landsprefix (som t ex +46)"
 msgid "Last name"
 msgstr "Efternamn"
 
-#: src/components/Navbar/Navbar.js:109
+#: src/components/Navbar/Navbar.js:193
 msgid "Logout"
 msgstr "Logga ut"
+
+#: src/components/Navbar/Navbar.js:133
+msgid "My lists"
+msgstr "Mina listor"
 
 #: src/pages/profile/ProfilePage.js:20
 msgid "My pages"
@@ -166,11 +202,15 @@ msgstr "Inget att se här..."
 msgid "Observation date"
 msgstr "Datum för obsen"
 
-#: src/components/Footer/Footer.js:68
+#: src/pages/observation/ObservationListPage.js:136
+msgid "Observations"
+msgstr "Observationer"
+
+#: src/components/Footer/Footer.js:73
 msgid "Other Resources"
 msgstr "Andra resurser"
 
-#: src/components/UserForm/UserForm.js:152
+#: src/components/UserForm/UserForm.js:158
 msgid "Phone number"
 msgstr "Telefonnummer"
 
@@ -182,11 +222,11 @@ msgstr "Var god uppge din mailadress för konfirmation"
 msgid "Previous Month"
 msgstr "Föregående månad"
 
-#: src/components/Footer/Footer.js:78
+#: src/components/Footer/Footer.js:83
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
-#: src/components/Navbar/Navbar.js:95
+#: src/components/Navbar/Navbar.js:179
 msgid "Profile"
 msgstr "Mina sidor"
 
@@ -196,7 +236,7 @@ msgstr "Sätt en kartnål på vad du sett"
 
 #: src/pages/home/HomePage.js:111
 msgid "Record where you first saw a specie in a country, or where your first observation in a region of your country."
-msgstr ""
+msgstr "Registrera var du först såg en art i ditt land, eller din första observation i en region av ett land."
 
 #: src/pages/home/home.js:104
 #~ msgid "Record where you first saw a specie in a country, or where your first sighting in a region of your country."
@@ -204,18 +244,18 @@ msgstr ""
 
 #: src/pages/home/HomePage.js:68
 msgid "Record your dragonfly observations and find like-minded new friends."
-msgstr "Skåda trollsländor, Lista dina observationer och skaffa nya vänner"
+msgstr "Skåda trollsländor, lista dina observationer och träffa likasinnade"
 
-#: src/pages/observation/ObservationAddPage.js:117
+#: src/pages/observation/ObservationAddPage.js:116
 msgid "Region"
 msgstr "Region"
 
-#: src/components/UserForm/UserForm.js:121
+#: src/components/UserForm/UserForm.js:122
 #: src/pages/profile/ProfilePage.js:34
 msgid "Resident country"
 msgstr "Land"
 
-#: src/components/UserForm/UserForm.js:131
+#: src/components/UserForm/UserForm.js:136
 #: src/pages/profile/ProfilePage.js:37
 msgid "Resident region"
 msgstr "Region"
@@ -224,7 +264,7 @@ msgstr "Region"
 msgid "Role"
 msgstr "Roll"
 
-#: src/components/UserForm/UserForm.js:168
+#: src/components/UserForm/UserForm.js:174
 msgid "Save"
 msgstr "Spara"
 
@@ -232,7 +272,7 @@ msgstr "Spara"
 msgid "Save observation"
 msgstr "Spara observationen"
 
-#: src/components/Navbar/Navbar.js:124
+#: src/components/Navbar/Navbar.js:208
 #: src/pages/home/HomePage.js:181
 msgid "Sign in"
 msgstr "Logga in/Skapa konto"
@@ -242,18 +282,27 @@ msgid "Sign in with email"
 msgstr "Logga in med din email"
 
 #: src/pages/observation/ObservationAddPage.js:126
+#: src/pages/observation/ObservationListPage.js:168
 msgid "Specie"
 msgstr "Art"
 
-#: src/components/Footer/Footer.js:73
+#: src/components/Footer/Footer.js:78
 msgid "Terms & Conditions"
 msgstr "Terms & Conditions"
 
-#: src/components/UserForm/UserForm.js:173
+#: src/components/UserForm/UserForm.js:124
+msgid "The country will be your default. You can still add oservations from other countries."
+msgstr "Landet kommer bli ditt förhandsval, Du kan fortfarande lägga till obsar från andra länder."
+
+#: src/components/UserForm/UserForm.js:137
+msgid "The region will be your default. You can still add oservations from other regions."
+msgstr "Regionen kommer bli ditt förhandsval. Du kan fortfarande lägga till obsar i andra regioner."
+
+#: src/components/UserForm/UserForm.js:179
 msgid "There are still mandatory fields missing. You will be able to save when those are completed"
 msgstr "Det saknas uppgifter i några obligatoriska fält. Du kan spara först när du fyllt i dem."
 
-#: src/components/UserForm/UserForm.js:163
+#: src/components/UserForm/UserForm.js:169
 msgid "This email can be the one you login with, or any other."
 msgstr "Välj själv om du vill använda samma som ovan eller någon annan."
 
@@ -268,7 +317,7 @@ msgstr "Detta är inte vetenskap eller \"citizen-science\". Du vill antagligen i
 
 #: src/pages/home/HomePage.js:71
 msgid "This site is all about sharing lists and finding friends. Keeping lists is fun and why not have fun with other like minded?"
-msgstr "Denna site handlar om att göra krysslistor och hitta vänner. Att hålla på med krysslistor är kul och varför inte dela det roliga med likasinnade?"
+msgstr "Denna site handlar om att göra krysslistor och träffa likasinnade. Att hålla på med krysslistor är kul och varför inte dela det roliga med andra?"
 
 #: src/pages/home/HomePage.js:219
 msgid "This site was made by some members of <0>Trollslände­föreningen</0>, the Swedish dragonfly society."
@@ -277,6 +326,10 @@ msgstr "Denna sida gjordes av några medlemmar av <0>Trollslände­föreningen</
 #: src/pages/home/HomePage.js:130
 msgid "Top 10 lists per country. Or per region of your country."
 msgstr "Top 10 svenska observatörer. Eller per landskap..."
+
+#: src/pages/member/MemberListPage.js:152
+msgid "Total observations"
+msgstr "Totalt antal obsar"
 
 #: src/pages/home/HomePage.js:146
 msgid "Traveling to a new region? Want some advice on good places or where to find a special specie? Why not ask someone who saw it before?"
@@ -338,6 +391,6 @@ msgstr "email för inloggning"
 msgid "iNaturalist"
 msgstr "iNaturalist"
 
-#: src/components/Footer/Footer.js:95
+#: src/components/Footer/Footer.js:100
 msgid "{0} Dragonlist by <0>Jonas Myrenås</0>, <1>Github</1>."
 msgstr "{0} Trollsländelistan av <0>Jonas Myrenås</0>, <1>Github</1>."

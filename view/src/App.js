@@ -60,7 +60,7 @@ const App = () => {
               <Route exact path="/members/list" component={MemberListPage} />
               <Route exact path="/member/:encodedemail/list" component={ObservationListPage} />
               <Route exact path="/observation">
-                <Redirect to="/observation/list" />
+                <Redirect to="/observation/add" />
               </Route>
               <Route exact path="/observation/add" component={ObservationAddPage} />
               <Route exact path="/privacypolicy" component={PrivacyPolicyPage} />
