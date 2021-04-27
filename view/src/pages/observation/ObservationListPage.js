@@ -8,7 +8,7 @@ import tw, { styled } from 'twin.macro'
 import { t, Trans } from '@lingui/macro'
 import { withI18n } from '@lingui/react'
 import { useQuery } from 'react-query'
-import { faEdit, faInfoCircle, faTrash, faUserEdit } from '@fortawesome/free-solid-svg-icons'
+import { faChevronCircleDown, faChevronCircleUp, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { AuthContext } from '../../services/authContext'
@@ -25,7 +25,8 @@ import { Select } from '../../components/Select/Select'
 
 import { capitalise } from '../../utils/capitalise'
 import { mapRegions } from '../../utils/mapRegions'
-import { useParams } from 'react-router'
+import { translateName } from '../../utils/translateName'
+import { useParams } from 'react-router-dom'
 
 export const ObservationListPage = withI18n()(({ history }) => {
   const { encodedemail } = useParams()
@@ -88,10 +89,10 @@ export const ObservationListPage = withI18n()(({ history }) => {
     }
   }, [userObservations, country, region])
 
-  const translateName = (scientificName) => {
-    const specie = species.filter((sp) => sp.scientific_name === scientificName)[0] ?? []
-    return specie[language][0] ?? scientificName
-  }
+  // const translateName = (scientificName) => {
+  //   const specie = species.filter((sp) => sp.scientific_name === scientificName)[0] ?? []
+  //   return specie[language][0] ?? scientificName
+  // }
 
   const goAdd = () => {
     history.push('/observation/add')
@@ -117,6 +118,7 @@ export const ObservationListPage = withI18n()(({ history }) => {
 
   const handleEdit = (obs) => {
     console.log('edit', obs)
+    history.push(`/observation/edit/${obs.id}`)
   }
 
   const handleDelete = (obs) => {
@@ -184,7 +186,7 @@ export const ObservationListPage = withI18n()(({ history }) => {
                         tw="px-1 text-lg font-semibold leading-normal text-left"
                         onClick={() => toggleExpandObservation(obs)}
                       >
-                        {capitalise(translateName(obs.specie))}
+                        {capitalise(translateName(obs.specie, species, language))}
                       </button>
                     </div>
                     <div tw="align-top text-sm font-light leading-normal pr-2 pl-1 ">{capitalise(obs.specie)}</div>
@@ -197,8 +199,15 @@ export const ObservationListPage = withI18n()(({ history }) => {
                   <td tw="align-top text-sm leading-normal whitespace-nowrap pt-1">
                     {format(new Date(obs.observationDate), 'yyyy-MM-dd')}
                   </td>
-                  <td>
-                    <span tw="mr-10"> </span>
+                  <td tw="align-top px-3">
+                    <button tw="px-1 py-0" onClick={() => toggleExpandObservation(obs)}>
+                      {expandedSpecies.has(obs.specie) && (
+                        <FontAwesomeIcon icon={faChevronCircleUp} tw="text-gray-500" />
+                      )}
+                      {!expandedSpecies.has(obs.specie) && (
+                        <FontAwesomeIcon icon={faChevronCircleDown} tw="text-gray-500" />
+                      )}
+                    </button>
                   </td>
                 </tr>
                 {expandedSpecies.has(obs.specie) &&
@@ -206,7 +215,12 @@ export const ObservationListPage = withI18n()(({ history }) => {
                     <tr key={`subitems${i}${j}`}>
                       <td></td>
                       <td tw="align-top text-sm font-light leading-normal pr-2 pl-1">
-                        <span>{capitalise(i18n._(t`${sub.country}`))}</span>, <span>{capitalise(sub.region)}</span>
+                        <span>{capitalise(i18n._(t`${sub.country}`))}</span>
+                        {sub.region && (
+                          <>
+                            , <span>{capitalise(sub.region)}</span>
+                          </>
+                        )}
                       </td>
                       <td tw="align-top text-sm font-light pr-2"></td>
                       <td tw="align-top text-sm font-light leading-normal whitespace-nowrap">

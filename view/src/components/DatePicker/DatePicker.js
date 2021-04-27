@@ -17,12 +17,12 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 import './datePicker.scss'
 
-export const DatePickerComponent = withI18n()(({ onSelectDate }) => (
+export const DatePickerComponent = withI18n()(({ onSelectDate, initialDate }) => (
   <>
     <label htmlFor="observationDate">
       <Trans>Observation date</Trans>
     </label>
-    <DatePicker onSelect={onSelectDate} tw="flex items-start flex-col">
+    <DatePicker initialDate={initialDate} onSelect={onSelectDate} tw="flex items-start flex-col">
       <DatePickerInput
         dateFormat={'yyyy-MM-dd'}
         id="observationDate"

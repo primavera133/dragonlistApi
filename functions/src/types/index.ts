@@ -92,7 +92,7 @@ export interface IObservationFormData {
   country: string
   observationDate: number
   observationDateStr?: string
-  region?: string
+  region?: string | null
   specie: string
   email: string
 }

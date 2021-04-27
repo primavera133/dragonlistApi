@@ -19,7 +19,7 @@ import { HowToPage } from './pages/howto'
 import { SignInEmailPage } from './pages/signin'
 import { ProfilePage } from './pages/profile'
 import { MemberListPage } from './pages/member'
-import { ObservationAddPage, ObservationListPage } from './pages/observation'
+import { ObservationAddPage, ObservationEditPage, ObservationListPage } from './pages/observation'
 import { AdminPage } from './pages/admin'
 import { TermsAndConditionsPage } from './pages/termsAndConditions'
 import { PrivacyPolicyPage } from './pages/privacyPolicy'
@@ -63,6 +63,7 @@ const App = () => {
                 <Redirect to="/observation/add" />
               </Route>
               <Route exact path="/observation/add" component={ObservationAddPage} />
+              <Route exact path="/observation/edit/:id" component={ObservationEditPage} />
               <Route exact path="/privacypolicy" component={PrivacyPolicyPage} />
               <Route exact path="/signin" component={SignInEmailPage} />
               <Route exact path="/termsandconditions" component={TermsAndConditionsPage} />

@@ -6,8 +6,8 @@ import Autosuggest from 'react-autosuggest'
 import tw, { styled } from 'twin.macro'
 import './search.scss'
 
-export const Search = ({ label, names, onSelect }) => {
-  const [value, setValue] = useState('')
+export const Search = ({ label, names, onSelect, initialValue = '' }) => {
+  const [value, setValue] = useState(initialValue)
   const [suggestions, setSuggestions] = useState([])
 
   // Teach Autosuggest how to calculate suggestions for any given input value.

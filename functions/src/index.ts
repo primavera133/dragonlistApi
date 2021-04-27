@@ -24,6 +24,7 @@ import getAllObservations from './api/observations/getAllObservations'
 import getUserObservations from './api/observations/getUserObservations'
 import getObservation from './api/observations/getObservation'
 import postObservation from './api/observations/postObservation'
+import putObservation from './api/observations/putObservation'
 import deleteUserObservation from './api/observations/deleteUserObservation'
 
 import auth from './util/auth'
@@ -57,6 +58,7 @@ app.get('/api/species', getAllSpecies)
 app.get('/api/observations', auth('admin'), getAllObservations)
 app.get('/api/observations/user/:email', auth(), getUserObservations)
 app.get('/api/observation/:observationId', auth(), getObservation)
+app.put('/api/observation/:observationId', auth(), putObservation)
 app.delete('/api/observation/:observationId', auth(), deleteUserObservation)
 app.post('/api/observation', auth(), postObservation)
 
@@ -65,4 +67,3 @@ app.get('/api/members', auth(), getAllMembers)
 app.use('/dragonlistapi', router)
 
 exports.dragonlistapi = functions.region('us-central1').https.onRequest(app)
-console.log('index.ts')
