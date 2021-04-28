@@ -1,4 +1,3 @@
-import { getAuthHeader } from '../services/authService'
 import { defaultFetchSettings } from './common'
 
 const getCountries = async () => {

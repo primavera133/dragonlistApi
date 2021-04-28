@@ -19,6 +19,7 @@ import getCountryUserObservations from './api/country/getCountryUserObservations
 import getCountryRegionUserObservations from './api/country/getCountryRegionUserObservations'
 
 import getAllSpecies from './api/specie/getAllSpecies'
+import getHighscores from './api/highscores/getHighscores'
 
 import getAllObservations from './api/observations/getAllObservations'
 import getUserObservations from './api/observations/getUserObservations'
@@ -30,6 +31,8 @@ import deleteUserObservation from './api/observations/deleteUserObservation'
 import auth from './util/auth'
 import config from './config/firebaseConfig'
 import getAllMembers from './api/member/getAllMembers'
+
+import { logActivities } from './logActivities'
 
 admin.initializeApp(config)
 firebase.initializeApp(config)
@@ -54,6 +57,7 @@ app.get('/api/country/:countryId/user/:email/observations', getCountryUserObserv
 app.get('/api/country/:countryId/region/:regionId/user/:email/observations', getCountryRegionUserObservations)
 
 app.get('/api/species', getAllSpecies)
+app.get('/api/highscores', getHighscores)
 
 app.get('/api/observations', auth('admin'), getAllObservations)
 app.get('/api/observations/user/:email', auth(), getUserObservations)
@@ -67,3 +71,5 @@ app.get('/api/members', auth(), getAllMembers)
 app.use('/dragonlistapi', router)
 
 exports.dragonlistapi = functions.region('us-central1').https.onRequest(app)
+
+exports.logActivities = logActivities

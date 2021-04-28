@@ -105,14 +105,19 @@ export const HomePage = ({ history }) => {
                     <FontAwesomeIcon icon={faMapPin} />
                   </div>
                   <h6 tw="text-xl font-semibold">
-                    <Trans>Put a pin on what you've seen</Trans>
+                    <Trans>Record what you've seen</Trans>
                   </h6>
                   <p tw="mt-2 mb-4 text-gray-600">
                     <Trans>
-                      Record where you first saw a specie in a country, or where your first observation in a region of
+                      Record when you first saw a specie in a country, or where your first observation in a region of
                       your country.
                     </Trans>
                   </p>
+                  {authUser && (
+                    <Button isSmall isPrimary onClick={() => history.push('/observation/add')}>
+                      <Trans>Add observation</Trans>
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
@@ -129,6 +134,11 @@ export const HomePage = ({ history }) => {
                   <p tw="mt-2 mb-4 text-gray-600">
                     <Trans>Top 10 lists per country. Or per region of your country.</Trans>
                   </p>
+                  {authUser && (
+                    <Button isSmall isPrimary onClick={() => history.push('/observation/list')}>
+                      <Trans>See lists</Trans>
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
@@ -148,6 +158,11 @@ export const HomePage = ({ history }) => {
                       not ask someone who saw it before?
                     </Trans>
                   </p>
+                  {authUser && (
+                    <Button isSmall isPrimary onClick={() => history.push('/members/list')}>
+                      <Trans>See members</Trans>
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
@@ -170,8 +185,7 @@ export const HomePage = ({ history }) => {
               <p tw="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
                 <Trans>
                   This is not citizen-science. You probably don't want to record every single observation in our
-                  database. There are better tools for that. See our <Link to="/">list of related services</Link> for
-                  those.
+                  database. There are better tools for that. Links to some can be found below in the page footer.
                 </Trans>
               </p>
               {!authUser && (

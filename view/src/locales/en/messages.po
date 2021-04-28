@@ -318,8 +318,8 @@ msgid "This is a project made mainly for fun. For the fun of listing your observ
 msgstr "This is a project made mainly for fun. For the fun of listing your observations. For the fun of comparing your lists and for the fun of finding a companion when you are in need of local guidance."
 
 #: src/pages/home/HomePage.js:171
-msgid "This is not citizen-science. You probably don't want to record every single observation in our database. There are better tools for that. See our <0>list of related services</0> for those."
-msgstr "This is not citizen-science. You probably don't want to record every single observation in our database. There are better tools for that. See our <0>list of related services</0> for those."
+msgid "This is not citizen-science. You probably don't want to record every single observation in our database. There are better tools for that. Links to some can be found below in the page footer."
+msgstr "This is not citizen-science. You probably don't want to record every single observation in our database. There are better tools for that. Links to some can be found below in the page footer."
 
 #: src/pages/home/HomePage.js:71
 msgid "This site is all about sharing lists and finding friends. Keeping lists is fun and why not have fun with other like minded?"

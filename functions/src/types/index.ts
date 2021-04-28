@@ -120,3 +120,5 @@ export interface IMember {
   residentCountry?: string
   residentRegion?: string
 }
+
+export interface IHighscores {}
