@@ -33,6 +33,7 @@ import config from './config/firebaseConfig'
 import getAllMembers from './api/member/getAllMembers'
 
 import { logActivities } from './logActivities'
+import { incrementTotals, decrementTotals } from './calculateHighscores'
 
 admin.initializeApp(config)
 firebase.initializeApp(config)
@@ -73,3 +74,6 @@ app.use('/dragonlistapi', router)
 exports.dragonlistapi = functions.region('us-central1').https.onRequest(app)
 
 exports.logActivities = logActivities
+
+exports.incrementTotals = incrementTotals
+exports.decrementTotals = decrementTotals
