@@ -52,7 +52,14 @@ export const ObservationListPage = withI18n()(({ history }) => {
       enabled: !!loggedInUserDetails,
     }
   )
-  const isFetching = isFetchingCountries || isFetchingSpecies || isFetchingUserObservations
+  const { isFetching: isFetchingUserTotals, data: userTotals, refetch: refetchUserTotals } = useQuery(
+    ['userTotals', email],
+    () => listsApi.getUserTotals(email),
+    {
+      enabled: !!loggedInUserDetails,
+    }
+  )
+  const isFetching = isFetchingCountries || isFetchingSpecies || isFetchingUserObservations || isFetchingUserTotals
 
   useEffect(() => {
     if (encodedemail) {
@@ -89,11 +96,6 @@ export const ObservationListPage = withI18n()(({ history }) => {
     }
   }, [userObservations, country, region])
 
-  // const translateName = (scientificName) => {
-  //   const specie = species.filter((sp) => sp.scientific_name === scientificName)[0] ?? []
-  //   return specie[language][0] ?? scientificName
-  // }
-
   const goAdd = () => {
     history.push('/observation/add')
   }
@@ -117,7 +119,6 @@ export const ObservationListPage = withI18n()(({ history }) => {
   }
 
   const handleEdit = (obs) => {
-    console.log('edit', obs)
     history.push(`/observation/edit/${obs.id}`)
   }
 
@@ -126,6 +127,19 @@ export const ObservationListPage = withI18n()(({ history }) => {
       listsApi.deleteUserObservation(obs)
       refetchUserObservations()
     }
+  }
+
+  const getTotals = (country, region) => {
+    if (!userTotals) {
+      return ''
+    }
+    if (country === 'all') {
+      return userTotals.total
+    }
+    if ((region && region === 'all') || !region) {
+      return userTotals[country]
+    }
+    return userTotals[`${country}___${region}`]
   }
 
   return (
@@ -215,7 +229,7 @@ export const ObservationListPage = withI18n()(({ history }) => {
                     <tr key={`subitems${i}${j}`}>
                       <td></td>
                       <td tw="align-top text-sm font-light leading-normal pr-2 pl-1">
-                        <span>{capitalise(i18n._(t`${sub.country}`))}</span>
+                        <span>{capitalise(sub.country)}</span>
                         {sub.region && (
                           <>
                             , <span>{capitalise(sub.region)}</span>
@@ -242,7 +256,7 @@ export const ObservationListPage = withI18n()(({ history }) => {
           <hr tw="mt-1 mb-4" />
           <div tw="flex justify-between">
             <span tw="text-lg font-semibold leading-normal">
-              {uniqueObservations.length} / {species?.length}
+              {getTotals(country, region)} / {species?.length}
             </span>
 
             <Button isPrimary isSmall onClick={goAdd}>

@@ -3,7 +3,7 @@ import { Response } from 'express'
 import { db } from '../../index'
 
 import validators from '../../util/validators/index'
-import { IObservation, IObservationFormData, IAuthRequest, IUser } from '../../types'
+import { IObservation, IObservationFormData, IAuthRequest } from '../../types'
 
 const postObservation = async (
   request: IAuthRequest,
@@ -15,9 +15,10 @@ const postObservation = async (
 
     const newObservation: IObservationFormData = {
       country: request.body.country,
+      email: request.user.email,
+      name: `${request.user.firstName} ${request.user.lastName}`,
       observationDate: request.body.observationDate,
       specie: request.body.specie,
-      email: request.user.email,
     }
     if (request.body.region) {
       newObservation.region = request.body.region
@@ -30,37 +31,6 @@ const postObservation = async (
     if (!valid) return response.status(400).json(errors)
 
     const { id: observationId } = await db.collection('observations').add(newObservation)
-
-    const userDocumentRef = db.collection('users').doc(`${request.user?.email}`)
-    const userDataDoc = await userDocumentRef.get()
-    if (!userDataDoc.exists) {
-      return response.status(400).json({ message: 'user not found' })
-    }
-    const userData = userDataDoc.data() as IUser
-
-    let { observationsCount } = userData
-    const { country, region } = newObservation
-
-    if (!observationsCount) {
-      observationsCount = {}
-    }
-
-    if (!observationsCount[country]) {
-      observationsCount[country] = {
-        total: 1,
-      }
-    } else {
-      observationsCount[country].total = observationsCount[country].total + 1
-    }
-
-    if (region) {
-      observationsCount[country][region] = (observationsCount[country][region] ?? 0) + 1
-    }
-
-    await userDocumentRef.update({
-      ...userData,
-      observationsCount,
-    })
 
     return response.status(201).json({
       observationId,

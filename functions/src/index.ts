@@ -34,6 +34,7 @@ import getAllMembers from './api/member/getAllMembers'
 
 import { logActivities } from './logActivities'
 import { incrementTotals, decrementTotals } from './calculateHighscores'
+import getUserTotals from './api/totals/getUserTotals'
 
 admin.initializeApp(config)
 firebase.initializeApp(config)
@@ -66,6 +67,8 @@ app.get('/api/observation/:observationId', auth(), getObservation)
 app.put('/api/observation/:observationId', auth(), putObservation)
 app.delete('/api/observation/:observationId', auth(), deleteUserObservation)
 app.post('/api/observation', auth(), postObservation)
+
+app.get('/api/totals/user/:email', auth(), getUserTotals)
 
 app.get('/api/members', auth(), getAllMembers)
 

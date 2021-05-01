@@ -2,15 +2,16 @@ import * as functions from 'firebase-functions'
 import admin from 'firebase-admin'
 import { IObservation } from '../types'
 
-type UserObservation = Record<string, number | admin.firestore.FieldValue>
+type UserObservation = Record<string, number | string | admin.firestore.FieldValue>
 
 export const incrementTotals = functions.firestore.document('/observations/{id}').onCreate(async (snap) => {
   const observationData = snap.data() as IObservation
-  const { country, region, email, specie } = observationData
+  const { country, region, email, name, specie } = observationData
 
   const userObservationRef = await admin.firestore().collection('userObservations').doc(email).get()
   if (!userObservationRef.exists) {
     const userObservation: UserObservation = {
+      name,
       total: 1,
       [country]: 1,
     }
@@ -51,7 +52,7 @@ export const incrementTotals = functions.firestore.document('/observations/{id}'
 
     if (!isUnique && !isUniqueCountry && !isUniqueCountryRegion) return null
 
-    const update: UserObservation = {}
+    const update: UserObservation = { name } // catch updated names
 
     if (isUnique) {
       update.total = admin.firestore.FieldValue.increment(1)

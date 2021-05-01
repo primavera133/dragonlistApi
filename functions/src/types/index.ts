@@ -83,6 +83,7 @@ export interface ISpecie {
 export interface IObservation {
   country: string
   email: string
+  name: string
   observationDate: Date
   observationDateStr?: string
   region?: string
@@ -95,6 +96,7 @@ export interface IObservationFormData {
   region?: string | null
   specie: string
   email: string
+  name: string
 }
 
 export interface IAuthRequest extends Request {

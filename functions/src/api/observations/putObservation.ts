@@ -3,7 +3,7 @@ import { Response } from 'express'
 import { db } from '../../index'
 
 import validators from '../../util/validators/index'
-import { IObservation, IObservationFormData, IAuthRequest, IUser } from '../../types'
+import { IObservation, IObservationFormData, IAuthRequest } from '../../types'
 
 const postObservation = async (
   request: IAuthRequest,
@@ -14,15 +14,21 @@ const postObservation = async (
     if (!request.user.email) throw new Error('email is missing')
 
     const { observationId } = request.params
-    const observationRef = db.doc(`/observations/${observationId}`)
-    const observationDoc = await observationRef.get()
-    const { country: oldCountry, region: oldRegion } = observationDoc.data() as IObservation
+
+    const observation = await db.collection('observations').doc(observationId).get()
+
+    if (!observation.exists) {
+      return response.status(400).json(new Error('observation not found'))
+    }
+
+    const { region: oldRegion } = observation.data() as IObservation
 
     const observationFormData: IObservationFormData = {
       country: request.body.country,
+      email: request.user.email,
+      name: `${request.user.firstName} ${request.user.lastName}`,
       observationDate: request.body.observationDate,
       specie: request.body.specie,
-      email: request.user.email,
     }
     if (request.body.region) {
       observationFormData.region = request.body.region
@@ -37,49 +43,8 @@ const postObservation = async (
 
     if (!valid) return response.status(400).json(errors)
 
-    await observationRef.update(observationFormData)
+    await db.collection('observations').doc(observationId).update(observationFormData)
 
-    const userDocumentRef = db.collection('users').doc(`${request.user?.email}`)
-    const userDataDoc = await userDocumentRef.get()
-    if (!userDataDoc.exists) {
-      return response.status(400).json({ message: 'user not found' })
-    }
-    const userData = userDataDoc.data() as IUser
-
-    let { observationsCount } = userData
-    const { country, region } = observationFormData
-
-    if (country !== oldCountry || region !== oldRegion) {
-      if (!observationsCount) {
-        observationsCount = {}
-      }
-      // first reduce old calculations
-      if (oldRegion) {
-        observationsCount[oldCountry][oldRegion] = observationsCount[oldCountry][oldRegion] - 1
-      }
-      observationsCount[oldCountry] = {
-        ...observationsCount[oldCountry],
-        total: observationsCount[oldCountry].total - 1,
-      }
-
-      // add new calculations
-      if (!observationsCount[country]) {
-        observationsCount[country] = {
-          total: 1,
-        }
-      } else {
-        observationsCount[country].total = observationsCount[country].total + 1
-      }
-
-      if (region) {
-        observationsCount[country][region] = (observationsCount[country][region] ?? 0) + 1
-      }
-
-      await userDocumentRef.update({
-        ...userData,
-        observationsCount,
-      })
-    }
     return response.status(201).json({
       observationId,
       ...observationFormData,
