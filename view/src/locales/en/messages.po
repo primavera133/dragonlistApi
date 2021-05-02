@@ -12,12 +12,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/pages/member/MemberListPage.js:54
-#: src/pages/observation/ObservationListPage.js:65
+#: src/pages/observation/ObservationListPage.js:73
 msgid "-- All countries --"
 msgstr "-- All countries --"
 
 #: src/pages/member/MemberListPage.js:53
-#: src/pages/observation/ObservationListPage.js:64
+#: src/pages/observation/ObservationListPage.js:72
 msgid "-- All regions --"
 msgstr "-- All regions --"
 
@@ -30,13 +30,15 @@ msgid "A sign-in email with additional instructions was sent to {email}. Check y
 msgstr "A sign-in email with additional instructions was sent to {email}. Check your inbox to complete sign-in."
 
 #: src/components/Navbar/Navbar.js:109
-#: src/pages/observation/ObservationAddPage.js:99
+#: src/pages/home/HomePage.js:118
+#: src/pages/observation/ObservationAddPage.js:48
+#: src/pages/observation/ObservationListPage.js:263
 msgid "Add observation"
 msgstr "Add observation"
 
 #: src/pages/observation/ObservationListPage.js:235
-msgid "Add specie"
-msgstr "Add specie"
+#~ msgid "Add specie"
+#~ msgstr "Add specie"
 
 #: src/pages/profile/ProfilePage.js:27
 msgid "Admin"
@@ -47,7 +49,7 @@ msgstr "Admin"
 msgid "All users"
 msgstr "All users"
 
-#: src/pages/observation/ObservationListPage.js:123
+#: src/pages/observation/ObservationListPage.js:126
 msgid "Are you sure you want to delete the observation?"
 msgstr "Are you sure you want to delete the observation?"
 
@@ -75,11 +77,11 @@ msgstr "Check that your inbox space is not running out or other inbox settings r
 msgid "Check your internet connection."
 msgstr "Check your internet connection."
 
-#: src/pages/completeSignIn/CompleteSignInPage.js:91
+#: src/pages/completeSignIn/CompleteSignInPage.js:96
 msgid "Complete"
 msgstr "Complete"
 
-#: src/pages/completeSignIn/CompleteSignInPage.js:86
+#: src/pages/completeSignIn/CompleteSignInPage.js:91
 msgid "Complete sign in"
 msgstr "Complete sign in"
 
@@ -95,11 +97,11 @@ msgstr "Contact details"
 msgid "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
 msgstr "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
 
-#: src/pages/observation/ObservationAddPage.js:105
+#: src/pages/observation/ObservationForm.js:83
 msgid "Country"
 msgstr "Country"
 
-#: src/pages/observation/ObservationListPage.js:173
+#: src/pages/observation/ObservationListPage.js:189
 msgid "Date"
 msgstr "Date"
 
@@ -115,6 +117,10 @@ msgstr "Dragonlist uses links-by-email to sign in. Enter your email address in t
 msgid "Edit"
 msgstr "Edit"
 
+#: src/pages/observation/ObservationEditPage.js:53
+msgid "Edit observation"
+msgstr "Edit observation"
+
 #: src/components/EmailForm/EmailForm.js:34
 #: src/components/UserForm/UserForm.js:101
 msgid "Email"
@@ -124,7 +130,7 @@ msgstr "Email"
 msgid "Email for contact"
 msgstr "Email for contact"
 
-#: src/pages/home/HomePage.js:143
+#: src/pages/home/HomePage.js:167
 msgid "Find local help"
 msgstr "Find local help"
 
@@ -168,6 +174,10 @@ msgstr "Including a country prefix is helpful."
 msgid "Last name"
 msgstr "Last name"
 
+#: src/pages/home/HomePage.js:153
+msgid "Log in to see lists"
+msgstr "Log in to see lists"
+
 #: src/components/Navbar/Navbar.js:193
 msgid "Logout"
 msgstr "Logout"
@@ -175,6 +185,20 @@ msgstr "Logout"
 #: src/pages/profile/ProfilePage.js:20
 #~ msgid "Mina sidor"
 #~ msgstr "Mina sidor"
+
+#: src/pages/observation/HighScorePage.js:20
+msgid "Most species"
+msgstr "Most species"
+
+#: src/pages/home/HomePage.js:142
+#: src/pages/observation/HighScorePage.js:30
+msgid "Most species in Sweden"
+msgstr "Most species in Sweden"
+
+#: src/pages/home/HomePage.js:137
+#: src/pages/observation/HighScorePage.js:25
+msgid "Most species in total"
+msgstr "Most species in total"
 
 #: src/components/Navbar/Navbar.js:133
 msgid "My lists"
@@ -196,7 +220,7 @@ msgstr "Name"
 msgid "Next Month"
 msgstr "Next Month"
 
-#: src/pages/completeSignIn/CompleteSignInPage.js:76
+#: src/pages/completeSignIn/CompleteSignInPage.js:81
 msgid "Nothing to see here."
 msgstr "Nothing to see here."
 
@@ -208,7 +232,7 @@ msgstr "Nothing to see here."
 msgid "Observation date"
 msgstr "Observation date"
 
-#: src/pages/observation/ObservationListPage.js:136
+#: src/pages/observation/ObservationListPage.js:152
 msgid "Observations"
 msgstr "Observations"
 
@@ -220,7 +244,7 @@ msgstr "Other Resources"
 msgid "Phone number"
 msgstr "Phone number"
 
-#: src/pages/completeSignIn/CompleteSignInPage.js:89
+#: src/pages/completeSignIn/CompleteSignInPage.js:94
 msgid "Please provide email for confirmation"
 msgstr "Please provide email for confirmation"
 
@@ -237,12 +261,20 @@ msgid "Profile"
 msgstr "Profile"
 
 #: src/pages/home/HomePage.js:108
-msgid "Put a pin on what you've seen"
-msgstr "Put a pin on what you've seen"
+#~ msgid "Put a pin on what you've seen"
+#~ msgstr "Put a pin on what you've seen"
+
+#: src/pages/home/HomePage.js:108
+msgid "Record what you've seen"
+msgstr "Record what you've seen"
 
 #: src/pages/home/HomePage.js:111
-msgid "Record where you first saw a specie in a country, or where your first observation in a region of your country."
-msgstr "Record where you first saw a specie in a country, or where your first observation in a region of your country."
+msgid "Record when you first saw a specie in a country, or where your first observation in a region of your country."
+msgstr "Record when you first saw a specie in a country, or where your first observation in a region of your country."
+
+#: src/pages/home/HomePage.js:111
+#~ msgid "Record where you first saw a specie in a country, or where your first observation in a region of your country."
+#~ msgstr "Record where you first saw a specie in a country, or where your first observation in a region of your country."
 
 #: src/pages/home/home.js:104
 #~ msgid "Record where you first saw a specie in a country, or where your first sighting in a region of your country."
@@ -252,7 +284,7 @@ msgstr "Record where you first saw a specie in a country, or where your first ob
 msgid "Record your dragonfly observations and find like-minded new friends."
 msgstr "Record your dragonfly observations and find like-minded new friends."
 
-#: src/pages/observation/ObservationAddPage.js:116
+#: src/pages/observation/ObservationForm.js:94
 msgid "Region"
 msgstr "Region"
 
@@ -274,12 +306,20 @@ msgstr "Role"
 msgid "Save"
 msgstr "Save"
 
-#: src/pages/observation/ObservationAddPage.js:133
+#: src/pages/observation/ObservationForm.js:111
 msgid "Save observation"
 msgstr "Save observation"
 
+#: src/pages/home/HomePage.js:147
+msgid "See lists"
+msgstr "See lists"
+
+#: src/pages/home/HomePage.js:177
+msgid "See members"
+msgstr "See members"
+
 #: src/components/Navbar/Navbar.js:208
-#: src/pages/home/HomePage.js:181
+#: src/pages/home/HomePage.js:209
 msgid "Sign in"
 msgstr "Sign in"
 
@@ -287,8 +327,8 @@ msgstr "Sign in"
 msgid "Sign in with email"
 msgstr "Sign in with email"
 
-#: src/pages/observation/ObservationAddPage.js:126
-#: src/pages/observation/ObservationListPage.js:168
+#: src/pages/observation/ObservationForm.js:104
+#: src/pages/observation/ObservationListPage.js:184
 msgid "Specie"
 msgstr "Specie"
 
@@ -312,12 +352,12 @@ msgstr "There are still mandatory fields missing. You will be able to save when 
 msgid "This email can be the one you login with, or any other."
 msgstr "This email can be the one you login with, or any other."
 
-#: src/pages/home/HomePage.js:162
-#: src/pages/home/HomePage.js:184
+#: src/pages/home/HomePage.js:191
+#: src/pages/home/HomePage.js:212
 msgid "This is a project made mainly for fun. For the fun of listing your observations. For the fun of comparing your lists and for the fun of finding a companion when you are in need of local guidance."
 msgstr "This is a project made mainly for fun. For the fun of listing your observations. For the fun of comparing your lists and for the fun of finding a companion when you are in need of local guidance."
 
-#: src/pages/home/HomePage.js:171
+#: src/pages/home/HomePage.js:200
 msgid "This is not citizen-science. You probably don't want to record every single observation in our database. There are better tools for that. Links to some can be found below in the page footer."
 msgstr "This is not citizen-science. You probably don't want to record every single observation in our database. There are better tools for that. Links to some can be found below in the page footer."
 
@@ -325,19 +365,15 @@ msgstr "This is not citizen-science. You probably don't want to record every sin
 msgid "This site is all about sharing lists and finding friends. Keeping lists is fun and why not have fun with other like minded?"
 msgstr "This site is all about sharing lists and finding friends. Keeping lists is fun and why not have fun with other like minded?"
 
-#: src/pages/home/HomePage.js:219
+#: src/pages/home/HomePage.js:247
 msgid "This site was made by some members of <0>Trollslände­föreningen</0>, the Swedish dragonfly society."
 msgstr "This site was made by some members of <0>Trollslände­föreningen</0>, the Swedish dragonfly society."
-
-#: src/pages/home/HomePage.js:130
-msgid "Top 10 lists per country. Or per region of your country."
-msgstr "Top 10 lists per country. Or per region of your country."
 
 #: src/pages/member/MemberListPage.js:152
 msgid "Total observations"
 msgstr "Total observations"
 
-#: src/pages/home/HomePage.js:146
+#: src/pages/home/HomePage.js:170
 msgid "Traveling to a new region? Want some advice on good places or where to find a special specie? Why not ask someone who saw it before?"
 msgstr "Traveling to a new region? Want some advice on good places or where to find a special specie? Why not ask someone who saw it before?"
 
@@ -365,19 +401,19 @@ msgstr "Useful Links"
 #~ msgid "Welcome new user"
 #~ msgstr "Welcome new user"
 
-#: src/pages/home/HomePage.js:168
+#: src/pages/home/HomePage.js:197
 msgid "What is this not?"
 msgstr "What is this not?"
 
-#: src/pages/home/HomePage.js:159
+#: src/pages/home/HomePage.js:188
 msgid "What is this website?"
 msgstr "What is this website?"
 
-#: src/pages/home/HomePage.js:216
+#: src/pages/home/HomePage.js:244
 msgid "Who made this?"
 msgstr "Who made this?"
 
-#: src/pages/home/HomePage.js:127
+#: src/pages/home/HomePage.js:132
 msgid "Who saw most?"
 msgstr "Who saw most?"
 
@@ -396,6 +432,10 @@ msgstr "email"
 #: src/components/Footer/Footer.js:46
 msgid "iNaturalist"
 msgstr "iNaturalist"
+
+#: src/components/Highscores/TopObservers.js:29
+msgid "species"
+msgstr "species"
 
 #: src/components/Footer/Footer.js:100
 msgid "{0} Dragonlist by <0>Jonas Myrenås</0>, <1>Github</1>."

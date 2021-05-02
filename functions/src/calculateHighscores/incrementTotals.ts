@@ -6,9 +6,15 @@ type UserObservation = Record<string, number | string | admin.firestore.FieldVal
 
 export const incrementTotals = functions.firestore.document('/observations/{id}').onCreate(async (snap) => {
   const observationData = snap.data() as IObservation
-  const { country, region, email, name, specie } = observationData
+  const { country, region, email, specie } = observationData
 
   const userObservationRef = await admin.firestore().collection('userObservations').doc(email).get()
+  const userSnapshot = await admin.firestore().collection('users').doc(email).get()
+  const user = userSnapshot.data()
+  const name = `${user?.firstName} ${user?.lastName}`
+
+  console.log(11111, name)
+
   if (!userObservationRef.exists) {
     const userObservation: UserObservation = {
       name,
@@ -63,7 +69,7 @@ export const incrementTotals = functions.firestore.document('/observations/{id}'
     if (isUniqueCountryRegion) {
       update[`${country}___${region}`] = admin.firestore.FieldValue.increment(1)
     }
-
+    console.log('update', update)
     await admin.firestore().collection('userObservations').doc(email).update(update)
   }
 

@@ -7,7 +7,6 @@ import tw from 'twin.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faAward,
-  faFingerprint,
   faMapPin,
   faMapSigns,
   faSignInAlt,
@@ -22,6 +21,7 @@ import { Navbar } from '../../components/Navbar'
 import { Footer } from '../../components/Footer'
 import { Link } from '../../components/Link'
 import { Button } from '../../components/Button'
+import { TopObservers } from '../../components/Highscores'
 
 const getHeroBg = () => {
   const images = [
@@ -128,16 +128,30 @@ export const HomePage = ({ history }) => {
                   <div tw="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-dlearthy">
                     <FontAwesomeIcon icon={faAward} />
                   </div>
-                  <h6 tw="text-xl font-semibold">
+                  <h6 tw="text-xl font-semibold mb-4">
                     <Trans>Who saw most?</Trans>
                   </h6>
-                  <p tw="mt-2 mb-4 text-gray-600">
-                    <Trans>Top 10 lists per country. Or per region of your country.</Trans>
-                  </p>
                   {authUser && (
-                    <Button isSmall isPrimary onClick={() => history.push('/observation/list')}>
-                      <Trans>See lists</Trans>
-                    </Button>
+                    <>
+                      <div tw="mb-4">
+                        <h3 tw="font-bold"><Trans>Most species in total</Trans></h3>
+                        <TopObservers country="total" />
+                      </div>
+
+                      <div tw="mb-4">
+                        <h3 tw="font-bold"><Trans>Most species in Sweden</Trans></h3>
+                        <TopObservers country="sweden" />
+                      </div>
+                      
+                      <Button isSmall isPrimary onClick={() => history.push('/observation/list')}>
+                        <Trans>See lists</Trans>
+                      </Button>
+                    </>
+                  )}
+                  {!authUser && (
+                    <>
+                      <Trans>Log in to see lists</Trans>
+                    </>
                   )}
                 </div>
               </div>

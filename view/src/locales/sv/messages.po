@@ -14,12 +14,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/pages/member/MemberListPage.js:54
-#: src/pages/observation/ObservationListPage.js:65
+#: src/pages/observation/ObservationListPage.js:73
 msgid "-- All countries --"
 msgstr "-- Alla länder --"
 
 #: src/pages/member/MemberListPage.js:53
-#: src/pages/observation/ObservationListPage.js:64
+#: src/pages/observation/ObservationListPage.js:72
 msgid "-- All regions --"
 msgstr "-- Alla regioner --"
 
@@ -32,11 +32,9 @@ msgid "A sign-in email with additional instructions was sent to {email}. Check y
 msgstr "Ett mail med en länk och instruktioner för hur du loggar in har mailats till {email}. Kolla din brevlåda för att fortsätta."
 
 #: src/components/Navbar/Navbar.js:109
-#: src/pages/observation/ObservationAddPage.js:99
-msgid "Add observation"
-msgstr "Lägg till ett kryss"
-
-#: src/pages/observation/ObservationListPage.js:235
+#: src/pages/home/HomePage.js:118
+#: src/pages/observation/ObservationAddPage.js:48
+#: src/pages/observation/ObservationListPage.js:263
 msgid "Add observation"
 msgstr "Lägg till observation"
 
@@ -49,7 +47,7 @@ msgstr "Administratör"
 msgid "All users"
 msgstr "Alla användare"
 
-#: src/pages/observation/ObservationListPage.js:123
+#: src/pages/observation/ObservationListPage.js:126
 msgid "Are you sure you want to delete the observation?"
 msgstr "Är du säker på att du vill radera obsen?"
 
@@ -77,11 +75,11 @@ msgstr "Kolla att din inbox har nog med hårddiskutrymme"
 msgid "Check your internet connection."
 msgstr "Kolla din uppkoppling mot internet"
 
-#: src/pages/completeSignIn/CompleteSignInPage.js:91
+#: src/pages/completeSignIn/CompleteSignInPage.js:96
 msgid "Complete"
 msgstr "Fortsätt"
 
-#: src/pages/completeSignIn/CompleteSignInPage.js:86
+#: src/pages/completeSignIn/CompleteSignInPage.js:91
 msgid "Complete sign in"
 msgstr "Inlogging"
 
@@ -97,11 +95,11 @@ msgstr "Kontaktuppgifter"
 msgid "Contact details are voluntary, choose freely how you wish to be contacted by other members. No contact details are visible for other users, unless they are logged in."
 msgstr "Kontaktuppfterna är frivilliga att fylla i. Välj hur du vill att andra medlemmar ska kunna kontakta dig. Inga kontaktuppgifter visas upp för oinloggade användare."
 
-#: src/pages/observation/ObservationAddPage.js:105
+#: src/pages/observation/ObservationForm.js:83
 msgid "Country"
 msgstr "Land"
 
-#: src/pages/observation/ObservationListPage.js:173
+#: src/pages/observation/ObservationListPage.js:189
 msgid "Date"
 msgstr "Datum"
 
@@ -117,6 +115,10 @@ msgstr "Trollsländelistan använder länk-via-email för inloggning. Fyll i din
 msgid "Edit"
 msgstr "Ändra uppgifter"
 
+#: src/pages/observation/ObservationEditPage.js:53
+msgid "Edit observation"
+msgstr "Editera obs"
+
 #: src/components/EmailForm/EmailForm.js:34
 #: src/components/UserForm/UserForm.js:101
 msgid "Email"
@@ -126,7 +128,7 @@ msgstr "Mailadress"
 msgid "Email for contact"
 msgstr "Mailadress för kontakt"
 
-#: src/pages/home/HomePage.js:143
+#: src/pages/home/HomePage.js:167
 msgid "Find local help"
 msgstr "Hitta lokala förmågor"
 
@@ -170,9 +172,27 @@ msgstr "Inkludera gärna landsprefix (som t ex +46)"
 msgid "Last name"
 msgstr "Efternamn"
 
+#: src/pages/home/HomePage.js:153
+msgid "Log in to see lists"
+msgstr "Logga in för att se toplistorna"
+
 #: src/components/Navbar/Navbar.js:193
 msgid "Logout"
 msgstr "Logga ut"
+
+#: src/pages/observation/HighScorePage.js:20
+msgid "Most species"
+msgstr "Flest kryss"
+
+#: src/pages/home/HomePage.js:142
+#: src/pages/observation/HighScorePage.js:30
+msgid "Most species in Sweden"
+msgstr "Flest kryss i Sverige"
+
+#: src/pages/home/HomePage.js:137
+#: src/pages/observation/HighScorePage.js:25
+msgid "Most species in total"
+msgstr "Flest antal arter totalt"
 
 #: src/components/Navbar/Navbar.js:133
 msgid "My lists"
@@ -190,7 +210,7 @@ msgstr "Namn"
 msgid "Next Month"
 msgstr "Nästa månad"
 
-#: src/pages/completeSignIn/CompleteSignInPage.js:76
+#: src/pages/completeSignIn/CompleteSignInPage.js:81
 msgid "Nothing to see here."
 msgstr "Inget att se här..."
 
@@ -202,7 +222,7 @@ msgstr "Inget att se här..."
 msgid "Observation date"
 msgstr "Datum för obsen"
 
-#: src/pages/observation/ObservationListPage.js:136
+#: src/pages/observation/ObservationListPage.js:152
 msgid "Observations"
 msgstr "Observationer"
 
@@ -214,7 +234,7 @@ msgstr "Andra resurser"
 msgid "Phone number"
 msgstr "Telefonnummer"
 
-#: src/pages/completeSignIn/CompleteSignInPage.js:89
+#: src/pages/completeSignIn/CompleteSignInPage.js:94
 msgid "Please provide email for confirmation"
 msgstr "Var god uppge din mailadress för konfirmation"
 
@@ -231,12 +251,20 @@ msgid "Profile"
 msgstr "Mina sidor"
 
 #: src/pages/home/HomePage.js:108
-msgid "Put a pin on what you've seen"
-msgstr "Sätt en kartnål på vad du sett"
+#~ msgid "Put a pin on what you've seen"
+#~ msgstr "Sätt en kartnål på vad du sett"
+
+#: src/pages/home/HomePage.js:108
+msgid "Record what you've seen"
+msgstr "Notera vad du sett"
 
 #: src/pages/home/HomePage.js:111
-msgid "Record where you first saw a specie in a country, or where your first observation in a region of your country."
-msgstr "Registrera var du först såg en art i ditt land, eller din första observation i en region av ett land."
+msgid "Record when you first saw a specie in a country, or where your first observation in a region of your country."
+msgstr "Notera när du först såg en art i ditt hemland, eller när du först såg den i en region."
+
+#: src/pages/home/HomePage.js:111
+#~ msgid "Record where you first saw a specie in a country, or where your first observation in a region of your country."
+#~ msgstr "Registrera var du först såg en art i ditt land, eller din första observation i en region av ett land."
 
 #: src/pages/home/home.js:104
 #~ msgid "Record where you first saw a specie in a country, or where your first sighting in a region of your country."
@@ -246,7 +274,7 @@ msgstr "Registrera var du först såg en art i ditt land, eller din första obse
 msgid "Record your dragonfly observations and find like-minded new friends."
 msgstr "Kryssa trollsländor, skapa listor och träffa likasinnade"
 
-#: src/pages/observation/ObservationAddPage.js:116
+#: src/pages/observation/ObservationForm.js:94
 msgid "Region"
 msgstr "Region"
 
@@ -268,12 +296,20 @@ msgstr "Roll"
 msgid "Save"
 msgstr "Spara"
 
-#: src/pages/observation/ObservationAddPage.js:133
+#: src/pages/observation/ObservationForm.js:111
 msgid "Save observation"
 msgstr "Spara observationen"
 
+#: src/pages/home/HomePage.js:147
+msgid "See lists"
+msgstr "Alla listor"
+
+#: src/pages/home/HomePage.js:177
+msgid "See members"
+msgstr "Kolla in andra användare"
+
 #: src/components/Navbar/Navbar.js:208
-#: src/pages/home/HomePage.js:181
+#: src/pages/home/HomePage.js:209
 msgid "Sign in"
 msgstr "Logga in/Skapa konto"
 
@@ -281,8 +317,8 @@ msgstr "Logga in/Skapa konto"
 msgid "Sign in with email"
 msgstr "Logga in med din email"
 
-#: src/pages/observation/ObservationAddPage.js:126
-#: src/pages/observation/ObservationListPage.js:168
+#: src/pages/observation/ObservationForm.js:104
+#: src/pages/observation/ObservationListPage.js:184
 msgid "Specie"
 msgstr "Art"
 
@@ -291,12 +327,20 @@ msgid "Terms & Conditions"
 msgstr "Terms & Conditions"
 
 #: src/components/UserForm/UserForm.js:124
-msgid "The country will be your default. You can still add oservations from other countries."
-msgstr "Landet kommer bli ditt förhandsval, Du kan fortfarande lägga till obsar från andra länder."
+msgid "The country will be your default. You can still add oservations from other countries"
+msgstr ""
+
+#: src/components/UserForm/UserForm.js:124
+#~ msgid "The country will be your default. You can still add oservations from other countries."
+#~ msgstr "Landet kommer bli ditt förhandsval, Du kan fortfarande lägga till obsar från andra länder."
 
 #: src/components/UserForm/UserForm.js:137
-msgid "The region will be your default. You can still add oservations from other regions."
-msgstr "Regionen kommer bli ditt förhandsval. Du kan fortfarande lägga till obsar i andra regioner."
+msgid "The region will be your default. You can still add oservations from other regions"
+msgstr ""
+
+#: src/components/UserForm/UserForm.js:137
+#~ msgid "The region will be your default. You can still add oservations from other regions."
+#~ msgstr "Regionen kommer bli ditt förhandsval. Du kan fortfarande lägga till obsar i andra regioner."
 
 #: src/components/UserForm/UserForm.js:179
 msgid "There are still mandatory fields missing. You will be able to save when those are completed"
@@ -306,12 +350,12 @@ msgstr "Det saknas uppgifter i några obligatoriska fält. Du kan spara först n
 msgid "This email can be the one you login with, or any other."
 msgstr "Välj själv om du vill använda samma som ovan eller någon annan."
 
-#: src/pages/home/HomePage.js:162
-#: src/pages/home/HomePage.js:184
+#: src/pages/home/HomePage.js:191
+#: src/pages/home/HomePage.js:212
 msgid "This is a project made mainly for fun. For the fun of listing your observations. For the fun of comparing your lists and for the fun of finding a companion when you are in need of local guidance."
 msgstr "Detta är ett projekt drivet för nöjes skull. För nöjet att skapa listor över observationer. För nöjet att jämföra dina listor med andras och för nöjet att finna likasinnade att ta hälp av."
 
-#: src/pages/home/HomePage.js:171
+#: src/pages/home/HomePage.js:200
 msgid "This is not citizen-science. You probably don't want to record every single observation in our database. There are better tools for that. Links to some can be found below in the page footer."
 msgstr "Detta är inte vetenskap eller \"citizen-science\". Du vill antagligen inte spara varenda observation du gör i vår databas. Det finns bättre verktyg som t.ex. Artportalen för det. Länkar till ett par hittar du nedan i footern."
 
@@ -319,19 +363,15 @@ msgstr "Detta är inte vetenskap eller \"citizen-science\". Du vill antagligen i
 msgid "This site is all about sharing lists and finding friends. Keeping lists is fun and why not have fun with other like minded?"
 msgstr "Denna site handlar om att göra krysslistor och träffa likasinnade. Att skåda trollsländor är kul och varför inte dela det roliga med andra?"
 
-#: src/pages/home/HomePage.js:219
+#: src/pages/home/HomePage.js:247
 msgid "This site was made by some members of <0>Trollslände­föreningen</0>, the Swedish dragonfly society."
 msgstr "Denna sida gjordes av några medlemmar av <0>Trollslände­föreningen</0>."
-
-#: src/pages/home/HomePage.js:130
-msgid "Top 10 lists per country. Or per region of your country."
-msgstr "Top 10 svenska observatörer. Eller per landskap..."
 
 #: src/pages/member/MemberListPage.js:152
 msgid "Total observations"
 msgstr "Totalt antal obsar"
 
-#: src/pages/home/HomePage.js:146
+#: src/pages/home/HomePage.js:170
 msgid "Traveling to a new region? Want some advice on good places or where to find a special specie? Why not ask someone who saw it before?"
 msgstr "Planerar du en resa till ett okänt område? Letar du bra lokaler? Varför inte ta hjälp av någon från platsen?"
 
@@ -359,19 +399,19 @@ msgstr "Användbara länkar"
 #~ msgid "Welcome new user"
 #~ msgstr "Ny användare? Välkommen!"
 
-#: src/pages/home/HomePage.js:168
+#: src/pages/home/HomePage.js:197
 msgid "What is this not?"
 msgstr "Vad är det inte?"
 
-#: src/pages/home/HomePage.js:159
+#: src/pages/home/HomePage.js:188
 msgid "What is this website?"
 msgstr "Vad är det här för något?"
 
-#: src/pages/home/HomePage.js:216
+#: src/pages/home/HomePage.js:244
 msgid "Who made this?"
 msgstr "Vem gjorde detta?"
 
-#: src/pages/home/HomePage.js:127
+#: src/pages/home/HomePage.js:132
 msgid "Who saw most?"
 msgstr "Vem såg flest?"
 
@@ -390,6 +430,10 @@ msgstr "email för inloggning"
 #: src/components/Footer/Footer.js:46
 msgid "iNaturalist"
 msgstr "iNaturalist"
+
+#: src/components/Highscores/TopObservers.js:29
+msgid "species"
+msgstr "arter"
 
 #: src/components/Footer/Footer.js:100
 msgid "{0} Dragonlist by <0>Jonas Myrenås</0>, <1>Github</1>."
