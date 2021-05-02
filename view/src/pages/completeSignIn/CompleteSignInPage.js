@@ -18,11 +18,16 @@ import { PageHeader } from '../../components/PageHeader'
 import { Loader } from '../../components/Loader'
 
 export const CompleteSignInPage = withI18n()(({ history, i18n }) => {
-  const { authUser, authUserLoading, userDetails, unfinishedProfile, setUnfinishedProfile } = useContext(AuthContext)
+  const { authUser, authUserLoading, setUnfinishedProfile } = useContext(AuthContext)
 
   const [isEmailSignin, setIsEmailSignin] = useState(true)
   const [error, setError] = useState(false)
   const [email, setEmail] = useState()
+
+  // TODO: replace with proper email setup for login...
+  if (window.location.href.includes('dragonlist-2aa56.web.app')) {
+    window.location.href = window.location.href.replace('dragonlist-2aa56.web.app', 'dragonlist.online')
+  }
 
   useEffect(() => {
     setEmail(window.localStorage.getItem('emailForSignIn'))
